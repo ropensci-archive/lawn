@@ -1,21 +1,21 @@
-turf
+lawn
 =======
 
 
 
-`turf` is an R wrapper for [proj4js](https://github.com/proj4js/proj4js).
+`lawn` is an R wrapper for [turf.js](http://turfjs.org/)
 
 ## Install
 
 
 ```r
 install.packages("devtools")
-devtools::install_github("sckott/turf")
+devtools::install_github("sckott/lawn")
 ```
 
 
 ```r
-library("turf")
+library("lawn")
 ```
 
 ## count
@@ -101,9 +101,9 @@ random(2)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -117.56023, 28.43863
-#> 2 Feature         Point  -99.42772, 26.52437
+#>      type geometry.type   geometry.coordinates
+#> 1 Feature         Point -177.768053, -6.424876
+#> 2 Feature         Point      134.5158, 31.0301
 ```
 
 ```r
@@ -116,11 +116,11 @@ random(5)
 #> 
 #> $features
 #>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point   92.94532, -89.51099
-#> 2 Feature         Point    47.85467, 60.36408
-#> 3 Feature         Point  -50.57581, -72.53826
-#> 4 Feature         Point  -45.23143, -85.82128
-#> 5 Feature         Point -159.81295, -79.77215
+#> 1 Feature         Point   71.444741, 4.487889
+#> 2 Feature         Point -120.39387, -58.30928
+#> 3 Feature         Point     96.2065, -80.9319
+#> 4 Feature         Point   73.91923, -59.25878
+#> 5 Feature         Point  114.23631, -50.67585
 ```
 
 ## sample from a FeatureCollection
@@ -150,7 +150,7 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        300         Point   10.79544, 59.93162
+#> 1 Feature        600         Point   10.71579, 59.90478
 #> 2 Feature        200         Point   10.72403, 59.92681
 ```
 
@@ -164,9 +164,9 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        100         Point   10.74600, 59.90857
-#> 2 Feature        200         Point   10.80643, 59.90891
-#> 3 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        200         Point   10.80643, 59.90891
+#> 2 Feature        300         Point   10.79544, 59.93162
+#> 3 Feature        100         Point   10.74600, 59.90857
 ```
 
 ## extent
@@ -177,4 +177,3 @@ dat <- points_average
 extent(dat)
 #> [1] 10.71579 59.90478 10.80643 59.93162
 ```
-

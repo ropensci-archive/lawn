@@ -1,7 +1,7 @@
 #' R client for turf.js for geospatial analysis
 #'
-#' @name turf-package
-#' @aliases turf
+#' @name lawn-package
+#' @aliases lawn
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @docType package
 NULL

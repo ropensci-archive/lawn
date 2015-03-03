@@ -1,4 +1,4 @@
-turf
+lawn
 =======
 
 ```{r echo=FALSE}
@@ -10,17 +10,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-`turf` is an R wrapper for [proj4js](https://github.com/proj4js/proj4js).
+`lawn` is an R wrapper for [turf.js](http://turfjs.org/)
 
 ## Install
 
 ```{r eval=FALSE}
 install.packages("devtools")
-devtools::install_github("sckott/turf")
+devtools::install_github("sckott/lawn")
 ```
 
 ```{r}
-library("turf")
+library("lawn")
 ```
 
 ## count
