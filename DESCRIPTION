@@ -13,3 +13,6 @@ LazyData: TRUE
 Imports:
     V8,
     jsonlite
+Suggests:
+    geojsonio,
+    maps

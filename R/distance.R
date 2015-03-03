@@ -3,10 +3,9 @@
 #' @importFrom jsonlite toJSON
 #' @export
 #'
-#' @param polygons Geojson polygons
-#' @param points Geojson points
-#' @param field (character) The field in the points features from which to pull values to average
-#' @param outputField (character) The field in polygons to put results of the averages
+#' @param from Origin point
+#' @param to Destination point
+#' @param units (character) Can be degrees, radians, miles, or kilometers
 #' @details Calculates the distance between two points in degress, radians, miles, or kilometers.
 #' Uses the Haversine formula to account for global curvature.
 #' @examples

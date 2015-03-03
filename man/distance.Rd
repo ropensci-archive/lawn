@@ -7,13 +7,11 @@
 distance(from, to, units = "kilometers")
 }
 \arguments{
-\item{polygons}{Geojson polygons}
+\item{from}{Origin point}
 
-\item{points}{Geojson points}
+\item{to}{Destination point}
 
-\item{field}{(character) The field in the points features from which to pull values to average}
-
-\item{outputField}{(character) The field in polygons to put results of the averages}
+\item{units}{(character) Can be degrees, radians, miles, or kilometers}
 }
 \description{
 Calculate the distance between two points
