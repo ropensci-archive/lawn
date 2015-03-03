@@ -7,6 +7,8 @@ Date: 2015-03-02
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")
+URL: https://github.com/sckott/turf
+BugReports: http://www.github.com/sckott/turf/issues
 LazyData: TRUE
 Imports:
     V8
