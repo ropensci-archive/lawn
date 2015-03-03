@@ -57,3 +57,34 @@ average(polygons = polygons_average, points = points_average, 'population')
 #> 2 10.76454, 10.76454, 10.86617, 10.86617, 10.76454, 59.88928, 59.93713, 59.93713, 59.88928, 59.88928
 ```
 
+## distance
+
+Define two points
+
+
+```r
+from <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+   "type": "Point",
+   "coordinates": [-75.343, 39.984]
+ }
+}'
+to <- '{
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.534, 39.123]
+  }
+}'
+```
+
+Calculate distance, default units is kilometers (`km`)
+
+
+```r
+distance(from, to)
+#> [1] 97.15958
+```

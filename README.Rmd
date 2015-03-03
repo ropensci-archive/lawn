@@ -40,3 +40,31 @@ Average value of a field for a set of points within a set of polygons
 average(polygons = polygons_average, points = points_average, 'population')
 ```
 
+## distance
+
+Define two points
+
+```{r}
+from <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+   "type": "Point",
+   "coordinates": [-75.343, 39.984]
+ }
+}'
+to <- '{
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.534, 39.123]
+  }
+}'
+```
+
+Calculate distance, default units is kilometers (`km`)
+
+```{r}
+distance(from, to)
+```
