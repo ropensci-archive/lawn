@@ -1,0 +1,12 @@
+Package: turf
+Type: Package
+Title: R client for turf.js for geospatial analysis
+Description: R client for turf.js for geospatial analysis
+Version: 0.0.1.99
+Date: 2015-03-02
+License: MIT + file LICENSE
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com")
+LazyData: TRUE
+Imports:
+    V8
