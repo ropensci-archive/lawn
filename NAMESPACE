@@ -3,6 +3,7 @@
 export(average)
 export(count)
 export(distance)
+export(extent)
 export(filter)
 export(random)
 export(sample)
