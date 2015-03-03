@@ -88,3 +88,84 @@ Calculate distance, default units is kilometers (`km`)
 distance(from, to)
 #> [1] 97.15958
 ```
+
+## random set of points
+
+
+```r
+random(2)
+```
+
+```
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point -76.97620, -53.14368
+#> 2 Feature         Point  -24.45760, 36.80671
+```
+
+```r
+random(5)
+```
+
+```
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type geometry.type  geometry.coordinates
+#> 1 Feature         Point -150.72320, -89.43182
+#> 2 Feature         Point  -39.34182, -16.50341
+#> 3 Feature         Point -179.90565, -86.86754
+#> 4 Feature         Point   -46.31246, 40.35835
+#> 5 Feature         Point  -45.19218, -63.02495
+```
+
+## sample from a FeatureCollection
+
+
+```r
+dat <- points_average
+sample(dat, 1)
+```
+
+```
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type population geometry.type geometry.coordinates
+#> 1 Feature        200         Point   10.72403, 59.92681
+```
+
+```r
+sample(dat, 2)
+```
+
+```
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type population geometry.type geometry.coordinates
+#> 1 Feature        600         Point   10.71579, 59.90478
+#> 2 Feature        200         Point   10.80643, 59.90891
+```
+
+```r
+sample(dat, 3)
+```
+
+```
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type population geometry.type geometry.coordinates
+#> 1 Feature        100         Point   10.74600, 59.90857
+#> 2 Feature        600         Point   10.71579, 59.90478
+#> 3 Feature        200         Point   10.72403, 59.92681
+```
+

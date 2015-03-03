@@ -68,3 +68,20 @@ Calculate distance, default units is kilometers (`km`)
 ```{r}
 distance(from, to)
 ```
+
+## random set of points
+
+```{r collapse=FALSE}
+random(2)
+random(5)
+```
+
+## sample from a FeatureCollection
+
+```{r collapse=FALSE}
+dat <- points_average
+sample(dat, 1)
+sample(dat, 2)
+sample(dat, 3)
+```
+
