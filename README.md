@@ -102,8 +102,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -76.97620, -53.14368
-#> 2 Feature         Point  -24.45760, 36.80671
+#> 1 Feature         Point -117.56023, 28.43863
+#> 2 Feature         Point  -99.42772, 26.52437
 ```
 
 ```r
@@ -116,11 +116,11 @@ random(5)
 #> 
 #> $features
 #>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point -150.72320, -89.43182
-#> 2 Feature         Point  -39.34182, -16.50341
-#> 3 Feature         Point -179.90565, -86.86754
-#> 4 Feature         Point   -46.31246, 40.35835
-#> 5 Feature         Point  -45.19218, -63.02495
+#> 1 Feature         Point   92.94532, -89.51099
+#> 2 Feature         Point    47.85467, 60.36408
+#> 3 Feature         Point  -50.57581, -72.53826
+#> 4 Feature         Point  -45.23143, -85.82128
+#> 5 Feature         Point -159.81295, -79.77215
 ```
 
 ## sample from a FeatureCollection
@@ -137,7 +137,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.72403, 59.92681
+#> 1 Feature        100         Point   10.74600, 59.90857
 ```
 
 ```r
@@ -150,8 +150,8 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        600         Point   10.71579, 59.90478
-#> 2 Feature        200         Point   10.80643, 59.90891
+#> 1 Feature        300         Point   10.79544, 59.93162
+#> 2 Feature        200         Point   10.72403, 59.92681
 ```
 
 ```r
@@ -165,7 +165,16 @@ sample(dat, 3)
 #> $features
 #>      type population geometry.type geometry.coordinates
 #> 1 Feature        100         Point   10.74600, 59.90857
-#> 2 Feature        600         Point   10.71579, 59.90478
-#> 3 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        200         Point   10.80643, 59.90891
+#> 3 Feature        600         Point   10.71579, 59.90478
+```
+
+## extent
+
+
+```r
+dat <- points_average
+extent(dat)
+#> [1] 10.71579 59.90478 10.80643 59.93162
 ```
 

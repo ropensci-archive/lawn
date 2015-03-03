@@ -85,3 +85,9 @@ sample(dat, 2)
 sample(dat, 3)
 ```
 
+## extent
+
+```{r}
+dat <- points_average
+extent(dat)
+```
