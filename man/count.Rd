@@ -2,19 +2,20 @@
 % Please edit documentation in R/count.R
 \name{count}
 \alias{count}
-\title{Count points that fall within a set of polygons.}
+\title{Calculates the number of points that fall within the set of polygons.}
 \usage{
 count(polygons, points, countField = "pt_count")
 }
 \arguments{
-\item{polygons}{asdfdf}
+\item{polygons}{Geojson polygons}
 
-\item{points}{asdfdf}
+\item{points}{Geojson points}
 
-\item{countField}{(character) Name of the resulting count field}
+\item{countField}{(character) A field to append to the attributes of the Polygon features
+representing Point counts}
 }
 \description{
-Count points that fall within a set of polygons.
+Calculates the number of points that fall within the set of polygons.
 }
 \examples{
 polygons <- '{

@@ -1,10 +1,11 @@
-#' Count points that fall within a set of polygons.
+#' Calculates the number of points that fall within the set of polygons.
 #'
 #' @export
 #'
-#' @param polygons asdfdf
-#' @param points asdfdf
-#' @param countField (character) Name of the resulting count field
+#' @param polygons Geojson polygons
+#' @param points Geojson points
+#' @param countField (character) A field to append to the attributes of the Polygon features
+#' representing Point counts
 #' @examples
 #' polygons <- '{
 #'   "type": "FeatureCollection",
