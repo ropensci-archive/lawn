@@ -2,7 +2,7 @@
 % Please edit documentation in R/filter.R
 \name{filter}
 \alias{filter}
-\title{Calculate the distance between two points}
+\title{Filter a FeatureCollection by a given property and value}
 \usage{
 filter(features, key, value)
 }
@@ -14,7 +14,7 @@ filter(features, key, value)
 \item{value}{(character) The value of that property on which to filter}
 }
 \description{
-Calculate the distance between two points
+Filter a FeatureCollection by a given property and value
 }
 \examples{
 dat <- filter_features

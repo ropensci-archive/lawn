@@ -1,4 +1,4 @@
-#' Calculate the distance between two points
+#' Filter a FeatureCollection by a given property and value
 #'
 #' @export
 #'
