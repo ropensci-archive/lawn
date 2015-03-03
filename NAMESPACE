@@ -3,4 +3,5 @@
 export(average)
 export(count)
 export(distance)
+export(filter)
 importFrom(V8,new_context)
