@@ -26,9 +26,26 @@
 #'   }
 #' }'
 #' distance(from, to)
+#'
+#' # from us.cities dataset
+#' library('maps')
+#' library('geojsonio')
+#' data(us.cities)
+#' out <- geojson_list(us.cities[1:2,], lat='lat', lon='long')
+#' distance(from=out$features[[1]], out$features[[2]])
 distance <- function(from, to, units = 'kilometers') {
+  from <- convert(from)
+  to <- convert(to)
   ct$eval(sprintf('var point1 = %s;', from))
   ct$eval(sprintf('var point2 = %s;', to))
   ct$eval(sprintf("var avg = turf.distance(point1, point2, '%s');", units))
   ct$get("avg")
+}
+
+convert <- function(x) {
+  if(is.character(x)) {
+    x
+  } else {
+    jsonlite::toJSON(x, auto_unbox = TRUE)
+  }
 }
