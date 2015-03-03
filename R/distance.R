@@ -1,5 +1,6 @@
 #' Calculate the distance between two points
 #'
+#' @importFrom jsonlite toJSON
 #' @export
 #'
 #' @param polygons Geojson polygons

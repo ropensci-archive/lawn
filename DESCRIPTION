@@ -11,4 +11,5 @@ URL: https://github.com/sckott/turf
 BugReports: http://www.github.com/sckott/turf/issues
 LazyData: TRUE
 Imports:
-    V8
+    V8,
+    jsonlite
