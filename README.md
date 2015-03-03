@@ -20,73 +20,11 @@ library("turf")
 
 ## count
 
-Define polygons and points
+Count number of points within polygons
 
 
 ```r
-polygons <- '{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-112.072391,46.586591],
-          [-112.072391,46.61761],
-          [-112.028102,46.61761],
-          [-112.028102,46.586591],
-          [-112.072391,46.586591]
-          ]]
-      }
-    }, {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-112.023983,46.570426],
-          [-112.023983,46.615016],
-          [-111.966133,46.615016],
-          [-111.966133,46.570426],
-          [-112.023983,46.570426]
-          ]]
-      }
-    }
-    ]
-};'
-points <- '{
-"type": "FeatureCollection",
-"features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "population": 200
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-112.0372, 46.608058]
-      }
-    }, {
-      "type": "Feature",
-      "properties": {
-        "population": 600
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-112.045955, 46.596264]
-      }
-    }
-    ]
-};'
-```
-
-Count points within polygons
-
-
-```r
-count(polygons = polygons, points = points)
+count(polygons = polygons_count, points = points_count)
 #> $type
 #> [1] "FeatureCollection"
 #> 
@@ -97,5 +35,25 @@ count(polygons = polygons, points = points)
 #>                                                                                           geometry.coordinates
 #> 1 -112.07239, -112.07239, -112.02810, -112.02810, -112.07239, 46.58659, 46.61761, 46.61761, 46.58659, 46.58659
 #> 2 -112.02398, -112.02398, -111.96613, -111.96613, -112.02398, 46.57043, 46.61502, 46.61502, 46.57043, 46.57043
+```
+
+
+## average
+
+Average value of a field for a set of points within a set of polygons
+
+
+```r
+average(polygons = polygons_average, points = points_average, 'population')
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type average geometry.type
+#> 1 Feature     300       Polygon
+#> 2 Feature     250       Polygon
+#>                                                                                 geometry.coordinates
+#> 1 10.66635, 10.66635, 10.76248, 10.76248, 10.66635, 59.89066, 59.93678, 59.93678, 59.89066, 59.89066
+#> 2 10.76454, 10.76454, 10.86617, 10.86617, 10.76454, 59.88928, 59.93713, 59.93713, 59.88928, 59.88928
 ```
 

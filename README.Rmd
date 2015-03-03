@@ -25,70 +25,18 @@ library("turf")
 
 ## count
 
-Define polygons and points
+Count number of points within polygons
 
 ```{r}
-polygons <- '{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-112.072391,46.586591],
-          [-112.072391,46.61761],
-          [-112.028102,46.61761],
-          [-112.028102,46.586591],
-          [-112.072391,46.586591]
-          ]]
-      }
-    }, {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-112.023983,46.570426],
-          [-112.023983,46.615016],
-          [-111.966133,46.615016],
-          [-111.966133,46.570426],
-          [-112.023983,46.570426]
-          ]]
-      }
-    }
-    ]
-};'
-points <- '{
-"type": "FeatureCollection",
-"features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "population": 200
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-112.0372, 46.608058]
-      }
-    }, {
-      "type": "Feature",
-      "properties": {
-        "population": 600
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-112.045955, 46.596264]
-      }
-    }
-    ]
-};'
+count(polygons = polygons_count, points = points_count)
 ```
 
-Count points within polygons
+
+## average
+
+Average value of a field for a set of points within a set of polygons
 
 ```{r}
-count(polygons = polygons, points = points)
+average(polygons = polygons_average, points = points_average, 'population')
 ```
 
