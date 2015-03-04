@@ -101,9 +101,9 @@ random(2)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type   geometry.coordinates
-#> 1 Feature         Point -177.768053, -6.424876
-#> 2 Feature         Point      134.5158, 31.0301
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point -96.40770, -75.77308
+#> 2 Feature         Point -146.33881, 57.26589
 ```
 
 ```r
@@ -115,12 +115,12 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point   71.444741, 4.487889
-#> 2 Feature         Point -120.39387, -58.30928
-#> 3 Feature         Point     96.2065, -80.9319
-#> 4 Feature         Point   73.91923, -59.25878
-#> 5 Feature         Point  114.23631, -50.67585
+#>      type geometry.type   geometry.coordinates
+#> 1 Feature         Point   170.84567, -18.00765
+#> 2 Feature         Point     52.69687, 41.28239
+#> 3 Feature         Point    -80.85200, 32.10113
+#> 4 Feature         Point   -157.02733, 31.10987
+#> 5 Feature         Point -138.180712, -8.030109
 ```
 
 ## sample from a FeatureCollection
@@ -150,7 +150,7 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        200         Point   10.80643, 59.90891
 #> 2 Feature        200         Point   10.72403, 59.92681
 ```
 
@@ -164,9 +164,9 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        300         Point   10.79544, 59.93162
-#> 3 Feature        100         Point   10.74600, 59.90857
+#> 1 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        200         Point   10.80643, 59.90891
+#> 3 Feature        600         Point   10.71579, 59.90478
 ```
 
 ## extent
@@ -177,3 +177,18 @@ dat <- points_average
 extent(dat)
 #> [1] 10.71579 59.90478 10.80643 59.93162
 ```
+
+## within
+
+
+```r
+within(points_within, polygon_within)
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point   -46.6318, -23.5523
+#> 2 Feature         Point     -46.643, -23.557
+```
+

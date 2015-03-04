@@ -91,3 +91,10 @@ sample(dat, 3)
 dat <- points_average
 extent(dat)
 ```
+
+## within
+
+```{r}
+within(points_within, polygon_within)
+```
+
