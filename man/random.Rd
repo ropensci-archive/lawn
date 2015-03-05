@@ -24,9 +24,8 @@ random(10)
 random(1000)
 
 # Sample points from a FeatureCollection
-dat <- points_average
-sample(dat, 1)
-sample(dat, 2)
-sample(dat, 3)
+sample(lawn_data$points_average, 1)
+sample(lawn_data$points_average, 2)
+sample(lawn_data$points_average, 3)
 }
 

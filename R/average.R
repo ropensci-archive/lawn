@@ -8,7 +8,9 @@
 #' @param outputField (character) The field in polygons to put results of the averages
 #' @examples
 #' # using data in the package
-#' average(polygons = polygons_average, points = points_average, 'population')
+#' cat(lawn_data$points_average)
+#' cat(lawn_data$polygons_average)
+#' average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
 average <- function(polygons, points, field, outputField = 'average') {
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))

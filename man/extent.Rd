@@ -19,8 +19,8 @@ and returns a bounding box. The returned bounding box is of the form
 }
 \examples{
 # From a FeatureCollection
-dat <- points_average
-extent(dat)
+cat(lawn_data$points_average)
+extent(lawn_data$points_average)
 
 # From a Feature
 dat <- '{

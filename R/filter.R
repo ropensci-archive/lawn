@@ -6,10 +6,10 @@
 #' @param key (character) The property on which to filter
 #' @param value (character) The value of that property on which to filter
 #' @examples
-#' dat <- filter_features
-#' filter(dat, 'species', 'oak')
-#' filter(dat, 'species', 'maple')
-#' filter(dat, 'species', 'redwood')
+#' cat(lawn_data$filter_features)
+#' filter(lawn_data$filter_features, 'species', 'oak')
+#' filter(lawn_data$filter_features, 'species', 'maple')
+#' filter(lawn_data$filter_features, 'species', 'redwood')
 filter <- function(features, key, value) {
   ct$eval(sprintf('var key = "%s";', key))
   ct$eval(sprintf('var value = "%s";', value))

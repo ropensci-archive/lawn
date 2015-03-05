@@ -15,6 +15,8 @@ within(points, polygons)
 Return points that fall within polygons
 }
 \examples{
-within(points_within, polygon_within)
+cat(lawn_data$points_within)
+cat(lawn_data$polygons_within)
+within(lawn_data$points_within, lawn_data$polygons_within)
 }
 

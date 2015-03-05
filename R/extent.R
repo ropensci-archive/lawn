@@ -7,8 +7,8 @@
 #' [west, south, east, north].
 #' @examples
 #' # From a FeatureCollection
-#' dat <- points_average
-#' extent(dat)
+#' cat(lawn_data$points_average)
+#' extent(lawn_data$points_average)
 #'
 #' # From a Feature
 #' dat <- '{

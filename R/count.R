@@ -8,7 +8,9 @@
 #' representing Point counts
 #' @examples
 #' # using data in the package
-#' count(polygons = polygons_count, points = points_count)
+#' cat(lawn_data$points_count)
+#' cat(lawn_data$polygons_count)
+#' count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 count <- function(polygons, points, countField = 'pt_count') {
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))

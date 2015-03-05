@@ -19,6 +19,8 @@ Calculates the number of points that fall within the set of polygons.
 }
 \examples{
 # using data in the package
-count(polygons = polygons_count, points = points_count)
+cat(lawn_data$points_count)
+cat(lawn_data$polygons_count)
+count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 }
 
