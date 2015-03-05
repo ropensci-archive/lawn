@@ -3,6 +3,9 @@ lawn
 
 
 
+[![Build Status](https://api.travis-ci.org/sckott/lawn.png)](https://travis-ci.org/sckott/lawn)
+[![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
+
 `lawn` is an R wrapper for [turf.js](http://turfjs.org/)
 
 ## Install
@@ -24,7 +27,7 @@ Count number of points within polygons
 
 
 ```r
-count(polygons = polygons_count, points = points_count)
+count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 #> $type
 #> [1] "FeatureCollection"
 #> 
@@ -44,7 +47,7 @@ Average value of a field for a set of points within a set of polygons
 
 
 ```r
-average(polygons = polygons_average, points = points_average, 'population')
+average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
 #> $type
 #> [1] "FeatureCollection"
 #> 
@@ -102,8 +105,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -96.40770, -75.77308
-#> 2 Feature         Point -146.33881, 57.26589
+#> 1 Feature         Point -173.98268, 78.81371
+#> 2 Feature         Point -112.72743, 17.81833
 ```
 
 ```r
@@ -115,19 +118,19 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type   geometry.coordinates
-#> 1 Feature         Point   170.84567, -18.00765
-#> 2 Feature         Point     52.69687, 41.28239
-#> 3 Feature         Point    -80.85200, 32.10113
-#> 4 Feature         Point   -157.02733, 31.10987
-#> 5 Feature         Point -138.180712, -8.030109
+#>      type geometry.type  geometry.coordinates
+#> 1 Feature         Point    26.41179, 37.17540
+#> 2 Feature         Point   -31.18082, 53.50672
+#> 3 Feature         Point    81.55997, 25.41563
+#> 4 Feature         Point -147.59000, -55.09112
+#> 5 Feature         Point    10.00120, 19.32502
 ```
 
 ## sample from a FeatureCollection
 
 
 ```r
-dat <- points_average
+dat <- lawn_data$points_average
 sample(dat, 1)
 ```
 
@@ -137,7 +140,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        100         Point   10.74600, 59.90857
+#> 1 Feature        200         Point   10.80643, 59.90891
 ```
 
 ```r
@@ -151,7 +154,7 @@ sample(dat, 2)
 #> $features
 #>      type population geometry.type geometry.coordinates
 #> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        600         Point   10.71579, 59.90478
 ```
 
 ```r
@@ -164,17 +167,16 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.72403, 59.92681
-#> 2 Feature        200         Point   10.80643, 59.90891
-#> 3 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        200         Point   10.80643, 59.90891
+#> 2 Feature        600         Point   10.71579, 59.90478
+#> 3 Feature        100         Point   10.74600, 59.90857
 ```
 
 ## extent
 
 
 ```r
-dat <- points_average
-extent(dat)
+extent(lawn_data$points_average)
 #> [1] 10.71579 59.90478 10.80643 59.93162
 ```
 
@@ -182,7 +184,7 @@ extent(dat)
 
 
 ```r
-within(points_within, polygon_within)
+within(lawn_data$points_within, lawn_data$polygons_within)
 #> $type
 #> [1] "FeatureCollection"
 #> 

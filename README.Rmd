@@ -10,6 +10,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Build Status](https://api.travis-ci.org/sckott/lawn.png)](https://travis-ci.org/sckott/lawn)
+[![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
+
 `lawn` is an R wrapper for [turf.js](http://turfjs.org/)
 
 ## Install
@@ -28,7 +31,7 @@ library("lawn")
 Count number of points within polygons
 
 ```{r}
-count(polygons = polygons_count, points = points_count)
+count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 ```
 
 
@@ -37,7 +40,7 @@ count(polygons = polygons_count, points = points_count)
 Average value of a field for a set of points within a set of polygons
 
 ```{r}
-average(polygons = polygons_average, points = points_average, 'population')
+average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
 ```
 
 ## distance
@@ -79,7 +82,7 @@ random(5)
 ## sample from a FeatureCollection
 
 ```{r collapse=FALSE}
-dat <- points_average
+dat <- lawn_data$points_average
 sample(dat, 1)
 sample(dat, 2)
 sample(dat, 3)
@@ -88,13 +91,12 @@ sample(dat, 3)
 ## extent
 
 ```{r}
-dat <- points_average
-extent(dat)
+extent(lawn_data$points_average)
 ```
 
 ## within
 
 ```{r}
-within(points_within, polygon_within)
+within(lawn_data$points_within, lawn_data$polygons_within)
 ```
 
