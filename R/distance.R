@@ -26,13 +26,6 @@
 #'   }
 #' }'
 #' distance(from, to)
-#'
-#' # from us.cities dataset
-#' library('maps')
-#' library('geojsonio')
-#' data(us.cities)
-#' out <- geojson_list(us.cities[1:2,], lat='lat', lon='long')
-#' distance(from=out$features[[1]], out$features[[2]])
 distance <- function(from, to, units = 'kilometers') {
   from <- convert(from)
   to <- convert(to)
