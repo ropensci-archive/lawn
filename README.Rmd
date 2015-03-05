@@ -134,7 +134,7 @@ Or during process of manipulating geojson, view at mostly any time.
 
 Here, we sample at random two points from the same dataset just viewed.
 
-```{r}
+```{r eval=FALSE}
 view(jsonlite::toJSON(sample(lawn_data$points_average, 2), auto_unbox=TRUE))
 ```
 
