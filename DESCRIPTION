@@ -12,7 +12,8 @@ BugReports: http://www.github.com/sckott/lawn/issues
 LazyData: TRUE
 Imports:
     V8,
-    jsonlite
+    jsonlite,
+    leaflet
 Suggests:
     testthat
 Enhances:
