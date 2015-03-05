@@ -5,7 +5,7 @@
 #' @param dist distance used to buffer the input
 #' @param units (character) Can be miles, feet, kilometers, meters, or degrees
 #' @details Calculates and returns a buffered feature.
-#'
+#' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' # From a FeatureCollection
 #' dat <- random(100)
