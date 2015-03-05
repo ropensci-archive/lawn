@@ -105,8 +105,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -173.98268, 78.81371
-#> 2 Feature         Point -112.72743, 17.81833
+#> 1 Feature         Point  104.57512, 48.29644
+#> 2 Feature         Point  19.56215, -28.94375
 ```
 
 ```r
@@ -118,12 +118,12 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point    26.41179, 37.17540
-#> 2 Feature         Point   -31.18082, 53.50672
-#> 3 Feature         Point    81.55997, 25.41563
-#> 4 Feature         Point -147.59000, -55.09112
-#> 5 Feature         Point    10.00120, 19.32502
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point  36.41980, -39.86598
+#> 2 Feature         Point -42.04151, -39.67086
+#> 3 Feature         Point  38.49978, -59.51030
+#> 4 Feature         Point  -80.09571, 22.90585
+#> 5 Feature         Point -2.710217, 50.356996
 ```
 
 ## sample from a FeatureCollection
@@ -140,7 +140,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
+#> 1 Feature        200         Point   10.72403, 59.92681
 ```
 
 ```r
@@ -153,8 +153,8 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        300         Point   10.79544, 59.93162
 ```
 
 ```r
@@ -167,8 +167,8 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        600         Point   10.71579, 59.90478
+#> 2 Feature        300         Point   10.79544, 59.93162
 #> 3 Feature        100         Point   10.74600, 59.90857
 ```
 
@@ -194,3 +194,31 @@ within(lawn_data$points_within, lawn_data$polygons_within)
 #> 2 Feature         Point     -46.643, -23.557
 ```
 
+## buffer
+
+
+```r
+dat <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+     "type": "Polygon",
+     "coordinates": [[
+       [-112.072391,46.586591],
+       [-112.072391,46.61761],
+       [-112.028102,46.61761],
+       [-112.028102,46.586591],
+       [-112.072391,46.586591]
+     ]]
+   }
+}'
+buffer(dat, 1, "miles")
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type geometry.type
+#> 1 Feature       Polygon
+#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           geometry.coordinates
+#> 1 -112.07239, -112.07522, -112.07793, -112.08044, -112.08263, -112.08443, -112.08577, -112.08660, -112.08687, -112.08687, -112.08660, -112.08577, -112.08443, -112.08263, -112.08044, -112.07793, -112.07522, -112.07239, -112.02810, -112.02528, -112.02256, -112.02006, -112.01786, -112.01606, -112.01472, -112.01390, -112.01362, -112.01362, -112.01390, -112.01472, -112.01606, -112.01786, -112.02006, -112.02256, -112.02528, -112.02810, -112.07239, 46.57211, 46.57239, 46.57321, 46.57455, 46.57635, 46.57854, 46.58105, 46.58377, 46.58659, 46.61761, 46.62044, 46.62315, 46.62566, 46.62785, 46.62965, 46.63099, 46.63181, 46.63209, 46.63209, 46.63181, 46.63099, 46.62965, 46.62785, 46.62566, 46.62315, 46.62044, 46.61761, 46.58659, 46.58377, 46.58105, 46.57854, 46.57635, 46.57455, 46.57321, 46.57239, 46.57211, 46.57211
+```

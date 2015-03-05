@@ -100,3 +100,22 @@ extent(lawn_data$points_average)
 within(lawn_data$points_within, lawn_data$polygons_within)
 ```
 
+## buffer
+
+```{r}
+dat <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+     "type": "Polygon",
+     "coordinates": [[
+       [-112.072391,46.586591],
+       [-112.072391,46.61761],
+       [-112.028102,46.61761],
+       [-112.028102,46.586591],
+       [-112.072391,46.586591]
+     ]]
+   }
+}'
+buffer(dat, 1, "miles")
+```
