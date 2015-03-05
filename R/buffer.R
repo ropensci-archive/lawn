@@ -26,7 +26,7 @@
 #'      ]]
 #'    }
 #' }'
-#' buffer(dat, 1,"miles")
+#' buffer(dat, 1, "miles")
 
 buffer <- function(input,dist,units=c("meters", "feet", "kilometers", "miles", "degrees")) {
   input<-convert(input)

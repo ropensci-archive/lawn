@@ -40,7 +40,7 @@ dat <- '{
      ]]
    }
 }'
-buffer(dat, 1,"miles")
+buffer(dat, 1, "miles")
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
