@@ -15,4 +15,5 @@ Imports:
     jsonlite
 Suggests:
     geojsonio,
-    maps
+    maps,
+    testthat
