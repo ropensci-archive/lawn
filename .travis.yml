@@ -1,18 +1,18 @@
 language: r
 
 before_install:
-  - sudo apt-get install libv8-dev
+- sudo apt-get install libv8-dev
 
 r_github_packages:
-  - jimhester/covr
-  - rstudio/leaflet
+- jimhester/covr
+- rstudio/leaflet
 
 after_success:
-  - Rscript -e 'library(covr); coveralls()'
+- Rscript -e 'library(covr); coveralls()'
 
 notifications:
   email:
     on_success: change
     on_failure: change
   slack:
-    secure: a/rA4KawTfmMItXyKG8QKb9ISUq1Ow7RM5pW+JFbjUkDHeJHtfGqCqw+fix1j1yxUY2VKtzMXwe5mOk2Guf3L/JF3UjYnel0p2dMVpqEnNZQu3fGbenoibM/WS/fzaFe5prn+Tq3tDLu+I/CijWclZCVD/fxzgjOq5XDL7ZqYwU=
+    secure: VH88KqRc9buwU3liODVtnycaBMoqvBrvCPnn3L6ydRALCGKvw4s5NCrb7RSSAnlYJSlTsiw4+fQcbkuhcJJhGUh9wK3avmCh6tJNHOztUxDbkbUzovSgXjCruNogVjnjh06yT/E3UqAINrnA9V1Hp5JUtaG6LzNV2cuP4hyqUfo=
