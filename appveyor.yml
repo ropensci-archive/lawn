@@ -12,6 +12,7 @@ install:
 
 build_script:
   - travis-tool.sh install_deps
+  - travis-tool.sh install_github rstudio/leaflet
 
 test_script:
   - travis-tool.sh run_tests
@@ -53,4 +54,4 @@ deploy:
   bucket: ropensci-windows
   artifact: zip
   set_public: true
-  
+
