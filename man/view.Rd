@@ -27,6 +27,11 @@ view(lawn_data$polygons_count)
 library("jsonlite")
 mylist <- fromJSON(lawn_data$polygons_average, FALSE)
 view(mylist)
+
+# from json (jsonlite class)
+x <- minify(lawn_data$points_count)
+class(x)
+view(x)
 }
 }
 
