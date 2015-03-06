@@ -2,22 +2,31 @@
 % Please edit documentation in R/view.R
 \name{view}
 \alias{view}
-\title{Visualize}
+\title{Visualize geojson from a character string or list}
 \usage{
 view(x)
 }
 \arguments{
-\item{x}{Input, a geojson character string}
+\item{x}{Input, a geojson character string or list}
+}
+\value{
+Opens a map with the geojson object(s)
 }
 \description{
-Visualize
+Visualize geojson from a character string or list
 }
 \examples{
 \dontrun{
+# from character string
 view(lawn_data$polygons_average)
 view(lawn_data$filter_features)
 view(lawn_data$polygons_within)
 view(lawn_data$polygons_count)
+
+# from a list
+library("jsonlite")
+mylist <- fromJSON(lawn_data$polygons_average, FALSE)
+view(mylist)
 }
 }
 
