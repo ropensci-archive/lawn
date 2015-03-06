@@ -2,6 +2,7 @@
 #'
 #' @import leaflet
 #' @export
+#' @param x Input, a geojson character string
 #' @examples \dontrun{
 #' view(lawn_data$polygons_average)
 #' view(lawn_data$filter_features)
