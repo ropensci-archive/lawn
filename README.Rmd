@@ -10,7 +10,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://api.travis-ci.org/sckott/lawn.png)](https://travis-ci.org/sckott/lawn)
+[![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
+[![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
 
 `lawn` is an R wrapper for [turf.js](http://turfjs.org/)
@@ -19,7 +20,7 @@ knitr::opts_chunk$set(
 
 ```{r eval=FALSE}
 install.packages("devtools")
-devtools::install_github("sckott/lawn")
+devtools::install_github("ropensci/lawn")
 ```
 
 ```{r}
@@ -139,3 +140,11 @@ view(jsonlite::toJSON(sample(lawn_data$points_average, 2), auto_unbox=TRUE))
 ```
 
 ![map1](inst/img/map2.png)
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
+* License: MIT
+* Get citation information for `lawn` in R doing `citation(package = 'lawn')`
+
+[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

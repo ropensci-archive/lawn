@@ -3,7 +3,8 @@ lawn
 
 
 
-[![Build Status](https://api.travis-ci.org/sckott/lawn.png)](https://travis-ci.org/sckott/lawn)
+[![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
+[![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
 
 `lawn` is an R wrapper for [turf.js](http://turfjs.org/)
@@ -13,7 +14,7 @@ lawn
 
 ```r
 install.packages("devtools")
-devtools::install_github("sckott/lawn")
+devtools::install_github("ropensci/lawn")
 ```
 
 
@@ -105,8 +106,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point  118.95746, 71.49877
-#> 2 Feature         Point   95.91548, 74.90674
+#> 1 Feature         Point 160.90175, -61.08592
+#> 2 Feature         Point   13.17037, 33.93215
 ```
 
 ```r
@@ -118,12 +119,12 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point -154.10313, -64.23609
-#> 2 Feature         Point   -40.37785, 57.48090
-#> 3 Feature         Point   -90.97275, 54.40162
-#> 4 Feature         Point   153.13890, 73.75951
-#> 5 Feature         Point  149.91840, -16.28118
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point  -64.35041, 43.51018
+#> 2 Feature         Point  107.58094, 56.84191
+#> 3 Feature         Point   -171.6337, 17.5349
+#> 4 Feature         Point -139.74770, -3.31051
+#> 5 Feature         Point 11.401996, -2.759027
 ```
 
 ## sample from a FeatureCollection
@@ -140,7 +141,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.72403, 59.92681
+#> 1 Feature        200         Point   10.80643, 59.90891
 ```
 
 ```r
@@ -153,8 +154,8 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        300         Point   10.79544, 59.93162
-#> 2 Feature        200         Point   10.80643, 59.90891
+#> 1 Feature        100         Point   10.74600, 59.90857
+#> 2 Feature        300         Point   10.79544, 59.93162
 ```
 
 ```r
@@ -167,8 +168,8 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        100         Point   10.74600, 59.90857
-#> 2 Feature        200         Point   10.80643, 59.90891
+#> 1 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        100         Point   10.74600, 59.90857
 #> 3 Feature        600         Point   10.71579, 59.90478
 ```
 
@@ -243,79 +244,12 @@ Here, we sample at random two points from the same dataset just viewed.
 view(jsonlite::toJSON(sample(lawn_data$points_average, 2), auto_unbox=TRUE))
 ```
 
-<!--html_preserve--><div id="htmlwidget-9818" style="width:504px;height:504px;" class="leaflet"></div>
-<script type="application/json" data-for="htmlwidget-9818">{ "x": {
- "calls": [
- {
- "method": "tileLayer",
-"args": [
- "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-{
- "minZoom":                 0,
-"maxZoom":                18,
-"maxNativeZoom": null,
-"tileSize":               256,
-"subdomains": "abc",
-"errorTileUrl": "",
-"tms": false,
-"continuousWorld": false,
-"noWrap": false,
-"zoomOffset":                 0,
-"zoomReverse": false,
-"opacity":                 1,
-"zIndex": null,
-"unloadInvisibleTiles": null,
-"updateWhenIdle": null,
-"detectRetina": false,
-"reuseTiles": false,
-"attribution": "&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>" 
-} 
-] 
-},
-{
- "method": "geoJSON",
-"args": [
- {
- "type": "FeatureCollection",
-"features": [
- {
- "type": "Feature",
-"properties": {
- "population": 200 
-},
-"geometry": {
- "type": "Point",
-"coordinates": [
-           10.8064,
-          59.9089 
-] 
-} 
-},
-{
- "type": "Feature",
-"properties": {
- "population": 300 
-},
-"geometry": {
- "type": "Point",
-"coordinates": [
-           10.7954,
-          59.9316 
-] 
-} 
-} 
-] 
-},
-null 
-] 
-} 
-],
-"fitBounds": [
-           59.9089,
-          10.7954,
-          59.9316,
-          10.8064 
-] 
-},"evals": [  ] }</script><!--/html_preserve-->
-
 ![map1](inst/img/map2.png)
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
+* License: MIT
+* Get citation information for `lawn` in R doing `citation(package = 'lawn')`
+
+[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
