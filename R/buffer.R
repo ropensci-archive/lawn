@@ -27,10 +27,13 @@
 #'    }
 #' }'
 #' buffer(dat, 1, "miles")
+#'
+#' # buffer a point
+#' buffer(point(c(-74.50,40)), 100, "meters") %>% view
 
-buffer <- function(input,dist,units=c("meters", "feet", "kilometers", "miles", "degrees")) {
-  input<-convert(input)
-  units<-match.arg(units)
+buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
+  input <- convert(input)
+  units <- match.arg(units)
   ct$eval(sprintf("var units = '%s';",units))
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))

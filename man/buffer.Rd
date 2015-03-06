@@ -41,6 +41,9 @@ dat <- '{
    }
 }'
 buffer(dat, 1, "miles")
+
+# buffer a point
+buffer(point(c(-74.50,40)), 100, "meters") \%>\% view
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

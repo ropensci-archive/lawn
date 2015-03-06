@@ -32,7 +32,7 @@ view.character <- function(x) {
 
 #' @export
 view.list <- function(x) {
-  make_view(toJSON(x, auto_unbox = TRUE))
+  make_view(toJSON(x, auto_unbox = TRUE, digits = 22))
 }
 
 #' @export
