@@ -9,7 +9,7 @@
 #'          \code{NULL}.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
-#'
+#' \dontrun{
 #' poly1 <- '{
 #' "type": "Feature",
 #' "properties": {
@@ -49,15 +49,27 @@
 #' view(poly2)
 #' intersect(poly1,poly2) %>% view()
 #'
-#' x1 <- buffer(point(c(-122.64, 45.53)),1500,"meters")
-#' x2 <- buffer(point(c(-122.645, 45.53)),1500,"meters")
+#' x1 <- buffer(point(c(-122.6375, 45.53)),1500,"meters")
+#' x2 <- buffer(point(c(-122.6475, 45.53)),1500,"meters")
+#' view(x1)
+#' view(x2)
 #' intersect(x1,x2) %>% view()
-
+#' }
 intersect <- function(poly1, poly2) {
-  poly1 <- convert(poly1)
-  poly2 <- convert(poly2)
-  ct$eval(sprintf("var poly1 = %s;", poly1))
-  ct$eval(sprintf("var poly2 = %s;", poly2))
+  poly1_1 <- convert(poly1)
+  poly2_1 <- convert(poly2)
+  if(is.list(poly1)){
+    ct$eval(sprintf("var poly1 = %s;", poly1_1))
+    ct$eval("poly1 = poly1.features[0]")
+  } else {
+    ct$eval(sprintf("var poly1 = %s;", poly1_1))
+  }
+  if(is.list(poly2)){
+    ct$eval(sprintf("var poly2 = %s;", poly2_1))
+    ct$eval("poly2 = poly2.features[0]")
+  } else {
+    ct$eval(sprintf("var poly2 = %s;", poly2))
+  }
   ct$eval("var inter = turf.intersect(poly1, poly2);")
   ct$get("inter")
 }
