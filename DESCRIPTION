@@ -14,7 +14,8 @@ LazyData: TRUE
 Imports:
     V8,
     jsonlite,
-    leaflet
+    leaflet,
+    magrittr
 Suggests:
     testthat
 Enhances:
