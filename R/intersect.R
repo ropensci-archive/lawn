@@ -5,7 +5,8 @@
 #' @param poly2 A polygon
 
 #' @details Finds the interesection of two polygons and returns just the
-#'          intersection of the two.  Polygons that do not intersect will return
+#'          intersection of the two.  Polygons with just a shared boundary will
+#'          return the boundary. Polygons that do not intersect will return
 #'          \code{NULL}.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples

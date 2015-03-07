@@ -16,10 +16,12 @@ Find the intersection of two polygons
 }
 \details{
 Finds the interesection of two polygons and returns just the
-         intersection of the two.  Polygons that do not intersect will return
+         intersection of the two.  Polygons with just a shared boundary will
+         return the boundary. Polygons that do not intersect will return
          \code{NULL}.
 }
 \examples{
+\dontrun{
 poly1 <- '{
 "type": "Feature",
 "properties": {
@@ -59,9 +61,12 @@ view(poly1)
 view(poly2)
 intersect(poly1,poly2) \%>\% view()
 
-x1 <- buffer(point(c(-122.64, 45.53)),1500,"meters")
-x2 <- buffer(point(c(-122.645, 45.53)),1500,"meters")
+x1 <- buffer(point(c(-122.6375, 45.53)),1500,"meters")
+x2 <- buffer(point(c(-122.6475, 45.53)),1500,"meters")
+view(x1)
+view(x2)
 intersect(x1,x2) \%>\% view()
+}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
