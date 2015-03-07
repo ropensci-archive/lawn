@@ -23,21 +23,22 @@ Finds the interesection of two polygons and returns just the
 \examples{
 \dontrun{
 poly1 <- '{
-"type": "Feature",
-"properties": {
-  "fill": "#0f0"
-},
-"geometry": {
-  "type": "Polygon",
-  "coordinates": [[
-    [-122.801742, 45.48565],
-    [-122.801742, 45.60491],
-    [-122.584762, 45.60491],
-    [-122.584762, 45.48565],
-    [-122.801742, 45.48565]
+ "type": "Feature",
+ "properties": {
+   "fill": "#0f0"
+ },
+ "geometry": {
+   "type": "Polygon",
+   "coordinates": [[
+     [-122.801742, 45.48565],
+     [-122.801742, 45.60491],
+     [-122.584762, 45.60491],
+     [-122.584762, 45.48565],
+     [-122.801742, 45.48565]
     ]]
-}
+ }
 }'
+
 poly2 <- '{
  "type": "Feature",
  "properties": {
@@ -59,10 +60,10 @@ poly2 <- '{
 }'
 view(poly1)
 view(poly2)
-intersect(poly1,poly2) \%>\% view()
+intersect(poly1, poly2) \%>\% view()
 
-x1 <- buffer(point(c(-122.6375, 45.53)),1500,"meters")
-x2 <- buffer(point(c(-122.6475, 45.53)),1500,"meters")
+x1 <- buffer(point(c(-122.6375, 45.53)), 1500, "meters")
+x2 <- buffer(point(c(-122.6475, 45.53)), 1500, "meters")
 view(x1)
 view(x2)
 intersect(x1,x2) \%>\% view()
