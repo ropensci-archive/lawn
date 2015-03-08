@@ -21,7 +21,6 @@ Finds the interesection of two polygons and returns the
          \code{NULL}.
 }
 \examples{
-\dontrun{
 poly1 <- '{
  "type": "Feature",
  "properties": {
@@ -67,7 +66,6 @@ x2 <- buffer(point(c(-122.6475, 45.53)), 1500, "meters")
 view(x1)
 view(x2)
 union(x1,x2) \%>\% view()
-}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

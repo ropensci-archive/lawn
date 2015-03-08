@@ -7,7 +7,6 @@
 #' @details Calculates and returns a buffered feature.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
-#' \dontrun{
 #' # From a FeatureCollection
 #' dat <- random(100)
 #' buffer(dat, 100)
@@ -31,7 +30,7 @@
 #'
 #' # buffer a point
 #' buffer(point(c(-74.50,40)), 100, "meters") %>% view
-#' }
+#'
 
 buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
   input <- convert(input)

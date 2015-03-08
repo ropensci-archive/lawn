@@ -10,7 +10,7 @@
 #'          \code{NULL}.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
-#' \dontrun{
+#'
 #' poly1 <- '{
 #'  "type": "Feature",
 #'  "properties": {
@@ -56,7 +56,7 @@
 #' view(x1)
 #' view(x2)
 #' union(x1,x2) %>% view()
-#' }
+#'
 union <- function(poly1, poly2) {
   poly1_1 <- convert(poly1)
   poly2_1 <- convert(poly2)
