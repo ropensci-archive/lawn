@@ -1,6 +1,5 @@
 #' Calculate the distance between two points
 #'
-#' @importFrom jsonlite toJSON
 #' @export
 #'
 #' @param from Origin point
@@ -33,12 +32,4 @@ distance <- function(from, to, units = 'kilometers') {
   ct$eval(sprintf('var point2 = %s;', to))
   ct$eval(sprintf("var avg = turf.distance(point1, point2, '%s');", units))
   ct$get("avg")
-}
-
-convert <- function(x) {
-  if(is.character(x)) {
-    x
-  } else {
-    jsonlite::toJSON(x, auto_unbox = TRUE)
-  }
 }

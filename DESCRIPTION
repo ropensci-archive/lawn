@@ -2,18 +2,20 @@ Package: lawn
 Type: Package
 Title: R client for turf.js for geospatial analysis
 Description: R client for turf.js for geospatial analysis
-Version: 0.0.2.99
-Date: 2015-03-05
+Version: 0.0.3.99
+Date: 2015-03-07
 License: MIT + file LICENSE
-Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com")
+Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com"),
+    person("Jeff", "Hollister", role = "aut", email = "hollister.jeff@epa.gov"))
 URL: https://github.com/ropensci/lawn
 BugReports: http://www.github.com/ropensci/lawn/issues
 LazyData: TRUE
 Imports:
     V8,
     jsonlite,
-    leaflet
+    leaflet,
+    magrittr
 Suggests:
     testthat
 Enhances:

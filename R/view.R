@@ -1,6 +1,6 @@
 #' Visualize geojson from a character string or list
 #'
-#' @import leaflet
+#' @importFrom leaflet leaflet addTiles addGeoJSON fitBounds
 #' @export
 #' @param x Input, a geojson character string or list
 #' @return Opens a map with the geojson object(s)
