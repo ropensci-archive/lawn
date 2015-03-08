@@ -1,15 +1,16 @@
-#' Find the intersection of two polygons
+#' Find the union of two polygons
 #'
 #' @export
 #' @param poly1 A polygon
 #' @param poly2 A polygon
 #'
-#' @details Finds the interesection of two polygons and returns just the
-#'          intersection of the two.  Polygons with just a shared boundary will
-#'          return the boundary. Polygons that do not intersect will return
+#' @details Finds the interesection of two polygons and returns the
+#'          union of the two.  Contiguous polygons are combined, non-contiguous
+#'          polygons are returned as MultiPolygon.
 #'          \code{NULL}.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
+#'
 #' poly1 <- '{
 #'  "type": "Feature",
 #'  "properties": {
@@ -48,14 +49,15 @@
 #' }'
 #' view(poly1)
 #' view(poly2)
-#' intersect(poly1, poly2) %>% view()
+#' union(poly1, poly2) %>% view()
 #'
 #' x1 <- buffer(point(c(-122.6375, 45.53)), 1500, "meters")
 #' x2 <- buffer(point(c(-122.6475, 45.53)), 1500, "meters")
 #' view(x1)
 #' view(x2)
-#' intersect(x1,x2) %>% view()
-intersect <- function(poly1, poly2) {
+#' union(x1,x2) %>% view()
+#'
+union <- function(poly1, poly2) {
   poly1_1 <- convert(poly1)
   poly2_1 <- convert(poly2)
   if(is.list(poly1)){
@@ -70,6 +72,6 @@ intersect <- function(poly1, poly2) {
   } else {
     ct$eval(sprintf("var poly2 = %s;", poly2))
   }
-  ct$eval("var inter = turf.intersect(poly1, poly2);")
-  ct$get("inter")
+  ct$eval("var union = turf.union(poly1, poly2);")
+  ct$get("union")
 }
