@@ -21,6 +21,7 @@ Buffer a feature
 Calculates and returns a buffered feature.
 }
 \examples{
+\dontrun{
 # From a FeatureCollection
 dat <- random(100)
 buffer(dat, 100)
@@ -44,6 +45,7 @@ buffer(dat, 1, "miles")
 
 # buffer a point
 buffer(point(c(-74.50,40)), 100, "meters") \%>\% view
+}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
