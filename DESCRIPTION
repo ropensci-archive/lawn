@@ -18,5 +18,4 @@ Imports:
     magrittr
 Suggests:
     testthat
-Enhances:
-    maps
+Enhances: maps
