@@ -16,46 +16,7 @@ Calculates the total area of a polygon or group of polygons. Returns
          the values in square meters.
 }
 \examples{
-poly <- '{
- "type": "Feature",
- "properties": {},
- "geometry": {
-   "type": "Polygon",
-   "coordinates": [[ [0.0, 0.0],
-     [1.0, 0.0],
-     [1.0, 1.0],
-     [0.0, 1.0],
-     [0.0, 0.0] ]]
-   }
-   }'
-
-multipoly <- '{
- "type": "FeatureCollection",
- "features":[
-   { "type": "Feature",
-     "properties": {},
-     "geometry": {
-       "type": "Polygon",
-         "coordinates": [[ [0.0, 0.0],
-         [1.0, 0.0],
-         [1.0, 1.0],
-         [0.0, 1.0],
-         [0.0, 0.0] ]]
-         }
-   },
-   { "type": "Feature",
-     "properties": {},
-     "geometry": {
-       "type": "Polygon",
-       "coordinates": [[ [1.0, 1.0],
-       [2.0, 1.0],
-       [2.0, 2.0],
-       [1.0, 2.0],
-       [1.0, 1.0] ]]
-       }
-   }]
- }'
-area(poly)
-area(multipoly)
+area(lawn_data$poly)
+area(lawn_data$multipoly)
 }
 
