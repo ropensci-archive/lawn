@@ -40,6 +40,11 @@ view.json <- function(x) {
   make_view(x)
 }
 
+#' @export
+view.geo_list <- function(x) {
+  make_view(jsonlite::toJSON(unclass(x), auto_unbox = TRUE))
+}
+
 make_view <- function(x) {
   b <- as.list(setNames(extent(x), c("lng1","lat1","lng2","lat2")))
   leaflet() %>%
