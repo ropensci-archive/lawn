@@ -7,7 +7,7 @@ lawn
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
 
-`lawn` is an R wrapper for [turf.js](http://turfjs.org/)
+`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library. 
 
 ## Install
 
@@ -106,8 +106,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point 160.90175, -61.08592
-#> 2 Feature         Point   13.17037, 33.93215
+#> 1 Feature         Point 110.67485, -27.12815
+#> 2 Feature         Point -4.898122, 54.011898
 ```
 
 ```r
@@ -119,12 +119,51 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
+#>      type geometry.type  geometry.coordinates
+#> 1 Feature         Point -111.63550, -81.61965
+#> 2 Feature         Point   71.63743, -70.33412
+#> 3 Feature         Point -149.12776, -19.23127
+#> 4 Feature         Point   136.65496, 56.17421
+#> 5 Feature         Point  -100.11786, 85.81677
+```
+
+## random features with geojson-random
+
+Points
+
+
+```r
+gr_point(2)
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point  -64.35041, 43.51018
-#> 2 Feature         Point  107.58094, 56.84191
-#> 3 Feature         Point   -171.6337, 17.5349
-#> 4 Feature         Point -139.74770, -3.31051
-#> 5 Feature         Point 11.401996, -2.759027
+#> 1 Feature         Point  132.75695, 39.29355
+#> 2 Feature         Point -36.27266, -30.45762
+```
+
+Positions
+
+
+```r
+gr_position()
+#> [1] -131.37151  -46.62053
+```
+
+Polygons
+
+
+```r
+gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
+#> $type
+#> [1] "FeatureCollection"
+#> 
+#> $features
+#>      type geometry.type
+#> 1 Feature       Polygon
+#>                                                                                                           geometry.coordinates
+#> 1 -91.94894, -91.13669, -95.38120, -94.11735, -93.23886, -91.94894, 31.06359, 30.51566, 27.88862, 30.21784, 30.69701, 31.06359
 ```
 
 ## sample from a FeatureCollection
@@ -154,8 +193,8 @@ sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        100         Point   10.74600, 59.90857
-#> 2 Feature        300         Point   10.79544, 59.93162
+#> 1 Feature        600         Point   10.71579, 59.90478
+#> 2 Feature        100         Point   10.74600, 59.90857
 ```
 
 ```r
@@ -168,8 +207,8 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.72403, 59.92681
-#> 2 Feature        100         Point   10.74600, 59.90857
+#> 1 Feature        200         Point   10.80643, 59.90891
+#> 2 Feature        200         Point   10.72403, 59.92681
 #> 3 Feature        600         Point   10.71579, 59.90478
 ```
 

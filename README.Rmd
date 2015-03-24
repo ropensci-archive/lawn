@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
 
-`lawn` is an R wrapper for [turf.js](http://turfjs.org/)
+`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library. 
 
 ## Install
 
@@ -78,6 +78,26 @@ distance(from, to)
 ```{r collapse=FALSE}
 random(2)
 random(5)
+```
+
+## random features with geojson-random
+
+Points
+
+```{r}
+gr_point(2)
+```
+
+Positions
+
+```{r}
+gr_position()
+````
+
+Polygons
+
+```{r}
+gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 ```
 
 ## sample from a FeatureCollection
