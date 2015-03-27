@@ -19,26 +19,26 @@
 #' data(lawn_data)
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
-#' ex_agg <- list(c("sum","population","pop_sum"),
-#'             c("average","population","pop_average"),
-#'             c("count","","num_of_pts"))
+#' ex_agg <- list(c('sum','population','pop_sum'),
+#'             c('average','population','pop_average'),
+#'             c('count','','num_of_pts'))
 #' aggregate(ex_polys,ex_pts,ex_agg)
-aggregate <- function(polys, pts, agg=list(c("count","","num_of_pts"))){
-  polys<-convert(polys)
-  pts<-convert(pts)
-  agg<-make_agg_array(agg)
-  ct$eval(sprintf('var polys = %s;',polys))
-  ct$eval(sprintf('var pts = %s;', pts))
-  ct$eval(sprintf('var agg = %s;', agg))
+aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts"))) {
+  polys <- convert(polys)
+  pts <- convert(pts)
+  agg <- make_agg_array(agg)
+  ct$eval(sprintf("var polys = %s;", polys))
+  ct$eval(sprintf("var pts = %s;", pts))
+  ct$eval(sprintf("var agg = %s;", agg))
   ct$eval("var aggreg = turf.aggregate(polys, pts, agg);")
   ct$get("aggreg")
 }
 
-make_agg_array <- function (agg){
-  if(!is.list(agg)){
+make_agg_array <- function(agg) {
+  if (!is.list(agg)) {
     stop("'agg' is not a list")
   }
-  agg<-data.frame(do.call("rbind",agg))
-  names(agg)<-c("aggregation","inField","outField")
+  agg <- data.frame(do.call("rbind", agg))
+  names(agg) <- c("aggregation", "inField", "outField")
   return(toJSON(agg))
 }
