@@ -5,7 +5,7 @@ lawn
 
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
-[![Coverage Status](https://coveralls.io/repos/sckott/lawn/badge.svg)](https://coveralls.io/r/sckott/lawn)
+[![Coverage Status](https://coveralls.io/repos/ropensci/lawn/badge.svg)](https://coveralls.io/r/ropensci/lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library. 
 
@@ -106,8 +106,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point 110.67485, -27.12815
-#> 2 Feature         Point -4.898122, 54.011898
+#> 1 Feature         Point  22.29056, -84.03604
+#> 2 Feature         Point -22.41968, -55.05934
 ```
 
 ```r
@@ -119,12 +119,12 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point -111.63550, -81.61965
-#> 2 Feature         Point   71.63743, -70.33412
-#> 3 Feature         Point -149.12776, -19.23127
-#> 4 Feature         Point   136.65496, 56.17421
-#> 5 Feature         Point  -100.11786, 85.81677
+#>      type geometry.type   geometry.coordinates
+#> 1 Feature         Point    -31.33347, 49.97117
+#> 2 Feature         Point     61.57815, 51.58939
+#> 3 Feature         Point    110.42348, 73.89989
+#> 4 Feature         Point -92.6017604, 0.8860521
+#> 5 Feature         Point  0.1769651, 68.0722766
 ```
 
 ## random features with geojson-random
@@ -139,8 +139,8 @@ gr_point(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point  132.75695, 39.29355
-#> 2 Feature         Point -36.27266, -30.45762
+#> 1 Feature         Point -81.37980, -76.11838
+#> 2 Feature         Point -80.551962, 5.194171
 ```
 
 Positions
@@ -148,7 +148,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] -131.37151  -46.62053
+#> [1] -26.35267  47.55159
 ```
 
 Polygons
@@ -163,7 +163,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #>      type geometry.type
 #> 1 Feature       Polygon
 #>                                                                                                           geometry.coordinates
-#> 1 -91.94894, -91.13669, -95.38120, -94.11735, -93.23886, -91.94894, 31.06359, 30.51566, 27.88862, 30.21784, 30.69701, 31.06359
+#> 1 -93.58169, -94.17353, -94.97594, -96.41842, -97.84882, -93.58169, 34.84241, 32.90783, 34.15654, 35.41595, 36.75437, 34.84241
 ```
 
 ## sample from a FeatureCollection
@@ -180,7 +180,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
+#> 1 Feature        100         Point   10.74600, 59.90857
 ```
 
 ```r
@@ -194,7 +194,7 @@ sample(dat, 2)
 #> $features
 #>      type population geometry.type geometry.coordinates
 #> 1 Feature        600         Point   10.71579, 59.90478
-#> 2 Feature        100         Point   10.74600, 59.90857
+#> 2 Feature        200         Point   10.80643, 59.90891
 ```
 
 ```r
@@ -207,8 +207,8 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        200         Point   10.72403, 59.92681
+#> 1 Feature        200         Point   10.72403, 59.92681
+#> 2 Feature        100         Point   10.74600, 59.90857
 #> 3 Feature        600         Point   10.71579, 59.90478
 ```
 
