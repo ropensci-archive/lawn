@@ -21,6 +21,8 @@ The data objects included in the list, accessible by name
  \item polygons_within - FeatureCollection of polygons
  \item poly - Feaure of a single 1 degree by 1 degree polygon
  \item multipoly - FeatureCollection of two 1 degree by 1 degree polygons
+ \item polygons_aggregate - FeatureCollection of Polygons from turf.js examples
+ \item points_aggregate - FeatureCollection of Points from turf.js examples
 }
 }
 \keyword{datasets}
