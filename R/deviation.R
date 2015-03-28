@@ -8,8 +8,9 @@
 #' @param outField Characater for the name of the field on the ouput polygon FeatureCollection
 #'        that will store the resultant value.
 #'
-#' @details Calculates the standard deviation of values from points that are
-#'          within a polygon and returns that on a polygon FeatureCollection.
+#' @details Calculates the population standard deviation (i.e. denominator = n, not n-1) of
+#'          values from points that are within a polygon and returns that on a polygon
+#'          FeatureCollection.
 #'
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples

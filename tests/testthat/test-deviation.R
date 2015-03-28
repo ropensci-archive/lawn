@@ -10,8 +10,7 @@ test_that("deviation works", {
   expect_is(dev_result$features, "data.frame")
   expect_is(dev_result$features$geometry$type, "character")
   expect_is(dev_result$features$geometry$coordinates[[1]], "array")
-  #expect_equal(dev_result$features$properties$pop_sum[1], sd(c(200,600,100)))
-  #This last test is failing:  Appears to be on the turf.js side of things
+  expect_equal(dev_result$features$properties$pop_sd[1], sd(c(200,600,100))*sqrt(2/3))
 })
 
 test_that("deviation fails correctly", {
