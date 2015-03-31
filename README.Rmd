@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 
 ```{r eval=FALSE}
 install.packages("devtools")
+devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
 

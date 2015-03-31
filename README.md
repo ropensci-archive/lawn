@@ -14,6 +14,7 @@ lawn
 
 ```r
 install.packages("devtools")
+devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
 
@@ -106,8 +107,8 @@ random(2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point  22.29056, -84.03604
-#> 2 Feature         Point -22.41968, -55.05934
+#> 1 Feature         Point   71.94271, 54.21991
+#> 2 Feature         Point  162.76996, 33.78816
 ```
 
 ```r
@@ -119,12 +120,12 @@ random(5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type   geometry.coordinates
-#> 1 Feature         Point    -31.33347, 49.97117
-#> 2 Feature         Point     61.57815, 51.58939
-#> 3 Feature         Point    110.42348, 73.89989
-#> 4 Feature         Point -92.6017604, 0.8860521
-#> 5 Feature         Point  0.1769651, 68.0722766
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point -118.25765, 45.65649
+#> 2 Feature         Point  126.09388, 54.72826
+#> 3 Feature         Point   153.0045, -25.5717
+#> 4 Feature         Point -59.96138, -12.63278
+#> 5 Feature         Point  -84.48857, 25.34464
 ```
 
 ## random features with geojson-random
@@ -138,9 +139,9 @@ gr_point(2)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -81.37980, -76.11838
-#> 2 Feature         Point -80.551962, 5.194171
+#>      type geometry.type  geometry.coordinates
+#> 1 Feature         Point  -117.25466, 62.49711
+#> 2 Feature         Point 161.085761, -8.974206
 ```
 
 Positions
@@ -148,7 +149,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] -26.35267  47.55159
+#> [1]  -6.71278 -35.22975
 ```
 
 Polygons
@@ -162,8 +163,8 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> $features
 #>      type geometry.type
 #> 1 Feature       Polygon
-#>                                                                                                           geometry.coordinates
-#> 1 -93.58169, -94.17353, -94.97594, -96.41842, -97.84882, -93.58169, 34.84241, 32.90783, 34.15654, 35.41595, 36.75437, 34.84241
+#>                                                                                                                 geometry.coordinates
+#> 1 -34.874086, -36.434021, -37.596913, -41.032652, -37.401970, -34.874086, 5.738494, 2.907455, 1.016554, 5.380564, 7.028738, 5.738494
 ```
 
 ## sample from a FeatureCollection
@@ -180,7 +181,7 @@ sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        100         Point   10.74600, 59.90857
+#> 1 Feature        300         Point   10.79544, 59.93162
 ```
 
 ```r
@@ -194,7 +195,7 @@ sample(dat, 2)
 #> $features
 #>      type population geometry.type geometry.coordinates
 #> 1 Feature        600         Point   10.71579, 59.90478
-#> 2 Feature        200         Point   10.80643, 59.90891
+#> 2 Feature        300         Point   10.79544, 59.93162
 ```
 
 ```r
@@ -207,9 +208,9 @@ sample(dat, 3)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.72403, 59.92681
-#> 2 Feature        100         Point   10.74600, 59.90857
-#> 3 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        100         Point   10.74600, 59.90857
+#> 2 Feature        600         Point   10.71579, 59.90478
+#> 3 Feature        200         Point   10.72403, 59.92681
 ```
 
 ## extent
