@@ -53,30 +53,9 @@
 #'    point(c(-2.25, 53.479271), properties = list(name = 'Location A'))
 #' )
 #' featurecollection(features) %>% view
-
 featurecollection <- function(features) {
   fts <- sapply(features, as.turf)
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featurecollection(features);")
   ct$get("feet")
-}
-
-as.turf <- function(x, ...) {
-  UseMethod("as.turf")
-}
-
-as.turf.point <- function(x, ...) {
-  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
-}
-
-as.turf.polygon <- function(x, ...) {
-  fixq(sprintf("turf.polygon(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
-}
-
-as.turf.linestring <- function(x, ...) {
-  fixq(sprintf("turf.linestring(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
-}
-
-fixq <- function(x) {
-  gsub("\"", "'", x)
 }

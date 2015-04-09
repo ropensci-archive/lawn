@@ -1,9 +1,9 @@
 #' @importFrom jsonlite toJSON
 convert <- function(x) {
-  if(is.character(x)) {
+  if (is.character(x)) {
     x
   } else {
-    jsonlite::toJSON(x, auto_unbox = TRUE)
+    jsonlite::toJSON(unclass(x), auto_unbox = TRUE)
   }
 }
 
