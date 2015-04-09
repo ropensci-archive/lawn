@@ -15,5 +15,5 @@
 
 polygon <- function(rings, properties = NULL) {
   ct$eval(sprintf("var poly = turf.polygon(%s, %s);", toj(rings), toj(properties)))
-  ct$get("poly")
+  structure(ct$get("poly"), class = "polygon")
 }

@@ -18,5 +18,5 @@
 
 linestring <- function(coordinates, properties = NULL) {
   ct$eval(sprintf("var poly = turf.linestring(%s, %s);", toj(coordinates), toj(properties)))
-  ct$get("poly")
+  structure(ct$get("poly"), class = "linestring")
 }
