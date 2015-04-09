@@ -6,3 +6,5 @@ convert <- function(x) {
     jsonlite::toJSON(x, auto_unbox = TRUE)
   }
 }
+
+toj <- function(x, ...) jsonlite::toJSON(x, ...)

@@ -4,15 +4,18 @@
 \alias{point}
 \title{Create a point}
 \usage{
-point(x)
+point(x, properties = NULL)
 }
 \arguments{
 \item{x}{A pair of points, of the form \code{c(longitude,latitude)}}
+
+\item{properties}{A list of properties}
 }
 \description{
 Create a point
 }
 \examples{
-point(c(40,-74.50))
+point(c(40, -74.50))
+point(c(40, -74.50), properties = list(name = 'poly1', population = 400))
 }
 
