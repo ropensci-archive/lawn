@@ -36,9 +36,9 @@
 #' gr_polygon(1, 3)
 #' gr_polygon(1, 100)
 #' ## max radial length, compare the following three
-#' gr_polygon(1, 10, 5) %>% view
-#' gr_polygon(1, 10, 30) %>% view
-#' gr_polygon(1, 10, 100) %>% view
+#' gr_polygon(1, 10, 5)
+#' gr_polygon(1, 10, 30)
+#' gr_polygon(1, 10, 100)
 #' ## use a bounding box
 #' gr_polygon(1, 5, 5, c(50, 50, 60, 60))
 

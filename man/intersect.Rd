@@ -57,15 +57,17 @@ poly2 <- '{
      ]]
  }
 }'
-view(poly1)
-view(poly2)
-intersect(poly1, poly2) \%>\% view()
+intersect(poly1, poly2)
+# view(poly1)
+# view(poly2)
+# intersect(poly1, poly2) \%>\% view()
 
 x1 <- buffer(point(c(-122.6375, 45.53)), 1500, "meters")
 x2 <- buffer(point(c(-122.6475, 45.53)), 1500, "meters")
-view(x1)
-view(x2)
-intersect(x1,x2) \%>\% view()
+intersect(x1, x2)
+# view(x1)
+# view(x2)
+# intersect(x1, x2) \%>\% view()
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

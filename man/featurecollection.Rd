@@ -54,7 +54,7 @@ features <- list(
    linestring(pts1, properties = list(name = 'line1', distance = 145)),
    linestring(pts2, properties = list(name = 'line2', distance = 145))
 )
-featurecollection(features) \%>\% view
+featurecollection(features)
 
 # mixed feature set, polygon, linestring, and point
 features <- list(
@@ -62,6 +62,6 @@ features <- list(
    linestring(pts1, properties = list(name = 'line1', distance = 145)),
    point(c(-2.25, 53.479271), properties = list(name = 'Location A'))
 )
-featurecollection(features) \%>\% view
+featurecollection(features)
 }
 

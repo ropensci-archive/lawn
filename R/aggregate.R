@@ -22,7 +22,7 @@
 #' ex_agg <- list(c('sum','population','pop_sum'),
 #'             c('average','population','pop_average'),
 #'             c('count','','num_of_pts'))
-#' aggregate(ex_polys,ex_pts,ex_agg)
+#' aggregate(ex_polys, ex_pts, ex_agg)
 aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts"))) {
   polys <- convert(polys)
   pts <- convert(pts)

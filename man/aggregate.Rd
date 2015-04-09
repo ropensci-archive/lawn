@@ -33,7 +33,7 @@ ex_pts <- lawn_data$points_aggregate
 ex_agg <- list(c('sum','population','pop_sum'),
             c('average','population','pop_average'),
             c('count','','num_of_pts'))
-aggregate(ex_polys,ex_pts,ex_agg)
+aggregate(ex_polys, ex_pts, ex_agg)
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

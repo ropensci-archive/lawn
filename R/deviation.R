@@ -17,7 +17,7 @@
 #' data(lawn_data)
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
-#' deviation(ex_polys,ex_pts,"population","pop_sd")
+#' deviation(ex_polys, ex_pts, "population", "pop_sd")
 deviation <- function(polys, pts, inField, outField) {
   polys <- convert(polys)
   pts <- convert(pts)

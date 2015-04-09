@@ -29,7 +29,7 @@ Calculates the population standard deviation (i.e. denominator = n, not n-1) of
 data(lawn_data)
 ex_polys <- lawn_data$polygons_aggregate
 ex_pts <- lawn_data$points_aggregate
-deviation(ex_polys,ex_pts,"population","pop_sd")
+deviation(ex_polys, ex_pts, "population", "pop_sd")
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
