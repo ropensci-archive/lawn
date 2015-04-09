@@ -45,8 +45,23 @@ view.geo_list <- function(x) {
   make_view(jsonlite::toJSON(unclass(x), auto_unbox = TRUE))
 }
 
+#' @export
+view.point <- function(x) {
+  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+}
+
+#' @export
+view.polygon <- function(x) {
+  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+}
+
+#' @export
+view.linestring <- function(x) {
+  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+}
+
 make_view <- function(x) {
-  b <- as.list(setNames(extent(x), c("lng1","lat1","lng2","lat2")))
+  b <- as.list(setNames(extent(x), c("lng1", "lat1", "lng2", "lat2")))
   leaflet() %>%
     addTiles() %>%
     addGeoJSON(jsonlite::fromJSON(x, FALSE)) %>%
