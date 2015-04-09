@@ -9,5 +9,5 @@
 
 point <- function(x, properties = NULL) {
   ct$eval(sprintf("var pt = turf.point(%s, %s);", toj(x), toj(properties)))
-  ct$get("pt")
+  structure(ct$get("pt"), class = "point")
 }
