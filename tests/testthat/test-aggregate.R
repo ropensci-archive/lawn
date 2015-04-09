@@ -22,5 +22,4 @@ test_that("aggregate fails correctly", {
   expect_error(aggregate(ex_polys), "argument \"pts\" is missing, with no default")
   expect_error(aggregate(ex_polys, ex_pts, c("count", "", "test")), "'agg' is not a list")
   expect_error(aggregate(ex_polys, ex_pts, list(c("mean", "testin", "testout"))), "Error: \"mean\" is not a recognized aggregation operation.")
-
 })

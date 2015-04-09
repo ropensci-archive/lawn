@@ -4,12 +4,14 @@ test_that("point works", {
   a <- point(c(40, -74.50))
   b <- point(c(40, -74.50), properties = list(name = 'poly1', population = 400))
 
-  expect_is(a, "list")
+  expect_is(a, "point")
+  expect_is(unclass(a), "list")
   expect_equal(a$type, "Feature")
   expect_is(a$geometry, "list")
   expect_equal(length(a$properties), 0)
 
-  expect_is(b, "list")
+  expect_is(b, "point")
+  expect_is(unclass(b), "list")
   expect_is(b$geometry, "list")
   expect_is(b$properties, "list")
   expect_equal(b$type, "Feature")
