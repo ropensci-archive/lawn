@@ -30,7 +30,6 @@
 #'
 #' # buffer a point
 #' buffer(point(c(-74.50,40)), 100, "meters")
-#'
 
 buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
   input <- convert(input)
