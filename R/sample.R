@@ -16,9 +16,9 @@
 #' @examples
 #' # Random
 #' ## set of points
-#' random(2)
-#' random(10)
-#' random(1000)
+#' random(n = 2)
+#' random(n = 10)
+#' random(n = 1000)
 #' ## set of polygons
 #' random('polygons', 2)
 #' random('polygons', 10)
