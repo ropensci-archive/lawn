@@ -4,12 +4,17 @@
 \alias{tag}
 \title{Inside}
 \usage{
-tag(points, polygons, polyId, caontainingPolyId)
+tag(points, polygons, polyId, containingPolyId)
 }
 \arguments{
-\item{point}{Input point}
+\item{points}{Input point}
 
-\item{polygon}{Input polygon or multipolygon}
+\item{polygons}{Input polygon or multipolygon}
+
+\item{polyId}{property in polygons to add to joined Point features}
+
+\item{containingPolyId}{property in points in which to store joined
+property from polygons}
 }
 \value{
 \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if

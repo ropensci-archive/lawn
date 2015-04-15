@@ -4,15 +4,15 @@
 #'
 #' @param type type of features desired: 'points' or 'polygons'
 #' @param n (integer) Number of features to generate
-#' @param options options relevant to the feature desired. See Details.
+#' @param bbox A bounding box inside of which geometries are placed. In the case
+#' of Point features, they are guaranteed to be within this bounds, while Polygon
+#' features have their centroid within the bounds.
+#' @param num_vertices	Number options.vertices the number of vertices added to
+#' polygon features.
+#' @param max_radial_length Number	<optional> 10	 the total number of decimal degrees
+#' longitude or latitude that a polygon can extent outwards to from its center.
 #' @param features A FeatureCollection
-#' @details
-#' Options fore the \code{options} parameter:
-#' \itemize{
-#'  \item \code{bbox} A bounding box inside of which geometries are placed. In the case of Point features, they are guaranteed to be within this bounds, while Polygon features have their centroid within the bounds.
-#'  \item \code{num_vertices}	Number options.vertices the number of vertices added to polygon features.
-#'  \item \code{max_radial_length} Number	<optional> 10	 the total number of decimal degrees longitude or latitude that a polygon can extent outwards to from its center.
-#'  }
+#'
 #' @examples
 #' # Random
 #' ## set of points
