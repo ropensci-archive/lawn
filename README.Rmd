@@ -77,8 +77,8 @@ distance(from, to)
 ## random set of points
 
 ```{r collapse=FALSE}
-random(2)
-random(5)
+random(n = 2)
+random(n = 5)
 ```
 
 ## random features with geojson-random
