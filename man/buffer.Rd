@@ -22,7 +22,7 @@ Calculates and returns a buffered feature.
 }
 \examples{
 # From a FeatureCollection
-dat <- random(100)
+dat <- random(n = 100)
 buffer(dat, 100)
 
 # From a Feature

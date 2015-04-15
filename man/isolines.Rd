@@ -22,7 +22,7 @@ FeatureCollection of isolines (LineString features)
 Takes points with z-values and an array of value breaks and generates isolines
 }
 \examples{
-pts <- random(10, )
+pts <- random(n = 10)
 pts$features$properties <- data.frame(z = round(rnorm(10, mean = 10)), stringsAsFactors = FALSE)
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 isolines(pts, 'z', 15, breaks)

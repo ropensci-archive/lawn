@@ -26,8 +26,10 @@ resides inside the polygon. The polygon can be convex or concave. The
 function accounts for holes
 }
 \examples{
-pts <- random(30)
+\dontrun{
+pts <- random(n = 30)
 polys <- triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 tag(pts, polys, 'fill', 'marker-color')
+}
 }
 
