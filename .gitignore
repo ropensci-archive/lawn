@@ -3,4 +3,4 @@
 .RData
 .DS_Store
 .V8history
-
+.httr-oauth

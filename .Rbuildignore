@@ -5,3 +5,4 @@ appveyor.yml
 README.Rmd
 inst/img
 CONTRIBUTING.md
+^\.httr-oauth$

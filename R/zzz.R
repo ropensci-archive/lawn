@@ -8,3 +8,5 @@ convert <- function(x) {
 }
 
 toj <- function(x, ...) jsonlite::toJSON(x, ...)
+
+cmp <- function(l) Filter(Negate(is.null), l)
