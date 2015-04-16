@@ -6,3 +6,5 @@ README.Rmd
 inst/img
 CONTRIBUTING.md
 ^\.httr-oauth$
+man-roxygen
+
