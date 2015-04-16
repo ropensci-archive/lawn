@@ -19,7 +19,7 @@ lawnlint <- function(x, lint = FALSE) {
 
 # helper fxn
 lintit <- function(x) {
-  ht$eval(sprintf("var out = geojsonhint.hint('%s');", minify(x)))
+  ht$eval(sprintf("var out = geojsonhint.hint('%s');", jsonlite::minify(x)))
   tmp <- as.list(ht$get("out"))
   if (identical(tmp, list())) {
     return(TRUE)
