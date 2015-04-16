@@ -1,6 +1,6 @@
 context("flip")
 
-library("jsonlite")
+suppressMessages(require("jsonlite", quietly = TRUE))
 
 a <- flip(lawn_data$points_average)
 b <- flip(lawn_data$polygons_average)

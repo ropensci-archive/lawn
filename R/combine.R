@@ -5,6 +5,7 @@
 #'
 #' @export
 #' @param fc A FeatureCollection of any type
+#' @template lint
 #' @examples
 #' # combine points
 #' fc1 <- '{
@@ -68,7 +69,8 @@
 #' combine(fc2) %>% view
 #' }
 
-combine <- function(fc) {
+combine <- function(fc, lint = FALSE) {
+  lawnlint(fc, lint)
   ct$eval(sprintf("var exp = turf.combine(%s);", convert(fc)))
   ct$get("exp")
 }
