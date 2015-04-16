@@ -23,5 +23,8 @@ rings <- list(list(
    c(-2.275543, 53.464547)
 ))
 polygon(rings, properties = list(name = 'poly1', population = 400))
+
+# Make a FeatureCollection
+featurecollection(polygon(rings))
 }
 

@@ -54,8 +54,37 @@
 #' )
 #' featurecollection(features)
 featurecollection <- function(features) {
+  UseMethod("featurecollection")
+}
+
+#' @export
+featurecollection.list <- function(features) {
+  do_fc(features)
+}
+
+#' @export
+featurecollection.centroid <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
+featurecollection.point <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
+featurecollection.polygon <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
+featurecollection.linestring <- function(features) {
+  do_fc(list(features))
+}
+
+do_fc <- function(features) {
   fts <- sapply(features, as.turf)
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featurecollection(features);")
-  ct$get("feet")
+  structure(ct$get("feet"), class = "featurecollection")
 }

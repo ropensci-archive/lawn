@@ -14,6 +14,11 @@ as.turf.point <- function(x, ...) {
 }
 
 #' @export
+as.turf.centroid <- function(x, ...) {
+  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+}
+
+#' @export
 as.turf.polygon <- function(x, ...) {
   fixq(sprintf("turf.polygon(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
 }

@@ -47,23 +47,41 @@ view.geo_list <- function(x) {
 
 #' @export
 view.point <- function(x) {
-  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+  make_view_obj(x)
 }
 
 #' @export
 view.polygon <- function(x) {
-  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+  make_view_obj(x)
 }
 
 #' @export
 view.linestring <- function(x) {
+  make_view_obj(x)
+}
+
+#' @export
+view.featurecollection <- function(x) {
+  make_view_obj(x)
+}
+
+make_view_obj <- function(x) {
   make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
 }
 
 make_view <- function(x) {
-  b <- as.list(setNames(extent(x), c("lng1", "lat1", "lng2", "lat2")))
+  b <- make_bounds(x)
   leaflet() %>%
     addTiles() %>%
     addGeoJSON(jsonlite::fromJSON(x, FALSE)) %>%
     fitBounds(lng1 = b$lng1, lat1 = b$lat1, lng2 = b$lng2, lat2 = b$lat2)
+}
+
+make_bounds <- function(z) {
+  b <- as.list(setNames(extent(z), c("lng1", "lat1", "lng2", "lat2")))
+  if (b$lng1 == b$lng2 || b$lat1 == b$lat2) {
+    Map("+", b, c(-1, -1, 1, 1))
+  } else {
+    b
+  }
 }
