@@ -27,6 +27,5 @@
 centroid <- function(features) {
   fts <- convert(features)
   ct$eval(sprintf("var ctr = turf.centroid(%s);", fts))
-  # ct$get("ctr")
   structure(ct$get("ctr"), class = "centroid")
 }

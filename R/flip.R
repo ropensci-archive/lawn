@@ -19,7 +19,8 @@
 #' flip(lawn_data$polygons_average) %>% view
 #' }
 
-flip <- function(input) {
+flip <- function(input, lint = FALSE) {
+  lawnlint(input, lint)
   ct$eval(sprintf("var flp = turf.flip(%s);", convert(input)))
   ct$get("flp")
 }
