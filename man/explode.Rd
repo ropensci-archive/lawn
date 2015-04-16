@@ -4,10 +4,15 @@
 \alias{explode}
 \title{Explode}
 \usage{
-explode(input)
+explode(input, lint = FALSE)
 }
 \arguments{
 \item{input}{Feature of features}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Takes a feature or set of features and returns all positions as points

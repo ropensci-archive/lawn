@@ -4,6 +4,7 @@
 #'
 #' @export
 #' @param input Feature of features
+#' @template lint
 #' @examples
 #' poly <- '{
 #'  "type": "Feature",
@@ -29,7 +30,8 @@
 #' explode(lawn_data$polygons_within) %>% view
 #' }
 
-explode <- function(input) {
+explode <- function(input, lint = FALSE) {
+  lawnlint(input, lint)
   ct$eval(sprintf("var exp = turf.explode(%s);", convert(input)))
   ct$get("exp")
 }

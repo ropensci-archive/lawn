@@ -4,6 +4,7 @@
 #'
 #' @export
 #' @param input Feature of features
+#' @template lint
 #' @examples
 #' poly <- '{
 #'  "type": "Feature",
@@ -25,7 +26,8 @@
 #' kinks(poly)$intersections %>% view
 #' }
 
-kinks <- function(input) {
+kinks <- function(input, lint = FALSE) {
+  lawnlint(input, lint)
   ct$eval(sprintf("var exp = turf.kinks(%s);", convert(input)))
   ct$get("exp")
 }
