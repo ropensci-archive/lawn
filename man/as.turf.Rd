@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.turf.R
 \name{as.turf}
 \alias{as.turf}
-\title{Coerce to turf.js object}
+\title{Coerce to turf.js javascript function call}
 \usage{
 as.turf(x, ...)
 }
@@ -12,7 +12,7 @@ as.turf(x, ...)
 \item{...}{Ignored}
 }
 \description{
-Coerce to turf.js object
+Coerce to turf.js javascript function call
 }
 \keyword{internal}
 

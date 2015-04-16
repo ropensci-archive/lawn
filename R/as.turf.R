@@ -1,4 +1,4 @@
-#' Coerce to turf.js object
+#' Coerce to turf.js javascript function call
 #'
 #' @param x Input
 #' @param ... Ignored
