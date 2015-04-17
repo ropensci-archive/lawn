@@ -33,5 +33,7 @@ poly <- '{
   }
 }'
 kinks(poly)
+# lint input object
+kinks(poly, TRUE)
 }
 

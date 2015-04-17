@@ -4,7 +4,7 @@
 \alias{line_slice}
 \title{Line slice}
 \usage{
-line_slice(point1, point2, line)
+line_slice(point1, point2, line, lint = FALSE)
 }
 \arguments{
 \item{point1}{Starting point}
@@ -12,6 +12,11 @@ line_slice(point1, point2, line)
 \item{point2}{Stopping point}
 
 \item{line}{Line to slice}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Takes a line, a start Point, and a stop point and returns the line in
@@ -49,6 +54,9 @@ line <- '{
     ]
   }
 }'
-line_slice(point1 = start, point2 = stop, line)
+line_slice(start, stop, line)
+
+# lint input objects
+line_slice(start, stop, line, TRUE)
 }
 

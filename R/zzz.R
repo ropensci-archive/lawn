@@ -13,7 +13,9 @@ cmp <- function(l) Filter(Negate(is.null), l)
 
 lawnlint <- function(x, lint = FALSE) {
   if (lint) {
-    lintit(x)
+    for (i in seq_along(x)) {
+      lintit(x[[i]])
+    }
   }
 }
 

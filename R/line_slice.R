@@ -7,6 +7,7 @@
 #' @param point1 Starting point
 #' @param point2 Stopping point
 #' @param line Line to slice
+#' @template lint
 #' @examples
 #' start <- '{
 #'   "type": "Feature",
@@ -39,13 +40,17 @@
 #'     ]
 #'   }
 #' }'
-#' line_slice(point1 = start, point2 = stop, line)
+#' line_slice(start, stop, line)
+#'
+#' # lint input objects
+#' line_slice(start, stop, line, TRUE)
 #' @examples \dontrun{
 #' line %>% view
 #' line_slice(point1 = start, point2 = stop, line) %>% view
 #' }
 
-line_slice <- function(point1, point2, line) {
+line_slice <- function(point1, point2, line, lint = FALSE) {
+  lawnlint(list(point1, point2, line), lint)
   point1 <- convert(point1)
   point2 <- convert(point2)
   line <- convert(line)

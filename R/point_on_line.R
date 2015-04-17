@@ -6,6 +6,7 @@
 #' @export
 #' @param line line to snap to
 #' @param point point to snap from
+#' @template lint
 #' @examples
 #' line <- '{
 #'   "type": "Feature",
@@ -31,13 +32,17 @@
 #'   }
 #' }'
 #' point_on_line(line, pt)
+#'
+#' # lint input objects
+#' point_on_line(line, pt, TRUE)
 #' @examples \dontrun{
 #' line %>% view
 #' pt %>% view
 #' point_on_line(line, pt) %>% view
 #' }
 
-point_on_line <- function(line, point) {
+point_on_line <- function(line, point, lint = FALSE) {
+  lawnlint(list(line, point), lint)
   line <- convert(line)
   point <- convert(point)
   ct$eval(sprintf("var exp = turf.pointOnLine(%s, %s);", line, point))

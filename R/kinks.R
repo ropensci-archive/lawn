@@ -21,6 +21,8 @@
 #'   }
 #' }'
 #' kinks(poly)
+#' # lint input object
+#' kinks(poly, TRUE)
 #' @examples \dontrun{
 #' poly %>% view
 #' kinks(poly)$intersections %>% view
