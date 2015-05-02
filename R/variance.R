@@ -1,15 +1,17 @@
-#' Sum
+#' Variance
 #'
 #' @export
 #' @param polygons a FeatureCollection of \code{\link{data-Polygon}} features
 #' @param points a FeatureCollection of \code{\link{data-Point}} features
 #' @param in_field the field in input data to analyze
 #' @param out_field the field in which to store results
+#' @return a FeatureCollection of \code{\link{data-Polygon}} features with
+#' properties listed as \code{out_field}
 #' @template lint
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @details Calculates the sum of a field for \code{\link{data-Point}} features
-#' within a set of \code{\link{data-Polygon}} features.
+#' @details Calculates the variance value of a field for \code{\link{data-Point}}
+#' features within a set of \code{\link{data-Polygon}} features.
 #' @examples
 #' polygons <- '{
 #'   "type": "FeatureCollection",
@@ -20,11 +22,11 @@
 #'       "geometry": {
 #'         "type": "Polygon",
 #'         "coordinates": [[
-#'           [-87.990188, 43.026486],
-#'           [-87.990188, 43.062115],
-#'           [-87.913284, 43.062115],
-#'           [-87.913284, 43.026486],
-#'           [-87.990188, 43.026486]
+#'           [-97.414398, 37.684092],
+#'           [-97.414398, 37.731353],
+#'           [-97.332344, 37.731353],
+#'           [-97.332344, 37.684092],
+#'           [-97.414398, 37.684092]
 #'         ]]
 #'       }
 #'     }, {
@@ -33,16 +35,17 @@
 #'       "geometry": {
 #'         "type": "Polygon",
 #'         "coordinates": [[
-#'           [-87.973709, 42.962452],
-#'           [-87.973709, 43.014689],
-#'           [-87.904014, 43.014689],
-#'           [-87.904014, 42.962452],
-#'           [-87.973709, 42.962452]
+#'           [-97.333717, 37.606072],
+#'           [-97.333717, 37.675397],
+#'           [-97.237586, 37.675397],
+#'           [-97.237586, 37.606072],
+#'           [-97.333717, 37.606072]
 #'         ]]
 #'       }
 #'     }
 #'   ]
 #' }'
+#'
 #' points <- '{
 #'   "type": "FeatureCollection",
 #'   "features": [
@@ -53,7 +56,7 @@
 #'       },
 #'       "geometry": {
 #'         "type": "Point",
-#'         "coordinates": [-87.974052, 43.049321]
+#'         "coordinates": [-97.401351, 37.719676]
 #'       }
 #'     }, {
 #'       "type": "Feature",
@@ -62,7 +65,7 @@
 #'       },
 #'       "geometry": {
 #'         "type": "Point",
-#'         "coordinates": [-87.957229, 43.037277]
+#'         "coordinates": [-97.355346, 37.706639]
 #'       }
 #'     }, {
 #'       "type": "Feature",
@@ -71,7 +74,7 @@
 #'       },
 #'       "geometry": {
 #'         "type": "Point",
-#'         "coordinates": [-87.931137, 43.048568]
+#'         "coordinates": [-97.387962, 37.70012]
 #'       }
 #'     }, {
 #'       "type": "Feature",
@@ -80,7 +83,7 @@
 #'       },
 #'       "geometry": {
 #'         "type": "Point",
-#'         "coordinates": [-87.963409, 42.99611]
+#'         "coordinates": [-97.301788, 37.66507]
 #'       }
 #'     }, {
 #'       "type": "Feature",
@@ -89,19 +92,19 @@
 #'       },
 #'       "geometry": {
 #'         "type": "Point",
-#'         "coordinates": [-87.94178, 42.974762]
+#'         "coordinates": [-97.265052, 37.643325]
 #'       }
 #'     }
 #'   ]
 #' }'
-#' sum(polygons, points, 'population', 'sum')
+#' variance(polygons, points, 'population', 'variance')
 #' @examples \dontrun{
-#' sum(polygons, points, 'population', 'sum') %>% view
+#' variance(polygons, points, 'population', 'variance') %>% view
 #' }
-sum <- function(polygons, points, in_field, out_field, lint = FALSE) {
+variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)
-  ct$eval(sprintf("var sumed = turf.sum(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("sumed")
+  ct$eval(sprintf("var variance = turf.variance(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
+  ct$get("variance")
 }
