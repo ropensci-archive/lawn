@@ -82,6 +82,10 @@ featurecollection.linestring <- function(features) {
   do_fc(list(features))
 }
 
+# featurecollection.featurecollection <- function(features) {
+#   do_fc(lapply(features, "[[", "features"))
+# }
+
 do_fc <- function(features) {
   fts <- sapply(features, as.turf)
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
