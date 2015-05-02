@@ -10,7 +10,7 @@ test_that("count works", {
   expect_is(a$features, "data.frame")
   expect_named(a$features$properties, "pt_count")
 
-  expect_equal(sum(count(lawn_data$polygons_average, lawn_data$points_average)$features$properties$pt_count), 5)
+  expect_equal(base::sum(count(lawn_data$polygons_average, lawn_data$points_average)$features$properties$pt_count), 5)
 })
 
 test_that("count fails correctly", {
