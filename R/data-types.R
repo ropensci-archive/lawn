@@ -15,6 +15,12 @@ NULL
 #' @rdname data-types
 NULL
 
+#' LineString description
+#'
+#' @name data-LineString
+#' @rdname data-types
+NULL
+
 #' Feature description
 #'
 #' @name data-Feature

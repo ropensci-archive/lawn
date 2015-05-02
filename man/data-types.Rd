@@ -3,6 +3,7 @@
 \name{data-types}
 \alias{data-Feature}
 \alias{data-FeatureCollection}
+\alias{data-LineString}
 \alias{data-Point}
 \alias{data-Polygon}
 \alias{data-types}
@@ -13,6 +14,8 @@ Description of data types
 Point description
 
 Polygon description
+
+LineString description
 
 Feature description
 
