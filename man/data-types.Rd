@@ -10,15 +10,34 @@
 \title{Description of data types}
 \description{
 Description of data types
+}
+\section{Point}{
 
-Point description
 
-Polygon description
+Point is a xyz
+}
 
-LineString description
+\section{Polygon}{
 
-Feature description
 
-FeatureCollection description
+Polygon is a xyz
+}
+
+\section{LineString}{
+
+
+LineString is a xyz
+}
+
+\section{Feature}{
+
+
+Feature is a xyz
+}
+
+\section{FeatureCollection}{
+
+
+FeatureCollection is a xyz
 }
 

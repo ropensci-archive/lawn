@@ -1,34 +1,26 @@
 #' Description of data types
 #'
+#' @section Point:
+#'
+#' Point is a xyz
+#'
+#' @section Polygon:
+#'
+#' Polygon is a xyz
+#'
+#' @section LineString:
+#'
+#' LineString is a xyz
+#'
+#' @section Feature:
+#'
+#' Feature is a xyz
+#'
+#' @section FeatureCollection:
+#'
+#' FeatureCollection is a xyz
+#'
 #' @name data-types
-NULL
-
-#' Point description
-#'
-#' @name data-Point
-#' @rdname data-types
-NULL
-
-#' Polygon description
-#'
-#' @name data-Polygon
-#' @rdname data-types
-NULL
-
-#' LineString description
-#'
-#' @name data-LineString
-#' @rdname data-types
-NULL
-
-#' Feature description
-#'
-#' @name data-Feature
-#' @rdname data-types
-NULL
-
-#' FeatureCollection description
-#'
-#' @name data-FeatureCollection
-#' @rdname data-types
+#' @aliases data-Point data-Polygon data-LineString
+#' data-Feature data-FeatureCollection
 NULL
