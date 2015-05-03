@@ -1,9 +1,7 @@
-#' Variance
+#' Maximum
 #'
 #' @export
 #' @template math
-#' @return a FeatureCollection of \code{\link{data-Polygon}} features with
-#' properties listed as \code{out_field}
 #' @template lint
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
@@ -12,14 +10,14 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' variance(poly, pt, 'population', 'variance')
+#' max(poly, pt, 'population', 'max')
 #' @examples \dontrun{
-#' variance(poly, pt, 'population', 'variance') %>% view
+#' max(poly, pt, 'population', 'max') %>% view
 #' }
-variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
+max <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)
-  ct$eval(sprintf("var variance = turf.variance(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("variance")
+  ct$eval(sprintf("var max = turf.max(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
+  ct$get("max")
 }

@@ -1,9 +1,7 @@
-#' Variance
+#' Minimum
 #'
 #' @export
 #' @template math
-#' @return a FeatureCollection of \code{\link{data-Polygon}} features with
-#' properties listed as \code{out_field}
 #' @template lint
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
@@ -12,14 +10,14 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' variance(poly, pt, 'population', 'variance')
+#' min(poly, pt, 'population', 'min')
 #' @examples \dontrun{
-#' variance(poly, pt, 'population', 'variance') %>% view
+#' min(poly, pt, 'population', 'min') %>% view
 #' }
-variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
+min <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)
-  ct$eval(sprintf("var variance = turf.variance(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("variance")
+  ct$eval(sprintf("var min = turf.min(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
+  ct$get("min")
 }
