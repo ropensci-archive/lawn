@@ -1,5 +1,6 @@
 #' Tag
 #'
+#' @export
 #' @param points Input \code{\link{data-Point}}
 #' @param polygons Input \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}
 #' @param polyId property in polygons to add to joined Point features
