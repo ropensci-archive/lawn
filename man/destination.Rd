@@ -46,6 +46,7 @@ pt <- '{
 }'
 destination(pt, 50, 90, "miles")
 destination(pt, 100, 90, "miles")
-destination(pt, 2, 90, "kilometers")
+destination(pt, 2, 45, "kilometers")
+destination(pt, 2, 30, "degrees")
 }
 
