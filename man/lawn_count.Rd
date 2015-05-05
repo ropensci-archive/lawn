@@ -2,7 +2,7 @@
 % Please edit documentation in R/count.R
 \name{lawn_count}
 \alias{lawn_count}
-\title{Count}
+\title{Count points within polygons}
 \usage{
 lawn_count(polygons, points, countField = "pt_count", lint = FALSE)
 }
@@ -18,6 +18,9 @@ representing Point counts}
 as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
+}
+\value{
+a \code{\link{data-FeatureCollection}}
 }
 \description{
 Calculates the number of \code{\link{data-Point}}'s that fall within the set

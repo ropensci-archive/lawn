@@ -1,4 +1,4 @@
-#' Count
+#' Count points within polygons
 #'
 #' Calculates the number of \code{\link{data-Point}}'s that fall within the set
 #' of \code{\link{data-Polygon}}'s
@@ -11,6 +11,7 @@
 #' representing Point counts
 #' @template lint
 #' @family aggregations
+#' @return a \code{\link{data-FeatureCollection}}
 #' @examples
 #' # using data in the package
 #' cat(lawn_data$points_count)
@@ -21,5 +22,5 @@ lawn_count <- function(polygons, points, countField = 'pt_count', lint = FALSE) 
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))
   ct$eval(sprintf("var counted = turf.count(polygons, points, '%s');", countField))
-  ct$get("counted")
+  structure(ct$get("counted"), class = "featurecollection")
 }
