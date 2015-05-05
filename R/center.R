@@ -13,12 +13,12 @@
 #' lawn_center(lawn_data$points_average)
 #' @examples \dontrun{
 #' lawn_center(lawn_data$points_average) %>% view
-#' featurecollection(lawn_data$points_average) %>% view
+#' lawn_featurecollection(lawn_data$points_average) %>% view
 #' lawn_center(lawn_data$points_average) %>% view
 #' }
 lawn_center <- function(features, lint = FALSE) {
   features <- convert(features)
   lawnlint(features, lint)
   ct$eval(sprintf("var cent = turf.center(%s);", features))
-  ct$get("cent")
+  structure(ct$get("cent"), class = "point")
 }
