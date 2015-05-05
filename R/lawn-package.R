@@ -3,6 +3,7 @@
 #' @name lawn-package
 #' @aliases lawn
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
+#' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @docType package
 NULL
 

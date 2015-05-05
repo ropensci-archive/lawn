@@ -10,5 +10,7 @@ R client for turf.js for geospatial analysis
 }
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
+
+Jeff Hollister \email{hollister.jeff@epa.gov}
 }
 
