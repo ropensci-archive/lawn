@@ -107,6 +107,12 @@ lawn_featurecollection.list <- function(features) {
   features <- lapply(features, function(z){
     if (is(z, "character")) {
       lawn_featurecollection(z)
+    } else if (is(z, "featurecollection")) {
+      type <- tolower(z$features$geometry$type)
+      switch(type,
+             polygon = lawn_polygon(z$features$geometry$coordinates[[1]]),
+             point = lawn_point(z$features$geometry$coordinates[[1]]),
+             linestring = lawn_linestring(z$features$geometry$coordinates[[1]]))
     } else {
       z
     }

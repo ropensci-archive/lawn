@@ -1,7 +1,7 @@
 #' Aggregate
 #'
 #' Calculates a series of aggregations for a set of points within a set of
-#' polygons. Sum, average, count, min, max, and deviation are supported.
+#' polygons. Sum, average, count, min, max, deviation supported
 #'
 #' @export
 #' @param polys \code{\link{data-Polygon}} defining area to aggregate.
@@ -18,7 +18,8 @@
 #'          name of the field on \code{pts} on which you wish to perfrom the
 #'          aggregation and outField is the name of the field on the ouput
 #'          polygon FeatureCollection that will store the resultant value.
-#'
+#' @return \code{\link{data-FeatureCollection}} of polygons with properties listed
+#' based on outField values in aggregations
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' ex_polys <- lawn_data$polygons_aggregate
@@ -27,13 +28,17 @@
 #'             c('average','population','pop_average'),
 #'             c('count','','num_of_pts'))
 #' lawn_aggregate(ex_polys, ex_pts, ex_agg)
+#'
+#' @examples \dontrun{
+#' lawn_aggregate(ex_polys, ex_pts, ex_agg) %>% view
+#' }
 lawn_aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts")), lint = FALSE) {
   polys <- convert(polys)
   pts <- convert(pts)
   lawnlint(list(polys, pts), lint)
   agg <- make_agg_array(agg)
   ct$eval(sprintf("var aggreg = turf.aggregate(%s, %s, %s);", polys, pts, agg))
-  ct$get("aggreg")
+  structure(ct$get("aggreg"), class = "featurecollection")
 }
 
 make_agg_array <- function(agg) {

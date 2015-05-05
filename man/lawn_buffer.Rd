@@ -22,6 +22,17 @@ objects. Default: \code{FALSE}}
 Calculates a buffer for input features for a given radius
 }
 \examples{
+# From a Point
+pt <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+    "type": "Point",
+    "coordinates": [-90.548630, 14.616599]
+  }
+}'
+lawn_buffer(pt, 5)
+
 # From a FeatureCollection
 dat <- lawn_random(n = 100)
 lawn_buffer(dat, 100)

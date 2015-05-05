@@ -19,9 +19,13 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+\code{\link{data-FeatureCollection}} of polygons with properties listed
+based on outField values in aggregations
+}
 \description{
 Calculates a series of aggregations for a set of points within a set of
-polygons. Sum, average, count, min, max, and deviation are supported.
+polygons. Sum, average, count, min, max, deviation supported
 }
 \details{
 Provides a statistical summary of values from points that are

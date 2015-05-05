@@ -19,9 +19,9 @@
 #' ]'
 #' lawn_along(lawn_linestring(pts), 1, 'miles')
 #' @examples \dontrun{
-#' lawn_along(line, 1, 'miles') %>% view
-#' res <- lawn_along(line, 1, 'miles')
-#' featurecollection(list(lawn_linestring(line), res)) %>% view
+#' lawn_along(lawn_linestring(pts), 1, 'miles') %>% view
+#' res <- lawn_along(lawn_linestring(pts), 1, 'miles')
+#' lawn_featurecollection(list(res, lawn_linestring(pts))) %>% view
 #' }
 lawn_along <- function(line, distance, units, lint = FALSE) {
   line <- convert(line)

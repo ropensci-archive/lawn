@@ -7,7 +7,7 @@
 lawn_area(input, lint = FALSE)
 }
 \arguments{
-\item{input}{A feature or feature collection of polygons.}
+\item{input}{A feature or featurecollection of polygons.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

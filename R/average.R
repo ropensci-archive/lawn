@@ -25,5 +25,5 @@ lawn_average <- function(polygons, points, field, outputField = 'average', lint 
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))
   ct$eval(sprintf("var avg = turf.average(polygons, points, '%s', '%s');", field, outputField))
-  ct$get("avg")
+  structure(ct$get("avg"), class = "featurecollection")
 }

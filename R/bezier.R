@@ -23,7 +23,7 @@
 #' lawn_bezier(lawn_linestring(pts), 9000L, 0.65)
 #' @examples \dontrun{
 #' lawn_bezier(lawn_linestring(pts)) %>% view
-#' featurecollection(list(lawn_linestring(pts), lawn_bezier(lawn_linestring(pts)))) %>% view
+#' lawn_featurecollection(list(lawn_linestring(pts), lawn_bezier(lawn_linestring(pts)))) %>% view
 #' }
 lawn_bezier <- function(line, resolution = 10000L, sharpness = 0.85, lint = FALSE) {
   line <- convert(line)

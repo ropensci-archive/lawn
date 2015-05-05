@@ -2,7 +2,7 @@
 #'
 #' @export
 #'
-#' @param input A feature or feature collection of polygons.
+#' @param input A feature or featurecollection of polygons.
 #' @template lint
 #' @family measurements
 #' @return value in square meters

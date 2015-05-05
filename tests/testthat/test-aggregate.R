@@ -7,7 +7,7 @@ ex_agg <- list(c("sum", "population", "pop_sum"), c("average", "population", "po
 agg_result <- lawn_aggregate(ex_polys, ex_pts, ex_agg)
 
 test_that("lawn_aggregate works", {
-  expect_is(agg_result, "list")
+  expect_is(agg_result, "featurecollection")
   expect_is(agg_result$type, "character")
   expect_is(agg_result$features, "data.frame")
   expect_is(agg_result$features$geometry$type, "character")
