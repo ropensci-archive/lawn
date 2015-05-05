@@ -1,4 +1,4 @@
-context("explode")
+context("lawn_explode")
 
 poly <- '{
  "type": "Feature",
@@ -16,9 +16,9 @@ poly <- '{
     ]]
  }
 }'
-a <- explode(poly)
+a <- lawn_explode(poly)
 
-test_that("explode works", {
+test_that("lawn_explode works", {
   expect_is(a, "list")
   expect_is(a$type, "character")
   expect_is(a$features, "data.frame")
@@ -27,8 +27,8 @@ test_that("explode works", {
   expect_equal(a$features$geometry$type[1], "Point")
 })
 
-test_that("explode fails correctly", {
-  expect_error(explode(), "argument \"input\" is missing, with no default")
-  expect_error(explode(5), "Unknown Geometry Type")
-  expect_error(explode(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
+test_that("lawn_explode fails correctly", {
+  expect_error(lawn_explode(), "argument \"input\" is missing, with no default")
+  expect_error(lawn_explode(5), "Unknown Geometry Type")
+  expect_error(lawn_explode(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
 })

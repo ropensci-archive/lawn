@@ -1,4 +1,4 @@
-context("point_on_line")
+context("lawn_point_on_line")
 
 line <- '{
   "type": "Feature",
@@ -23,9 +23,9 @@ pt <- '{
     "coordinates": [-77.037076, 38.884017]
   }
 }'
-a <- point_on_line(line, pt)
+a <- lawn_point_on_line(line, pt)
 
-test_that("point_on_line works", {
+test_that("lawn_point_on_line works", {
   expect_is(a, "list")
   expect_is(a$type, "character")
   expect_is(a$geometry, "list")
@@ -33,7 +33,7 @@ test_that("point_on_line works", {
   expect_is(a$geometry$coordinates, "numeric")
 })
 
-test_that("point_on_line fails correctly", {
-  expect_error(point_on_line(), "argument \"line\" is missing, with no default")
-  expect_error(point_on_line(5, TRUE), "input must be a LineString Feature or Geometry")
+test_that("lawn_point_on_line fails correctly", {
+  expect_error(lawn_point_on_line(), "argument \"line\" is missing, with no default")
+  expect_error(lawn_point_on_line(5, TRUE), "input must be a LineString Feature or Geometry")
 })

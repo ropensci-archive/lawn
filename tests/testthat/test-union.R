@@ -1,4 +1,4 @@
-context("union")
+context("lawn_union")
 
 poly1 <- '{
  "type": "Feature",
@@ -37,8 +37,8 @@ poly2 <- '{
  }
 }'
 
-test_that("union works", {
-  a <- union(poly1, poly2)
+test_that("lawn_union works", {
+  a <- lawn_union(poly1, poly2)
   bb <- a %>% view
 
   expect_is(a, "list")
@@ -49,8 +49,8 @@ test_that("union works", {
   expect_is(bb$x, "list")
 })
 
-test_that("union fails correctly", {
-  expect_error(union(), "missing, with no default")
-  expect_error(union("afa", "asd"), "Error : ReferenceError: afa is not defined\n")
-  expect_error(union(stuff = "adf"), "unused argument")
+test_that("lawn_union fails correctly", {
+  expect_error(lawn_union(), "missing, with no default")
+  expect_error(lawn_union("afa", "asd"), "Error : ReferenceError: afa is not defined\n")
+  expect_error(lawn_union(stuff = "adf"), "unused argument")
 })

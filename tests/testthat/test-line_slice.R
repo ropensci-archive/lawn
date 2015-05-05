@@ -1,4 +1,4 @@
-context("line_slice")
+context("lawn_line_slice")
 
 start <- '{
   "type": "Feature",
@@ -32,9 +32,9 @@ line <- '{
   }
 }'
 
-a <- line_slice(start, stop, line)
+a <- lawn_line_slice(start, stop, line)
 
-test_that("line_slice works", {
+test_that("lawn_line_slice works", {
   expect_is(a, "list")
   expect_is(a$type, "character")
   expect_is(a$geometry$coordinates, "matrix")
@@ -42,7 +42,7 @@ test_that("line_slice works", {
   expect_is(a$geometry$coordinates[[1]], "numeric")
 })
 
-test_that("line_slice fails correctly", {
-  expect_error(line_slice(), "argument \"point1\" is missing, with no default")
-  expect_error(line_slice(5, 5, 6, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
+test_that("lawn_line_slice fails correctly", {
+  expect_error(lawn_line_slice(), "argument \"point1\" is missing, with no default")
+  expect_error(lawn_line_slice(5, 5, 6, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
 })

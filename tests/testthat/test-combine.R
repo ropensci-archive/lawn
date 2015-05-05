@@ -1,4 +1,4 @@
-context("combine")
+context("lawn_combine")
 
 # combine points
 fc1 <- '{
@@ -54,10 +54,10 @@ fc2 <- '{
  ]
 }'
 
-a <- combine(fc1)
-b <- combine(fc2)
+a <- lawn_combine(fc1)
+b <- lawn_combine(fc2)
 
-test_that("combine works", {
+test_that("lawn_combine works", {
   expect_is(a, "list")
   expect_is(a$type, "character")
   expect_is(a$geometry$coordinates, "matrix")
@@ -73,9 +73,9 @@ test_that("combine works", {
   expect_equal(jsonlite::fromJSON(fc2)$features$geometry$type[1], "LineString")
 })
 
-test_that("combine fails correctly", {
-  expect_error(combine(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
-  expect_error(combine("ex_polys", TRUE), "invalid char in json text")
-  expect_error(combine("{}", TRUE), "Line 1 - The type property is required and was not found")
-  expect_error(combine(sub("FeatureCollection", "adfadf", fc1), TRUE), "The type adfadf is unknown")
+test_that("lawn_combine fails correctly", {
+  expect_error(lawn_combine(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
+  expect_error(lawn_combine("ex_polys", TRUE), "invalid char in json text")
+  expect_error(lawn_combine("{}", TRUE), "Line 1 - The type property is required and was not found")
+  expect_error(lawn_combine(sub("FeatureCollection", "adfadf", fc1), TRUE), "The type adfadf is unknown")
 })

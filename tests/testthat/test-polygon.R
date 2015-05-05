@@ -1,6 +1,6 @@
-context("polygon")
+context("lawn_polygon")
 
-test_that("polygon works", {
+test_that("lawn_polygon works", {
   rings <- list(list(
     c(-2.275543, 53.464547),
     c(-2.275543, 53.489271),
@@ -8,8 +8,8 @@ test_that("polygon works", {
     c(-2.215118, 53.464547),
     c(-2.275543, 53.464547)
   ))
-  a <- polygon(rings)
-  b <- polygon(rings, properties = list(name = 'poly1', population = 400))
+  a <- lawn_polygon(rings)
+  b <- lawn_polygon(rings, properties = list(name = 'poly1', population = 400))
 
   expect_is(a, "polygon")
   expect_is(unclass(a), "list")
@@ -27,10 +27,10 @@ test_that("polygon works", {
   expect_equal(length(b$properties), 2)
 
   # passing NULL gives empty polygon geometry
-  expect_is(polygon(NULL), "polygon")
+  expect_is(lawn_polygon(NULL), "polygon")
 })
 
-test_that("polygon fails correctly", {
-  expect_error(polygon(), "argument \"rings\" is missing, with no default")
-  expect_error(polygon("stuff"), "stuff is not defined")
+test_that("lawn_polygon fails correctly", {
+  expect_error(lawn_polygon(), "argument \"rings\" is missing, with no default")
+  expect_error(lawn_polygon("stuff"), "stuff is not defined")
 })

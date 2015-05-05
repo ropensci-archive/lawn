@@ -1,12 +1,12 @@
-context("aggregate")
+context("lawn_aggregate")
 
 ex_polys <- lawn_data$polygons_aggregate
 ex_pts <- lawn_data$points_aggregate
 ex_agg <- list(c("sum", "population", "pop_sum"), c("average", "population", "pop_average"), c("count", "",
                                                                                                "num_of_pts"))
-agg_result <- aggregate(ex_polys, ex_pts, ex_agg)
+agg_result <- lawn_aggregate(ex_polys, ex_pts, ex_agg)
 
-test_that("aggregate works", {
+test_that("lawn_aggregate works", {
   expect_is(agg_result, "list")
   expect_is(agg_result$type, "character")
   expect_is(agg_result$features, "data.frame")
@@ -17,9 +17,9 @@ test_that("aggregate works", {
   expect_equal(agg_result$features$properties$num_of_pts[1], 3)
 })
 
-test_that("aggregate fails correctly", {
-  expect_error(aggregate(), "argument \"polys\" is missing, with no default")
-  expect_error(aggregate(ex_polys), "argument \"pts\" is missing, with no default")
-  expect_error(aggregate(ex_polys, ex_pts, c("count", "", "test")), "'agg' is not a list")
-  expect_error(aggregate(ex_polys, ex_pts, list(c("mean", "testin", "testout"))), "Error: \"mean\" is not a recognized aggregation operation.")
+test_that("lawn_aggregate fails correctly", {
+  expect_error(lawn_aggregate(), "argument \"polys\" is missing, with no default")
+  expect_error(lawn_aggregate(ex_polys), "argument \"pts\" is missing, with no default")
+  expect_error(lawn_aggregate(ex_polys, ex_pts, c("count", "", "test")), "'agg' is not a list")
+  expect_error(lawn_aggregate(ex_polys, ex_pts, list(c("mean", "testin", "testout"))), "Error: \"mean\" is not a recognized aggregation operation.")
 })

@@ -1,12 +1,12 @@
-context("featurecollection")
+context("lawn_featurecollection")
 
 # points
 features <- list(
-   point(c(-75.343, 39.984), properties = list(name = 'Location A')),
-   point(c(-75.833, 39.284), properties = list(name = 'Location B')),
-   point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+  lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+  lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+  lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
 )
-a <- featurecollection(features)
+a <- lawn_featurecollection(features)
 
 # polygons
 rings <- list(list(
@@ -24,10 +24,10 @@ rings2 <- list(list(
    c(-2.775543, 54.464547)
 ))
 features <- list(
-   polygon(rings, properties = list(name = 'poly1', population = 400)),
-   polygon(rings2, properties = list(name = 'poly2', population = 5000))
+  lawn_polygon(rings, properties = list(name = 'poly1', population = 400)),
+  lawn_polygon(rings2, properties = list(name = 'poly2', population = 5000))
 )
-b <- featurecollection(features)
+b <- lawn_featurecollection(features)
 
 # linestrings
 pts1 <- list(
@@ -38,12 +38,12 @@ pts1 <- list(
 )
 pts2 <- rapply(pts1, function(x) x + 0.1, how = "list")
 features <- list(
-   linestring(pts1, properties = list(name = 'line1', distance = 145)),
-   linestring(pts2, properties = list(name = 'line2', distance = 145))
+  lawn_linestring(pts1, properties = list(name = 'line1', distance = 145)),
+  lawn_linestring(pts2, properties = list(name = 'line2', distance = 145))
 )
-c <- featurecollection(features)
+c <- lawn_featurecollection(features)
 
-test_that("featurecollection works", {
+test_that("lawn_featurecollection works", {
   expect_is(a, "featurecollection")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
@@ -70,8 +70,8 @@ test_that("featurecollection works", {
   expect_equal(c$features$properties$distance[1], 145)
 })
 
-test_that("featurecollection fails correctly", {
-  expect_error(featurecollection(), "no applicable method")
-  expect_error(featurecollection(5), "applied to an object of class")
-  expect_error(featurecollection(rings), "applied to an object of class \"list\"")
+test_that("lawn_featurecollection fails correctly", {
+  expect_error(lawn_featurecollection(), "no applicable method")
+  expect_error(lawn_featurecollection(5), "applied to an object of class")
+  expect_error(lawn_featurecollection(rings), "applied to an object of class \"list\"")
 })
