@@ -2,14 +2,14 @@
 % Please edit documentation in R/tag.R
 \name{tag}
 \alias{tag}
-\title{Inside}
+\title{Tag}
 \usage{
 tag(points, polygons, polyId, containingPolyId)
 }
 \arguments{
-\item{points}{Input point}
+\item{points}{Input \code{\link{data-Point}}}
 
-\item{polygons}{Input polygon or multipolygon}
+\item{polygons}{Input \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}}
 
 \item{polyId}{property in polygons to add to joined Point features}
 
@@ -17,19 +17,17 @@ tag(points, polygons, polyId, containingPolyId)
 property from polygons}
 }
 \value{
-\code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if
-the Point IS NOT inside the Polygon
+points with containingPolyId property containing values from polyId
 }
 \description{
-Takes a Point and a Polygon or MultiPolygon and determines if the point
-resides inside the polygon. The polygon can be convex or concave. The
-function accounts for holes
+Tag
+}
+\details{
+Takes a set of points and a set of polygons and performs a spatial join
 }
 \examples{
-\dontrun{
 pts <- random(n = 30)
 polys <- triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 tag(pts, polys, 'fill', 'marker-color')
-}
 }
 

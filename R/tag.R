@@ -1,26 +1,23 @@
-#' Inside
+#' Tag
 #'
-#' Takes a Point and a Polygon or MultiPolygon and determines if the point
-#' resides inside the polygon. The polygon can be convex or concave. The
-#' function accounts for holes
-#'
-#' @param points Input point
-#' @param polygons Input polygon or multipolygon
+#' @param points Input \code{\link{data-Point}}
+#' @param polygons Input \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}
 #' @param polyId property in polygons to add to joined Point features
 #' @param containingPolyId property in points in which to store joined
 #' property from polygons
-#' @return \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if
-#' the Point IS NOT inside the Polygon
-#' @examples \dontrun{
+#' @return points with containingPolyId property containing values from polyId
+#' @details Takes a set of points and a set of polygons and performs a spatial join
+#' @examples
 #' pts <- random(n = 30)
 #' polys <- triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 #' tag(pts, polys, 'fill', 'marker-color')
+#' @examples \dontrun{
+#' tag(pts, polys, 'fill', 'marker-color') %>% view
 #' }
 tag <- function(points, polygons, polyId, containingPolyId) {
-  message("not working yet")
-#   points <- convert(points)
-#   polygons <- convert(polygons)
-#   ct$eval(sprintf("var tag = turf.tag(%s, %s, '%s', '%s');",
-#                   points, polygons, polyId, caontainingPolyId))
-#   ct$get("tag")
+  points <- convert(points)
+  polygons <- convert(polygons)
+  ct$eval(sprintf("var tag = turf.tag(%s, %s, '%s', '%s');",
+                  points, polygons, polyId, containingPolyId))
+  ct$get("tag")
 }
