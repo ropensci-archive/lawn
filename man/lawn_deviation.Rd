@@ -22,13 +22,13 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
-\description{
-Deviation
+\value{
+polygons with appended field representing deviation, as a
+\code{\link{data-FeatureCollection}}
 }
-\details{
+\description{
 Calculates the population standard deviation (i.e. denominator = n, not n-1) of
-         values from points that are within a polygon and returns that on a polygon
-         FeatureCollection.
+values from \code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
 ex_polys <- lawn_data$polygons_aggregate
@@ -37,5 +37,12 @@ lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
+}
+\seealso{
+Other aggregations: \code{\link{lawn_aggregate}};
+  \code{\link{lawn_average}}; \code{\link{lawn_count}};
+  \code{\link{lawn_max}}; \code{\link{lawn_median}};
+  \code{\link{lawn_min}}; \code{\link{lawn_sum}};
+  \code{\link{lawn_variance}}
 }
 

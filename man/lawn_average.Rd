@@ -26,8 +26,8 @@ objects. Default: \code{FALSE}}
 polygons with the value of outField set to the calculated averages
 }
 \description{
-Calculate the average value of a field for a set of points within a set of
-polygons
+Calculate the average value of a field for a set of \code{\link{data-Point}}'s
+within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
 # using data in the package
@@ -35,5 +35,12 @@ cat(lawn_data$points_average)
 cat(lawn_data$polygons_average)
 lawn_average(polygons = lawn_data$polygons_average,
              points = lawn_data$points_average, 'population')
+}
+\seealso{
+Other aggregations: \code{\link{lawn_aggregate}};
+  \code{\link{lawn_count}}; \code{\link{lawn_deviation}};
+  \code{\link{lawn_max}}; \code{\link{lawn_median}};
+  \code{\link{lawn_min}}; \code{\link{lawn_sum}};
+  \code{\link{lawn_variance}}
 }
 

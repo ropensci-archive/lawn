@@ -8,6 +8,7 @@
 #' @param pts \code{\link{data-Point}} with values to aggregate.
 #' @param agg Aggregation object. For more information, see details.
 #' @template lint
+#' @family aggregations
 #'
 #' @details Provides a statistical summary of values from points that are
 #'          within a polygon.   The \code{agg} parameter must be a list of

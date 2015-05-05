@@ -1,4 +1,7 @@
-#' Calculates the number of points that fall within the set of polygons.
+#' Count
+#'
+#' Calculates the number of \code{\link{data-Point}}'s that fall within the set
+#' of \code{\link{data-Polygon}}'s
 #'
 #' @export
 #'
@@ -7,6 +10,7 @@
 #' @param countField (character) A field to append to the attributes of the Polygon features
 #' representing Point counts
 #' @template lint
+#' @family aggregations
 #' @examples
 #' # using data in the package
 #' cat(lawn_data$points_count)

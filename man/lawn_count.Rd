@@ -2,7 +2,7 @@
 % Please edit documentation in R/count.R
 \name{lawn_count}
 \alias{lawn_count}
-\title{Calculates the number of points that fall within the set of polygons.}
+\title{Count}
 \usage{
 lawn_count(polygons, points, countField = "pt_count", lint = FALSE)
 }
@@ -20,12 +20,20 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Calculates the number of points that fall within the set of polygons.
+Calculates the number of \code{\link{data-Point}}'s that fall within the set
+of \code{\link{data-Polygon}}'s
 }
 \examples{
 # using data in the package
 cat(lawn_data$points_count)
 cat(lawn_data$polygons_count)
 lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+}
+\seealso{
+Other aggregations: \code{\link{lawn_aggregate}};
+  \code{\link{lawn_average}}; \code{\link{lawn_deviation}};
+  \code{\link{lawn_max}}; \code{\link{lawn_median}};
+  \code{\link{lawn_min}}; \code{\link{lawn_sum}};
+  \code{\link{lawn_variance}}
 }
 

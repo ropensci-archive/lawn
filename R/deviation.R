@@ -1,5 +1,8 @@
 #' Deviation
 #'
+#' Calculates the population standard deviation (i.e. denominator = n, not n-1) of
+#' values from \code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s
+#'
 #' @export
 #' @param polys Polygon(s) defining area to aggregate.
 #' @param pts Points with values to aggregate.
@@ -8,10 +11,9 @@
 #' @param outField Characater for the name of the field on the ouput polygon FeatureCollection
 #'        that will store the resultant value.
 #' @template lint
-#'
-#' @details Calculates the population standard deviation (i.e. denominator = n, not n-1) of
-#'          values from points that are within a polygon and returns that on a polygon
-#'          FeatureCollection.
+#' @family aggregations
+#' @return polygons with appended field representing deviation, as a
+#' \code{\link{data-FeatureCollection}}
 #'
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples

@@ -1,7 +1,7 @@
 #' Average
 #'
-#' Calculate the average value of a field for a set of points within a set of
-#' polygons
+#' Calculate the average value of a field for a set of \code{\link{data-Point}}'s
+#' within a set of \code{\link{data-Polygon}}'s
 #'
 #' @export
 #'
@@ -12,6 +12,7 @@
 #' @param outputField (character) The field in polygons to put results of the
 #' averages
 #' @template lint
+#' @family aggregations
 #' @return polygons with the value of outField set to the calculated averages
 #' @examples
 #' # using data in the package

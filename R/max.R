@@ -1,12 +1,14 @@
 #' Maximum
 #'
+#' Calculates the maximum value of a field for a set of \code{\link{data-Point}}'s
+#' within a set of \code{\link{data-Polygon}}'s
+#'
 #' @export
 #' @template math
 #' @template lint
+#' @family aggregations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @details Calculates the variance value of a field for \code{\link{data-Point}}
-#' features within a set of \code{\link{data-Polygon}} features.
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average

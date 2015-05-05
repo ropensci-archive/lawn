@@ -25,15 +25,19 @@ A FeatureCollection of \code{\link{data-Polygon}} features with
 properties listed as \code{out_field}
 }
 \description{
-Maximum
-}
-\details{
-Calculates the variance value of a field for \code{\link{data-Point}}
-features within a set of \code{\link{data-Polygon}} features.
+Calculates the maximum value of a field for a set of \code{\link{data-Point}}'s
+within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
 lawn_max(poly, pt, 'population', 'max')
+}
+\seealso{
+Other aggregations: \code{\link{lawn_aggregate}};
+  \code{\link{lawn_average}}; \code{\link{lawn_count}};
+  \code{\link{lawn_deviation}}; \code{\link{lawn_median}};
+  \code{\link{lawn_min}}; \code{\link{lawn_sum}};
+  \code{\link{lawn_variance}}
 }
 
