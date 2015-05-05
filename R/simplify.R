@@ -1,5 +1,8 @@
 #' Simplify
 #'
+#' Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+#' and returns a simplified version
+#'
 #' @export
 #' @param feature a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
 #' feature to be simplified
@@ -8,12 +11,11 @@
 #' higher-quality simplification with a different algorithm
 #' @return a simplified feature
 #' @template lint
-#'
+#' @family transformations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @details Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-#' feature and returns a simplified version. Internally uses simplify-js
-#' (\url{http://mourner.github.io/simplify-js/}) to perform simplification.
+#' @details Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
+#' to perform simplification.
 #'
 #' @examples
 #' feature <- '{

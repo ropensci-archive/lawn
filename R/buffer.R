@@ -1,11 +1,13 @@
 #' Buffer a feature
 #'
+#' Calculates a buffer for input features for a given radius
+#'
 #' @export
 #' @param input A Feature or FeatureCollection
 #' @param dist distance used to buffer the input
 #' @param units (character) Can be miles, feet, kilometers (default), meters, or degrees
 #' @template lint
-#' @details Calculates and returns a buffered feature.
+#' @family transformations
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' # From a FeatureCollection

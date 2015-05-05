@@ -19,10 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Buffer a feature
-}
-\details{
-Calculates and returns a buffered feature.
+Calculates a buffer for input features for a given radius
 }
 \examples{
 # From a FeatureCollection
@@ -51,5 +48,12 @@ lawn_buffer(lawn_point(c(-74.50,40)), 100, "meters")
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_concave}}; \code{\link{lawn_convex}};
+  \code{\link{lawn_erase}}; \code{\link{lawn_intersect}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

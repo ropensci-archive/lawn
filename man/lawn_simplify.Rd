@@ -27,12 +27,12 @@ A FeatureCollection of \code{\link{data-Polygon}} features with
 properties listed as \code{out_field}
 }
 \description{
-Simplify
+Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+and returns a simplified version
 }
 \details{
-Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-feature and returns a simplified version. Internally uses simplify-js
-(\url{http://mourner.github.io/simplify-js/}) to perform simplification.
+Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
+to perform simplification.
 }
 \examples{
 feature <- '{
@@ -66,5 +66,12 @@ feature <- '{
 }'
 
 lawn_simplify(feature, tolerance = 0.01)
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_convex}}; \code{\link{lawn_erase}};
+  \code{\link{lawn_intersect}}; \code{\link{lawn_merge}};
+  \code{\link{lawn_union}}
 }
 

@@ -19,12 +19,9 @@ merged \code{\link{data-Polygon}} or multipolygon
 \code{\link{data-MultiPolygon}}
 }
 \description{
-Merge
-}
-\details{
-Takes a set of \code{\link{data-Polygon}} and returns a single
+Takes a set of \code{\link{data-Polygon}}'s and returns a single
 merged polygon feature. If the input polygon features are not contiguous,
-this function returns a \code{\link{data-MultiPolygon}} feature.
+returns a \code{\link{data-MultiPolygon}} feature.
 }
 \examples{
 polygons <- '{
@@ -62,5 +59,12 @@ polygons <- '{
   ]
 }'
 lawn_merge(polygons)
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_convex}}; \code{\link{lawn_erase}};
+  \code{\link{lawn_intersect}};
+  \code{\link{lawn_simplify}}; \code{\link{lawn_union}}
 }
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/intersect.R
 \name{lawn_intersect}
 \alias{lawn_intersect}
-\title{Find the intersection of two polygons}
+\title{Intersection}
 \usage{
 lawn_intersect(poly1, poly2, lint = FALSE)
 }
@@ -17,13 +17,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Find the intersection of two polygons
+Finds the interesection of two \code{\link{data-Polygon}}'s and returns just
+the intersection of the two
 }
 \details{
-Finds the interesection of two polygons and returns just the
-         intersection of the two.  Polygons with just a shared boundary will
-         return the boundary. Polygons that do not intersect will return
-         \code{NULL}.
+Polygons with just a shared boundary will return the boundary. Polygons
+that do not intersect will return \code{NULL}.
 }
 \examples{
 poly1 <- '{
@@ -76,5 +75,12 @@ lawn_intersect(x1, x2)
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_convex}}; \code{\link{lawn_erase}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

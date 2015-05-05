@@ -22,12 +22,9 @@ objects. Default: \code{FALSE}}
 \code{\link{data-LineString}} curved line
 }
 \description{
-Bezier
-}
-\details{
 Takes a \code{\link{data-LineString}} and returns a curved version
 by applying a \href{http://en.wikipedia.org/wiki/Bezier_spline}{Bezier}
-spline algorithm.
+spline algorithm
 }
 \examples{
 pts <- '[
@@ -39,5 +36,12 @@ pts <- '[
 lawn_bezier(lawn_linestring(pts))
 lawn_bezier(lawn_linestring(pts), 9000L)
 lawn_bezier(lawn_linestring(pts), 9000L, 0.65)
+}
+\seealso{
+Other transformations: \code{\link{lawn_buffer}};
+  \code{\link{lawn_concave}}; \code{\link{lawn_convex}};
+  \code{\link{lawn_erase}}; \code{\link{lawn_intersect}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

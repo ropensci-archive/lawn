@@ -1,14 +1,15 @@
-#' Find the union of two polygons
+#' Union
+#'
+#' Finds the interesection of two polygons and returns the union of the two
 #'
 #' @export
 #' @param poly1 A polygon
 #' @param poly2 A polygon
 #' @template lint
+#' @family transformations
 #'
-#' @details Finds the interesection of two polygons and returns the
-#'          union of the two.  Contiguous polygons are combined, non-contiguous
-#'          polygons are returned as MultiPolygon.
-#'          \code{NULL}.
+#' @details Contiguous polygons are combined, non-contiguous polygons are returned
+#' as MultiPolygon
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{

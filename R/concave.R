@@ -1,15 +1,16 @@
 #' Concave
 #'
+#' Takes a set of \code{\link{data-Point}}'s and returns a concave hull polygon.
+#' Internally, this implements a Monotone chain algorithm
+#'
 #' @export
 #' @param points input points in a \code{\link{data-FeatureCollection}}
 #' @param maxEdge the size of an edge necessary for part of the hull to
 #' become concave (in miles)
 #' @param units	used for maxEdge distance (miles [default] or kilometers)
 #' @template lint
+#' @family transformations
 #' @return \code{\link{data-Polygon}} a concave hull
-#' @details Takes a set of \code{\link{data-Point}} and returns a concave
-#' hull polygon. Internally, this implements a
-#' \href{http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript}{Monotone chain algorithm}
 #' @examples
 #' points <- '{
 #'   "type": "FeatureCollection",

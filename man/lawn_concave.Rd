@@ -23,12 +23,8 @@ objects. Default: \code{FALSE}}
 \code{\link{data-Polygon}} a concave hull
 }
 \description{
-Concave
-}
-\details{
-Takes a set of \code{\link{data-Point}} and returns a concave
-hull polygon. Internally, this implements a
-\href{http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript}{Monotone chain algorithm}
+Takes a set of \code{\link{data-Point}}'s and returns a concave hull polygon.
+Internally, this implements a Monotone chain algorithm
 }
 \examples{
 points <- '{
@@ -80,5 +76,12 @@ points <- '{
     ]
 }'
 lawn_concave(points, 1)
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_convex}};
+  \code{\link{lawn_erase}}; \code{\link{lawn_intersect}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

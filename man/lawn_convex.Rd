@@ -18,14 +18,10 @@ objects. Default: \code{FALSE}}
 \code{\link{data-Polygon}} a convex hull
 }
 \description{
-Convex
-}
-\details{
-Takes a set of \code{\link{data-Point}} and returns a convex
+Takes a set of \code{\link{data-Point}}'s and returns a convex
 hull polygon. Internally, this uses the
 \href{https://github.com/mikolalysenko/convex-hull}{convex-hull} module
-that implements a
-\href{http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript}{Monotone chain hull}
+that implements a Monotone chain hull
 }
 \examples{
 points <- '{
@@ -77,5 +73,12 @@ points <- '{
     ]
 }'
 lawn_convex(points)
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_erase}}; \code{\link{lawn_intersect}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

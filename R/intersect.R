@@ -1,14 +1,15 @@
-#' Find the intersection of two polygons
+#' Intersection
+#'
+#' Finds the interesection of two \code{\link{data-Polygon}}'s and returns just
+#' the intersection of the two
 #'
 #' @export
 #' @param poly1 A polygon
 #' @param poly2 A polygon
 #' @template lint
-#'
-#' @details Finds the interesection of two polygons and returns just the
-#'          intersection of the two.  Polygons with just a shared boundary will
-#'          return the boundary. Polygons that do not intersect will return
-#'          \code{NULL}.
+#' @family transformations
+#' @details Polygons with just a shared boundary will return the boundary. Polygons
+#' that do not intersect will return \code{NULL}.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{

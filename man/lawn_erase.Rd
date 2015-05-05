@@ -21,10 +21,7 @@ a \code{\link{data-Polygon}} feature showing the area of poly1 excluding
 the area of poly2
 }
 \description{
-Erase
-}
-\details{
-Finds the difference between two \code{\link{data-Polygon}} by clipping
+Finds the difference between two \code{\link{data-Polygon}}'s by clipping
 the second polygon from the first.
 }
 \examples{
@@ -62,5 +59,12 @@ poly2 <- '{
   }
 }'
 lawn_erase(poly1, poly2)
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_convex}}; \code{\link{lawn_intersect}};
+  \code{\link{lawn_merge}}; \code{\link{lawn_simplify}};
+  \code{\link{lawn_union}}
 }
 

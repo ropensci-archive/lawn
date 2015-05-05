@@ -2,7 +2,7 @@
 % Please edit documentation in R/union.R
 \name{lawn_union}
 \alias{lawn_union}
-\title{Find the union of two polygons}
+\title{Union}
 \usage{
 lawn_union(poly1, poly2, lint = FALSE)
 }
@@ -17,13 +17,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Find the union of two polygons
+Finds the interesection of two polygons and returns the union of the two
 }
 \details{
-Finds the interesection of two polygons and returns the
-         union of the two.  Contiguous polygons are combined, non-contiguous
-         polygons are returned as MultiPolygon.
-         \code{NULL}.
+Contiguous polygons are combined, non-contiguous polygons are returned
+as MultiPolygon
 }
 \examples{
 poly1 <- '{
@@ -76,5 +74,12 @@ lawn_union(x1, x2)
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
+}
+\seealso{
+Other transformations: \code{\link{lawn_bezier}};
+  \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
+  \code{\link{lawn_convex}}; \code{\link{lawn_erase}};
+  \code{\link{lawn_intersect}}; \code{\link{lawn_merge}};
+  \code{\link{lawn_simplify}}
 }
 

@@ -1,13 +1,15 @@
 #' Merge
 #'
+#' Takes a set of \code{\link{data-Polygon}}'s and returns a single
+#' merged polygon feature. If the input polygon features are not contiguous,
+#' returns a \code{\link{data-MultiPolygon}} feature.
+#'
 #' @export
 #' @param fc input polygons, as \code{\link{data-FeatureCollection}}
 #' @template lint
+#' @family transformations
 #' @return merged \code{\link{data-Polygon}} or multipolygon
 #' \code{\link{data-MultiPolygon}}
-#' @details Takes a set of \code{\link{data-Polygon}} and returns a single
-#' merged polygon feature. If the input polygon features are not contiguous,
-#' this function returns a \code{\link{data-MultiPolygon}} feature.
 #' @examples
 #' polygons <- '{
 #'   "type": "FeatureCollection",
