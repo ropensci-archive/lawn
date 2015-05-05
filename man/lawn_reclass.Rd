@@ -23,16 +23,20 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-FeatureCollection a FeatureCollection with identical geometries to
+a \code{\link{data-FeatureCollection}} with identical geometries to
 input but with outField populated.
 }
 \description{
-Takes a FeatureCollection, an input field, an output field, and an array of
-translations and outputs an identical FeatureCollection with the output
-field property populated
+Takes a \code{\link{data-FeatureCollection}}, an input field, an output field,
+and an array of translations and outputs an identical FeatureCollection with
+the output field property populated
 }
 \examples{
 translations <- list(list(0, 200, "small"), list(200, 400, "medium"), list(400, 600, "large"))
 lawn_reclass(lawn_data$points_average, 'population', 'size', translations)
+}
+\seealso{
+Other classification: \code{\link{lawn_jenks}};
+  \code{\link{lawn_nearest}}; \code{\link{lawn_quantile}}
 }
 

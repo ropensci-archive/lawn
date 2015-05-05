@@ -1,8 +1,8 @@
 #' Reclass
 #'
-#' Takes a FeatureCollection, an input field, an output field, and an array of
-#' translations and outputs an identical FeatureCollection with the output
-#' field property populated
+#' Takes a \code{\link{data-FeatureCollection}}, an input field, an output field,
+#' and an array of translations and outputs an identical FeatureCollection with
+#' the output field property populated
 #'
 #' @export
 #'
@@ -13,7 +13,8 @@
 #' as combined numerics and characters will become all character strings when converted
 #' to json
 #' @template lint
-#' @return FeatureCollection a FeatureCollection with identical geometries to
+#' @family classification
+#' @return a \code{\link{data-FeatureCollection}} with identical geometries to
 #' input but with outField populated.
 #' @examples
 #' translations <- list(list(0, 200, "small"), list(200, 400, "medium"), list(400, 600, "large"))

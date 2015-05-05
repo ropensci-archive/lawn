@@ -1,6 +1,7 @@
 #' Quantile
 #'
-#' Takes a FeatureCollection, a property name, set of percentiles and returns a quantile array
+#' Takes a \code{\link{data-FeatureCollection}}, a property name, set of percentiles
+#' and returns a quantile array
 #'
 #' @export
 #'
@@ -8,6 +9,7 @@
 #' @param field The property in input from which to retrieve quantile values
 #' @param percentiles An Array of percentiles on which to calculate quantile values
 #' @template lint
+#' @family classification
 #' @return An array of the break values
 #' @examples
 #' pts <- '{

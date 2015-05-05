@@ -22,7 +22,8 @@ objects. Default: \code{FALSE}}
 An array of the break values
 }
 \description{
-Takes a FeatureCollection, a property name, set of percentiles and returns a quantile array
+Takes a \code{\link{data-FeatureCollection}}, a property name, set of percentiles
+and returns a quantile array
 }
 \examples{
 pts <- '{
@@ -80,5 +81,9 @@ lawn_quantile(pts, 'population', c(25, 50, 75, 99))
 lawn_quantile(pts, 'population', c(25, 50, 75, 95))
 lawn_quantile(pts, 'population', c(25, 50, 75))
 lawn_quantile(pts, 'population', c(1, 50, 99.9))
+}
+\seealso{
+Other classification: \code{\link{lawn_jenks}};
+  \code{\link{lawn_nearest}}; \code{\link{lawn_reclass}}
 }
 

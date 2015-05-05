@@ -17,10 +17,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A point as a Feature
+A \code{\link{data-Point}} as a Feature
 }
 \description{
-Takes a reference point and a set of points and returns the point from
+Takes a reference \code{\link{data-Point}} and a set of points and returns the point from
 the set closest to the reference
 }
 \examples{
@@ -62,5 +62,9 @@ against <- '{
  ]
 }'
 lawn_nearest(point, against)
+}
+\seealso{
+Other classification: \code{\link{lawn_jenks}};
+  \code{\link{lawn_quantile}}; \code{\link{lawn_reclass}}
 }
 

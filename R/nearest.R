@@ -1,6 +1,6 @@
 #' Nearest
 #'
-#' Takes a reference point and a set of points and returns the point from
+#' Takes a reference \code{\link{data-Point}} and a set of points and returns the point from
 #' the set closest to the reference
 #'
 #' @export
@@ -8,7 +8,8 @@
 #' @param point The reference point, a Feature
 #' @param against Input point set, a FeatureCollection
 #' @template lint
-#' @return A point as a Feature
+#' @family classification
+#' @return A \code{\link{data-Point}} as a Feature
 #' @examples
 #' point <- '{
 #'   "type": "Feature",

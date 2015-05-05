@@ -1,13 +1,15 @@
 #' Jenks
 #'
-#' Takes a set of features and returns an array of the Jenks Natural breaks for a given property
+#' Takes a set of \code{\link{data-Feature}}'s and returns an array of the Jenks
+#' Natural breaks for a given property
 #'
 #' @export
 #'
-#' @param input Set of Features
+#' @param input Set of \code{\link{data-Feature}}'s
 #' @param field the property in input on which to calculate Jenks natural breaks
 #' @param numberOfBreaks Number of classes in which to group the data
 #' @template lint
+#' @family classification
 #' @return An array of the break values
 #' @references Jenks Natural breaks
 #' \url{http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization}

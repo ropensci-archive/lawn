@@ -7,7 +7,7 @@
 lawn_jenks(input, field, numberOfBreaks, lint = FALSE)
 }
 \arguments{
-\item{input}{Set of Features}
+\item{input}{Set of \code{\link{data-Feature}}'s}
 
 \item{field}{the property in input on which to calculate Jenks natural breaks}
 
@@ -22,7 +22,8 @@ objects. Default: \code{FALSE}}
 An array of the break values
 }
 \description{
-Takes a set of features and returns an array of the Jenks Natural breaks for a given property
+Takes a set of \code{\link{data-Feature}}'s and returns an array of the Jenks
+Natural breaks for a given property
 }
 \examples{
 lawn_jenks(lawn_data$points_average, 'population', 0)
@@ -34,5 +35,9 @@ lawn_jenks(lawn_data$points_average, 'population', 4)
 \references{
 Jenks Natural breaks
 \url{http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization}
+}
+\seealso{
+Other classification: \code{\link{lawn_nearest}};
+  \code{\link{lawn_quantile}}; \code{\link{lawn_reclass}}
 }
 
