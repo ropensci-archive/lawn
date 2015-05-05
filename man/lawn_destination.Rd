@@ -24,13 +24,10 @@ objects. Default: \code{FALSE}}
 destination \code{\link{data-Point}}
 }
 \description{
-Destination
-}
-\details{
 Takes a \code{\link{data-Point}} and calculates the location of a
 destination point given a distance in degrees, radians, miles, or kilometers; and
-bearing in degrees. This uses the
-\href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine} formula to account
+bearing in degrees. Uses the
+\href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula} to account
 for global curvature.
 }
 \examples{
@@ -48,5 +45,16 @@ lawn_destination(pt, 50, 90, "miles")
 lawn_destination(pt, 100, 90, "miles")
 lawn_destination(pt, 2, 45, "kilometers")
 lawn_destination(pt, 2, 30, "degrees")
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}}; \code{\link{lawn_distance}};
+  \code{\link{lawn_envelope}}; \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

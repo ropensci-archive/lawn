@@ -2,18 +2,20 @@
 % Please edit documentation in R/average.R
 \name{lawn_average}
 \alias{lawn_average}
-\title{Calculate the average value of a field for a set of points within a set of polygons}
+\title{Average}
 \usage{
 lawn_average(polygons, points, field, outputField = "average", lint = FALSE)
 }
 \arguments{
-\item{polygons}{Geojson polygons}
+\item{polygons}{Geojson \code{\link{data-Polygon}}'s}
 
-\item{points}{Geojson points}
+\item{points}{Geojson \code{\link{data-Point}}'s}
 
-\item{field}{(character) The field in the points features from which to pull values to average}
+\item{field}{(character) The field in the points features from which to pull
+values to average}
 
-\item{outputField}{(character) The field in polygons to put results of the averages}
+\item{outputField}{(character) The field in polygons to put results of the
+averages}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -24,12 +26,14 @@ objects. Default: \code{FALSE}}
 polygons with the value of outField set to the calculated averages
 }
 \description{
-Calculate the average value of a field for a set of points within a set of polygons
+Calculate the average value of a field for a set of points within a set of
+polygons
 }
 \examples{
 # using data in the package
 cat(lawn_data$points_average)
 cat(lawn_data$polygons_average)
-lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
+lawn_average(polygons = lawn_data$polygons_average,
+             points = lawn_data$points_average, 'population')
 }
 

@@ -4,9 +4,8 @@
 #'
 #' @param input A feature or feature collection of polygons.
 #' @template lint
-#'
-#' @details Calculates the total area of a polygon or group of polygons. Returns
-#'          the values in square meters.
+#' @family measurements
+#' @return value in square meters
 #' @examples
 #' lawn_area(lawn_data$poly)
 #' lawn_area(lawn_data$multipoly)

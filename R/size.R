@@ -1,11 +1,13 @@
 #' Size
 #'
+#' Takes a bounding box and returns a new bounding box with a size
+#' expanded or contracted by a factor of X.
+#'
 #' @export
 #' @param bbox a bounding box
 #' @param factor the ratio of the new bbox to the input bbox
+#' @family measurements
 #' @return the resized bbox
-#' @details Takes a bounding box and returns a new bounding box with a size
-#' expanded or contracted by a factor of X.
 #' @examples
 #' bbox <- c(0, 0, 10, 10)
 #' lawn_size(bbox, factor = 1)

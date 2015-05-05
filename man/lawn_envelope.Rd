@@ -19,9 +19,6 @@ a rectangular \code{\link{data-Polygon}} feature that
 encompasses all vertices
 }
 \description{
-Envelope
-}
-\details{
 Takes any number of features and returns a rectangular
 \code{\link{data-Polygon}} that encompasses all vertices.
 }
@@ -60,5 +57,17 @@ fc <- '{
   ]
 }'
 lawn_envelope(fc)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

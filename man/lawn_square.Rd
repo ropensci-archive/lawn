@@ -18,9 +18,6 @@ objects. Default: \code{FALSE}}
 A square surrounding bbox
 }
 \description{
-Square
-}
-\details{
 Takes a bounding box and calculates the minimum square bounding
 box that would contain the input.
 }
@@ -29,5 +26,18 @@ bbox <- c(-20, -20, -15, 0)
 lawn_square(bbox)
 lawn_square(bbox, TRUE)
 sq <- lawn_square(bbox)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}
 }
 

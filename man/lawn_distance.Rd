@@ -2,7 +2,7 @@
 % Please edit documentation in R/distance.R
 \name{lawn_distance}
 \alias{lawn_distance}
-\title{Calculate the distance between two points}
+\title{Distance}
 \usage{
 lawn_distance(from, to, units = "kilometers", lint = FALSE)
 }
@@ -19,11 +19,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Calculate the distance between two points
-}
-\details{
-Calculates the distance between two points in degress, radians, miles, or kilometers.
-Uses the Haversine formula to account for global curvature.
+Calculates the distance between two \code{\link{data-Point}}'s in degress,
+radians, miles, or kilometers. Uses the
+\href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula}
+to account for global curvature.
 }
 \examples{
 from <- '{
@@ -43,5 +42,17 @@ to <- '{
   }
 }'
 lawn_distance(from, to)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_envelope}}; \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

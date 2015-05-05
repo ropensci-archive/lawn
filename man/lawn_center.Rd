@@ -19,13 +19,22 @@ a \code{\link{data-Point}} feature at the absolute center point of
 all input features
 }
 \description{
-Center
-}
-\details{
 Takes a \code{\link{data-FeatureCollection}} and returns the
-absolute center point of all features.
+absolute center point of all features
 }
 \examples{
 lawn_center(lawn_data$points_average)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

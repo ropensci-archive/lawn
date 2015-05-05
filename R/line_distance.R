@@ -1,12 +1,14 @@
 #' Line distance
 #'
+#' Takes a \code{\link{data-LineString}} and measures its length in
+#' the specified units.
+#'
 #' @export
 #' @param line Line to measure, a \code{\link{data-LineString}}
 #' @param units Can be degrees, radians, miles, or kilometers
 #' @template lint
+#' @family measurements
 #' @return length of the input line
-#' @details Takes a \code{\link{data-LineString}} and measures its length in
-#' the specified units.
 #' @examples
 #' line <- '{
 #'   "type": "Feature",

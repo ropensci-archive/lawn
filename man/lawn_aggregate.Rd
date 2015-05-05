@@ -8,9 +8,9 @@ lawn_aggregate(polys, pts, agg = list(c("count", "", "num_of_pts")),
   lint = FALSE)
 }
 \arguments{
-\item{polys}{Polygon(s) defining area to aggregate.}
+\item{polys}{\code{\link{data-Polygon}} defining area to aggregate.}
 
-\item{pts}{Points with values to aggregate.}
+\item{pts}{\code{\link{data-Point}} with values to aggregate.}
 
 \item{agg}{Aggregation object. For more information, see details.}
 
@@ -20,7 +20,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Aggregate
+Calculates a series of aggregations for a set of points within a set of
+polygons. Sum, average, count, min, max, and deviation are supported.
 }
 \details{
 Provides a statistical summary of values from points that are

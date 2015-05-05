@@ -1,11 +1,13 @@
 #' Get a bounding box
 #'
+#' Calculates the extent of all input features in a FeatureCollection,
+#' and returns a bounding box. The returned bounding box is of the form
+#' [west, south, east, north].
+#'
 #' @export
 #' @param input A Feature or FeatureCollection
 #' @template lint
-#' @details Calculates the extent of all input features in a FeatureCollection,
-#' and returns a bounding box. The returned bounding box is of the form
-#' [west, south, east, north].
+#' @family measurements
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)

@@ -20,9 +20,6 @@ objects. Default: \code{FALSE}}
 length of the input line
 }
 \description{
-Line distance
-}
-\details{
 Takes a \code{\link{data-LineString}} and measures its length in
 the specified units.
 }
@@ -46,5 +43,16 @@ lawn_line_distance(line, 'kilometers')
 lawn_line_distance(line, 'miles')
 lawn_line_distance(line, 'radians')
 lawn_line_distance(line, 'degrees')
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}}; \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

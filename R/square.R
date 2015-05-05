@@ -1,11 +1,13 @@
 #' Square
 #'
+#' Takes a bounding box and calculates the minimum square bounding
+#' box that would contain the input.
+#'
 #' @export
 #' @param bbox A bounding box
 #' @template lint
+#' @family measurements
 #' @return A square surrounding bbox
-#' @details Takes a bounding box and calculates the minimum square bounding
-#' box that would contain the input.
 #' @examples
 #' bbox <- c(-20, -20, -15, 0)
 #' lawn_square(bbox)

@@ -1,12 +1,22 @@
 #' Point on surface
 #'
+#' Finds a \code{\link{data-Point}} guaranteed to be on the surface of
+#' \code{\link{data-GeoJSON}} object.
+#'
 #' @export
 #' @param x any \code{\link{data-GeoJSON}} object
 #' @return A point on the surface of \code{x}
 #' @template lint
-#'
-#' @details Finds a \code{\link{data-Point}} guaranteed to be on the surface of
-#' \code{\link{data-GeoJSON}} object.
+#' @family measurements
+#' @details What will be returned?
+#' \itemize{
+#'  \item Given a \code{\link{data-Polygon}}, the point will be in the area
+#'  of the polygon
+#'  \item Given a \code{\link{data-LineString}}, the point will be along
+#'  the string
+#'  \item Given a \code{\link{data-Point}}, the point will the same as
+#'  the input
+#' }
 #'
 #' @examples
 #' # polygon

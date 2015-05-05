@@ -22,9 +22,6 @@ objects. Default: \code{FALSE}}
 \code{\link{data-Point}} distance units along the line
 }
 \description{
-Along
-}
-\details{
 Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
 at a specified distance along the line.
 }
@@ -36,5 +33,18 @@ pts <- '[
    [-21.927337, 64.136673]
 ]'
 lawn_along(lawn_linestring(pts), 1, 'miles')
+}
+\seealso{
+Other measurements: \code{\link{lawn_area}};
+  \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

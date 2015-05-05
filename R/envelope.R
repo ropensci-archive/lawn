@@ -1,12 +1,14 @@
 #' Envelope
 #'
+#' Takes any number of features and returns a rectangular
+#' \code{\link{data-Polygon}} that encompasses all vertices.
+#'
 #' @export
 #' @param fc \code{\link{data-FeatureCollection}}
 #' @template lint
+#' @family measurements
 #' @return a rectangular \code{\link{data-Polygon}} feature that
 #' encompasses all vertices
-#' @details Takes any number of features and returns a rectangular
-#' \code{\link{data-Polygon}} that encompasses all vertices.
 #' @examples
 #' fc <- '{
 #'   "type": "FeatureCollection",

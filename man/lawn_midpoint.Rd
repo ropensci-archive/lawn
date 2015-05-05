@@ -20,10 +20,7 @@ objects. Default: \code{FALSE}}
 A \code{\link{data-Point}} midway between pt1 and pt2
 }
 \description{
-Midpoint
-}
-\details{
-Takes two \code{\link{data-Point}} and returns a point midway
+Takes two \code{\link{data-Point}}'s and returns a point midway
 between them
 }
 \examples{
@@ -44,5 +41,17 @@ pt2 <- '{
   }
 }'
 lawn_midpoint(pt1, pt2)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

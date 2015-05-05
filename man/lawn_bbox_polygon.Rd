@@ -14,13 +14,22 @@ lawn_bbox_polygon(bbox)
 a \code{\link{data-Polygon}} representation of the bounding box
 }
 \description{
-Bbox polygon
-}
-\details{
 Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}
 }
 \examples{
 bbox <- c(0, 0, 10, 10)
 lawn_bbox_polygon(bbox)
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bearing}};
+  \code{\link{lawn_center}}; \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}};
+  \code{\link{lawn_point_on_surface}};
+  \code{\link{lawn_size}}; \code{\link{lawn_square}}
 }
 

@@ -1,13 +1,15 @@
 #' Along
 #'
+#' Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
+#' at a specified distance along the line.
+#'
 #' @export
 #' @param line input \code{\link{data-LineString}}
 #' @param distance distance along the line
 #' @param units	can be degrees, radians, miles (default), or kilometers
 #' @template lint
+#' @family measurements
 #' @return \code{\link{data-Point}} distance units along the line
-#' @details Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
-#' at a specified distance along the line.
 #' @examples
 #' pts <- '[
 #'    [-21.964416, 64.148203],

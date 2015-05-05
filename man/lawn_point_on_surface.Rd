@@ -18,11 +18,19 @@ objects. Default: \code{FALSE}}
 A point on the surface of \code{x}
 }
 \description{
-Point on surface
-}
-\details{
 Finds a \code{\link{data-Point}} guaranteed to be on the surface of
 \code{\link{data-GeoJSON}} object.
+}
+\details{
+What will be returned?
+\itemize{
+ \item Given a \code{\link{data-Polygon}}, the point will be in the area
+ of the polygon
+ \item Given a \code{\link{data-LineString}}, the point will be along
+ the string
+ \item Given a \code{\link{data-Point}}, the point will the same as
+ the input
+}
 }
 \examples{
 # polygon
@@ -39,5 +47,17 @@ linestring <- '[
    [-21.930084, 64.14446]
 ]'
 lawn_point_on_surface(lawn_linestring(linestring))
+}
+\seealso{
+Other measurements: \code{\link{lawn_along}};
+  \code{\link{lawn_area}}; \code{\link{lawn_bbox_polygon}};
+  \code{\link{lawn_bearing}}; \code{\link{lawn_center}};
+  \code{\link{lawn_centroid}};
+  \code{\link{lawn_destination}};
+  \code{\link{lawn_distance}}; \code{\link{lawn_envelope}};
+  \code{\link{lawn_extent}};
+  \code{\link{lawn_line_distance}};
+  \code{\link{lawn_midpoint}}; \code{\link{lawn_size}};
+  \code{\link{lawn_square}}
 }
 

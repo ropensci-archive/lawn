@@ -1,4 +1,9 @@
-#' Calculate the distance between two points
+#' Distance
+#'
+#' Calculates the distance between two \code{\link{data-Point}}'s in degress,
+#' radians, miles, or kilometers. Uses the
+#' \href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula}
+#' to account for global curvature.
 #'
 #' @export
 #'
@@ -6,8 +11,7 @@
 #' @param to Destination point
 #' @param units (character) Can be degrees, radians, miles, or kilometers
 #' @template lint
-#' @details Calculates the distance between two points in degress, radians, miles, or kilometers.
-#' Uses the Haversine formula to account for global curvature.
+#' @family measurements
 #' @examples
 #' from <- '{
 #'  "type": "Feature",

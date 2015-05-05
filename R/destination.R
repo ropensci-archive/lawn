@@ -1,17 +1,19 @@
 #' Destination
 #'
+#' Takes a \code{\link{data-Point}} and calculates the location of a
+#' destination point given a distance in degrees, radians, miles, or kilometers; and
+#' bearing in degrees. Uses the
+#' \href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula} to account
+#' for global curvature.
+#'
 #' @export
 #' @param start	starting point \code{\link{data-Point}}
 #' @param distance distance from the starting point
 #' @param bearing	ranging from -180 to 180
 #' @param units	miles, kilometers, degrees, or radians
 #' @template lint
+#' @family measurements
 #' @return destination \code{\link{data-Point}}
-#' @details Takes a \code{\link{data-Point}} and calculates the location of a
-#' destination point given a distance in degrees, radians, miles, or kilometers; and
-#' bearing in degrees. This uses the
-#' \href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine} formula to account
-#' for global curvature.
 #' @examples
 #' pt <- '{
 #'   "type": "Feature",

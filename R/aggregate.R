@@ -1,8 +1,11 @@
 #' Aggregate
 #'
+#' Calculates a series of aggregations for a set of points within a set of
+#' polygons. Sum, average, count, min, max, and deviation are supported.
+#'
 #' @export
-#' @param polys Polygon(s) defining area to aggregate.
-#' @param pts Points with values to aggregate.
+#' @param polys \code{\link{data-Polygon}} defining area to aggregate.
+#' @param pts \code{\link{data-Point}} with values to aggregate.
 #' @param agg Aggregation object. For more information, see details.
 #' @template lint
 #'

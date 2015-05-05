@@ -1,12 +1,14 @@
 #' Midpoint
 #'
+#' Takes two \code{\link{data-Point}}'s and returns a point midway
+#' between them
+#'
 #' @export
 #' @param pt1 First point
 #' @param pt2 Second point
 #' @template lint
+#' @family measurements
 #' @return A \code{\link{data-Point}} midway between pt1 and pt2
-#' @details Takes two \code{\link{data-Point}} and returns a point midway
-#' between them
 #' @examples
 #' pt1 <- '{
 #'   "type": "Feature",
