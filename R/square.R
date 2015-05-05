@@ -11,7 +11,9 @@
 #' square(bbox)
 #' square(bbox, TRUE)
 #' sq <- square(bbox)
+#' @examples \dontrun{
 #' featurecollection(list(bbox_polygon(bbox), bbox_polygon(sq))) %>% view
+#' }
 square <- function(bbox, lint = FALSE) {
   ct$eval(sprintf("var sq = turf.square(%s);", convert(bbox)))
   ct$get("sq")

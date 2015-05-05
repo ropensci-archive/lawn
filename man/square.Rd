@@ -29,6 +29,5 @@ bbox <- c(-20, -20, -15, 0)
 square(bbox)
 square(bbox, TRUE)
 sq <- square(bbox)
-featurecollection(list(bbox_polygon(bbox), bbox_polygon(sq))) \%>\% view
 }
 
