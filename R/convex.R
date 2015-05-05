@@ -67,5 +67,5 @@ lawn_convex <- function(input, lint = FALSE) {
   input <- convert(input)
   lawnlint(input, lint)
   ct$eval(sprintf("var cv = turf.convex(%s);", input))
-  structure(ct$get("cv"), class = "linestring")
+  structure(ct$get("cv"), class = "polygon")
 }
