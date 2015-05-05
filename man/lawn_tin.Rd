@@ -2,7 +2,7 @@
 % Please edit documentation in R/tin.R
 \name{lawn_tin}
 \alias{lawn_tin}
-\title{Tin}
+\title{Create a Triangulated Irregular Network}
 \usage{
 lawn_tin(pt, propertyName = NULL, lint = FALSE)
 }
@@ -19,16 +19,15 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-TIN output
+TIN output, as a \code{\link{data-FeatureCollection}}
 }
 \description{
-Tin
+Takes a set of \code{\link{data-Point}}'s and the name of a z-value property
+and creates a Triangulated Irregular Network (TIN)
 }
 \details{
-Takes a set of points and the name of a z-value property and creates a
-Triangulated Irregular Network, or a TIN for short, returned as a collection of
-Polygons. These are often used for developing elevation contour maps or stepped
-heat visualizations.
+Data returned as a collection of Polygons. These are often used for
+developing elevation contour maps or stepped heat visualizations.
 
 This triangulates the points, as well as adds properties called a, b, and c
 representing the value of the given propertyName at each of the points that
@@ -37,5 +36,13 @@ represent the corners of the triangle.
 \examples{
 pts <- lawn_random(bbox = c(-70, 40, -60, 60))
 lawn_tin(pts)
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_isolines}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_point_grid}};
+  \code{\link{lawn_square_grid}};
+  \code{\link{lawn_triangle_grid}}
 }
 

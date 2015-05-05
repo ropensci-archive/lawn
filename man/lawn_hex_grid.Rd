@@ -2,7 +2,7 @@
 % Please edit documentation in R/hex_grid.R
 \name{lawn_hex_grid}
 \alias{lawn_hex_grid}
-\title{HexGrid}
+\title{Create a HexGrid}
 \usage{
 lawn_hex_grid(extent, cellWidth, units)
 }
@@ -14,17 +14,25 @@ lawn_hex_grid(extent, cellWidth, units)
 \item{units}{(character) units to use for cellWidth, one of 'miles', xxxx}
 }
 \value{
-FeatureCollection grid of points
+\code{\link{data-FeatureCollection}} grid of points
 }
 \description{
 Takes a bounding box and a cell size in degrees and returns a
-FeatureCollection of flat-topped hexagons (Polygon features)
-aligned in an "odd-q" vertical grid as described in
-Hexagonal Grids \url{http://www.redblobgames.com/grids/hexagons/}
+\code{\link{data-FeatureCollection}} of flat-topped hexagons
+(\code{\link{data-Polygon}} features) aligned in an "odd-q" vertical
+grid as described in Hexagonal Grids
+\url{http://www.redblobgames.com/grids/hexagons/}
 }
 \examples{
 lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
 lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')
 lawn_hex_grid(c(-96,31,-84,40), 10, 'miles')
+}
+\seealso{
+Other interpolation: \code{\link{lawn_isolines}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_point_grid}};
+  \code{\link{lawn_square_grid}}; \code{\link{lawn_tin}};
+  \code{\link{lawn_triangle_grid}}
 }
 

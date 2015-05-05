@@ -1,16 +1,18 @@
-#' Inside
+#' Does a point reside inside a polygon
 #'
-#' Takes a Point and a Polygon or MultiPolygon and determines if the point
-#' resides inside the polygon. The polygon can be convex or concave. The
-#' function accounts for holes
+#' Takes a \code{\link{data-Point}} and a \code{\link{data-Polygon}} or
+#' \code{\link{data-MultiPolygon}} and determines if the point
+#' resides inside the polygon
 #'
 #' @export
 #'
 #' @param point Input point
 #' @param polygon Input polygon or multipolygon
 #' @template lint
+#' @family joins
 #' @return \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if
 #' the Point IS NOT inside the Polygon
+#' @details The polygon can be convex or concave. The function accounts for holes
 #' @examples
 #' point1 <- '{
 #'   "type": "Feature",

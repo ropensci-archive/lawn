@@ -7,7 +7,7 @@
 lawn_filter(features, key, value, lint = FALSE)
 }
 \arguments{
-\item{features}{A FeatureCollection}
+\item{features}{A \code{\link{data-FeatureCollection}}}
 
 \item{key}{(character) The property on which to filter}
 
@@ -18,6 +18,10 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+\code{\link{data-FeatureCollection}} - a filtered collection with only
+features that match input key and value
+}
 \description{
 Filter a FeatureCollection by a given property and value
 }
@@ -26,5 +30,11 @@ cat(lawn_data$filter_features)
 lawn_filter(lawn_data$filter_features, 'species', 'oak')
 lawn_filter(lawn_data$filter_features, 'species', 'maple')
 lawn_filter(lawn_data$filter_features, 'species', 'redwood')
+}
+\seealso{
+Other data: \code{\link{lawn_featurecollection}};
+  \code{\link{lawn_linestring}}; \code{\link{lawn_point}};
+  \code{\link{lawn_polygon}}; \code{\link{lawn_random}};
+  \code{\link{lawn_remove}}; \code{\link{lawn_sample}}
 }
 

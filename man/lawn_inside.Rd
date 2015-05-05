@@ -2,7 +2,7 @@
 % Please edit documentation in R/inside.R
 \name{lawn_inside}
 \alias{lawn_inside}
-\title{Inside}
+\title{Does a point reside inside a polygon}
 \usage{
 lawn_inside(point, polygon, lint = FALSE)
 }
@@ -21,9 +21,12 @@ objects. Default: \code{FALSE}}
 the Point IS NOT inside the Polygon
 }
 \description{
-Takes a Point and a Polygon or MultiPolygon and determines if the point
-resides inside the polygon. The polygon can be convex or concave. The
-function accounts for holes
+Takes a \code{\link{data-Point}} and a \code{\link{data-Polygon}} or
+\code{\link{data-MultiPolygon}} and determines if the point
+resides inside the polygon
+}
+\details{
+The polygon can be convex or concave. The function accounts for holes
 }
 \examples{
 point1 <- '{
@@ -62,5 +65,9 @@ poly <- '{
 }'
 lawn_inside(point1, poly)
 lawn_inside(point2, poly)
+}
+\seealso{
+Other joins: \code{\link{lawn_tag}};
+  \code{\link{lawn_within}}
 }
 

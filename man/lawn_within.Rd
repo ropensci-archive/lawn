@@ -16,12 +16,22 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+points that land within at least one polygon, as a
+\code{\link{data-FeatureCollection}}
+}
 \description{
-Return points that fall within polygons
+Takes a set of \code{\link{data-Point}}'s and a set of
+\code{\link{data-Polygon}}'s and returns points that fall within
+the polygons
 }
 \examples{
 cat(lawn_data$points_within)
 cat(lawn_data$polygons_within)
 lawn_within(lawn_data$points_within, lawn_data$polygons_within)
+}
+\seealso{
+Other joins: \code{\link{lawn_inside}};
+  \code{\link{lawn_tag}}
 }
 

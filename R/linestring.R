@@ -3,6 +3,8 @@
 #' @export
 #' @param coordinates A list of Positions
 #' @param properties A list of properties
+#' @family data
+#' @return a \code{\link{data-LineString}} feature
 #' @examples
 #' linestring1 <- '[
 #'    [-21.964416, 64.148203],

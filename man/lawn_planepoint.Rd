@@ -2,7 +2,7 @@
 % Please edit documentation in R/planepoint.R
 \name{lawn_planepoint}
 \alias{lawn_planepoint}
-\title{Planepoint}
+\title{Calculate a Planepoint}
 \usage{
 lawn_planepoint(pt, triangle, lint = FALSE)
 }
@@ -20,12 +20,13 @@ objects. Default: \code{FALSE}}
 the z-value for pt
 }
 \description{
-Planepoint
+Takes a triangular plane as a \code{\link{data-Polygon}} and a
+\code{\link{data-Point}} within that triangle and returns the
+z-value at that point
 }
 \details{
-Takes a triangular plane as a Polygon and a Point within that triangle
-and returns the z-value at that point. The Polygon needs to have properties a,
-b, and c that define the values at its three corners.
+The Polygon needs to have properties a, b, and c that define
+the values at its three corners.
 }
 \examples{
 pt <- lawn_point(c(-75.3221, 39.529))
@@ -47,5 +48,12 @@ triangle <- '{
   }
 }'
 lawn_planepoint(pt, triangle)
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_isolines}};
+  \code{\link{lawn_point_grid}};
+  \code{\link{lawn_square_grid}}; \code{\link{lawn_tin}};
+  \code{\link{lawn_triangle_grid}}
 }
 

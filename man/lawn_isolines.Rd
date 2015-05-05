@@ -2,7 +2,7 @@
 % Please edit documentation in R/isolines.R
 \name{lawn_isolines}
 \alias{lawn_isolines}
-\title{Isolines}
+\title{Generate Isolines}
 \usage{
 lawn_isolines(points, z, resolution, breaks, lint = FALSE)
 }
@@ -21,15 +21,24 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-FeatureCollection of isolines (LineString features)
+\code{\link{data-FeatureCollection}} of isolines
+(\code{\link{data-LineString}} features)
 }
 \description{
-Takes points with z-values and an array of value breaks and generates isolines
+Takes \code{\link{data-Point}}'s with z-values and an array of value
+breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
 }
 \examples{
 pts <- lawn_random(n = 10)
 pts$features$properties <- data.frame(z = round(rnorm(10, mean = 10)), stringsAsFactors = FALSE)
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 lawn_isolines(pts, 'z', 15, breaks)
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_point_grid}};
+  \code{\link{lawn_square_grid}}; \code{\link{lawn_tin}};
+  \code{\link{lawn_triangle_grid}}
 }
 

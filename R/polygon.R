@@ -3,6 +3,8 @@
 #' @export
 #' @param rings A list of LinearRings, or in json
 #' @param properties A list of properties
+#' @family data
+#' @return a \code{\link{data-Polygon}} feature
 #' @examples
 #' rings <- list(list(
 #'    c(-2.275543, 53.464547),

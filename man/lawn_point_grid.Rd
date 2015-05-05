@@ -2,7 +2,7 @@
 % Please edit documentation in R/point_grid.R
 \name{lawn_point_grid}
 \alias{lawn_point_grid}
-\title{PointGrid}
+\title{Create a PointGrid}
 \usage{
 lawn_point_grid(extent, cellWidth, units)
 }
@@ -14,14 +14,22 @@ lawn_point_grid(extent, cellWidth, units)
 \item{units}{(character) units to use for cellWidth, one of 'miles', xxxx}
 }
 \value{
-FeatureCollection grid of points
+\code{\link{data-FeatureCollection}} grid of points
 }
 \description{
-Takes a bounding box and a cell depth and returns a set of points in a grid
+Takes a bounding box and a cell depth and returns a set of
+\code{\link{data-Point}}'s in a grid
 }
 \examples{
 lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 10, 'miles')
 lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_isolines}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_square_grid}}; \code{\link{lawn_tin}};
+  \code{\link{lawn_triangle_grid}}
 }
 

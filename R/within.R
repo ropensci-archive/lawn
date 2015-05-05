@@ -1,9 +1,16 @@
 #' Return points that fall within polygons
 #'
+#' Takes a set of \code{\link{data-Point}}'s and a set of
+#' \code{\link{data-Polygon}}'s and returns points that fall within
+#' the polygons
+#'
 #' @export
 #' @param polygons FeatureCollection of polygons
 #' @param points FeatureCollection of points
 #' @template lint
+#' @family joins
+#' @return points that land within at least one polygon, as a
+#' \code{\link{data-FeatureCollection}}
 #' @examples
 #' cat(lawn_data$points_within)
 #' cat(lawn_data$polygons_within)

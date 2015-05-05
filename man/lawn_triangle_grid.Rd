@@ -2,7 +2,7 @@
 % Please edit documentation in R/triangle_grid.R
 \name{lawn_triangle_grid}
 \alias{lawn_triangle_grid}
-\title{TriangleGrid}
+\title{Create a TriangleGrid}
 \usage{
 lawn_triangle_grid(extent, cellWidth, units)
 }
@@ -14,14 +14,22 @@ lawn_triangle_grid(extent, cellWidth, units)
 \item{units}{(character) units to use for cellWidth, one of 'miles', xxxx}
 }
 \value{
-FeatureCollection grid of polygons
+\code{\link{data-FeatureCollection}} grid of polygons
 }
 \description{
-Takes a bounding box and a cell depth and returns a set of triangular polygons in a grid
+Takes a bounding box and a cell depth and returns a set of triangular
+\code{\link{data-Polygon}}'s in a grid
 }
 \examples{
 lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 10, 'miles')
 lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_isolines}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_point_grid}};
+  \code{\link{lawn_square_grid}}; \code{\link{lawn_tin}}
 }
 

@@ -1,13 +1,17 @@
-#' Planepoint
+#' Calculate a Planepoint
+#'
+#' Takes a triangular plane as a \code{\link{data-Polygon}} and a
+#' \code{\link{data-Point}} within that triangle and returns the
+#' z-value at that point
 #'
 #' @export
 #' @param pt the Point for which a z-value will be calculated
 #' @param triangle a Polygon feature with three vertices
 #' @template lint
+#' @family interpolation
 #' @return the z-value for pt
-#' @details Takes a triangular plane as a Polygon and a Point within that triangle
-#' and returns the z-value at that point. The Polygon needs to have properties a,
-#' b, and c that define the values at its three corners.
+#' @details The Polygon needs to have properties a, b, and c that define
+#' the values at its three corners.
 #' @examples
 #' pt <- lawn_point(c(-75.3221, 39.529))
 #' triangle <- '{

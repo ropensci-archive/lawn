@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param features Input features
+#' @family data
 #' @examples \dontrun{
 #' # points
 #' features <- list(

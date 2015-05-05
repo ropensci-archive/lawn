@@ -2,7 +2,7 @@
 % Please edit documentation in R/tag.R
 \name{lawn_tag}
 \alias{lawn_tag}
-\title{Tag}
+\title{Spatial join}
 \usage{
 lawn_tag(points, polygons, polyId, containingPolyId, lint = FALSE)
 }
@@ -25,14 +25,16 @@ objects. Default: \code{FALSE}}
 points with containingPolyId property containing values from polyId
 }
 \description{
-Tag
-}
-\details{
-Takes a set of points and a set of polygons and performs a spatial join
+Takes a set of \code{\link{data-Point}}'s and a set of
+\code{\link{data-Polygon}}'s and performs a spatial join
 }
 \examples{
 pts <- lawn_random(n = 30)
 polys <- lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 lawn_tag(pts, polys, 'fill', 'marker-color')
+}
+\seealso{
+Other joins: \code{\link{lawn_inside}};
+  \code{\link{lawn_within}}
 }
 

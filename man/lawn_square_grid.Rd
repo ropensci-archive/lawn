@@ -2,7 +2,7 @@
 % Please edit documentation in R/square_grid.R
 \name{lawn_square_grid}
 \alias{lawn_square_grid}
-\title{SquareGrid}
+\title{Create a SquareGrid}
 \usage{
 lawn_square_grid(extent, cellWidth, units)
 }
@@ -14,14 +14,22 @@ lawn_square_grid(extent, cellWidth, units)
 \item{units}{(character) units to use for cellWidth, one of 'miles', xxxx}
 }
 \value{
-FeatureCollection grid of polygons
+\code{\link{data-FeatureCollection}} grid of polygons
 }
 \description{
-Takes a bounding box and a cell depth and returns a set of square polygons in a grid
+Takes a bounding box and a cell depth and returns a set of square
+\code{\link{data-Polygon}}'s in a grid
 }
 \examples{
 lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
 lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 10, 'miles')
 lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
+}
+\seealso{
+Other interpolation: \code{\link{lawn_hex_grid}};
+  \code{\link{lawn_isolines}};
+  \code{\link{lawn_planepoint}};
+  \code{\link{lawn_point_grid}}; \code{\link{lawn_tin}};
+  \code{\link{lawn_triangle_grid}}
 }
 

@@ -1,4 +1,7 @@
-#' Tag
+#' Spatial join
+#'
+#' Takes a set of \code{\link{data-Point}}'s and a set of
+#' \code{\link{data-Polygon}}'s and performs a spatial join
 #'
 #' @export
 #' @param points Input \code{\link{data-Point}}
@@ -7,8 +10,8 @@
 #' @param containingPolyId property in points in which to store joined
 #' property from polygons
 #' @template lint
+#' @family joins
 #' @return points with containingPolyId property containing values from polyId
-#' @details Takes a set of points and a set of polygons and performs a spatial join
 #' @examples
 #' pts <- lawn_random(n = 30)
 #' polys <- lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')

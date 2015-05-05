@@ -2,7 +2,7 @@
 % Please edit documentation in R/remove.R
 \name{lawn_remove}
 \alias{lawn_remove}
-\title{Return a FeatureCollection with features removed matching value of property given}
+\title{Remove things from a FeatureCollection}
 \usage{
 lawn_remove(features, property, value, lint = FALSE)
 }
@@ -19,14 +19,22 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A FeatureCollection
+A \code{\link{data-FeatureCollection}}
 }
 \description{
-Return a FeatureCollection with features removed matching value of property given
+Takes a \code{\link{data-FeatureCollection}} of any type, a property, and a
+value and returns a \code{\link{data-FeatureCollection}} with features
+matching that property-value pair removed.
 }
 \examples{
 cat(lawn_data$remove_features)
 lawn_remove(lawn_data$remove_features, 'marker-color', '#00f')
 lawn_remove(lawn_data$remove_features, 'marker-color', '#0f0')
+}
+\seealso{
+Other data: \code{\link{lawn_featurecollection}};
+  \code{\link{lawn_filter}}; \code{\link{lawn_linestring}};
+  \code{\link{lawn_point}}; \code{\link{lawn_polygon}};
+  \code{\link{lawn_random}}; \code{\link{lawn_sample}}
 }
 
