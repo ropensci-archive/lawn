@@ -2,7 +2,7 @@ Package: lawn
 Title: R Client for turf.js for Geospatial Analysis
 Description: R client for turf.js for geospatial analysis.
 Type: Package
-Version: 0.0.6.990
+Version: 0.0.8.900
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
