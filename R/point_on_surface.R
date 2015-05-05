@@ -5,7 +5,7 @@
 #' @return A point on the surface of \code{x}
 #' @template lint
 #'
-#' @details Finds a \code{\link{Point}} guaranteed to be on the surface of
+#' @details Finds a \code{\link{data-Point}} guaranteed to be on the surface of
 #' \code{\link{GeoJSON}} object.
 #'
 #' @examples

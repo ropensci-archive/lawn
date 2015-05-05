@@ -21,7 +21,7 @@ A point on the surface of \code{x}
 Point on surface
 }
 \details{
-Finds a \code{\link{Point}} guaranteed to be on the surface of
+Finds a \code{\link{data-Point}} guaranteed to be on the surface of
 \code{\link{GeoJSON}} object.
 }
 \examples{
