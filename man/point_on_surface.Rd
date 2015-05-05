@@ -22,7 +22,7 @@ Point on surface
 }
 \details{
 Finds a \code{\link{data-Point}} guaranteed to be on the surface of
-\code{\link{GeoJSON}} object.
+\code{\link{data-GeoJSON}} object.
 }
 \examples{
 # polygon
