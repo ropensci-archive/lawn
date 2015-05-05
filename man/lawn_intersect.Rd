@@ -4,12 +4,17 @@
 \alias{lawn_intersect}
 \title{Find the intersection of two polygons}
 \usage{
-lawn_intersect(poly1, poly2)
+lawn_intersect(poly1, poly2, lint = FALSE)
 }
 \arguments{
 \item{poly1}{A polygon}
 
 \item{poly2}{A polygon}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Find the intersection of two polygons

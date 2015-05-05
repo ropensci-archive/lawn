@@ -4,7 +4,7 @@
 \alias{lawn_jenks}
 \title{Jenks}
 \usage{
-lawn_jenks(input, field, numberOfBreaks)
+lawn_jenks(input, field, numberOfBreaks, lint = FALSE)
 }
 \arguments{
 \item{input}{Set of Features}
@@ -12,6 +12,11 @@ lawn_jenks(input, field, numberOfBreaks)
 \item{field}{the property in input on which to calculate Jenks natural breaks}
 
 \item{numberOfBreaks}{Number of classes in which to group the data}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 An array of the break values

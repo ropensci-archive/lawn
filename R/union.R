@@ -3,6 +3,7 @@
 #' @export
 #' @param poly1 A polygon
 #' @param poly2 A polygon
+#' @template lint
 #'
 #' @details Finds the interesection of two polygons and returns the
 #'          union of the two.  Contiguous polygons are combined, non-contiguous
@@ -58,9 +59,10 @@
 #' # view(x2)
 #' # lawn_union(x1, x2) %>% view()
 #'
-lawn_union <- function(poly1, poly2) {
+lawn_union <- function(poly1, poly2, lint = FALSE) {
   poly1_1 <- convert(poly1)
   poly2_1 <- convert(poly2)
+  lawnlint(list(poly1_1, poly2_1), lint)
   if (is.list(poly1)) {
     ct$eval(sprintf("var poly1 = %s;", poly1_1))
     ct$eval("poly1 = poly1.features[0]")

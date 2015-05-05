@@ -4,6 +4,7 @@
 #' @param polys Polygon(s) defining area to aggregate.
 #' @param pts Points with values to aggregate.
 #' @param agg Aggregation object. For more information, see details.
+#' @template lint
 #'
 #' @details Provides a statistical summary of values from points that are
 #'          within a polygon.   The \code{agg} parameter must be a list of
@@ -22,14 +23,12 @@
 #'             c('average','population','pop_average'),
 #'             c('count','','num_of_pts'))
 #' lawn_aggregate(ex_polys, ex_pts, ex_agg)
-lawn_aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts"))) {
+lawn_aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts")), lint = FALSE) {
   polys <- convert(polys)
   pts <- convert(pts)
+  lawnlint(list(polys, pts), lint)
   agg <- make_agg_array(agg)
-  ct$eval(sprintf("var polys = %s;", polys))
-  ct$eval(sprintf("var pts = %s;", pts))
-  ct$eval(sprintf("var agg = %s;", agg))
-  ct$eval("var aggreg = turf.aggregate(polys, pts, agg);")
+  ct$eval(sprintf("var aggreg = turf.aggregate(%s, %s, %s);", polys, pts, agg))
   ct$get("aggreg")
 }
 

@@ -7,6 +7,7 @@
 #'
 #' @param point The reference point, a Feature
 #' @param against Input point set, a FeatureCollection
+#' @template lint
 #' @return A point as a Feature
 #' @examples
 #' point <- '{
@@ -47,9 +48,10 @@
 #'  ]
 #' }'
 #' lawn_nearest(point, against)
-lawn_nearest <- function(point, against) {
+lawn_nearest <- function(point, against, lint = FALSE) {
   point <- convert(point)
   against <- convert(against)
+  lawnlint(list(point, against), lint)
   ct$eval(sprintf("var nearest = turf.nearest(%s, %s);", point, against))
   ct$get("nearest")
 }

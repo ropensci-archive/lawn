@@ -4,7 +4,7 @@
 \alias{lawn_isolines}
 \title{Isolines}
 \usage{
-lawn_isolines(points, z, resolution, breaks)
+lawn_isolines(points, z, resolution, breaks, lint = FALSE)
 }
 \arguments{
 \item{points}{Input points}
@@ -14,6 +14,11 @@ lawn_isolines(points, z, resolution, breaks)
 \item{resolution}{(numeric) resolution of the underlying grid}
 
 \item{breaks}{(numeric) where to draw contours}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 FeatureCollection of isolines (LineString features)

@@ -4,12 +4,17 @@
 \alias{lawn_within}
 \title{Return points that fall within polygons}
 \usage{
-lawn_within(points, polygons)
+lawn_within(points, polygons, lint = FALSE)
 }
 \arguments{
 \item{points}{FeatureCollection of points}
 
 \item{polygons}{FeatureCollection of polygons}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Return points that fall within polygons

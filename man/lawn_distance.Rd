@@ -4,7 +4,7 @@
 \alias{lawn_distance}
 \title{Calculate the distance between two points}
 \usage{
-lawn_distance(from, to, units = "kilometers")
+lawn_distance(from, to, units = "kilometers", lint = FALSE)
 }
 \arguments{
 \item{from}{Origin point}
@@ -12,6 +12,11 @@ lawn_distance(from, to, units = "kilometers")
 \item{to}{Destination point}
 
 \item{units}{(character) Can be degrees, radians, miles, or kilometers}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Calculate the distance between two points

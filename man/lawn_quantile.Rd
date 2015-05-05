@@ -4,7 +4,7 @@
 \alias{lawn_quantile}
 \title{Quantile}
 \usage{
-lawn_quantile(input, field, percentiles)
+lawn_quantile(input, field, percentiles, lint = FALSE)
 }
 \arguments{
 \item{input}{Set of Features}
@@ -12,6 +12,11 @@ lawn_quantile(input, field, percentiles)
 \item{field}{The property in input from which to retrieve quantile values}
 
 \item{percentiles}{An Array of percentiles on which to calculate quantile values}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 An array of the break values

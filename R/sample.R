@@ -12,6 +12,7 @@
 #' @param max_radial_length Number	<optional> 10	 the total number of decimal degrees
 #' longitude or latitude that a polygon can extent outwards to from its center.
 #' @param features A FeatureCollection
+#' @template lint
 #'
 #' @examples
 #' # Random
@@ -42,7 +43,8 @@ lawn_random <- function(type = "points", n = 10, bbox = NULL,
 
 #' @export
 #' @rdname lawn_random
-lawn_sample <- function(features = NULL, n = 100) {
+lawn_sample <- function(features = NULL, n = 100, lint = FALSE) {
+  if (!is.null(features)) lawnlint(features, lint)
   ct$eval(sprintf("var pts = turf.sample(%s, %s);", features, n))
   ct$get("pts")
 }

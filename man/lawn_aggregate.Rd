@@ -4,7 +4,8 @@
 \alias{lawn_aggregate}
 \title{Aggregate}
 \usage{
-lawn_aggregate(polys, pts, agg = list(c("count", "", "num_of_pts")))
+lawn_aggregate(polys, pts, agg = list(c("count", "", "num_of_pts")),
+  lint = FALSE)
 }
 \arguments{
 \item{polys}{Polygon(s) defining area to aggregate.}
@@ -12,6 +13,11 @@ lawn_aggregate(polys, pts, agg = list(c("count", "", "num_of_pts")))
 \item{pts}{Points with values to aggregate.}
 
 \item{agg}{Aggregation object. For more information, see details.}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Aggregate

@@ -7,6 +7,7 @@
 #'        the aggregation
 #' @param outField Characater for the name of the field on the ouput polygon FeatureCollection
 #'        that will store the resultant value.
+#' @template lint
 #'
 #' @details Calculates the population standard deviation (i.e. denominator = n, not n-1) of
 #'          values from points that are within a polygon and returns that on a polygon
@@ -17,9 +18,10 @@
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
 #' lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
-lawn_deviation <- function(polys, pts, inField, outField) {
+lawn_deviation <- function(polys, pts, inField, outField, lint = FALSE) {
   polys <- convert(polys)
   pts <- convert(pts)
+  lawnlint(list(polys, pts), lint)
   ct$eval(sprintf("var polys = %s;", polys))
   ct$eval(sprintf("var pts = %s;", pts))
   ct$eval(sprintf("var inField = '%s';", inField))

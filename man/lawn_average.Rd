@@ -2,9 +2,9 @@
 % Please edit documentation in R/average.R
 \name{lawn_average}
 \alias{lawn_average}
-\title{Calculate the average value of a field for a set of points within a set of polygons.}
+\title{Calculate the average value of a field for a set of points within a set of polygons}
 \usage{
-lawn_average(polygons, points, field, outputField = "average")
+lawn_average(polygons, points, field, outputField = "average", lint = FALSE)
 }
 \arguments{
 \item{polygons}{Geojson polygons}
@@ -14,9 +14,17 @@ lawn_average(polygons, points, field, outputField = "average")
 \item{field}{(character) The field in the points features from which to pull values to average}
 
 \item{outputField}{(character) The field in polygons to put results of the averages}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
+}
+\value{
+polygons with the value of outField set to the calculated averages
 }
 \description{
-Calculate the average value of a field for a set of points within a set of polygons.
+Calculate the average value of a field for a set of points within a set of polygons
 }
 \examples{
 # using data in the package

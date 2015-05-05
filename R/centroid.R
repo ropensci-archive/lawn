@@ -7,6 +7,7 @@
 #' @export
 #'
 #' @param features Input features
+#' @template lint
 #' @return Feature - centroid of the input features
 #' @examples
 #' poly <- '{
@@ -24,8 +25,9 @@
 #'   }
 #' }'
 #' lawn_centroid(poly)
-lawn_centroid <- function(features) {
+lawn_centroid <- function(features, lint = FALSE) {
   fts <- convert(features)
+  lawnlint(fts, lint)
   ct$eval(sprintf("var ctr = turf.centroid(%s);", fts))
   structure(ct$get("ctr"), class = "centroid")
 }

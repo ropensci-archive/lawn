@@ -4,7 +4,7 @@
 \alias{lawn_deviation}
 \title{Deviation}
 \usage{
-lawn_deviation(polys, pts, inField, outField)
+lawn_deviation(polys, pts, inField, outField, lint = FALSE)
 }
 \arguments{
 \item{polys}{Polygon(s) defining area to aggregate.}
@@ -15,7 +15,12 @@ lawn_deviation(polys, pts, inField, outField)
 the aggregation}
 
 \item{outField}{Characater for the name of the field on the ouput polygon FeatureCollection
-       that will store the resultant value.}
+that will store the resultant value.}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Deviation

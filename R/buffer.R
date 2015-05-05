@@ -3,7 +3,8 @@
 #' @export
 #' @param input A Feature or FeatureCollection
 #' @param dist distance used to buffer the input
-#' @param units (character) Can be miles, feet, kilometers, meters, or degrees
+#' @param units (character) Can be miles, feet, kilometers (default), meters, or degrees
+#' @template lint
 #' @details Calculates and returns a buffered feature.
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
@@ -30,10 +31,10 @@
 #'
 #' # buffer a point
 #' lawn_buffer(lawn_point(c(-74.50,40)), 100, "meters")
-
-lawn_buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
+lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
   input <- convert(input)
-  units <- match.arg(units)
+  lawnlint(input, lint)
+  units <- match.arg(units, c("meters", "feet", "kilometers", "miles", "degrees"))
   ct$eval(sprintf("var units = '%s';", units))
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))

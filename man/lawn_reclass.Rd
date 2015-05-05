@@ -4,7 +4,7 @@
 \alias{lawn_reclass}
 \title{Reclass}
 \usage{
-lawn_reclass(input, inField, outField, translations)
+lawn_reclass(input, inField, outField, translations, lint = FALSE)
 }
 \arguments{
 \item{input}{Set of input features}
@@ -16,6 +16,11 @@ lawn_reclass(input, inField, outField, translations)
 \item{translations}{an array of translations. Use nested lists instead of vectors
 as combined numerics and characters will become all character strings when converted
 to json}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 FeatureCollection a FeatureCollection with identical geometries to

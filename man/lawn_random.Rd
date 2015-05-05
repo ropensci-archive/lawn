@@ -8,7 +8,7 @@
 lawn_random(type = "points", n = 10, bbox = NULL, num_vertices = NULL,
   max_radial_length = NULL)
 
-lawn_sample(features = NULL, n = 100)
+lawn_sample(features = NULL, n = 100, lint = FALSE)
 }
 \arguments{
 \item{type}{type of features desired: 'points' or 'polygons'}
@@ -26,6 +26,11 @@ polygon features.}
 longitude or latitude that a polygon can extent outwards to from its center.}
 
 \item{features}{A FeatureCollection}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Return a FeatureCollection with given number of features at random

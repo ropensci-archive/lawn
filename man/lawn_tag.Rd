@@ -4,7 +4,7 @@
 \alias{lawn_tag}
 \title{Tag}
 \usage{
-lawn_tag(points, polygons, polyId, containingPolyId)
+lawn_tag(points, polygons, polyId, containingPolyId, lint = FALSE)
 }
 \arguments{
 \item{points}{Input \code{\link{data-Point}}}
@@ -15,6 +15,11 @@ lawn_tag(points, polygons, polyId, containingPolyId)
 
 \item{containingPolyId}{property in points in which to store joined
 property from polygons}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 points with containingPolyId property containing values from polyId

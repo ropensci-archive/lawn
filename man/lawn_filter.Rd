@@ -4,7 +4,7 @@
 \alias{lawn_filter}
 \title{Filter a FeatureCollection by a given property and value}
 \usage{
-lawn_filter(features, key, value)
+lawn_filter(features, key, value, lint = FALSE)
 }
 \arguments{
 \item{features}{A FeatureCollection}
@@ -12,6 +12,11 @@ lawn_filter(features, key, value)
 \item{key}{(character) The property on which to filter}
 
 \item{value}{(character) The value of that property on which to filter}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Filter a FeatureCollection by a given property and value

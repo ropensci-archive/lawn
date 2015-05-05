@@ -4,7 +4,7 @@
 \alias{lawn_remove}
 \title{Return a FeatureCollection with features removed matching value of property given}
 \usage{
-lawn_remove(features, property, value)
+lawn_remove(features, property, value, lint = FALSE)
 }
 \arguments{
 \item{features}{A set of input features}
@@ -12,6 +12,11 @@ lawn_remove(features, property, value)
 \item{property}{Property to filter}
 
 \item{value}{Value to filter}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 A FeatureCollection

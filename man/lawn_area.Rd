@@ -4,10 +4,15 @@
 \alias{lawn_area}
 \title{Calculate the area of a polygon or group of polygons}
 \usage{
-lawn_area(input)
+lawn_area(input, lint = FALSE)
 }
 \arguments{
 \item{input}{A feature or feature collection of polygons.}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Calculate the area of a polygon or group of polygons

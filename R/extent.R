@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param input A Feature or FeatureCollection
+#' @template lint
 #' @details Calculates the extent of all input features in a FeatureCollection,
 #' and returns a bounding box. The returned bounding box is of the form
 #' [west, south, east, north].
@@ -26,7 +27,8 @@
 #'    }
 #' }'
 #' lawn_extent(dat)
-lawn_extent <- function(input) {
+lawn_extent <- function(input, lint = FALSE) {
+  lawnlint(input, lint)
   ct$eval(sprintf("var bbox = turf.extent(%s);", input))
   ct$get("bbox")
 }

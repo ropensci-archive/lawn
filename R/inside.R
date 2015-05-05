@@ -8,6 +8,7 @@
 #'
 #' @param point Input point
 #' @param polygon Input polygon or multipolygon
+#' @template lint
 #' @return \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if
 #' the Point IS NOT inside the Polygon
 #' @examples
@@ -47,9 +48,10 @@
 #' }'
 #' lawn_inside(point1, poly)
 #' lawn_inside(point2, poly)
-lawn_inside <- function(point, polygon) {
+lawn_inside <- function(point, polygon, lint = FALSE) {
   point <- convert(point)
   polygon <- convert(polygon)
+  lawnlint(list(point, polygon), lint)
   ct$eval(sprintf("var ins = turf.inside(%s, %s);", point, polygon))
   ct$get("ins")
 }

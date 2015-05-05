@@ -4,12 +4,17 @@
 \alias{lawn_nearest}
 \title{Nearest}
 \usage{
-lawn_nearest(point, against)
+lawn_nearest(point, against, lint = FALSE)
 }
 \arguments{
 \item{point}{The reference point, a Feature}
 
 \item{against}{Input point set, a FeatureCollection}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 A point as a Feature

@@ -4,10 +4,15 @@
 \alias{lawn_extent}
 \title{Get a bounding box}
 \usage{
-lawn_extent(input)
+lawn_extent(input, lint = FALSE)
 }
 \arguments{
 \item{input}{A Feature or FeatureCollection}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Get a bounding box

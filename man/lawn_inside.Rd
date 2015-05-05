@@ -4,12 +4,17 @@
 \alias{lawn_inside}
 \title{Inside}
 \usage{
-lawn_inside(point, polygon)
+lawn_inside(point, polygon, lint = FALSE)
 }
 \arguments{
 \item{point}{Input point}
 
 \item{polygon}{Input polygon or multipolygon}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \value{
 \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if

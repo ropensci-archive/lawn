@@ -4,7 +4,7 @@
 \alias{lawn_count}
 \title{Calculates the number of points that fall within the set of polygons.}
 \usage{
-lawn_count(polygons, points, countField = "pt_count")
+lawn_count(polygons, points, countField = "pt_count", lint = FALSE)
 }
 \arguments{
 \item{polygons}{Geojson polygons}
@@ -13,6 +13,11 @@ lawn_count(polygons, points, countField = "pt_count")
 
 \item{countField}{(character) A field to append to the attributes of the Polygon features
 representing Point counts}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
+as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good geojson
+objects. Default: \code{FALSE}}
 }
 \description{
 Calculates the number of points that fall within the set of polygons.

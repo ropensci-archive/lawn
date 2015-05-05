@@ -12,14 +12,16 @@
 #' @param translations an array of translations. Use nested lists instead of vectors
 #' as combined numerics and characters will become all character strings when converted
 #' to json
+#' @template lint
 #' @return FeatureCollection a FeatureCollection with identical geometries to
 #' input but with outField populated.
 #' @examples
 #' translations <- list(list(0, 200, "small"), list(200, 400, "medium"), list(400, 600, "large"))
 #' lawn_reclass(lawn_data$points_average, 'population', 'size', translations)
-lawn_reclass <- function(input, inField, outField, translations) {
+lawn_reclass <- function(input, inField, outField, translations, lint = FALSE) {
   input <- convert(input)
   translations <- convert(translations)
+  lawnlint(list(input, translations), lint)
   ct$eval(sprintf("var rc = turf.reclass(%s, '%s', '%s', %s);",
                   input, inField, outField, translations))
   ct$get("rc")
