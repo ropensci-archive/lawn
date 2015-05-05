@@ -60,11 +60,11 @@
 #'    }
 #'  ]
 #' }'
-#' quantile(pts, 'population', c(25, 50, 75, 99))
-#' quantile(pts, 'population', c(25, 50, 75, 95))
-#' quantile(pts, 'population', c(25, 50, 75))
-#' quantile(pts, 'population', c(1, 50, 99.9))
-quantile <- function(input, field, percentiles) {
+#' lawn_quantile(pts, 'population', c(25, 50, 75, 99))
+#' lawn_quantile(pts, 'population', c(25, 50, 75, 95))
+#' lawn_quantile(pts, 'population', c(25, 50, 75))
+#' lawn_quantile(pts, 'population', c(1, 50, 99.9))
+lawn_quantile <- function(input, field, percentiles) {
   input <- convert(input)
   ct$eval(sprintf("var quant = turf.quantile(%s, '%s', %s);", input, field, toj(percentiles)))
   ct$get("quant")

@@ -12,10 +12,10 @@
 #' @param units (character) units to use for cellWidth, one of 'miles', xxxx
 #' @return FeatureCollection grid of points
 #' @examples
-#' hex_grid(c(-96,31,-84,40), 50, 'miles')
-#' hex_grid(c(-96,31,-84,40), 30, 'miles')
-#' hex_grid(c(-96,31,-84,40), 10, 'miles')
-hex_grid <- function(extent, cellWidth, units) {
+#' lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
+#' lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')
+#' lawn_hex_grid(c(-96,31,-84,40), 10, 'miles')
+lawn_hex_grid <- function(extent, cellWidth, units) {
   ct$eval(sprintf("var hg = turf.hexGrid(%s, %s, '%s');", toj(extent), cellWidth, units))
   ct$get("hg")
 }

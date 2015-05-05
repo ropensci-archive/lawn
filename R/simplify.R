@@ -46,11 +46,11 @@
 #'   }
 #' }'
 #'
-#' simplify(feature, tolerance = 0.01)
+#' lawn_simplify(feature, tolerance = 0.01)
 #' @examples \dontrun{
-#' simplify(feature, tolerance = 0.01) %>% view
+#' lawn_simplify(feature, tolerance = 0.01) %>% view
 #' }
-simplify <- function(feature, tolerance, high_quality = FALSE, lint = FALSE) {
+lawn_simplify <- function(feature, tolerance, high_quality = FALSE, lint = FALSE) {
   lawnlint(feature, lint)
   stopifnot(is.logical(high_quality))
   ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature), tolerance, tolower(high_quality)))

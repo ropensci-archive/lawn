@@ -23,8 +23,8 @@
 #'      ]]
 #'   }
 #' }'
-#' centroid(poly)
-centroid <- function(features) {
+#' lawn_centroid(poly)
+lawn_centroid <- function(features) {
   fts <- convert(features)
   ct$eval(sprintf("var ctr = turf.centroid(%s);", fts))
   structure(ct$get("ctr"), class = "centroid")

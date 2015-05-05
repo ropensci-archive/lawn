@@ -12,15 +12,14 @@
 #'     "coordinates": [20.566406, 43.421008]
 #'    }
 #' }'
-#' flip(serbia)
+#' lawn_flip(serbia)
 #' @examples \dontrun{
 #' lawn_data$points_average %>% view
-#' flip(lawn_data$points_average) %>% view
+#' lawn_flip(lawn_data$points_average) %>% view
 #' lawn_data$polygons_average %>% view
-#' flip(lawn_data$polygons_average) %>% view
+#' lawn_flip(lawn_data$polygons_average) %>% view
 #' }
-
-flip <- function(input, lint = FALSE) {
+lawn_flip <- function(input, lint = FALSE) {
   lawnlint(input, lint)
   ct$eval(sprintf("var flp = turf.flip(%s);", convert(input)))
   ct$get("flp")

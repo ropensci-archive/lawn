@@ -1,7 +1,7 @@
 #' Tin
 #'
 #' @export
-#' @param points input points
+#' @param pt input points
 #' @param propertyName name of the property from which to pull z values This is
 #' optional: if not given, then there will be no extra data added to the derived
 #' triangles.
@@ -16,13 +16,13 @@
 #' representing the value of the given propertyName at each of the points that
 #' represent the corners of the triangle.
 #' @examples
-#' pts <- random(bbox = c(-70, 40, -60, 60))
-#' tin(pts)
+#' pts <- lawn_random(bbox = c(-70, 40, -60, 60))
+#' lawn_tin(pts)
 #' @examples \dontrun{
-#' tin(pts) %>% view
-#' tin(random(bbox = c(-70, 40, -60, 10))) %>% view
+#' lawn_tin(pts) %>% view
+#' lawn_tin(lawn_random(bbox = c(-70, 40, -60, 10))) %>% view
 #' }
-tin <- function(pt, propertyName = NULL, lint = FALSE) {
+lawn_tin <- function(pt, propertyName = NULL, lint = FALSE) {
   pt <- convert(pt)
   lawnlint(pt, lint)
   ct$eval(sprintf("var tin = turf.tin(%s, '%s');", pt, convert(propertyName)))

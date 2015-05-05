@@ -66,6 +66,6 @@ gr_polygon(1, 5, 5, c(50, 50, 60, 60))
 \url{https://github.com/mapbox/geojson-random}
 }
 \seealso{
-\code{\link{random}}
+\code{\link{lawn_random}}
 }
 

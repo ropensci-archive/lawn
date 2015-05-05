@@ -10,11 +10,11 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' min(poly, pt, 'population', 'min')
+#' lawn_min(poly, pt, 'population', 'min')
 #' @examples \dontrun{
-#' min(poly, pt, 'population', 'min') %>% view
+#' lawn_min(poly, pt, 'population', 'min') %>% view
 #' }
-min <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_min <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)

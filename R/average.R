@@ -10,8 +10,8 @@
 #' # using data in the package
 #' cat(lawn_data$points_average)
 #' cat(lawn_data$polygons_average)
-#' average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
-average <- function(polygons, points, field, outputField = 'average') {
+#' lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
+lawn_average <- function(polygons, points, field, outputField = 'average') {
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))
   ct$eval(sprintf("var avg = turf.average(polygons, points, '%s', '%s');", field, outputField))

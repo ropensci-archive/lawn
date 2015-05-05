@@ -11,12 +11,11 @@
 #'    c(-2.215118, 53.464547),
 #'    c(-2.275543, 53.464547)
 #' ))
-#' polygon(rings, properties = list(name = 'poly1', population = 400))
+#' lawn_polygon(rings, properties = list(name = 'poly1', population = 400))
 #'
 #' # Make a FeatureCollection
-#' featurecollection(polygon(rings))
-
-polygon <- function(rings, properties = NULL) {
+#' # lawn_featurecollection(lawn_polygon(rings))
+lawn_polygon <- function(rings, properties = NULL) {
   ct$eval(sprintf("var poly = turf.polygon(%s, %s);", convert(rings), toj(properties)))
   structure(ct$get("poly"), class = "polygon")
 }

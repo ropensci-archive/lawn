@@ -10,8 +10,8 @@
 #' # using data in the package
 #' cat(lawn_data$points_count)
 #' cat(lawn_data$polygons_count)
-#' count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
-count <- function(polygons, points, countField = 'pt_count') {
+#' lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count <- function(polygons, points, countField = 'pt_count') {
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))
   ct$eval(sprintf("var counted = turf.count(polygons, points, '%s');", countField))

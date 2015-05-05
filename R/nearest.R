@@ -46,8 +46,8 @@
 #'    }
 #'  ]
 #' }'
-#' nearest(point, against)
-nearest <- function(point, against) {
+#' lawn_nearest(point, against)
+lawn_nearest <- function(point, against) {
   point <- convert(point)
   against <- convert(against)
   ct$eval(sprintf("var nearest = turf.nearest(%s, %s);", point, against))

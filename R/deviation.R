@@ -14,11 +14,10 @@
 #'
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
-#' data(lawn_data)
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
-#' deviation(ex_polys, ex_pts, "population", "pop_sd")
-deviation <- function(polys, pts, inField, outField) {
+#' lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
+lawn_deviation <- function(polys, pts, inField, outField) {
   polys <- convert(polys)
   pts <- convert(pts)
   ct$eval(sprintf("var polys = %s;", polys))

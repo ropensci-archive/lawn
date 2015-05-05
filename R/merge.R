@@ -43,12 +43,12 @@
 #'     }
 #'   ]
 #' }'
-#' merge(polygons)
+#' lawn_merge(polygons)
 #' @examples \dontrun{
 #' featurecollection(polygons) %>% view
-#' merge(polygons) %>% view
+#' lawn_merge(polygons) %>% view
 #' }
-merge <- function(fc, lint = FALSE) {
+lawn_merge <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
   ct$eval(sprintf("var mrg = turf.merge(%s);", fc))

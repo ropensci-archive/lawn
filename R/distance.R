@@ -24,8 +24,8 @@
 #'     "coordinates": [-75.534, 39.123]
 #'   }
 #' }'
-#' distance(from, to)
-distance <- function(from, to, units = 'kilometers') {
+#' lawn_distance(from, to)
+lawn_distance <- function(from, to, units = 'kilometers') {
   from <- convert(from)
   to <- convert(to)
   ct$eval(sprintf('var point1 = %s;', from))

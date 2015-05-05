@@ -9,7 +9,7 @@
 #' and returns the z-value at that point. The Polygon needs to have properties a,
 #' b, and c that define the values at its three corners.
 #' @examples
-#' pt <- point(c(-75.3221, 39.529))
+#' pt <- lawn_point(c(-75.3221, 39.529))
 #' triangle <- '{
 #'   "type": "Feature",
 #'   "properties": {
@@ -27,8 +27,8 @@
 #'     ]]
 #'   }
 #' }'
-#' planepoint(pt, triangle)
-planepoint <- function(pt, triangle, lint = FALSE) {
+#' lawn_planepoint(pt, triangle)
+lawn_planepoint <- function(pt, triangle, lint = FALSE) {
   pt <- convert(pt)
   triangle <- convert(triangle)
   lawnlint(list(pt, triangle), lint)

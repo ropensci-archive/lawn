@@ -28,8 +28,8 @@
 #'     "coordinates": [-75.534, 39.123]
 #'   }
 #' }'
-#' bearing(start, end)
-bearing <- function(start, end, lint = FALSE) {
+#' lawn_bearing(start, end)
+lawn_bearing <- function(start, end, lint = FALSE) {
   start <- convert(start)
   end <- convert(end)
   lawnlint(list(start, end), lint)

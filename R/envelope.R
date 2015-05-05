@@ -41,12 +41,12 @@
 #'     }
 #'   ]
 #' }'
-#' envelope(fc)
+#' lawn_envelope(fc)
 #' @examples \dontrun{
 #' fc %>% view
-#' envelope(fc) %>% view
+#' lawn_envelope(fc) %>% view
 #' }
-envelope <- function(fc, lint = FALSE) {
+lawn_envelope <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
   ct$eval(sprintf("var env = turf.envelope(%s);", fc))

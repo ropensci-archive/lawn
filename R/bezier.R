@@ -16,14 +16,14 @@
 #'    [-21.93901, 64.135924],
 #'    [-21.927337, 64.136673]
 #' ]'
-#' bezier(linestring(pts))
-#' bezier(linestring(pts), 9000L)
-#' bezier(linestring(pts), 9000L, 0.65)
+#' lawn_bezier(lawn_linestring(pts))
+#' lawn_bezier(lawn_linestring(pts), 9000L)
+#' lawn_bezier(lawn_linestring(pts), 9000L, 0.65)
 #' @examples \dontrun{
-#' bezier(linestring(pts)) %>% view
-#' featurecollection(list(linestring(pts), bezier(linestring(pts)))) %>% view
+#' lawn_bezier(lawn_linestring(pts)) %>% view
+#' featurecollection(list(lawn_linestring(pts), lawn_bezier(lawn_linestring(pts)))) %>% view
 #' }
-bezier <- function(line, resolution = 10000L, sharpness = 0.85, lint = FALSE) {
+lawn_bezier <- function(line, resolution = 10000L, sharpness = 0.85, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
   ct$eval(sprintf("var bz = turf.bezier(%s, %s, %s);", line, resolution, sharpness))

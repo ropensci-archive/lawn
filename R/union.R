@@ -46,19 +46,19 @@
 #'      ]]
 #'  }
 #' }'
-#' union(poly1, poly2)
+#' lawn_union(poly1, poly2)
 #' # view(poly1)
 #' # view(poly2)
-#' # union(poly1, poly2) %>% view()
+#' # lawn_union(poly1, poly2) %>% view()
 #'
-#' x1 <- buffer(point(c(-122.6375, 45.53)), 1500, "meters")
-#' x2 <- buffer(point(c(-122.6475, 45.53)), 1500, "meters")
-#' union(x1, x2)
+#' x1 <- lawn_buffer(lawn_point(c(-122.6375, 45.53)), 1500, "meters")
+#' x2 <- lawn_buffer(lawn_point(c(-122.6475, 45.53)), 1500, "meters")
+#' lawn_union(x1, x2)
 #' # view(x1)
 #' # view(x2)
-#' # union(x1, x2) %>% view()
+#' # lawn_union(x1, x2) %>% view()
 #'
-union <- function(poly1, poly2) {
+lawn_union <- function(poly1, poly2) {
   poly1_1 <- convert(poly1)
   poly2_1 <- convert(poly2)
   if (is.list(poly1)) {

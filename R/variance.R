@@ -12,11 +12,11 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' variance(poly, pt, 'population', 'variance')
+#' lawn_variance(poly, pt, 'population', 'variance')
 #' @examples \dontrun{
-#' variance(poly, pt, 'population', 'variance') %>% view
+#' lawn_variance(poly, pt, 'population', 'variance') %>% view
 #' }
-variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)

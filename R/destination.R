@@ -23,15 +23,15 @@
 #'     "coordinates": [-75.343, 39.984]
 #'   }
 #' }'
-#' destination(pt, 50, 90, "miles")
-#' destination(pt, 100, 90, "miles")
-#' destination(pt, 2, 45, "kilometers")
-#' destination(pt, 2, 30, "degrees")
+#' lawn_destination(pt, 50, 90, "miles")
+#' lawn_destination(pt, 100, 90, "miles")
+#' lawn_destination(pt, 2, 45, "kilometers")
+#' lawn_destination(pt, 2, 30, "degrees")
 #' @examples \dontrun{
 #' pt %>% view
-#' destination(pt, 200, 90, "miles") %>% view
+#' lawn_destination(pt, 200, 90, "miles") %>% view
 #' }
-destination <- function(start, distance, bearing, units, lint = FALSE) {
+lawn_destination <- function(start, distance, bearing, units, lint = FALSE) {
   start <- convert(start)
   lawnlint(start, lint)
   ct$eval(sprintf("var dest = turf.destination(%s, %s, %s, '%s');", start, distance, bearing, units))

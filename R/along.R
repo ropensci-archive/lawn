@@ -15,13 +15,13 @@
 #'    [-21.93901, 64.135924],
 #'    [-21.927337, 64.136673]
 #' ]'
-#' along(linestring(pts), 1, 'miles')
+#' lawn_along(lawn_linestring(pts), 1, 'miles')
 #' @examples \dontrun{
-#' along(line, 1, 'miles') %>% view
-#' res <- along(line, 1, 'miles')
-#' featurecollection(list(linestring(line), res)) %>% view
+#' lawn_along(line, 1, 'miles') %>% view
+#' res <- lawn_along(line, 1, 'miles')
+#' featurecollection(list(lawn_linestring(line), res)) %>% view
 #' }
-along <- function(line, distance, units, lint = FALSE) {
+lawn_along <- function(line, distance, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
   ct$eval(sprintf("var alg = turf.along(%s, %s, '%s');", line, distance, units))

@@ -10,11 +10,11 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' sum(poly, pt, 'population', 'sum')
+#' lawn_sum(poly, pt, 'population', 'sum')
 #' @examples \dontrun{
-#' sum(poly, pt, 'population', 'sum') %>% view
+#' lawn_sum(poly, pt, 'population', 'sum') %>% view
 #' }
-sum <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_sum <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)

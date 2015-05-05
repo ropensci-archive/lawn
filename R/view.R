@@ -78,7 +78,7 @@ make_view <- function(x) {
 }
 
 make_bounds <- function(z) {
-  b <- as.list(setNames(extent(z), c("lng1", "lat1", "lng2", "lat2")))
+  b <- as.list(setNames(lawn_extent(z), c("lng1", "lat1", "lng2", "lat2")))
   if (b$lng1 == b$lng2 || b$lat1 == b$lat2) {
     Map("+", b, c(-1, -1, 1, 1))
   } else {

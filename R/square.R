@@ -8,13 +8,13 @@
 #' box that would contain the input.
 #' @examples
 #' bbox <- c(-20, -20, -15, 0)
-#' square(bbox)
-#' square(bbox, TRUE)
-#' sq <- square(bbox)
+#' lawn_square(bbox)
+#' lawn_square(bbox, TRUE)
+#' sq <- lawn_square(bbox)
 #' @examples \dontrun{
-#' featurecollection(list(bbox_polygon(bbox), bbox_polygon(sq))) %>% view
+#' lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) %>% view
 #' }
-square <- function(bbox, lint = FALSE) {
+lawn_square <- function(bbox, lint = FALSE) {
   ct$eval(sprintf("var sq = turf.square(%s);", convert(bbox)))
   ct$get("sq")
 }

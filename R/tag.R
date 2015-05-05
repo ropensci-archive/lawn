@@ -9,13 +9,13 @@
 #' @return points with containingPolyId property containing values from polyId
 #' @details Takes a set of points and a set of polygons and performs a spatial join
 #' @examples
-#' pts <- random(n = 30)
-#' polys <- triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
-#' tag(pts, polys, 'fill', 'marker-color')
+#' pts <- lawn_random(n = 30)
+#' polys <- lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
+#' lawn_tag(pts, polys, 'fill', 'marker-color')
 #' @examples \dontrun{
-#' tag(pts, polys, 'fill', 'marker-color') %>% view
+#' lawn_tag(pts, polys, 'fill', 'marker-color') %>% view
 #' }
-tag <- function(points, polygons, polyId, containingPolyId) {
+lawn_tag <- function(points, polygons, polyId, containingPolyId) {
   points <- convert(points)
   polygons <- convert(polygons)
   ct$eval(sprintf("var tag = turf.tag(%s, %s, '%s', '%s');",

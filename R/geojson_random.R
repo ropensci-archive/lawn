@@ -14,7 +14,7 @@
 #' @references \url{https://github.com/mapbox/geojson-random}
 #' @details These functions create either random points, polygons, or positions (single
 #' long/lat coordinate pairs).
-#' @seealso \code{\link{random}}
+#' @seealso \code{\link{lawn_random}}
 #' @examples
 #' # Random points
 #' gr_point(5)

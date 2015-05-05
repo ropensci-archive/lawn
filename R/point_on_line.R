@@ -31,17 +31,16 @@
 #'     "coordinates": [-77.037076, 38.884017]
 #'   }
 #' }'
-#' point_on_line(line, pt)
+#' lawn_point_on_line(line, pt)
 #'
 #' # lint input objects
-#' point_on_line(line, pt, TRUE)
+#' lawn_point_on_line(line, pt, TRUE)
 #' @examples \dontrun{
 #' line %>% view
 #' pt %>% view
-#' point_on_line(line, pt) %>% view
+#' lawn_point_on_line(line, pt) %>% view
 #' }
-
-point_on_line <- function(line, point, lint = FALSE) {
+lawn_point_on_line <- function(line, point, lint = FALSE) {
   lawnlint(list(line, point), lint)
   line <- convert(line)
   point <- convert(point)

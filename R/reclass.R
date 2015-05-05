@@ -16,8 +16,8 @@
 #' input but with outField populated.
 #' @examples
 #' translations <- list(list(0, 200, "small"), list(200, 400, "medium"), list(400, 600, "large"))
-#' reclass(lawn_data$points_average, 'population', 'size', translations)
-reclass <- function(input, inField, outField, translations) {
+#' lawn_reclass(lawn_data$points_average, 'population', 'size', translations)
+lawn_reclass <- function(input, inField, outField, translations) {
   input <- convert(input)
   translations <- convert(translations)
   ct$eval(sprintf("var rc = turf.reclass(%s, '%s', '%s', %s);",

@@ -8,13 +8,13 @@
 #' @details Takes a \code{\link{data-FeatureCollection}} and returns the
 #' absolute center point of all features.
 #' @examples
-#' center(lawn_data$points_average)
+#' lawn_center(lawn_data$points_average)
 #' @examples \dontrun{
-#' center(lawn_data$points_average) %>% view
+#' lawn_center(lawn_data$points_average) %>% view
 #' featurecollection(lawn_data$points_average) %>% view
-#' center(lawn_data$points_average) %>% view
+#' lawn_center(lawn_data$points_average) %>% view
 #' }
-center <- function(features, lint = FALSE) {
+lawn_center <- function(features, lint = FALSE) {
   features <- convert(features)
   lawnlint(features, lint)
   ct$eval(sprintf("var cent = turf.center(%s);", features))

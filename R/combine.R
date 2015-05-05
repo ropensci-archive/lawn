@@ -28,7 +28,7 @@
 #'    }
 #'  ]
 #' }'
-#' combine(fc1)
+#' lawn_combine(fc1)
 #'
 #' # combine linestrings
 #' fc2 <- '{
@@ -61,15 +61,15 @@
 #'    }
 #'  ]
 #' }'
-#' combine(fc2)
+#' lawn_combine(fc2)
 #' @examples \dontrun{
 #' fc1 %>% view
-#' combine(fc1) %>% view
+#' lawn_combine(fc1) %>% view
 #' fc2 %>% view
-#' combine(fc2) %>% view
+#' lawn_combine(fc2) %>% view
 #' }
 
-combine <- function(fc, lint = FALSE) {
+lawn_combine <- function(fc, lint = FALSE) {
   lawnlint(fc, lint)
   ct$eval(sprintf("var exp = turf.combine(%s);", convert(fc)))
   ct$get("exp")

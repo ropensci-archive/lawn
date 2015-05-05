@@ -16,8 +16,8 @@
 #'    [-21.916007, 64.141016],
 #'    [-21.930084, 64.14446]
 #' ]'
-#' linestring(linestring1)
-#' linestring(linestring2)
+#' lawn_linestring(linestring1)
+#' lawn_linestring(linestring2)
 #'
 #' pts <- list(
 #'    c(-21.964416, 64.148203),
@@ -25,13 +25,12 @@
 #'    c(-21.93901, 64.135924),
 #'    c(-21.927337, 64.136673)
 #' )
-#' linestring(pts, properties = list(name = 'line1', distance = 145))
+#' lawn_linestring(pts, properties = list(name = 'line1', distance = 145))
 #'
 #' # completely non-sensical, but gets some data quickly
-#' pts <- random()$features$geometry$coordinates
-#' linestring(pts)
-
-linestring <- function(coordinates, properties = NULL) {
+#' pts <- lawn_random()$features$geometry$coordinates
+#' lawn_linestring(pts)
+lawn_linestring <- function(coordinates, properties = NULL) {
   ct$eval(sprintf("var poly = turf.linestring(%s, %s);", convert(coordinates), toj(properties)))
   structure(ct$get("poly"), class = "linestring")
 }

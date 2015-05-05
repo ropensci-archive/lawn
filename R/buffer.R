@@ -8,8 +8,8 @@
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' # From a FeatureCollection
-#' dat <- random(n = 100)
-#' buffer(dat, 100)
+#' dat <- lawn_random(n = 100)
+#' lawn_buffer(dat, 100)
 #'
 #' # From a Feature
 #' dat <- '{
@@ -26,12 +26,12 @@
 #'      ]]
 #'    }
 #' }'
-#' buffer(dat, 1, "miles")
+#' lawn_buffer(dat, 1, "miles")
 #'
 #' # buffer a point
-#' buffer(point(c(-74.50,40)), 100, "meters")
+#' lawn_buffer(lawn_point(c(-74.50,40)), 100, "meters")
 
-buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
+lawn_buffer <- function(input, dist, units = c("meters", "feet", "kilometers", "miles", "degrees")) {
   input <- convert(input)
   units <- match.arg(units)
   ct$eval(sprintf("var units = '%s';", units))

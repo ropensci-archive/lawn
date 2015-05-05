@@ -16,14 +16,13 @@
 #'
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
-#' data(lawn_data)
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
 #' ex_agg <- list(c('sum','population','pop_sum'),
 #'             c('average','population','pop_average'),
 #'             c('count','','num_of_pts'))
-#' aggregate(ex_polys, ex_pts, ex_agg)
-aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts"))) {
+#' lawn_aggregate(ex_polys, ex_pts, ex_agg)
+lawn_aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts"))) {
   polys <- convert(polys)
   pts <- convert(pts)
   agg <- make_agg_array(agg)

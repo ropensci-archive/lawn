@@ -20,15 +20,14 @@
 #'     ]]
 #'   }
 #' }'
-#' kinks(poly)
+#' lawn_kinks(poly)
 #' # lint input object
-#' kinks(poly, TRUE)
+#' lawn_kinks(poly, TRUE)
 #' @examples \dontrun{
 #' poly %>% view
-#' kinks(poly)$intersections %>% view
+#' lawn_kinks(poly)$intersections %>% view
 #' }
-
-kinks <- function(input, lint = FALSE) {
+lawn_kinks <- function(input, lint = FALSE) {
   lawnlint(input, lint)
   ct$eval(sprintf("var exp = turf.kinks(%s);", convert(input)))
   ct$get("exp")

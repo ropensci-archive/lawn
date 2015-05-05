@@ -40,16 +40,15 @@
 #'     ]
 #'   }
 #' }'
-#' line_slice(start, stop, line)
+#' lawn_line_slice(start, stop, line)
 #'
 #' # lint input objects
-#' line_slice(start, stop, line, TRUE)
+#' lawn_line_slice(start, stop, line, TRUE)
 #' @examples \dontrun{
 #' line %>% view
-#' line_slice(point1 = start, point2 = stop, line) %>% view
+#' lawn_line_slice(point1 = start, point2 = stop, line) %>% view
 #' }
-
-line_slice <- function(point1, point2, line, lint = FALSE) {
+lawn_line_slice <- function(point1, point2, line, lint = FALSE) {
   lawnlint(list(point1, point2, line), lint)
   point1 <- convert(point1)
   point2 <- convert(point2)

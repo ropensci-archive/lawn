@@ -11,12 +11,12 @@
 #' @references Jenks Natural breaks
 #' \url{http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization}
 #' @examples
-#' jenks(lawn_data$points_average, 'population', 0)
-#' jenks(lawn_data$points_average, 'population', 1)
-#' jenks(lawn_data$points_average, 'population', 2)
-#' jenks(lawn_data$points_average, 'population', 3)
-#' jenks(lawn_data$points_average, 'population', 4)
-jenks <- function(input, field, numberOfBreaks) {
+#' lawn_jenks(lawn_data$points_average, 'population', 0)
+#' lawn_jenks(lawn_data$points_average, 'population', 1)
+#' lawn_jenks(lawn_data$points_average, 'population', 2)
+#' lawn_jenks(lawn_data$points_average, 'population', 3)
+#' lawn_jenks(lawn_data$points_average, 'population', 4)
+lawn_jenks <- function(input, field, numberOfBreaks) {
   input <- convert(input)
   ct$eval(sprintf("var jks = turf.jenks(%s, '%s', %s);", input, field, toj(numberOfBreaks)))
   ct$get("jks")

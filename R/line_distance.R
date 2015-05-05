@@ -23,11 +23,11 @@
 #'     ]
 #'   }
 #' }'
-#' line_distance(line, 'kilometers')
-#' line_distance(line, 'miles')
-#' line_distance(line, 'radians')
-#' line_distance(line, 'degrees')
-line_distance <- function(line, units, lint = FALSE) {
+#' lawn_line_distance(line, 'kilometers')
+#' lawn_line_distance(line, 'miles')
+#' lawn_line_distance(line, 'radians')
+#' lawn_line_distance(line, 'degrees')
+lawn_line_distance <- function(line, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
   ct$eval(sprintf("var env = turf.lineDistance(%s, '%s');", line, units))

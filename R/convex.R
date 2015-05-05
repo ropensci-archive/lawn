@@ -58,11 +58,11 @@
 #'     }
 #'     ]
 #' }'
-#' convex(points)
+#' lawn_convex(points)
 #' @examples \dontrun{
-#' convex(points) %>% view
+#' lawn_convex(points) %>% view
 #' }
-convex <- function(input, lint = FALSE) {
+lawn_convex <- function(input, lint = FALSE) {
   input <- convert(input)
   lawnlint(input, lint)
   ct$eval(sprintf("var cv = turf.convex(%s);", input))

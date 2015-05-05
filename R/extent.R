@@ -8,7 +8,7 @@
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)
-#' extent(lawn_data$points_average)
+#' lawn_extent(lawn_data$points_average)
 #'
 #' # From a Feature
 #' dat <- '{
@@ -25,8 +25,8 @@
 #'      ]]
 #'    }
 #' }'
-#' extent(dat)
-extent <- function(input) {
+#' lawn_extent(dat)
+lawn_extent <- function(input) {
   ct$eval(sprintf("var bbox = turf.extent(%s);", input))
   ct$get("bbox")
 }

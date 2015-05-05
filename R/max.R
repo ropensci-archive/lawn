@@ -10,11 +10,11 @@
 #' @examples
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' max(poly, pt, 'population', 'max')
+#' lawn_max(poly, pt, 'population', 'max')
 #' @examples \dontrun{
-#' max(poly, pt, 'population', 'max') %>% view
+#' lawn_max(poly, pt, 'population', 'max') %>% view
 #' }
-max <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_max <- function(polygons, points, in_field, out_field, lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)

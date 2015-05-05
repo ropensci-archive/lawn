@@ -59,11 +59,11 @@
 #'     }
 #'     ]
 #' }'
-#' concave(points, 1)
+#' lawn_concave(points, 1)
 #' @examples \dontrun{
-#' concave(points) %>% view
+#' lawn_concave(points) %>% view
 #' }
-concave <- function(points, maxEdge = 1, units = "miles", lint = FALSE) {
+lawn_concave <- function(points, maxEdge = 1, units = "miles", lint = FALSE) {
   points <- convert(points)
   lawnlint(points, lint)
   ct$eval(sprintf("var cv = turf.concave(%s, %s, '%s');", points, maxEdge, units))

@@ -45,9 +45,9 @@
 #'       ]]
 #'   }
 #' }'
-#' inside(point1, poly)
-#' inside(point2, poly)
-inside <- function(point, polygon) {
+#' lawn_inside(point1, poly)
+#' lawn_inside(point2, poly)
+lawn_inside <- function(point, polygon) {
   point <- convert(point)
   polygon <- convert(polygon)
   ct$eval(sprintf("var ins = turf.inside(%s, %s);", point, polygon))
