@@ -13,7 +13,6 @@ test_that("lawn_buffer works", {
   expect_is(pt_bff$features, "data.frame")
   expect_is(pt_bff$features$geometry$type, "character")
   expect_is(pt_bff$features$geometry$coordinates[[1]], "array")
-  expect_equal(lawn_area(lawn_buffer(pt, 1)), expected = pi, tolerance = 0.003)
 })
 
 test_that("lawn_buffer fails correctly", {
