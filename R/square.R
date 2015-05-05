@@ -5,18 +5,16 @@
 #'
 #' @export
 #' @param bbox A bounding box
-#' @template lint
 #' @family measurements
 #' @return A square surrounding bbox
 #' @examples
 #' bbox <- c(-20, -20, -15, 0)
 #' lawn_square(bbox)
-#' lawn_square(bbox, TRUE)
-#' sq <- lawn_square(bbox)
 #' @examples \dontrun{
+#' sq <- lawn_square(bbox)
 #' lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) %>% view
 #' }
-lawn_square <- function(bbox, lint = FALSE) {
+lawn_square <- function(bbox) {
   ct$eval(sprintf("var sq = turf.square(%s);", convert(bbox)))
   ct$get("sq")
 }

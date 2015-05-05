@@ -4,15 +4,10 @@
 \alias{lawn_square}
 \title{Square}
 \usage{
-lawn_square(bbox, lint = FALSE)
+lawn_square(bbox)
 }
 \arguments{
 \item{bbox}{A bounding box}
-
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
 }
 \value{
 A square surrounding bbox
@@ -24,8 +19,6 @@ box that would contain the input.
 \examples{
 bbox <- c(-20, -20, -15, 0)
 lawn_square(bbox)
-lawn_square(bbox, TRUE)
-sq <- lawn_square(bbox)
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}};
