@@ -24,6 +24,8 @@
 #'   }
 #' }'
 #' destination(pt, 50, 90, "miles")
+#' destination(pt, 100, 90, "miles")
+#' destination(pt, 2, 90, "kilometers")
 #' @examples \dontrun{
 #' pt %>% view
 #' destination(pt, 200, 90, "miles") %>% view
