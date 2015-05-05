@@ -58,6 +58,18 @@ featurecollection <- function(features) {
 }
 
 #' @export
+featurecollection.character <- function(features) {
+  res <- tryCatch(jsonlite::fromJSON(features), error = function(e) e)
+  if (!is(res, "simpleError")) {
+    if (res$type == "FeatureCollection") {
+      structure(res, class = "featurecollection")
+    }
+  } else {
+    stop("character input must be JSON", call. = FALSE)
+  }
+}
+
+#' @export
 featurecollection.list <- function(features) {
   do_fc(features)
 }
