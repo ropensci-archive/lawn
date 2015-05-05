@@ -43,7 +43,7 @@ lawn_random(bbox = c(-70, 40, -60, 60))
 lawn_random(num_vertices = 5)
 }
 \seealso{
-Other data: \code{\link{lawn_featurecollection}};
+Other data functions: \code{\link{lawn_featurecollection}};
   \code{\link{lawn_filter}}; \code{\link{lawn_linestring}};
   \code{\link{lawn_point}}; \code{\link{lawn_polygon}};
   \code{\link{lawn_remove}}; \code{\link{lawn_sample}}

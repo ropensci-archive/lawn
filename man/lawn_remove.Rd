@@ -32,7 +32,7 @@ lawn_remove(lawn_data$remove_features, 'marker-color', '#00f')
 lawn_remove(lawn_data$remove_features, 'marker-color', '#0f0')
 }
 \seealso{
-Other data: \code{\link{lawn_featurecollection}};
+Other data functions: \code{\link{lawn_featurecollection}};
   \code{\link{lawn_filter}}; \code{\link{lawn_linestring}};
   \code{\link{lawn_point}}; \code{\link{lawn_polygon}};
   \code{\link{lawn_random}}; \code{\link{lawn_sample}}

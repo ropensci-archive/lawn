@@ -6,7 +6,7 @@
 #' @param key (character) The property on which to filter
 #' @param value (character) The value of that property on which to filter
 #' @template lint
-#' @family data
+#' @family data functions
 #' @return \code{\link{data-FeatureCollection}} - a filtered collection with only
 #' features that match input key and value
 #' @examples

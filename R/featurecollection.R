@@ -1,8 +1,10 @@
 #' Create a FeatureCollection
 #'
 #' @export
-#' @param features Input features
-#' @family data
+#' @param features Input features, can be json as json or character class,
+#' or a point, polygon, linestring, or centroid class, or many of those
+#' things in a list
+#' @family data functions
 #' @examples \dontrun{
 #' # points
 #' ## single point

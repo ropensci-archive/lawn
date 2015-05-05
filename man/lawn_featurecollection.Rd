@@ -7,7 +7,9 @@
 lawn_featurecollection(features)
 }
 \arguments{
-\item{features}{Input features}
+\item{features}{Input features, can be json as json or character class,
+or a point, polygon, linestring, or centroid class, or many of those
+things in a list}
 }
 \description{
 Create a FeatureCollection
@@ -107,7 +109,7 @@ lawn_featurecollection(cent)
 }
 }
 \seealso{
-Other data: \code{\link{lawn_filter}};
+Other data functions: \code{\link{lawn_filter}};
   \code{\link{lawn_linestring}}; \code{\link{lawn_point}};
   \code{\link{lawn_polygon}}; \code{\link{lawn_random}};
   \code{\link{lawn_remove}}; \code{\link{lawn_sample}}

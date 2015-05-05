@@ -7,7 +7,7 @@
 #' @param features A FeatureCollection
 #' @param n (integer) Number of features to generate
 #' @template lint
-#' @family data
+#' @family data functions
 #' @return A \code{\link{data-FeatureCollection}}
 #'
 #' @examples

@@ -46,7 +46,7 @@ pts <- lawn_random()$features$geometry$coordinates
 lawn_linestring(pts)
 }
 \seealso{
-Other data: \code{\link{lawn_featurecollection}};
+Other data functions: \code{\link{lawn_featurecollection}};
   \code{\link{lawn_filter}}; \code{\link{lawn_point}};
   \code{\link{lawn_polygon}}; \code{\link{lawn_random}};
   \code{\link{lawn_remove}}; \code{\link{lawn_sample}}

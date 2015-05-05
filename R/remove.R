@@ -10,7 +10,7 @@
 #' @param property Property to filter
 #' @param value Value to filter
 #' @template lint
-#' @family data
+#' @family data functions
 #' @return A \code{\link{data-FeatureCollection}}
 #' @examples
 #' cat(lawn_data$remove_features)

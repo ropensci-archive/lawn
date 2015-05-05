@@ -29,7 +29,7 @@ lawn_sample(lawn_data$points_average, 2)
 lawn_sample(lawn_data$points_average, 3)
 }
 \seealso{
-Other data: \code{\link{lawn_featurecollection}};
+Other data functions: \code{\link{lawn_featurecollection}};
   \code{\link{lawn_filter}}; \code{\link{lawn_linestring}};
   \code{\link{lawn_point}}; \code{\link{lawn_polygon}};
   \code{\link{lawn_random}}; \code{\link{lawn_remove}}

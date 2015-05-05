@@ -25,10 +25,10 @@ lawn_point('[-74.5, 40]')
 lawn_point(c(-74.5, 40), properties = list(name = 'poly1', population = 400))
 
 # Make a FeatureCollection
-# lawn_featurecollection(lawn_point(c(-74.5, 40)))
+lawn_featurecollection(lawn_point(c(-74.5, 40)))
 }
 \seealso{
-Other data: \code{\link{lawn_featurecollection}};
+Other data functions: \code{\link{lawn_featurecollection}};
   \code{\link{lawn_filter}}; \code{\link{lawn_linestring}};
   \code{\link{lawn_polygon}}; \code{\link{lawn_random}};
   \code{\link{lawn_remove}}; \code{\link{lawn_sample}}

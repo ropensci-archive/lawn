@@ -49,16 +49,19 @@
 #'  }
 #' }'
 #' lawn_intersect(poly1, poly2)
-#' # view(poly1)
-#' # view(poly2)
-#' # lawn_intersect(poly1, poly2) %>% view()
+#'
+#' @examples \dontrun{
+#' view(poly1)
+#' view(poly2)
+#' lawn_intersect(poly1, poly2) %>% view()
 #'
 #' x1 <- lawn_buffer(lawn_point(c(-122.6375, 45.53)), 1500, "meters")
 #' x2 <- lawn_buffer(lawn_point(c(-122.6475, 45.53)), 1500, "meters")
 #' lawn_intersect(x1, x2)
-#' # view(x1)
-#' # view(x2)
-#' # lawn_intersect(x1, x2) %>% view()
+#' view(x1)
+#' view(x2)
+#' lawn_intersect(x1, x2) %>% view()
+#' }
 lawn_intersect <- function(poly1, poly2, lint = FALSE) {
   poly1_1 <- convert(poly1)
   poly2_1 <- convert(poly2)

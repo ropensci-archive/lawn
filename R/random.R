@@ -14,7 +14,7 @@
 #' polygon features.
 #' @param max_radial_length Number	<optional> 10	 the total number of decimal degrees
 #' longitude or latitude that a polygon can extent outwards to from its center
-#' @family data
+#' @family data functions
 #' @return A \code{\link{data-FeatureCollection}}
 #'
 #' @examples
