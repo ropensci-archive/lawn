@@ -20,6 +20,6 @@ test_that("point works", {
 
 test_that("point fails correctly", {
   expect_error(point(), "argument \"x\" is missing, with no default")
-  expect_error(point(x = 5), "Coordinates must be at least 2 numbers long")
+  expect_error(point(x = 5), "Coordinates must be an array")
   expect_error(point(NULL), "Coordinates must be an array")
 })

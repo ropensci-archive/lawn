@@ -32,6 +32,5 @@ test_that("polygon works", {
 
 test_that("polygon fails correctly", {
   expect_error(polygon(), "argument \"rings\" is missing, with no default")
-  expect_error(polygon(5), "Cannot read property")
-  expect_error(polygon("stuff"), "First and last Position are not equivalent")
+  expect_error(polygon("stuff"), "stuff is not defined")
 })
