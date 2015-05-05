@@ -16,4 +16,4 @@ notifications:
     on_success: change
     on_failure: change
   slack:
-    secure: g90z6fjQ7sRGmEYaKwDdDgukdc1+f/J8WSqUo+tA56h+OsjirCr2Kln9IVUTdQQvRymz6Ut857J4WaqczsGtldMTFyGPuY0HeQtjnUkHlcrwVqvbrRDYc/yCS2qMIaR3JAUjfxbZItjYf0SXbi0gPj4isRNTnbyz3v6VDzmQvqM=
+    secure: DycAoDonrA+nFYb6aaxXzzmawazjMMjWrzMzVeGyysm8Pea2hWvAmFg3T+i+26IOXK6SSNZQtmW6mcB5eLIC8Gm8+SSCbZ+ETYZT21oBxER5FuX/rxQVTr18u9PMXfEGdgj4/GO1U8JLcwx/ZuzV6VhuWJGT3ONgqsqFypCvdWA=
