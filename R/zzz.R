@@ -29,3 +29,5 @@ lintit <- function(x) {
     stop("Line ", tmp$line, " - ", tmp$message, call. = FALSE)
   }
 }
+
+as.fc <- function(x) structure(x, class = "featurecollection")

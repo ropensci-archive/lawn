@@ -22,5 +22,5 @@ lawn_count <- function(polygons, points, countField = 'pt_count', lint = FALSE) 
   ct$eval(sprintf('var polygons = %s;', polygons))
   ct$eval(sprintf('var points = %s;', points))
   ct$eval(sprintf("var counted = turf.count(polygons, points, '%s');", countField))
-  structure(ct$get("counted"), class = "featurecollection")
+  as.fc(ct$get("counted"))
 }

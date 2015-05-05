@@ -29,5 +29,5 @@ lawn_deviation <- function(polys, pts, inField, outField, lint = FALSE) {
   ct$eval(sprintf("var inField = '%s';", inField))
   ct$eval(sprintf("var outField = '%s';", outField))
   ct$eval("var dev = turf.deviation(polys, pts, inField, outField);")
-  ct$get("dev")
+  as.fc(ct$get("dev"))
 }

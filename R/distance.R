@@ -12,6 +12,7 @@
 #' @param units (character) Can be degrees, radians, miles, or kilometers
 #' @template lint
 #' @family measurements
+#' @return Single numeric value
 #' @examples
 #' from <- '{
 #'  "type": "Feature",

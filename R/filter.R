@@ -19,5 +19,5 @@ lawn_filter <- function(features, key, value, lint = FALSE) {
   ct$eval(sprintf('var key = "%s";', key))
   ct$eval(sprintf('var value = "%s";', value))
   ct$eval(sprintf("var filtered = turf.filter(%s, key, value);", features))
-  structure(ct$get("filtered"), class = "featurecollection")
+  as.fc(ct$get("filtered"))
 }

@@ -18,6 +18,9 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+Single numeric value
+}
 \description{
 Calculates the distance between two \code{\link{data-Point}}'s in degress,
 radians, miles, or kilometers. Uses the

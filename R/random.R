@@ -35,5 +35,5 @@ lawn_random <- function(type = "points", n = 10, bbox = NULL,
   jj <- jsonlite::toJSON(cmp(list(bbox = bbox, num_vertices = num_vertices,
                                   max_radial_length = max_radial_length)))
   ct$eval(sprintf("var rnd = turf.random('%s', %s, %s);", type, n, jj))
-  structure(ct$get("rnd"), class = "featurecollection")
+  as.fc(ct$get("rnd"))
 }

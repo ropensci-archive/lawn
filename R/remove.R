@@ -20,5 +20,5 @@ lawn_remove <- function(features, property, value, lint = FALSE) {
   features <- convert(features)
   lawnlint(features, lint)
   ct$eval(sprintf("var rmv = turf.remove(%s, '%s', '%s');", features, property, value))
-  structure(ct$get("rmv"), class = "featurecollection")
+  as.fc(ct$get("rmv"))
 }

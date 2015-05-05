@@ -58,5 +58,5 @@ lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
   ct$eval(sprintf("var units = '%s';", units))
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))
-  structure(ct$get("buff"), class = "featurecollection")
+  as.fc(ct$get("buff"))
 }

@@ -179,5 +179,5 @@ do_fc <- function(features) {
   fts <- sapply(features, as.turf)
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featurecollection(features);")
-  structure(ct$get("feet"), class = "featurecollection")
+  as.fc(ct$get("feet"))
 }
