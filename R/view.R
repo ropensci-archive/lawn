@@ -1,4 +1,4 @@
-#' Visualize geojson from a character string or list
+#' Visualize geojson
 #'
 #' @importFrom leaflet leaflet addTiles addGeoJSON fitBounds
 #' @export

@@ -2,7 +2,7 @@
 % Please edit documentation in R/view.R
 \name{view}
 \alias{view}
-\title{Visualize geojson from a character string or list}
+\title{Visualize geojson}
 \usage{
 view(x)
 }
@@ -13,7 +13,7 @@ view(x)
 Opens a map with the geojson object(s)
 }
 \description{
-Visualize geojson from a character string or list
+Visualize geojson
 }
 \examples{
 \dontrun{

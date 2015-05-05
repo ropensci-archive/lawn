@@ -48,8 +48,11 @@
 #' @examples \dontrun{
 #' lawn_erase(poly1, poly2) %>% view
 #' lawn_featurecollection(list(poly1, poly2)) %>% view
-#' ## FIXME - view() doesn't work for this
-#' lawn_featurecollection(list(lawn_polygon(poly1), lawn_polygon(poly2))) %>% view
+#' fc <- lawn_featurecollection(list(
+#'    lawn_polygon(fromJSON(poly1)$geometry$coordinates),
+#'    lawn_polygon(fromJSON(poly2)$geometry$coordinates)
+#' ))
+#' view(fc)
 #' }
 lawn_erase <- function(poly1, poly2, lint = FALSE) {
   poly1 <- convert(poly1)
