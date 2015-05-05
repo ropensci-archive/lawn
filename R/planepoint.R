@@ -5,7 +5,9 @@
 #' @param triangle a Polygon feature with three vertices
 #' @template lint
 #' @return the z-value for pt
-#' @details Takes a triangular plane as a Polygon and a Point within that triangle and returns the z-value at that point. The Polygon needs to have properties a, b, and c that define the values at its three corners.
+#' @details Takes a triangular plane as a Polygon and a Point within that triangle
+#' and returns the z-value at that point. The Polygon needs to have properties a,
+#' b, and c that define the values at its three corners.
 #' @examples
 #' pt <- point(c(-75.3221, 39.529))
 #' triangle <- '{
