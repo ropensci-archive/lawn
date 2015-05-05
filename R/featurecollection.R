@@ -104,6 +104,13 @@ lawn_featurecollection <- function(features) {
 # from a list, could be many different things in the list ----
 #' @export
 lawn_featurecollection.list <- function(features) {
+  features <- lapply(features, function(z){
+    if (is(z, "character")) {
+      lawn_featurecollection(z)
+    } else {
+      z
+    }
+  })
   do_fc(features)
 }
 
@@ -136,6 +143,9 @@ lawn_featurecollection.character <- function(features) {
   if (!is(res, "simpleError")) {
     if (res$type == "FeatureCollection") {
       structure(res, class = "featurecollection")
+    } else {
+      structure(res, class = tolower(res$geometry$type))
+      # stop("'type' must be FeatureCollection", call. = FALSE)
     }
   } else {
     stop("character input must be JSON", call. = FALSE)
@@ -149,7 +159,7 @@ lawn_featurecollection.json <- function(features) {
   if (res$type == "FeatureCollection") {
     structure(res, class = "featurecollection")
   } else {
-    stop("type must be FeatureCollection", call. = FALSE)
+    stop("'type' must be FeatureCollection", call. = FALSE)
   }
 }
 
