@@ -51,12 +51,22 @@ view.point <- function(x) {
 }
 
 #' @export
+view.multipoint <- function(x) {
+  make_view_obj(x)
+}
+
+#' @export
 view.polygon <- function(x) {
   make_view_obj(x)
 }
 
 #' @export
 view.linestring <- function(x) {
+  make_view_obj(x)
+}
+
+#' @export
+view.multilinestring <- function(x) {
   make_view_obj(x)
 }
 

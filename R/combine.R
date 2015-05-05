@@ -4,7 +4,7 @@
 #' MultiPoint, MultiLineString, or MultiPolygon features.
 #'
 #' @export
-#' @param fc A FeatureCollection of any type
+#' @param fc A \code{\link{data-FeatureCollection}} of any type
 #' @template lint
 #' @examples
 #' # combine points
@@ -70,7 +70,9 @@
 #' }
 
 lawn_combine <- function(fc, lint = FALSE) {
+  fc <- convert(fc)
   lawnlint(fc, lint)
-  ct$eval(sprintf("var exp = turf.combine(%s);", convert(fc)))
-  ct$get("exp")
+  ct$eval(sprintf("var exp = turf.combine(%s);", fc))
+  clz <- match.arg(tolower(fromJSON(fc)$features$geometry$type[1]), c("point", "polygon", "linestring"))
+  structure(ct$get("exp"), class = paste0("multi", clz))
 }
