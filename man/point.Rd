@@ -7,15 +7,18 @@
 point(x, properties = NULL)
 }
 \arguments{
-\item{x}{A pair of points, of the form \code{c(longitude,latitude)}}
+\item{x}{A pair of points in a vector, list or json, of the form
+\code{e.g., c(longitude,latitude)}}
 
-\item{properties}{A list of properties}
+\item{properties}{A list of properties. Default: NULL}
 }
 \description{
 Create a point
 }
 \examples{
 point(c(-74.5, 40))
+point(list(-74.5, 40))
+point('[-74.5, 40]')
 point(c(-74.5, 40), properties = list(name = 'poly1', population = 400))
 
 # Make a FeatureCollection

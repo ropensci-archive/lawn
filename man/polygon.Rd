@@ -7,7 +7,7 @@
 polygon(rings, properties = NULL)
 }
 \arguments{
-\item{rings}{A list of LinearRings}
+\item{rings}{A list of LinearRings, or in json}
 
 \item{properties}{A list of properties}
 }

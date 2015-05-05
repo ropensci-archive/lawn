@@ -1,7 +1,7 @@
 #' Create a polygon
 #'
 #' @export
-#' @param rings A list of LinearRings
+#' @param rings A list of LinearRings, or in json
 #' @param properties A list of properties
 #' @examples
 #' rings <- list(list(
@@ -17,6 +17,6 @@
 #' featurecollection(polygon(rings))
 
 polygon <- function(rings, properties = NULL) {
-  ct$eval(sprintf("var poly = turf.polygon(%s, %s);", toj(rings), toj(properties)))
+  ct$eval(sprintf("var poly = turf.polygon(%s, %s);", convert(rings), toj(properties)))
   structure(ct$get("poly"), class = "polygon")
 }
