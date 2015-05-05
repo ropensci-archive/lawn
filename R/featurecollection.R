@@ -56,7 +56,7 @@
 #' lawn_featurecollection(features)
 #' }
 lawn_featurecollection <- function(features) {
-  UseMethod("featurecollection")
+  UseMethod("lawn_featurecollection")
 }
 
 #' @export
