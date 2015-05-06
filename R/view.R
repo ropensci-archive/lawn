@@ -16,7 +16,7 @@
 #' mylist <- fromJSON(lawn_data$polygons_average, FALSE)
 #' view(mylist)
 #'
-#' # from json (jsonlite class)
+#' # from json (a jsonlite class)
 #' x <- minify(lawn_data$points_count)
 #' class(x)
 #' view(x)
@@ -27,6 +27,11 @@ view <- function(x) {
 
 #' @export
 view.character <- function(x) {
+  make_view(x)
+}
+
+#' @export
+view.json <- function(x) {
   make_view(x)
 }
 
