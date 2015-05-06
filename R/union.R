@@ -7,6 +7,8 @@
 #' @param poly2 A polygon
 #' @template lint
 #' @family transformations
+#' @return a combined \code{\link{data-Polygon}} or
+#' \code{\link{data-MultiPolygon}} feature
 #'
 #' @details Contiguous polygons are combined, non-contiguous polygons are returned
 #' as MultiPolygon
@@ -79,5 +81,6 @@ lawn_union <- function(poly1, poly2, lint = FALSE) {
     ct$eval(sprintf("var poly2 = %s;", poly2))
   }
   ct$eval("var union = turf.union(poly1, poly2);")
-  ct$get("union")
+  tmp <- ct$get("union")
+  structure(tmp, class = tolower(ct$get("union.geometry.type")))
 }

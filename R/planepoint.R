@@ -9,7 +9,7 @@
 #' @param triangle a Polygon feature with three vertices
 #' @template lint
 #' @family interpolation
-#' @return the z-value for pt
+#' @return the z-value for pt (numeric)
 #' @details The Polygon needs to have properties a, b, and c that define
 #' the values at its three corners.
 #' @examples

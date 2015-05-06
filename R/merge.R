@@ -47,7 +47,7 @@
 #' }'
 #' lawn_merge(polygons)
 #' @examples \dontrun{
-#' featurecollection(polygons) %>% view
+#' lawn_featurecollection(polygons) %>% view
 #' lawn_merge(polygons) %>% view
 #' }
 lawn_merge <- function(fc, lint = FALSE) {

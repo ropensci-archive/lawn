@@ -16,5 +16,5 @@
 #' lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
 lawn_point_grid <- function(extent, cellWidth, units) {
   ct$eval(sprintf("var pg = turf.pointGrid(%s, %s, '%s');", toj(extent), cellWidth, units))
-  ct$get("pg")
+  as.fc(ct$get("pg"))
 }

@@ -7,7 +7,7 @@
 #' @param bbox a bounding box
 #' @param factor the ratio of the new bbox to the input bbox
 #' @family measurements
-#' @return the resized bbox
+#' @return the resized bbox, numeric vector of length four
 #' @examples
 #' bbox <- c(0, 0, 10, 10)
 #' lawn_size(bbox, factor = 1)

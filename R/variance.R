@@ -23,5 +23,5 @@ lawn_variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
   py <- convert(polygons)
   pt <- convert(points)
   ct$eval(sprintf("var variance = turf.variance(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("variance")
+  as.fc(ct$get("variance"))
 }

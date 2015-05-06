@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-the z-value for pt
+the z-value for pt (numeric)
 }
 \description{
 Takes a triangular plane as a \code{\link{data-Polygon}} and a

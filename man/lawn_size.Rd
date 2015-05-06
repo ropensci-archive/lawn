@@ -12,7 +12,7 @@ lawn_size(bbox, factor)
 \item{factor}{the ratio of the new bbox to the input bbox}
 }
 \value{
-the resized bbox
+the resized bbox, numeric vector of length four
 }
 \description{
 Takes a bounding box and returns a new bounding box with a size

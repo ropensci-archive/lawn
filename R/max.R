@@ -21,5 +21,5 @@ lawn_max <- function(polygons, points, in_field, out_field, lint = FALSE) {
   py <- convert(polygons)
   pt <- convert(points)
   ct$eval(sprintf("var max = turf.max(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("max")
+  as.fc(ct$get("max"))
 }

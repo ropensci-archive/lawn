@@ -21,5 +21,5 @@ lawn_median <- function(polygons, points, in_field, out_field, lint = FALSE) {
   py <- convert(polygons)
   pt <- convert(points)
   ct$eval(sprintf("var med = turf.median(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("med")
+  as.fc(ct$get("med"))
 }

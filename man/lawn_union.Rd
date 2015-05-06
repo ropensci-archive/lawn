@@ -16,6 +16,10 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+a combined \code{\link{data-Polygon}} or
+\code{\link{data-MultiPolygon}} feature
+}
 \description{
 Finds the interesection of two polygons and returns the union of the two
 }

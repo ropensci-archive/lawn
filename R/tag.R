@@ -25,5 +25,5 @@ lawn_tag <- function(points, polygons, polyId, containingPolyId, lint = FALSE) {
   lawnlint(list(points, polygons), lint)
   ct$eval(sprintf("var tag = turf.tag(%s, %s, '%s', '%s');",
                   points, polygons, polyId, containingPolyId))
-  ct$get("tag")
+  as.fc(ct$get("tag"))
 }

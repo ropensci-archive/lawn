@@ -10,7 +10,7 @@ lawn_square(bbox)
 \item{bbox}{A bounding box}
 }
 \value{
-A square surrounding bbox
+A square surrounding bbox, numeric vector of length four
 }
 \description{
 Takes a bounding box and calculates the minimum square bounding

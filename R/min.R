@@ -21,5 +21,5 @@ lawn_min <- function(polygons, points, in_field, out_field, lint = FALSE) {
   py <- convert(polygons)
   pt <- convert(points)
   ct$eval(sprintf("var min = turf.min(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("min")
+  as.fc(ct$get("min"))
 }

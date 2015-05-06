@@ -25,5 +25,5 @@ lawn_reclass <- function(input, inField, outField, translations, lint = FALSE) {
   lawnlint(list(input, translations), lint)
   ct$eval(sprintf("var rc = turf.reclass(%s, '%s', '%s', %s);",
                   input, inField, outField, translations))
-  ct$get("rc")
+  as.fc(ct$get("rc"))
 }

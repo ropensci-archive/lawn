@@ -29,9 +29,9 @@
 #' lawn_midpoint(pt1, pt2)
 #' @examples \dontrun{
 #' lawn_midpoint(pt1, pt2) %>% view
-#' featurecollection(list(
-#'   point(fromJSON(pt1)$geometry$coordinates),
-#'   point(fromJSON(pt2)$geometry$coordinates),
+#' lawn_featurecollection(list(
+#'   lawn_point(fromJSON(pt1)$geometry$coordinates),
+#'   lawn_point(fromJSON(pt2)$geometry$coordinates),
 #'   structure(lawn_midpoint(pt1, pt2), class = "point")
 #' )) %>% view
 #' }
@@ -40,5 +40,5 @@ lawn_midpoint <- function(pt1, pt2, lint = FALSE) {
   pt2 <- convert(pt2)
   lawnlint(list(pt1, pt2), lint)
   ct$eval(sprintf("var md = turf.midpoint(%s, %s);", pt1, pt2))
-  ct$get("md")
+  structure(ct$get("md"), class = "point")
 }

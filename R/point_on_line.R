@@ -41,9 +41,9 @@
 #' lawn_point_on_line(line, pt) %>% view
 #' }
 lawn_point_on_line <- function(line, point, lint = FALSE) {
-  lawnlint(list(line, point), lint)
   line <- convert(line)
   point <- convert(point)
+  lawnlint(list(line, point), lint)
   ct$eval(sprintf("var exp = turf.pointOnLine(%s, %s);", line, point))
-  ct$get("exp")
+  structure(ct$get("exp"), class = "point")
 }

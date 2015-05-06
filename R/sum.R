@@ -17,9 +17,9 @@
 #' lawn_sum(poly, pt, 'population', 'sum') %>% view
 #' }
 lawn_sum <- function(polygons, points, in_field, out_field, lint = FALSE) {
-  lawnlint(list(polygons, points), lint)
   py <- convert(polygons)
   pt <- convert(points)
+  lawnlint(list(polygons, points), lint)
   ct$eval(sprintf("var sumed = turf.sum(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  ct$get("sumed")
+  as.fc(ct$get("sumed"))
 }

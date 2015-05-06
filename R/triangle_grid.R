@@ -16,5 +16,5 @@
 #' lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
 lawn_triangle_grid <- function(extent, cellWidth, units) {
   ct$eval(sprintf("var tg = turf.triangleGrid(%s, %s, '%s');", toj(extent), cellWidth, units))
-  ct$get("tg")
+  as.fc(ct$get("tg"))
 }

@@ -49,10 +49,14 @@
 #'  ]
 #' }'
 #' lawn_nearest(point, against)
+#'
+#' @examples \dontrun{
+#' lawn_nearest(point, against) %>% view
+#' }
 lawn_nearest <- function(point, against, lint = FALSE) {
   point <- convert(point)
   against <- convert(against)
   lawnlint(list(point, against), lint)
   ct$eval(sprintf("var nearest = turf.nearest(%s, %s);", point, against))
-  ct$get("nearest")
+  structure(ct$get("nearest"), class = "point")
 }

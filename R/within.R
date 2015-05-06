@@ -20,5 +20,5 @@ lawn_within <- function(points, polygons, lint = FALSE) {
   polygons <- convert(polygons)
   lawnlint(list(points, polygons))
   ct$eval(sprintf("var pts = turf.within(%s, %s);", points, polygons))
-  ct$get("pts")
+  as.fc(ct$get("pts"))
 }

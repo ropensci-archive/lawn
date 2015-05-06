@@ -28,5 +28,5 @@ lawn_tin <- function(pt, propertyName = NULL, lint = FALSE) {
   pt <- convert(pt)
   lawnlint(pt, lint)
   ct$eval(sprintf("var tin = turf.tin(%s, '%s');", pt, convert(propertyName)))
-  ct$get("tin")
+  as.fc(ct$get("tin"))
 }
