@@ -8,7 +8,7 @@
 #' @param units Can be degrees, radians, miles, or kilometers
 #' @template lint
 #' @family measurements
-#' @return length of the input line
+#' @return length of the input line (numeric)
 #' @examples
 #' line <- '{
 #'   "type": "Feature",

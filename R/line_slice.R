@@ -8,6 +8,7 @@
 #' @param point2 Stopping point
 #' @param line Line to slice
 #' @template lint
+#' @return a \code{\link{data-LineString}}
 #' @examples
 #' start <- '{
 #'   "type": "Feature",
@@ -54,5 +55,5 @@ lawn_line_slice <- function(point1, point2, line, lint = FALSE) {
   point2 <- convert(point2)
   line <- convert(line)
   ct$eval(sprintf("var exp = turf.lineSlice(%s, %s, %s);", point1, point2, line))
-  ct$get("exp")
+  structure(ct$get("exp"), class = "linestring")
 }

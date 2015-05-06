@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-An array of the break values
+An array of the break values (numeric)
 }
 \description{
 Takes a set of \code{\link{data-Feature}}'s and returns an array of the Jenks

@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-length of the input line
+length of the input line (numeric)
 }
 \description{
 Takes a \code{\link{data-LineString}} and measures its length in

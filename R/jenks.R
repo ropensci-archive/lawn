@@ -10,7 +10,7 @@
 #' @param numberOfBreaks Number of classes in which to group the data
 #' @template lint
 #' @family classification
-#' @return An array of the break values
+#' @return An array of the break values (numeric)
 #' @references Jenks Natural breaks
 #' \url{http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization}
 #' @examples
