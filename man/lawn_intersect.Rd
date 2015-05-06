@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-Polygon}}, \code{\link{data-MultiLinestring}}, or undefined
+\code{\link{data-Polygon}}, \code{\link{data-MultiLineString}}, or undefined
 }
 \description{
 Finds the interesection of two \code{\link{data-Polygon}}'s and returns just

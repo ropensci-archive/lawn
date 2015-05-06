@@ -10,7 +10,7 @@
 #' @family transformations
 #' @details Polygons with just a shared boundary will return the boundary. Polygons
 #' that do not intersect will return \code{NULL}.
-#' @return \code{\link{data-Polygon}}, \code{\link{data-MultiLinestring}}, or undefined
+#' @return \code{\link{data-Polygon}}, \code{\link{data-MultiLineString}}, or undefined
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{

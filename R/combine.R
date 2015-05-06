@@ -3,6 +3,7 @@
 #' Combines a FeatureCollection of Point, LineString, or Polygon features into
 #' MultiPoint, MultiLineString, or MultiPolygon features.
 #'
+#' @importFrom jsonlite fromJSON
 #' @export
 #' @param fc A \code{\link{data-FeatureCollection}} of any type
 #' @template lint
