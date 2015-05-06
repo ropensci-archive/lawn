@@ -104,36 +104,31 @@ lawn_distance(from, to)
 
 ```r
 lawn_random(n = 2)
-```
-
-```
 #> $type
 #> [1] "FeatureCollection"
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point   11.67891, 61.61151
-#> 2 Feature         Point   49.92398, -1.98285
+#> 1 Feature         Point  167.30619, 25.17848
+#> 2 Feature         Point  -32.10306, 53.43144
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
 ```
 
+
 ```r
 lawn_random(n = 5)
-```
-
-```
 #> $type
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type geometry.coordinates
-#> 1 Feature         Point -53.80771, -68.08713
-#> 2 Feature         Point    78.46423, 8.05468
-#> 3 Feature         Point -99.42516, -83.87583
-#> 4 Feature         Point  105.84696, 77.11038
-#> 5 Feature         Point  145.96738, 24.74638
+#>      type geometry.type   geometry.coordinates
+#> 1 Feature         Point    -58.67052, 28.36528
+#> 2 Feature         Point    86.82092, -86.67376
+#> 3 Feature         Point -170.679818, -5.010867
+#> 4 Feature         Point    15.52654, -19.65143
+#> 5 Feature         Point   104.18723, -71.66213
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -151,8 +146,8 @@ gr_point(2)
 #> 
 #> $features
 #>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point   -98.54100, 86.21412
-#> 2 Feature         Point -162.62926, -63.49629
+#> 1 Feature         Point -172.45147, -68.39409
+#> 2 Feature         Point  -11.68456, -57.68366
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -163,7 +158,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 117.78960  49.40304
+#> [1]  22.57551 -32.57410
 ```
 
 Polygons
@@ -177,8 +172,8 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> $features
 #>      type geometry.type
 #> 1 Feature       Polygon
-#>                                                                                                                 geometry.coordinates
-#> 1 -67.45056, -70.75402, -71.46234, -71.77229, -73.76357, -67.45056, -61.37548, -63.44190, -63.79921, -63.71420, -61.22014, -61.37548
+#>                                                                                                                       geometry.coordinates
+#> 1 -116.51079, -115.41952, -115.09452, -118.31157, -116.71443, -116.51079, -44.39019, -43.85438, -46.92479, -47.53488, -41.12107, -44.39019
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -190,9 +185,6 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 ```r
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
-```
-
-```
 #> $type
 #> [1] "FeatureCollection"
 #> 
@@ -204,35 +196,31 @@ lawn_sample(dat, 1)
 #> [1] "featurecollection"
 ```
 
+
 ```r
 lawn_sample(dat, 2)
-```
-
-```
 #> $type
 #> [1] "FeatureCollection"
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        300         Point   10.79544, 59.93162
+#> 2 Feature        200         Point   10.72403, 59.92681
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
 ```
 
+
 ```r
 lawn_sample(dat, 3)
-```
-
-```
 #> $type
 #> [1] "FeatureCollection"
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        200         Point   10.80643, 59.90891
-#> 2 Feature        100         Point   10.74600, 59.90857
+#> 1 Feature        300         Point   10.79544, 59.93162
+#> 2 Feature        200         Point   10.80643, 59.90891
 #> 3 Feature        600         Point   10.71579, 59.90478
 #> 
 #> attr(,"class")
@@ -298,7 +286,7 @@ lawn_buffer(dat, 1, "miles")
 
 ## view
 
-`lawn` includes a tiny helper function for visualizing geojson. 
+`lawn` includes a tiny helper function for visualizing geojson.
 
 
 ```r
@@ -307,7 +295,7 @@ view(lawn_data$points_average)
 
 ![map1](inst/img/map1.png)
 
-Or during process of manipulating geojson, view at mostly any time. 
+Or during process of manipulating geojson, view at mostly any time.
 
 Here, we sample at random two points from the same dataset just viewed.
 
