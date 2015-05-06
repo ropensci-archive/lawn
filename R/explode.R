@@ -5,6 +5,7 @@
 #' @export
 #' @param input Feature of features
 #' @template lint
+#' @return a \code{\link{data-FeatureCollection}} of points
 #' @examples
 #' poly <- '{
 #'  "type": "Feature",
@@ -30,7 +31,8 @@
 #' lawn_explode(lawn_data$polygons_within) %>% view
 #' }
 lawn_explode <- function(input, lint = FALSE) {
+  input <- convert(input)
   lawnlint(input, lint)
-  ct$eval(sprintf("var exp = turf.explode(%s);", convert(input)))
-  ct$get("exp")
+  ct$eval(sprintf("var exp = turf.explode(%s);", input))
+  as.fc(ct$get("exp"))
 }

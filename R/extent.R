@@ -8,6 +8,7 @@
 #' @param input A Feature or FeatureCollection
 #' @template lint
 #' @family measurements
+#' @return A numeric vector of length 4 with bounding box
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)

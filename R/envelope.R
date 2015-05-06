@@ -52,5 +52,5 @@ lawn_envelope <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
   ct$eval(sprintf("var env = turf.envelope(%s);", fc))
-  ct$get("env")
+  structure(ct$get("env"), class = "polygon")
 }
