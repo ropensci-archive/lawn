@@ -15,6 +15,13 @@
 #' lawn_bbox_polygon(c(1, 3, 5, 50)) %>% view
 #' }
 lawn_bbox_polygon <- function(bbox) {
+  all_numeric(bbox)
   ct$eval(sprintf("var bbp = turf.bboxPolygon(%s);", convert(bbox)))
   structure(ct$get("bbp"), class = "polygon")
+}
+
+all_numeric <- function(x) {
+  if (!all(vapply(x, is.numeric, logical(1)))) {
+    stop("All values must be numeric", call. = FALSE)
+  }
 }
