@@ -33,16 +33,15 @@ library("lawn")
 Count number of points within polygons
 
 ```{r}
-count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 ```
-
 
 ## average
 
 Average value of a field for a set of points within a set of polygons
 
 ```{r}
-average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
+lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
 ```
 
 ## distance
@@ -71,14 +70,14 @@ to <- '{
 Calculate distance, default units is kilometers (`km`)
 
 ```{r}
-distance(from, to)
+lawn_distance(from, to)
 ```
 
 ## random set of points
 
 ```{r collapse=FALSE}
-random(n = 2)
-random(n = 5)
+lawn_random(n = 2)
+lawn_random(n = 5)
 ```
 
 ## random features with geojson-random
@@ -93,7 +92,7 @@ Positions
 
 ```{r}
 gr_position()
-````
+```
 
 Polygons
 
@@ -105,21 +104,21 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 
 ```{r collapse=FALSE}
 dat <- lawn_data$points_average
-sample(dat, 1)
-sample(dat, 2)
-sample(dat, 3)
+lawn_sample(dat, 1)
+lawn_sample(dat, 2)
+lawn_sample(dat, 3)
 ```
 
 ## extent
 
 ```{r}
-extent(lawn_data$points_average)
+lawn_extent(lawn_data$points_average)
 ```
 
 ## within
 
 ```{r}
-within(lawn_data$points_within, lawn_data$polygons_within)
+lawn_within(lawn_data$points_within, lawn_data$polygons_within)
 ```
 
 ## buffer
@@ -139,7 +138,7 @@ dat <- '{
      ]]
    }
 }'
-buffer(dat, 1, "miles")
+lawn_buffer(dat, 1, "miles")
 ```
 
 ## view
@@ -157,7 +156,7 @@ Or during process of manipulating geojson, view at mostly any time.
 Here, we sample at random two points from the same dataset just viewed.
 
 ```{r eval=FALSE}
-view(jsonlite::toJSON(sample(lawn_data$points_average, 2), auto_unbox=TRUE))
+lawn_sample(lawn_data$points_average, 2) %>% view()
 ```
 
 ![map1](inst/img/map2.png)
