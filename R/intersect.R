@@ -10,6 +10,7 @@
 #' @family transformations
 #' @details Polygons with just a shared boundary will return the boundary. Polygons
 #' that do not intersect will return \code{NULL}.
+#' @return \code{\link{data-Polygon}}, \code{\link{data-MultiLinestring}}, or undefined
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{
@@ -79,5 +80,6 @@ lawn_intersect <- function(poly1, poly2, lint = FALSE) {
     ct$eval(sprintf("var poly2 = %s;", poly2))
   }
   ct$eval("var inter = turf.intersect(poly1, poly2);")
-  ct$get("inter")
+  tmp <- ct$get("inter")
+  structure(tmp, class = tolower(tmp$geometry$type))
 }

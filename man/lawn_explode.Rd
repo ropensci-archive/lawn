@@ -14,6 +14,9 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+a \code{\link{data-FeatureCollection}} of points
+}
 \description{
 Takes a feature or set of features and returns all positions as points
 }

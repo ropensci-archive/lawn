@@ -26,7 +26,8 @@ Default: 10}
 longitude that a vertex can reach out of the center of the Polygon. Default: 10}
 }
 \value{
-A GeoJSON FeatureCollection.
+A \code{\link{data-FeatureCollection}} for point and polygon, or numeric
+vector for position.
 }
 \description{
 Return a FeatureCollection with N number of features with random coordinates

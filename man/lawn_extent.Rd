@@ -14,6 +14,9 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+A numeric vector of length 4 with bounding box
+}
 \description{
 Calculates the extent of all input features in a FeatureCollection,
 and returns a bounding box. The returned bounding box is of the form

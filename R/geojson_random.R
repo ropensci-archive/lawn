@@ -10,7 +10,8 @@
 #' longitude that a vertex can reach out of the center of the Polygon. Default: 10
 #' @param bbox (numeric) A bounding box, of the form west, south, east, north order.
 #' By default, no bounding box is passed in.
-#' @return A GeoJSON FeatureCollection.
+#' @return A \code{\link{data-FeatureCollection}} for point and polygon, or numeric
+#' vector for position.
 #' @references \url{https://github.com/mapbox/geojson-random}
 #' @details These functions create either random points, polygons, or positions (single
 #' long/lat coordinate pairs).
@@ -52,7 +53,7 @@ gr_point <- function(n = 10, bbox = NULL) {
     stopifnot(is.numeric(bbox))
     rand$eval(sprintf("var pt = georandom.point(%s, %s);", n, jsonlite::toJSON(bbox)))
   }
-  rand$get("pt")
+  as.fc(rand$get("pt"))
 }
 
 #' @export
@@ -76,5 +77,5 @@ gr_polygon <- function(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL
     stopifnot(is.numeric(bbox))
     rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s, %s);", n, vertices, max_radial_length, jsonlite::toJSON(bbox)))
   }
-  rand$get("polys")
+  as.fc(rand$get("polys"))
 }
