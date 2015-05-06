@@ -26,7 +26,7 @@ pt <- '{
 a <- lawn_point_on_line(line, pt)
 
 test_that("lawn_point_on_line works", {
-  expect_is(a, "list")
+  expect_is(a, "point")
   expect_is(a$type, "character")
   expect_is(a$geometry, "list")
   expect_is(a$geometry$type, "character")

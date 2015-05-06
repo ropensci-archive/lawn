@@ -5,7 +5,7 @@ ply <- lawn_data$polygons_count
 a <- lawn_count(polygons = ply, points = pts)
 
 test_that("lawn_count works", {
-  expect_is(a, "list")
+  expect_is(a, "featurecollection")
   expect_equal(a$type, "FeatureCollection")
   expect_is(a$features, "data.frame")
   expect_named(a$features$properties, "pt_count")

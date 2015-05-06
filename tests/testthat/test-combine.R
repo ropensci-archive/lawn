@@ -58,14 +58,14 @@ a <- lawn_combine(fc1)
 b <- lawn_combine(fc2)
 
 test_that("lawn_combine works", {
-  expect_is(a, "list")
+  expect_is(a, "multipoint")
   expect_is(a$type, "character")
   expect_is(a$geometry$coordinates, "matrix")
   expect_is(a$geometry$type, "character")
   expect_equal(a$geometry$type, "MultiPoint")
   expect_equal(jsonlite::fromJSON(fc1)$features$geometry$type[1], "Point")
 
-  expect_is(b, "list")
+  expect_is(b, "multilinestring")
   expect_is(b$type, "character")
   expect_is(b$geometry$coordinates, "array")
   expect_is(b$geometry$type, "character")

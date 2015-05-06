@@ -6,7 +6,7 @@ a <- lawn_flip(lawn_data$points_average)
 b <- lawn_flip(lawn_data$polygons_average)
 
 test_that("lawn_flip works", {
-  expect_is(a, "list")
+  expect_is(a, "featurecollection")
   expect_is(a$type, "character")
   expect_is(a$features, "data.frame")
   expect_is(a$features$geometry$type, "character")

@@ -35,7 +35,7 @@ line <- '{
 a <- lawn_line_slice(start, stop, line)
 
 test_that("lawn_line_slice works", {
-  expect_is(a, "list")
+  expect_is(a, "linestring")
   expect_is(a$type, "character")
   expect_is(a$geometry$coordinates, "matrix")
   expect_is(a$geometry$type, "character")

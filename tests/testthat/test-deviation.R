@@ -5,7 +5,7 @@ ex_pts <- lawn_data$points_aggregate
 dev_result <- lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
 
 test_that("lawn_deviation works", {
-  expect_is(dev_result, "list")
+  expect_is(dev_result, "featurecollection")
   expect_is(dev_result$type, "character")
   expect_is(dev_result$features, "data.frame")
   expect_is(dev_result$features$geometry$type, "character")
