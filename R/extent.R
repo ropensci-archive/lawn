@@ -31,6 +31,7 @@
 #' }'
 #' lawn_extent(dat)
 lawn_extent <- function(input, lint = FALSE) {
+  input <- convert(input)
   lawnlint(input, lint)
   ct$eval(sprintf("var bbox = turf.extent(%s);", input))
   ct$get("bbox")
