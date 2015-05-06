@@ -14,14 +14,18 @@
 #' @return \code{\link{data-FeatureCollection}} of isolines
 #' (\code{\link{data-LineString}} features)
 #' @examples
-#' pts <- lawn_random(n = 10)
-#' pts$features$properties <- data.frame(z = round(rnorm(10, mean = 10)), stringsAsFactors = FALSE)
+#' pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
+#' pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)), stringsAsFactors = FALSE)
 #' breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 #' lawn_isolines(pts, 'z', 15, breaks)
+#'
+#' @examples \dontrun{
+#' lawn_isolines(pts, 'z', 15, breaks) %>% view
+#' }
 lawn_isolines <- function(points, z, resolution, breaks, lint = FALSE) {
   points <- convert(points)
   lawnlint(points, lint)
   ct$eval(sprintf("var iso = turf.isolines(%s, '%s', %s, %s);",
-                  points, z, resolution, breaks))
-  ct$get("iso")
+                  points, z, resolution, toj(breaks)))
+  as.fc(ct$get("iso"))
 }
