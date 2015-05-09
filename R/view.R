@@ -1,6 +1,5 @@
 #' Visualize geojson
 #'
-#' @importFrom leaflet leaflet addTiles addGeoJSON fitBounds
 #' @export
 #' @param x Input, a geojson character string or list
 #' @return Opens a map with the geojson object(s)
@@ -85,11 +84,12 @@ make_view_obj <- function(x) {
 }
 
 make_view <- function(x) {
+  check4leaflet()
   b <- make_bounds(x)
-  leaflet() %>%
-    addTiles() %>%
-    addGeoJSON(jsonlite::fromJSON(x, FALSE)) %>%
-    fitBounds(lng1 = b$lng1, lat1 = b$lat1, lng2 = b$lng2, lat2 = b$lat2)
+  leaflet::leaflet() %>%
+    leaflet::addTiles() %>%
+    leaflet::addGeoJSON(jsonlite::fromJSON(x, FALSE)) %>%
+    leaflet::fitBounds(lng1 = b$lng1, lat1 = b$lat1, lng2 = b$lng2, lat2 = b$lat2)
 }
 
 make_bounds <- function(z) {

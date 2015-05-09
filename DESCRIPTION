@@ -1,8 +1,13 @@
 Package: lawn
 Title: R Client for turf.js for Geospatial Analysis
-Description: R client for turf.js for geospatial analysis.
+Description: R client for `turf.js` (http://turfjs.org/) for
+    geospatial analysis. The package revolves around using `GeoJSON`
+    data. Functions are included for creating `GeoJSON` data objects,
+    measuring aspects of `GeoJSON`, and combining, transforming,
+    and creating random `GeoJSON` data objects. Obtain leaflet at
+    https://github.com/rstudio/leaflet
 Type: Package
-Version: 0.0.8.920
+Version: 0.0.8.930
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
@@ -15,9 +20,9 @@ VignetteBuilder: knitr
 Imports:
     V8,
     jsonlite,
-    leaflet,
     magrittr
 Suggests:
     testthat,
-    knitr
+    knitr,
+    leaflet
 Enhances: maps
