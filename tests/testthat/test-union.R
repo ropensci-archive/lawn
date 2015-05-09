@@ -39,14 +39,11 @@ poly2 <- '{
 
 test_that("lawn_union works", {
   a <- lawn_union(poly1, poly2)
-  bb <- a %>% view
 
   expect_is(a, "polygon")
   expect_is(a$type, "character")
   expect_is(a$geometry, "list")
   expect_is(a$geometry$coordinates, "array")
-  expect_is(bb, "leaflet")
-  expect_is(bb$x, "list")
 })
 
 test_that("lawn_union fails correctly", {
