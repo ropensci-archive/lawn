@@ -34,6 +34,8 @@
 #' lawn_destination(pt, 200, 90, "miles") %>% view
 #' }
 lawn_destination <- function(start, distance, bearing, units, lint = FALSE) {
+  if (abs(bearing) > 180) stop("bearing must be between -180 and 180", call. = FALSE)
+  units <- match.arg(units, c("miles", "kilometers", "degrees", "radians"))
   start <- convert(start)
   lawnlint(start, lint)
   ct$eval(sprintf("var dest = turf.destination(%s, %s, %s, '%s');", start, distance, bearing, units))

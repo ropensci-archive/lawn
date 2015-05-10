@@ -1,8 +1,42 @@
-context("lawn_center")
+context("lawn_envelope")
 
-xxx
+fc <- '{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Location A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.343, 39.984]
+      }
+    }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Location B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.833, 39.284]
+      }
+    }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Location C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.534, 39.123]
+      }
+    }
+  ]
+}'
 
-test_that("lawn_center works", {
+a <- lawn_envelope(fc)
+
+test_that("lawn_envelope works", {
   expect_is(a, "centroid")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
@@ -15,8 +49,8 @@ test_that("lawn_center works", {
   expect_equal(length(b$properties), 0)
 })
 
-test_that("lawn_center fails correctly", {
-  expect_error(lawn_center(), "argument \"features\" is missing, with no default")
-  expect_error(lawn_center(), "Unknown Geometry Type")
-  expect_error(lawn_center(), "Unknown Geometry Type")
+test_that("lawn_envelope fails correctly", {
+  expect_error(lawn_envelope(), "argument \"fc\" is missing, with no default")
+  expect_error(lawn_envelope(), "Unknown Geometry Type")
+  expect_error(lawn_envelope(), "Unknown Geometry Type")
 })
