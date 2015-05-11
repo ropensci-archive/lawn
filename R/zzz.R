@@ -3,7 +3,7 @@ convert <- function(x) {
   if (is.character(x)) {
     x
   } else {
-    jsonlite::toJSON(unclass(x), auto_unbox = TRUE)
+    jsonlite::toJSON(unclass(x), auto_unbox = TRUE, digits = 22)
   }
 }
 
@@ -20,14 +20,31 @@ lawnlint <- function(x, lint = FALSE) {
 }
 
 # helper fxn
-lintit <- function(x) {
-  ht$eval(sprintf("var out = geojsonhint.hint('%s');", jsonlite::minify(x)))
-  tmp <- as.list(ht$get("out"))
+lintit <- function(z) {
+  ht$eval(sprintf("var out = geojsonhint.hint('%s');", jsonlite::minify(z)))
+  tmp_ <- ht$get("out")
+  tmp <- if (is(tmp_, "data.frame")) {
+    paste0("\n", apply(tmp_, 1, function(w) {
+      ww <- as.list(w)
+      sprintf("Line %s - %s", ww['line'], ww['message'])
+    }), collapse = " ")
+  } else {
+    tmp_
+  }
   if (identical(tmp, list())) {
     return(TRUE)
   } else {
-    stop("Line ", tmp$line, " - ", tmp$message, call. = FALSE)
+    stop(tmp, call. = FALSE)
+    # stop("Line ", tmp$line, " - ", tmp$message, call. = FALSE)
   }
 }
 
 as.fc <- function(x) structure(x, class = "featurecollection")
+
+pluck <- function(x, name, type) {
+  if (missing(type)) {
+    lapply(x, "[[", name)
+  } else {
+    vapply(x, "[[", name, FUN.VALUE = type)
+  }
+}
