@@ -5,8 +5,8 @@
 #' the polygons
 #'
 #' @export
-#' @param polygons FeatureCollection of polygons
 #' @param points FeatureCollection of points
+#' @param polygons FeatureCollection of polygons
 #' @template lint
 #' @family joins
 #' @return points that land within at least one polygon, as a
@@ -18,7 +18,7 @@
 lawn_within <- function(points, polygons, lint = FALSE) {
   points <- convert(points)
   polygons <- convert(polygons)
-  lawnlint(list(points, polygons))
+  lawnlint(list(points, polygons), lint)
   ct$eval(sprintf("var pts = turf.within(%s, %s);", points, polygons))
   as.fc(ct$get("pts"))
 }

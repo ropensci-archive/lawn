@@ -46,8 +46,8 @@
 #' }'
 #' lawn_erase(poly1, poly2)
 #' @examples \dontrun{
-#' lawn_erase(poly1, poly2) %>% view
 #' lawn_featurecollection(list(poly1, poly2)) %>% view
+#' lawn_erase(poly1, poly2) %>% view
 #' fc <- lawn_featurecollection(list(
 #'    lawn_polygon(fromJSON(poly1)$geometry$coordinates),
 #'    lawn_polygon(fromJSON(poly2)$geometry$coordinates)
