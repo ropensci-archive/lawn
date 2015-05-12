@@ -6,14 +6,13 @@
 #' @export
 #' @param feature a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
 #' feature to be simplified
-#' @param tolerance simplification tolerance
-#' @param high_quality (boolean) whether or not to spend more time to create a
-#' higher-quality simplification with a different algorithm
+#' @param tolerance (numeric) Simplification tolerance
+#' @param high_quality (boolean) Whether or not to spend more time to create a
+#' higher-quality simplification with a different algorithm. Default: \code{FALSE}
 #' @return a simplified feature
 #' @template lint
 #' @family transformations
-#' @return A FeatureCollection of \code{\link{data-Polygon}} features with
-#' properties listed as \code{out_field}
+#' @return A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}
 #' @details Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
 #' to perform simplification.
 #'
@@ -52,9 +51,9 @@
 #' @examples \dontrun{
 #' lawn_simplify(feature, tolerance = 0.01) %>% view
 #' }
-lawn_simplify <- function(feature, tolerance, high_quality = FALSE, lint = FALSE) {
+lawn_simplify <- function(feature, tolerance = 0.01, high_quality = FALSE, lint = FALSE) {
   lawnlint(feature, lint)
   stopifnot(is.logical(high_quality))
   ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature), tolerance, tolower(high_quality)))
-  ct$get("simp")
+  structure(ct$get("simp"), class = tolower(ct$get("simp.geometry.type")))
 }
