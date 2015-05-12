@@ -5,8 +5,8 @@
 #' the polygons
 #'
 #' @export
-#' @param points FeatureCollection of points
-#' @param polygons FeatureCollection of polygons
+#' @param points \code{\link{data-FeatureCollection}} of points
+#' @param polygons \code{\link{data-FeatureCollection}} of polygons
 #' @template lint
 #' @family joins
 #' @return points that land within at least one polygon, as a
