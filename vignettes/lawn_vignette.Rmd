@@ -40,15 +40,21 @@ knitr::opts_chunk$set(
 lawn introduction
 =================
 
-`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/) for advanced geospatial analysis. In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library. 
+`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/) for advanced geospatial analysis. In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library.
 
 `lawn` includes traditional spatial operations, helper functions for creating GeoJSON data, and data classification and statistics tools.
 
-There is an additional helper function (see `view()`) in this package to help visualize data with interactive maps via the `leaflet` package ([https://github.com/rstudio/leaflet](https://github.com/rstudio/leaflet)).  
+There is an additional helper function (see `view()`) in this package to help visualize data with interactive maps via the `leaflet` package ([https://github.com/rstudio/leaflet](https://github.com/rstudio/leaflet)). Note that `leaflet` is not required to install `lawn` - it's in Suggests, not Imports or Depends.
 
 ## Install
 
-Stable version from CRAN
+If installing `leaflet`
+
+```{r eval=FALSE}
+devtools::install_github("rstudio/leaflet")
+```
+
+Stable `lawn` version from CRAN
 
 ```{r eval=FALSE}
 install.packages("lawn")
@@ -57,8 +63,6 @@ install.packages("lawn")
 Or, the development version from Github
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
 
@@ -100,8 +104,8 @@ lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
 Average value of a field for a set of points within a set of polygons
 
 ```{r}
-lawn_average(polygons = lawn_data$polygons_average, 
-             points = lawn_data$points_average, 
+lawn_average(polygons = lawn_data$polygons_average,
+             points = lawn_data$points_average,
              field = 'population')
 ```
 
@@ -213,7 +217,7 @@ lawn_buffer(dat, 1, "miles")
 
 ## lint input geojson
 
-For most functions, you can lint your input geojson data to make sure it is proper geojson. We use 
+For most functions, you can lint your input geojson data to make sure it is proper geojson. We use
 the javascript library geojsonhint. See the `lint` parameter where available.
 
 Good GeoJSON
@@ -231,7 +235,7 @@ dat <- '{
         "type": "Point",
         "coordinates": [10.724029, 59.926807]
       }
-    }, 
+    },
       {
       "type": "Feature",
       "properties": {
@@ -261,7 +265,7 @@ dat <- '{
       "geometry": {
         "type": "Point"
       }
-    }, 
+    },
       {
       "type": "Feature",
       "properties": {
@@ -276,7 +280,7 @@ dat <- '{
 }'
 lawn_extent(dat, lint = TRUE)
 
-#> Error: Line 1 - "coordinates" property required 
+#> Error: Line 1 - "coordinates" property required
 ```
 
 ## view
