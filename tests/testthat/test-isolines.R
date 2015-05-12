@@ -25,8 +25,6 @@ test_that("lawn_isolines returns correct values", {
 test_that("resolution parameter works as expected", {
   expect_less_than(length(lawn_isolines(pts, 'z', 30, breaks)$features$geometry$coordinates),
                    length(lawn_isolines(pts, 'z', 50, breaks)$features$geometry$coordinates))
-  expect_less_than(length(lawn_isolines(pts, 'z', 4, breaks)$features$geometry$coordinates),
-                   length(lawn_isolines(pts, 'z', 5, breaks)$features$geometry$coordinates))
 })
 
 test_that("lawn_isolines fails correctly", {
