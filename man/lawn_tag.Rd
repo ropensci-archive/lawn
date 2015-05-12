@@ -4,16 +4,16 @@
 \alias{lawn_tag}
 \title{Spatial join}
 \usage{
-lawn_tag(points, polygons, polyId, containingPolyId, lint = FALSE)
+lawn_tag(points, polygons, poly_id, containing_polyid, lint = FALSE)
 }
 \arguments{
 \item{points}{Input \code{\link{data-Point}}}
 
 \item{polygons}{Input \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}}
 
-\item{polyId}{property in polygons to add to joined Point features}
+\item{poly_id}{property in polygons to add to joined Point features}
 
-\item{containingPolyId}{property in points in which to store joined
+\item{containing_polyid}{property in points in which to store joined
 property from polygons}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
@@ -22,7 +22,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-points with containingPolyId property containing values from polyId
+points with containing_polyid property containing values from poly_id
 }
 \description{
 Takes a set of \code{\link{data-Point}}'s and a set of
@@ -31,6 +31,8 @@ Takes a set of \code{\link{data-Point}}'s and a set of
 \examples{
 pts <- lawn_random(n = 30)
 polys <- lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
+polys$features$properties <-
+   data.frame(fill = c("#f92", "295"), stroke = 1:2, `fill-opacity` = 2:3)
 lawn_tag(pts, polys, 'fill', 'marker-color')
 }
 \seealso{

@@ -7,9 +7,9 @@
 lawn_within(points, polygons, lint = FALSE)
 }
 \arguments{
-\item{points}{FeatureCollection of points}
+\item{points}{\code{\link{data-FeatureCollection}} of points}
 
-\item{polygons}{FeatureCollection of polygons}
+\item{polygons}{\code{\link{data-FeatureCollection}} of polygons}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
