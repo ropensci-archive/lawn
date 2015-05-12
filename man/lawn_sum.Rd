@@ -11,9 +11,9 @@ lawn_sum(polygons, points, in_field, out_field, lint = FALSE)
 
 \item{points}{a FeatureCollection of \code{\link{data-Point}} features}
 
-\item{in_field}{the field in input data to analyze}
+\item{in_field}{(character) the field in input data to analyze}
 
-\item{out_field}{the field in which to store results}
+\item{out_field}{(character) the field in which to store results}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
