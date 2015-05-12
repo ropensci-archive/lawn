@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param x Input, a geojson character string or list
+#' @param ... Any geojson object, as list, json, or point, polygon, etc. class
 #' @return Opens a map with the geojson object(s)
 #' @examples \dontrun{
 #' # from character string
@@ -10,15 +11,30 @@
 #' view(lawn_data$polygons_within)
 #' view(lawn_data$polygons_count)
 #'
-#' # from a list
-#' library("jsonlite")
-#' mylist <- fromJSON(lawn_data$polygons_average, FALSE)
-#' view(mylist)
-#'
 #' # from json (a jsonlite class)
 #' x <- minify(lawn_data$points_count)
 #' class(x)
 #' view(x)
+#'
+#' # from a list (a single object)
+#' library("jsonlite")
+#' x <- fromJSON(lawn_data$polygons_average, FALSE)
+#' view(x)
+#'
+#' # From a list of many objects
+#' x <- list(
+#'  lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+#'  lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+#'  lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+#' )
+#' view(x)
+#'
+#' # Use view_ to pass in arbitrary objects that will be combined
+#' view_(
+#'  lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+#'  lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+#'  lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+#' )
 #' }
 view <- function(x) {
   UseMethod("view")
@@ -36,7 +52,7 @@ view.json <- function(x) {
 
 #' @export
 view.list <- function(x) {
-  make_view(toJSON(x, auto_unbox = TRUE, digits = 22))
+  make_view_obj(lawn_featurecollection(x))
 }
 
 #' @export
@@ -81,6 +97,12 @@ view.featurecollection <- function(x) {
 
 make_view_obj <- function(x) {
   make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+}
+
+#' @export
+#' @rdname view
+view_ <- function(...) {
+  view(list(...))
 }
 
 make_view <- function(x) {

@@ -2,12 +2,17 @@
 % Please edit documentation in R/view.R
 \name{view}
 \alias{view}
+\alias{view_}
 \title{Visualize geojson}
 \usage{
 view(x)
+
+view_(...)
 }
 \arguments{
 \item{x}{Input, a geojson character string or list}
+
+\item{...}{Any geojson object, as list, json, or point, polygon, etc. class}
 }
 \value{
 Opens a map with the geojson object(s)
@@ -23,15 +28,30 @@ view(lawn_data$filter_features)
 view(lawn_data$polygons_within)
 view(lawn_data$polygons_count)
 
-# from a list
-library("jsonlite")
-mylist <- fromJSON(lawn_data$polygons_average, FALSE)
-view(mylist)
-
 # from json (a jsonlite class)
 x <- minify(lawn_data$points_count)
 class(x)
 view(x)
+
+# from a list (a single object)
+library("jsonlite")
+x <- fromJSON(lawn_data$polygons_average, FALSE)
+view(x)
+
+# From a list of many objects
+x <- list(
+ lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+ lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+ lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+)
+view(x)
+
+# Use view_ to pass in arbitrary objects that will be combined
+view_(
+ lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+ lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+ lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+)
 }
 }
 
