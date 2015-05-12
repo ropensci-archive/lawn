@@ -20,6 +20,10 @@ Opens a map with the geojson object(s)
 \description{
 Visualize geojson
 }
+\details{
+\code{view_} is a special interface to \code{view} to accept arbitrary
+input via \code{...}
+}
 \examples{
 \dontrun{
 # from character string
