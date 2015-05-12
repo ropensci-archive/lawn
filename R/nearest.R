@@ -5,8 +5,8 @@
 #'
 #' @export
 #'
-#' @param point The reference point, a Feature
-#' @param against Input point set, a FeatureCollection
+#' @param point The reference point, a \code{\link{data-Feature}}
+#' @param against Input point set, a \code{\link{data-FeatureCollection}}
 #' @template lint
 #' @family classification
 #' @return A \code{\link{data-Point}} as a Feature

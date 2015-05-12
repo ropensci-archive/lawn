@@ -1,34 +1,59 @@
-context("lawn_hex_grid")
+context("lawn_nearest")
 
-a <- lawn_hex_grid(c(-96, 31, -84, 40), 50, 'miles')
-b <- lawn_hex_grid(c(-96, 31, -84, 40), 30, 'miles')
-d <- lawn_hex_grid(c(-96, 31, -84, 40), 10, 'miles')
+point <- '{
+  "type": "Feature",
+  "properties": {
+    "marker-color": "#0f0"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [28.965797, 41.010086]
+  }
+}'
+against <- '{
+ "type": "FeatureCollection",
+ "features": [
+   {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "Point",
+       "coordinates": [28.973865, 41.011122]
+     }
+   }, {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "Point",
+       "coordinates": [28.948459, 41.024204]
+     }
+   }, {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "Point",
+       "coordinates": [28.938674, 41.013324]
+     }
+   }
+ ]
+}'
 
-test_that("lawn_hex_grid returns correct classes", {
-  expect_is(a, "featurecollection")
+a <- lawn_nearest(point, against)
+
+test_that("lawn_nearest returns correct classes", {
+  expect_is(a, "point")
   expect_is(a$type, "character")
-  expect_is(a$features, "data.frame")
-  expect_is(a$features$geometry$type, "character")
-  expect_is(a$features$geometry$coordinates[[1]], "array")
-  expect_equal(a$features$geometry$type[1], "Polygon")
+  expect_is(a$geometry$type, "character")
+  expect_is(a$geometry$coordinates, "numeric")
+  expect_equal(a$geometry$type, "Point")
 })
 
-test_that("cellWidth parameter works as expected", {
-  expect_less_than(length(a$features$geometry$coordinates),
-                   length(b$features$geometry$coordinates))
-  expect_less_than(length(a$features$geometry$coordinates),
-                   length(d$features$geometry$coordinates))
-  expect_less_than(length(b$features$geometry$coordinates),
-                   length(d$features$geometry$coordinates))
+test_that("expected values", {
+  expect_less_than(lawn_nearest(point, lawn_data$points_average)$geometry$coordinates[1], 20)
+  expect_less_than(lawn_nearest(point, lawn_data$points_aggregate)$geometry$coordinates[1], 5)
 })
 
-test_that("lawn_hex_grid fails correctly", {
+test_that("lawn_nearest fails correctly", {
   # missing arguments
-  expect_error(lawn_hex_grid(), "argument \"extent\" is missing, with no default")
-  # empty featurecollection if bbox is not correct
-  expect_equal(length(lawn_hex_grid(c(-96, 31, -84), 10, 'miles')$features), 0)
-  # can't pass in a character string to cellWidth
-  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), "the", 'miles'), "the is not defined")
-  # can't pass in a character string to cellWidth
-  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), 50, 'doesntexist'), "unknown option given to \"units\"")
+  expect_error(lawn_nearest(), "argument \"point\" is missing, with no default")
 })

@@ -7,9 +7,9 @@
 lawn_nearest(point, against, lint = FALSE)
 }
 \arguments{
-\item{point}{The reference point, a Feature}
+\item{point}{The reference point, a \code{\link{data-Feature}}}
 
-\item{against}{Input point set, a FeatureCollection}
+\item{against}{Input point set, a \code{\link{data-FeatureCollection}}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
