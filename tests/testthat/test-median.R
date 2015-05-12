@@ -15,7 +15,7 @@ test_that("lawn_median returns correct classes", {
 })
 
 test_that("in_field and out_field parameter works as expected", {
-  expect_equal(length(lawn_median(poly, pt, 'population2', 'median')$features$properties), 0)
+  expect_equal(length(lawn_median(poly, pt, 'population2', 'median')$features$properties), 1)
   expect_named(lawn_median(poly, pt, 'population', 'bears')$features$properties, 'bears')
 })
 
