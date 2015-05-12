@@ -11,7 +11,8 @@ lawn_square_grid(extent, cellWidth, units)
 
 \item{cellWidth}{(integer) width of each cell}
 
-\item{units}{(character) units to use for cellWidth, one of 'miles', xxxx}
+\item{units}{(character) units to use for cellWidth, one of 'miles' or
+'kilometers'}
 }
 \value{
 \code{\link{data-FeatureCollection}} grid of polygons
