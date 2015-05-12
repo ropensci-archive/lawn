@@ -33,6 +33,7 @@
 #' pts <- lawn_random()$features$geometry$coordinates
 #' lawn_linestring(pts)
 lawn_linestring <- function(coordinates, properties = NULL) {
+  # TODO: need to find way to fail well when unacceptable items passed in
   ct$eval(sprintf("var poly = turf.linestring(%s, %s);", convert(coordinates), toj(properties)))
   structure(ct$get("poly"), class = "linestring")
 }
