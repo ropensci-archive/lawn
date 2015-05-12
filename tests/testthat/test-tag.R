@@ -12,7 +12,7 @@ test_that("lawn_tag returns correct classes", {
   expect_is(a$features, "data.frame")
   expect_is(a$features$geometry$type, "character")
   expect_is(a$features$geometry$coordinates, "list")
-  expect_equal(a$features$geometry$type[1], "Polygon")
+  expect_equal(a$features$geometry$type[1], "Point")
 })
 
 test_that("polyId, containingPolyId parameters works as expected", {
