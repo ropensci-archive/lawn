@@ -2,13 +2,13 @@
 #'
 #' Calculates the extent of all input features in a FeatureCollection,
 #' and returns a bounding box. The returned bounding box is of the form
-#' [west, south, east, north].
+#' (west, south, east, north).
 #'
 #' @export
-#' @param input A Feature or FeatureCollection
+#' @param input A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}
 #' @template lint
 #' @family measurements
-#' @return A numeric vector of length 4 with bounding box
+#' @return A bounding box, numeric vector of length 4
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)
