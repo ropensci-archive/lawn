@@ -8,8 +8,8 @@
 #' Default: 10
 #' @param max_radial_length (integer) Maximum number of decimal degrees latitude or
 #' longitude that a vertex can reach out of the center of the Polygon. Default: 10
-#' @param bbox (numeric) A bounding box, of the form west, south, east, north order.
-#' By default, no bounding box is passed in.
+#' @param bbox (numeric) A bounding box of length 4, of the form west, south, east,
+#' north order. By default, no bounding box is passed in.
 #' @return A \code{\link{data-FeatureCollection}} for point and polygon, or numeric
 #' vector for position.
 #' @references \url{https://github.com/mapbox/geojson-random}
@@ -50,7 +50,7 @@ gr_point <- function(n = 10, bbox = NULL) {
   if (is.null(bbox)) {
     rand$eval(sprintf("var pt = georandom.point(%s);", n))
   } else {
-    stopifnot(is.numeric(bbox))
+    check_bbox(bbox)
     rand$eval(sprintf("var pt = georandom.point(%s, %s);", n, jsonlite::toJSON(bbox)))
   }
   as.fc(rand$get("pt"))
@@ -62,7 +62,7 @@ gr_position <- function(bbox = NULL) {
   if (is.null(bbox)) {
     rand$eval("var pos = georandom.position();")
   } else {
-    stopifnot(is.numeric(bbox))
+    check_bbox(bbox)
     rand$eval(sprintf("var pos = georandom.position(%s);", jsonlite::toJSON(bbox)))
   }
   rand$get("pos")
@@ -74,8 +74,13 @@ gr_polygon <- function(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL
   if (is.null(bbox)) {
     rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s);", n, vertices, max_radial_length))
   } else {
-    stopifnot(is.numeric(bbox))
+    check_bbox(bbox)
     rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s, %s);", n, vertices, max_radial_length, jsonlite::toJSON(bbox)))
   }
   as.fc(rand$get("polys"))
+}
+
+check_bbox <- function(w) {
+  if (!is.numeric(w)) stop("bbox must be numeric", call. = FALSE)
+  if (length(w) != 4) stop("bbox must be length 4", call. = FALSE)
 }

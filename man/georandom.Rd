@@ -16,8 +16,8 @@ gr_polygon(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL)
 \arguments{
 \item{n}{(integer) Number of features to create. Default: 10 (points), 1 (polygons)}
 
-\item{bbox}{(numeric) A bounding box, of the form west, south, east, north order.
-By default, no bounding box is passed in.}
+\item{bbox}{(numeric) A bounding box of length 4, of the form west, south, east,
+north order. By default, no bounding box is passed in.}
 
 \item{vertices}{(integer) Number coordinates each Polygon will contain.
 Default: 10}
