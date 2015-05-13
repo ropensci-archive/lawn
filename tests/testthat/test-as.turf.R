@@ -15,28 +15,27 @@ linestring1 <- '[
    [-21.927337, 64.136673]
 ]'
 
-
 a <- as.turf(lawn_point(c(-74.5, 40)))
 b <- as.turf(lawn_polygon(rings))
 d <- as.turf(lawn_linestring(linestring1))
 e <- as.turf(lawn_centroid(lawn_polygon(rings)))
 
-suppressPackageStartupMessages(library("geojsonio", quietly = TRUE))
-f <- as.turf(geojson_list(c(-99.74,32.45)))
+# suppressPackageStartupMessages(library("geojsonio", quietly = TRUE))
+# f <- as.turf(geojson_list(c(-99.74,32.45)))
 
 test_that("as.turf works", {
   expect_is(a, "character")
   expect_is(b, "character")
   expect_is(d, "character")
   expect_is(e, "character")
-  expect_is(f, "list")
-  expect_is(f[[1]], "character")
+  # expect_is(f, "list")
+  # expect_is(f[[1]], "character")
 
   expect_true(grepl("turf.point", a))
   expect_true(grepl("turf.polygon", b))
   expect_true(grepl("turf.linestring", d))
   expect_true(grepl("turf.point", e))
-  expect_true(grepl("turf.point", f))
+  # expect_true(grepl("turf.point", f))
 })
 
 test_that("as.turf fails correctly", {
