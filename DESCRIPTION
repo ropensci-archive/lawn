@@ -7,7 +7,7 @@ Description: R client for `turf.js` (http://turfjs.org/) for
     and creating random `GeoJSON` data objects. Obtain leaflet at
     https://github.com/rstudio/leaflet.
 Type: Package
-Version: 0.0.8.994
+Version: 0.0.9.900
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
