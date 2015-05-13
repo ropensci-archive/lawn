@@ -96,6 +96,12 @@
 #' }'
 #' cent <- lawn_centroid(poly)
 #' lawn_featurecollection(cent)
+#'
+#' # From a geo_list object from geojsonio package
+#' library("geojsonio")
+#' vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+#' x <- geojson_list(vecs, geometry="polygon")
+#' lawn_featurecollection(x)
 #' }
 lawn_featurecollection <- function(features) {
   UseMethod("lawn_featurecollection")
@@ -172,6 +178,12 @@ lawn_featurecollection.json <- function(features) {
   }
 }
 
+# geo_list - from geojsonio -----------------------
+#' @export
+lawn_featurecollection.geo_list <- function(features) {
+  lawn_featurecollection(unclass(features))
+}
+
 # self - return a featurecollection -----------------------
 #' @export
 lawn_featurecollection.featurecollection <- function(features) {
@@ -179,7 +191,7 @@ lawn_featurecollection.featurecollection <- function(features) {
 }
 
 do_fc <- function(features) {
-  fts <- sapply(features, as.turf)
+  fts <- unlist(sapply(features, as.turf))
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featurecollection(features);")
   as.fc(ct$get("feet"))

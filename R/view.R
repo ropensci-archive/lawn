@@ -37,6 +37,38 @@
 #'  lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
 #'  lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
 #' )
+#'
+#' ## another eg, smile :)
+#' l1 <- list(
+#'    c(-69.9609375, 35.460669951495305),
+#'    c(-78.75, 39.095962936305504),
+#'    c(-87.1875, 39.36827914916011),
+#'    c(-92.46093749999999, 36.03133177633189)
+#' )
+#' l2 <- list(
+#'    c(-46.0546875, 8.7547947),
+#'    c(-33.0468750, -0.7031074),
+#'    c(-14.0625000, 0.0000000),
+#'    c(-0.3515625,  9.4490618)
+#' )
+#' l3 <- list(
+#'    c(-1.40625, 38.81152),
+#'    c(14.76562, 45.33670),
+#'    c(23.20312, 45.58329),
+#'    c(33.04688, 39.63954)
+#' )
+#' view_(lawn_point(c(-30, 20)),
+#'    lawn_linestring(l1),
+#'    lawn_linestring(l2),
+#'    lawn_linestring(l3)
+#' )
+#'
+#' # From a geo_list object from geojsonio package
+#' library("geojsonio")
+#' vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+#' x <- geojson_list(vecs, geometry="polygon")
+#' view_(x)
+#' view_(x, lawn_point(c(101, 0)))
 #' }
 view <- function(x) {
   UseMethod("view")
@@ -104,7 +136,9 @@ make_view_obj <- function(x) {
 #' @export
 #' @rdname view
 view_ <- function(...) {
-  view(list(...))
+  tmp <- list(...)
+  if (length(tmp) == 1) tmp <- tmp[[1]]
+  view(tmp)
 }
 
 make_view <- function(x) {
