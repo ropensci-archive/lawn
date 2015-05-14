@@ -81,6 +81,5 @@ lawn_union <- function(poly1, poly2, lint = FALSE) {
     ct$eval(sprintf("var poly2 = %s;", poly2))
   }
   ct$eval("var union = turf.union(poly1, poly2);")
-  tmp <- ct$get("union")
-  structure(tmp, class = tolower(ct$get("union.geometry.type")))
+  structure(ct$get("union"), class = tolower(ct$get("union.geometry.type")))
 }
