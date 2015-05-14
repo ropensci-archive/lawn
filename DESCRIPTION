@@ -14,6 +14,7 @@ Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
     person("Jeff", "Hollister", role = "aut", email = "hollister.jeff@epa.gov")
   )
+Additional_repositories: http://www.carlboettiger.info/drat/
 URL: https://github.com/ropensci/lawn
 BugReports: http://www.github.com/ropensci/lawn/issues
 LazyData: true
