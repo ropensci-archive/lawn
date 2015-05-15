@@ -65,21 +65,12 @@
 #' lawn_union(x1, x2) %>% view()
 #' }
 lawn_union <- function(poly1, poly2, lint = FALSE) {
-  poly1_1 <- convert(poly1)
-  poly2_1 <- convert(poly2)
-  lawnlint(list(poly1_1, poly2_1), lint)
-  if (is.list(poly1)) {
-    ct$eval(sprintf("var poly1 = %s;", poly1_1))
-    ct$eval("poly1 = poly1.features[0]")
-  } else {
-    ct$eval(sprintf("var poly1 = %s;", poly1_1))
-  }
-  if (is.list(poly2)) {
-    ct$eval(sprintf("var poly2 = %s;", poly2_1))
-    ct$eval("poly2 = poly2.features[0]")
-  } else {
-    ct$eval(sprintf("var poly2 = %s;", poly2))
-  }
-  ct$eval("var union = turf.union(poly1, poly2);")
-  structure(ct$get("union"), class = tolower(ct$get("union.geometry.type")))
+  poly1 <- unclass(as_feature(poly1))
+  poly2 <- unclass(as_feature(poly2))
+  poly1 <- convert(poly1)
+  poly2 <- convert(poly2)
+  lawnlint(list(poly1, poly2), lint)
+  ct$eval(sprintf("var union = turf.union(%s, %s);", poly1, poly2))
+  tmp <- ct$get("union")
+  structure(tmp, class = tolower(tmp$geometry$type))
 }
