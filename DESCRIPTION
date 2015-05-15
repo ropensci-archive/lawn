@@ -8,7 +8,7 @@ Description: R client for `turf.js` (http://turfjs.org/) for
     https://github.com/rstudio/leaflet for use in interactively
     visualizing data.
 Type: Package
-Version: 0.0.9.920
+Version: 0.0.9.930
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
