@@ -1,5 +1,11 @@
 context("view")
 
+skip_if_not_installed <- function(pkg) {
+  if (requireNamespace(pkg, quietly = TRUE))
+    return()
+  testthat::skip(paste0(pkg, " not installed"))
+}
+
 # from character string  ----------------
 test_that("view works with character input", {
   skip_if_not_installed("leaflet")
