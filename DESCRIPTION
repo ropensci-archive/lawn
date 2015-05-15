@@ -1,20 +1,18 @@
 Package: lawn
-Title: R Client for Turf.js for Geospatial Analysis
-Description: R client for `turf.js` (http://turfjs.org/) for
-    geospatial analysis. The package revolves around using `GeoJSON`
-    data. Functions are included for creating `GeoJSON` data objects,
-    measuring aspects of `GeoJSON`, and combining, transforming,
-    and creating random `GeoJSON` data objects. Obtain leaflet at
-    https://github.com/rstudio/leaflet for use in interactively
-    visualizing data.
+Title: R Client for Turf.js for 'Geospatial' Analysis
+Description: R client for 'Turf.js' (http://turfjs.org/) for
+    'geospatial' analysis. The package revolves around using 'GeoJSON'
+    data. Functions are included for creating 'GeoJSON' data objects,
+    measuring aspects of 'GeoJSON', and combining, transforming,
+    and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.0.9.930
+Version: 0.0.9.999
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
     person("Jeff", "Hollister", role = "aut", email = "hollister.jeff@epa.gov")
   )
-Additional_repositories: http://www.carlboettiger.info/drat/
+Additional_repositories: http://www.carlboettiger.info/drat
 URL: https://github.com/ropensci/lawn
 BugReports: http://www.github.com/ropensci/lawn/issues
 LazyData: true

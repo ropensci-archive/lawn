@@ -1,12 +1,14 @@
 context("view")
 
 # from character string  ----------------
-ch1 <- view(lawn_data$polygons_average)
-ch2 <- view(lawn_data$filter_features)
-ch3 <- view(lawn_data$polygons_within)
-ch4 <- view(lawn_data$polygons_count)
-
 test_that("view works with character input", {
+  skip_if_not_installed("leaflet")
+
+  ch1 <- view(lawn_data$polygons_average)
+  ch2 <- view(lawn_data$filter_features)
+  ch3 <- view(lawn_data$polygons_within)
+  ch4 <- view(lawn_data$polygons_count)
+
   expect_is(ch1, c("leaflet", "htmlwidget"))
   expect_is(ch1$x, "list")
   expect_is(ch1$x$fitBounds, "list")
@@ -20,9 +22,11 @@ test_that("view works with character input", {
 # from json (a jsonlite class) ----------------
 suppressPackageStartupMessages(library("jsonlite", quietly = TRUE))
 x <- jsonlite::minify(lawn_data$points_count)
-json1 <- view(x)
 
 test_that("view works with json input", {
+  skip_if_not_installed("leaflet")
+
+  json1 <- view(x)
   expect_is(json1, c("leaflet", "htmlwidget"))
   expect_is(json1$x, "list")
   expect_is(json1$x$fitBounds, "list")
@@ -31,9 +35,11 @@ test_that("view works with json input", {
 
 # from a list (a single object)  ----------------
 x <- jsonlite::fromJSON(lawn_data$polygons_average, FALSE)
-list1 <- view(x)
 
 test_that("view works with list input", {
+  skip_if_not_installed("leaflet")
+
+  list1 <- view(x)
   expect_is(list1, c("leaflet", "htmlwidget"))
   expect_is(list1$x, "list")
   expect_is(list1$x$fitBounds, "list")
@@ -46,9 +52,11 @@ x <- list(
  lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
  lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
 )
-listmany <- view(x)
 
 test_that("view works with list of many objects input", {
+  skip_if_not_installed("leaflet")
+
+  listmany <- view(x)
   expect_is(listmany, c("leaflet", "htmlwidget"))
   expect_is(listmany$x, "list")
   expect_is(listmany$x$fitBounds, "list")
@@ -56,13 +64,16 @@ test_that("view works with list of many objects input", {
 })
 
 # view_  --------------------------------
-viewdots <- view_(
- lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
- lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
- lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
-)
 
 test_that("view_ works as expected", {
+  skip_if_not_installed("leaflet")
+
+  viewdots <- view_(
+    lawn_point(c(-75.343, 39.984), properties = list(name = 'Location A')),
+    lawn_point(c(-75.833, 39.284), properties = list(name = 'Location B')),
+    lawn_point(c(-75.534, 39.123), properties = list(name = 'Location C'))
+  )
+
   expect_is(viewdots, c("leaflet", "htmlwidget"))
   expect_is(viewdots$x, "list")
   expect_is(viewdots$x$fitBounds, "list")
@@ -71,6 +82,8 @@ test_that("view_ works as expected", {
 
 # fails well -----------------------------
 test_that("view fails correctly", {
+  skip_if_not_installed("leaflet")
+
   # missing arguments
   expect_error(view(), "no applicable method")
   # wrong input
