@@ -1,6 +1,7 @@
-#' Union
+#' Merge polygons
 #'
-#' Finds the interesection of two polygons and returns the union of the two
+#' Finds the interesection of two \code{\link{data-Polygon}}'s and returns the
+#' union of the two
 #'
 #' @export
 #' @param poly1 A polygon
@@ -12,6 +13,7 @@
 #'
 #' @details Contiguous polygons are combined, non-contiguous polygons are returned
 #' as MultiPolygon
+#' @seealso \code{\link{lawn_merge}}
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{

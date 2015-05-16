@@ -1,4 +1,4 @@
-#' Spatial join
+#' Spatial join of points and polygons
 #'
 #' Takes a set of \code{\link{data-Point}}'s and a set of
 #' \code{\link{data-Polygon}}'s and performs a spatial join

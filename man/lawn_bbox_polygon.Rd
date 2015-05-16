@@ -2,7 +2,7 @@
 % Please edit documentation in R/bbox_polygon.R
 \name{lawn_bbox_polygon}
 \alias{lawn_bbox_polygon}
-\title{Bbox polygon}
+\title{Make a polygon from a bounding box}
 \usage{
 lawn_bbox_polygon(bbox)
 }

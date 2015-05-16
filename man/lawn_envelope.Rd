@@ -2,7 +2,7 @@
 % Please edit documentation in R/envelope.R
 \name{lawn_envelope}
 \alias{lawn_envelope}
-\title{Envelope}
+\title{Calculate envelope around features}
 \usage{
 lawn_envelope(fc, lint = FALSE)
 }

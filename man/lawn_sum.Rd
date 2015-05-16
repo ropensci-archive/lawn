@@ -2,7 +2,7 @@
 % Please edit documentation in R/sum.R
 \name{lawn_sum}
 \alias{lawn_sum}
-\title{Sum}
+\title{Sum of a field among points within polygons}
 \usage{
 lawn_sum(polygons, points, in_field, out_field, lint = FALSE)
 }

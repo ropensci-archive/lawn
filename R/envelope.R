@@ -1,4 +1,4 @@
-#' Envelope
+#' Calculate envelope around features
 #'
 #' Takes any number of features and returns a rectangular
 #' \code{\link{data-Polygon}} that encompasses all vertices.

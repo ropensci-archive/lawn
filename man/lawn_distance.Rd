@@ -2,7 +2,7 @@
 % Please edit documentation in R/distance.R
 \name{lawn_distance}
 \alias{lawn_distance}
-\title{Distance}
+\title{Distance between two points}
 \usage{
 lawn_distance(from, to, units = "kilometers", lint = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Bearing
+#' Get geographic bearing between two points
 #'
 #' Takes two \code{\link{data-Point}}'s and finds the geographic bearing
 #' between them

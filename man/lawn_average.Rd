@@ -2,7 +2,7 @@
 % Please edit documentation in R/average.R
 \name{lawn_average}
 \alias{lawn_average}
-\title{Average}
+\title{Average of a field among points within polygons}
 \usage{
 lawn_average(polygons, points, field, outputField = "average", lint = FALSE)
 }

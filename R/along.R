@@ -1,4 +1,4 @@
-#' Along
+#' Get a point at a distance along a line
 #'
 #' Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
 #' at a specified distance along the line.

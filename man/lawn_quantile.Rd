@@ -2,7 +2,7 @@
 % Please edit documentation in R/quantile.R
 \name{lawn_quantile}
 \alias{lawn_quantile}
-\title{Quantile}
+\title{Calculate quantiles}
 \usage{
 lawn_quantile(input, field, percentiles, lint = FALSE)
 }

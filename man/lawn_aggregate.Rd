@@ -2,7 +2,7 @@
 % Please edit documentation in R/aggregate.R
 \name{lawn_aggregate}
 \alias{lawn_aggregate}
-\title{Aggregate}
+\title{Calculate a series of aggregations for a set of points within polygons}
 \usage{
 lawn_aggregate(polys, pts, agg = list(c("count", "", "num_of_pts")),
   lint = FALSE)

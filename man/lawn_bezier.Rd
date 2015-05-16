@@ -2,7 +2,7 @@
 % Please edit documentation in R/bezier.R
 \name{lawn_bezier}
 \alias{lawn_bezier}
-\title{Bezier}
+\title{Curve a linestring}
 \usage{
 lawn_bezier(line, resolution = 10000L, sharpness = 0.85, lint = FALSE)
 }

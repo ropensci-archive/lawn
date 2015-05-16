@@ -1,4 +1,4 @@
-#' Aggregate
+#' Calculate a series of aggregations for a set of points within polygons
 #'
 #' Calculates a series of aggregations for a set of points within a set of
 #' polygons. Sum, average, count, min, max, deviation supported

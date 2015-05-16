@@ -1,4 +1,4 @@
-#' Reclass
+#' Reclassify properties data
 #'
 #' Takes a \code{\link{data-FeatureCollection}}, an input field, an output field,
 #' and an array of translations and outputs an identical FeatureCollection with

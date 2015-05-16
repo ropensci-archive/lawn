@@ -1,4 +1,4 @@
-#' Destination
+#' Calculate destination point
 #'
 #' Takes a \code{\link{data-Point}} and calculates the location of a
 #' destination point given a distance in degrees, radians, miles, or kilometers; and

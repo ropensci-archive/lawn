@@ -2,7 +2,7 @@
 % Please edit documentation in R/min.R
 \name{lawn_min}
 \alias{lawn_min}
-\title{Minimum}
+\title{Minimum value of a field among points within polygons}
 \usage{
 lawn_min(polygons, points, in_field, out_field, lint = FALSE)
 }

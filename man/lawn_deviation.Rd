@@ -2,7 +2,7 @@
 % Please edit documentation in R/deviation.R
 \name{lawn_deviation}
 \alias{lawn_deviation}
-\title{Deviation}
+\title{Standard deviation of a field among points within polygons}
 \usage{
 lawn_deviation(polys, pts, inField, outField, lint = FALSE)
 }

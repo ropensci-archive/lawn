@@ -1,4 +1,4 @@
-#' Concave
+#' Concave hull polygon
 #'
 #' Takes a set of \code{\link{data-Point}}'s and returns a concave hull polygon.
 #' Internally, this implements a Monotone chain algorithm

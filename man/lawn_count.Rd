@@ -2,7 +2,7 @@
 % Please edit documentation in R/count.R
 \name{lawn_count}
 \alias{lawn_count}
-\title{Count points within polygons}
+\title{Count number of points within polygons}
 \usage{
 lawn_count(polygons, points, countField = "pt_count", lint = FALSE)
 }

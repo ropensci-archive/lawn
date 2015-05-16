@@ -2,7 +2,7 @@
 % Please edit documentation in R/tag.R
 \name{lawn_tag}
 \alias{lawn_tag}
-\title{Spatial join}
+\title{Spatial join of points and polygons}
 \usage{
 lawn_tag(points, polygons, poly_id, containing_polyid, lint = FALSE)
 }

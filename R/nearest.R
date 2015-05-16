@@ -1,4 +1,4 @@
-#' Nearest
+#' Get nearest point
 #'
 #' Takes a reference \code{\link{data-Point}} and a set of points and returns the point from
 #' the set closest to the reference

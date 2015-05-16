@@ -2,7 +2,7 @@
 % Please edit documentation in R/square.R
 \name{lawn_square}
 \alias{lawn_square}
-\title{Square}
+\title{Calculate a square bounding box}
 \usage{
 lawn_square(bbox)
 }

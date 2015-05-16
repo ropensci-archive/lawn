@@ -2,7 +2,7 @@
 % Please edit documentation in R/kinks.R
 \name{lawn_kinks}
 \alias{lawn_kinks}
-\title{Kinks}
+\title{Get points at all self-intersections of a polygon}
 \usage{
 lawn_kinks(input, lint = FALSE)
 }
@@ -15,7 +15,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Takes a polygon and returns points at all self-intersections
+Get points at all self-intersections of a polygon
 }
 \examples{
 poly <- '{

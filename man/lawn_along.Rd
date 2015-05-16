@@ -2,7 +2,7 @@
 % Please edit documentation in R/along.R
 \name{lawn_along}
 \alias{lawn_along}
-\title{Along}
+\title{Get a point at a distance along a line}
 \usage{
 lawn_along(line, distance, units, lint = FALSE)
 }

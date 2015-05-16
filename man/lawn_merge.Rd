@@ -2,7 +2,7 @@
 % Please edit documentation in R/merge.R
 \name{lawn_merge}
 \alias{lawn_merge}
-\title{Merge}
+\title{Merge polygons}
 \usage{
 lawn_merge(fc, lint = FALSE)
 }
@@ -61,6 +61,8 @@ polygons <- '{
 lawn_merge(polygons)
 }
 \seealso{
+\code{\link{lawn_union}}
+
 Other transformations: \code{\link{lawn_bezier}};
   \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
   \code{\link{lawn_convex}}; \code{\link{lawn_erase}};

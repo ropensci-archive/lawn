@@ -1,4 +1,4 @@
-#' Line distance
+#' Measure a linestring
 #'
 #' Takes a \code{\link{data-LineString}} and measures its length in
 #' the specified units.

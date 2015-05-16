@@ -1,4 +1,4 @@
-#' Explode
+#' Explode vertices to points
 #'
 #' Takes a feature or set of features and returns all positions as points
 #'

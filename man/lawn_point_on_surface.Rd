@@ -2,7 +2,7 @@
 % Please edit documentation in R/point_on_surface.R
 \name{lawn_point_on_surface}
 \alias{lawn_point_on_surface}
-\title{Point on surface}
+\title{Get a point on the surface of a feature}
 \usage{
 lawn_point_on_surface(x, lint = FALSE)
 }

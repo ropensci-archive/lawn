@@ -1,4 +1,4 @@
-#' Erase
+#' Erase one polygon from another
 #'
 #' Finds the difference between two \code{\link{data-Polygon}}'s by clipping
 #' the second polygon from the first.

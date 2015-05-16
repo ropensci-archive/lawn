@@ -2,7 +2,7 @@
 % Please edit documentation in R/simplify.R
 \name{lawn_simplify}
 \alias{lawn_simplify}
-\title{Simplify}
+\title{Simplify GeoJSON data}
 \usage{
 lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
   lint = FALSE)

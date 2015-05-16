@@ -1,4 +1,4 @@
-#' Variance
+#' Variance of a field among points within polygons
 #'
 #' Calculates the variance value of a field for a set of \code{\link{data-Point}}'s
 #' within a set of \code{\link{data-Polygon}}'s

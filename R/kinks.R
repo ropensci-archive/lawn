@@ -1,6 +1,4 @@
-#' Kinks
-#'
-#' Takes a polygon and returns points at all self-intersections
+#' Get points at all self-intersections of a polygon
 #'
 #' @export
 #' @param input Feature of features

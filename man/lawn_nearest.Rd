@@ -2,7 +2,7 @@
 % Please edit documentation in R/nearest.R
 \name{lawn_nearest}
 \alias{lawn_nearest}
-\title{Nearest}
+\title{Get nearest point}
 \usage{
 lawn_nearest(point, against, lint = FALSE)
 }

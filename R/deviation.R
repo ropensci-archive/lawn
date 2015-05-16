@@ -1,4 +1,4 @@
-#' Deviation
+#' Standard deviation of a field among points within polygons
 #'
 #' Calculates the population standard deviation (i.e. denominator = n, not n-1) of
 #' values from \code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s

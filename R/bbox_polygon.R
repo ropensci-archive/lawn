@@ -1,4 +1,4 @@
-#' Bbox polygon
+#' Make a polygon from a bounding box
 #'
 #' Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/line_distance.R
 \name{lawn_line_distance}
 \alias{lawn_line_distance}
-\title{Line distance}
+\title{Measure a linestring}
 \usage{
 lawn_line_distance(line, units, lint = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Simplify
+#' Simplify GeoJSON data
 #'
 #' Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
 #' and returns a simplified version

@@ -2,7 +2,7 @@
 % Please edit documentation in R/union.R
 \name{lawn_union}
 \alias{lawn_union}
-\title{Union}
+\title{Merge polygons}
 \usage{
 lawn_union(poly1, poly2, lint = FALSE)
 }
@@ -21,7 +21,8 @@ a combined \code{\link{data-Polygon}} or
 \code{\link{data-MultiPolygon}} feature
 }
 \description{
-Finds the interesection of two polygons and returns the union of the two
+Finds the interesection of two \code{\link{data-Polygon}}'s and returns the
+union of the two
 }
 \details{
 Contiguous polygons are combined, non-contiguous polygons are returned
@@ -70,6 +71,8 @@ lawn_union(poly1, poly2)
 Jeff Hollister \email{hollister.jeff@epa.gov}
 }
 \seealso{
+\code{\link{lawn_merge}}
+
 Other transformations: \code{\link{lawn_bezier}};
   \code{\link{lawn_buffer}}; \code{\link{lawn_concave}};
   \code{\link{lawn_convex}}; \code{\link{lawn_erase}};

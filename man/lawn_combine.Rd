@@ -2,7 +2,7 @@
 % Please edit documentation in R/combine.R
 \name{lawn_combine}
 \alias{lawn_combine}
-\title{Combine}
+\title{Combine singular features into plural versions}
 \usage{
 lawn_combine(fc, lint = FALSE)
 }

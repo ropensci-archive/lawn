@@ -2,7 +2,7 @@
 % Please edit documentation in R/reclass.R
 \name{lawn_reclass}
 \alias{lawn_reclass}
-\title{Reclass}
+\title{Reclassify properties data}
 \usage{
 lawn_reclass(input, inField, outField, translations, lint = FALSE)
 }

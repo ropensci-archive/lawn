@@ -1,4 +1,4 @@
-#' Count points within polygons
+#' Count number of points within polygons
 #'
 #' Calculates the number of \code{\link{data-Point}}'s that fall within the set
 #' of \code{\link{data-Polygon}}'s

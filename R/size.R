@@ -1,4 +1,4 @@
-#' Size
+#' Expand a bounding box
 #'
 #' Takes a bounding box and returns a new bounding box with a size
 #' expanded or contracted by a factor of X.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/explode.R
 \name{lawn_explode}
 \alias{lawn_explode}
-\title{Explode}
+\title{Explode vertices to points}
 \usage{
 lawn_explode(input, lint = FALSE)
 }

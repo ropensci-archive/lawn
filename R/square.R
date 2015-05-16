@@ -1,4 +1,4 @@
-#' Square
+#' Calculate a square bounding box
 #'
 #' Takes a bounding box and calculates the minimum square bounding
 #' box that would contain the input.

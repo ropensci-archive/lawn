@@ -1,4 +1,4 @@
-#' Merge
+#' Merge polygons
 #'
 #' Takes a set of \code{\link{data-Polygon}}'s and returns a single
 #' merged polygon feature. If the input polygon features are not contiguous,
@@ -8,6 +8,7 @@
 #' @param fc input polygons, as \code{\link{data-FeatureCollection}}
 #' @template lint
 #' @family transformations
+#' @seealso \code{\link{lawn_union}}
 #' @return merged \code{\link{data-Polygon}} or multipolygon
 #' \code{\link{data-MultiPolygon}}
 #' @examples

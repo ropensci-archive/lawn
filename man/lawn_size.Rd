@@ -2,7 +2,7 @@
 % Please edit documentation in R/size.R
 \name{lawn_size}
 \alias{lawn_size}
-\title{Size}
+\title{Expand a bounding box}
 \usage{
 lawn_size(bbox, factor)
 }

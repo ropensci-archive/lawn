@@ -2,7 +2,7 @@
 % Please edit documentation in R/max.R
 \name{lawn_max}
 \alias{lawn_max}
-\title{Maximum}
+\title{Maximum value of a field among points within polygons}
 \usage{
 lawn_max(polygons, points, in_field, out_field, lint = FALSE)
 }

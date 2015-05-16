@@ -2,7 +2,7 @@
 % Please edit documentation in R/erase.R
 \name{lawn_erase}
 \alias{lawn_erase}
-\title{Erase}
+\title{Erase one polygon from another}
 \usage{
 lawn_erase(poly1, poly2, lint = FALSE)
 }

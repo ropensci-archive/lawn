@@ -2,7 +2,7 @@
 % Please edit documentation in R/jenks.R
 \name{lawn_jenks}
 \alias{lawn_jenks}
-\title{Jenks}
+\title{Get Jenks breaks}
 \usage{
 lawn_jenks(input, field, numberOfBreaks, lint = FALSE)
 }

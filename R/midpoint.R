@@ -1,4 +1,4 @@
-#' Midpoint
+#' Get a point midway between two points
 #'
 #' Takes two \code{\link{data-Point}}'s and returns a point midway
 #' between them

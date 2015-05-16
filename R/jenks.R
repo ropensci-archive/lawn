@@ -1,4 +1,4 @@
-#' Jenks
+#' Get Jenks breaks
 #'
 #' Takes a set of \code{\link{data-Feature}}'s and returns an array of the Jenks
 #' Natural breaks for a given property

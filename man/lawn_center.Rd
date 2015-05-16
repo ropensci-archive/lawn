@@ -2,7 +2,7 @@
 % Please edit documentation in R/center.R
 \name{lawn_center}
 \alias{lawn_center}
-\title{Center}
+\title{Get center point}
 \usage{
 lawn_center(features, lint = FALSE)
 }

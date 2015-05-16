@@ -1,4 +1,4 @@
-#' Center
+#' Get center point
 #'
 #' Takes a \code{\link{data-FeatureCollection}} and returns the
 #' absolute center point of all features

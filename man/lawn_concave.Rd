@@ -2,7 +2,7 @@
 % Please edit documentation in R/concave.R
 \name{lawn_concave}
 \alias{lawn_concave}
-\title{Concave}
+\title{Concave hull polygon}
 \usage{
 lawn_concave(points, maxEdge = 1, units = "miles", lint = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Line slice
+#' Slice a line given two points
 #'
 #' Takes a line, a start Point, and a stop point and returns the line in
 #' between those points

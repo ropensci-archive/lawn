@@ -2,7 +2,7 @@
 % Please edit documentation in R/point_on_line.R
 \name{lawn_point_on_line}
 \alias{lawn_point_on_line}
-\title{Line slice}
+\title{Get closest point on linestring to reference point}
 \usage{
 lawn_point_on_line(line, point, lint = FALSE)
 }
@@ -16,9 +16,12 @@ as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
+\value{
+A \code{\link{data-Point}}
+}
 \description{
-Takes a line, a start Point, and a stop point and returns the line in
-between those points
+Takes a line, a start \code{\link{data-Point}}, and a stop point and returns
+the line in between those points
 }
 \examples{
 line <- '{

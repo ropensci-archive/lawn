@@ -1,4 +1,4 @@
-#' Quantile
+#' Calculate quantiles
 #'
 #' Takes a \code{\link{data-FeatureCollection}}, a property name, set of percentiles
 #' and returns a quantile array

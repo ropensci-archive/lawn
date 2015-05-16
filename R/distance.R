@@ -1,4 +1,4 @@
-#' Distance
+#' Distance between two points
 #'
 #' Calculates the distance between two \code{\link{data-Point}}'s in degress,
 #' radians, miles, or kilometers. Uses the

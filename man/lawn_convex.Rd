@@ -2,7 +2,7 @@
 % Please edit documentation in R/convex.R
 \name{lawn_convex}
 \alias{lawn_convex}
-\title{Convex}
+\title{Convex hull polygon}
 \usage{
 lawn_convex(input, lint = FALSE)
 }

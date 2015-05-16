@@ -1,4 +1,4 @@
-#' Convex
+#' Convex hull polygon
 #'
 #' Takes a set of \code{\link{data-Point}}'s and returns a convex
 #' hull polygon. Internally, this uses the

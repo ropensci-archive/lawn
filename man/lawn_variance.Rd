@@ -2,7 +2,7 @@
 % Please edit documentation in R/variance.R
 \name{lawn_variance}
 \alias{lawn_variance}
-\title{Variance}
+\title{Variance of a field among points within polygons}
 \usage{
 lawn_variance(polygons, points, in_field, out_field, lint = FALSE)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/destination.R
 \name{lawn_destination}
 \alias{lawn_destination}
-\title{Destination}
+\title{Calculate destination point}
 \usage{
 lawn_destination(start, distance, bearing, units, lint = FALSE)
 }

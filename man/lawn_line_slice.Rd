@@ -2,7 +2,7 @@
 % Please edit documentation in R/line_slice.R
 \name{lawn_line_slice}
 \alias{lawn_line_slice}
-\title{Line slice}
+\title{Slice a line given two points}
 \usage{
 lawn_line_slice(point1, point2, line, lint = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Bezier
+#' Curve a linestring
 #'
 #' Takes a \code{\link{data-LineString}} and returns a curved version
 #' by applying a \href{http://en.wikipedia.org/wiki/Bezier_spline}{Bezier}

@@ -1,4 +1,4 @@
-#' Average
+#' Average of a field among points within polygons
 #'
 #' Calculate the average value of a field for a set of \code{\link{data-Point}}'s
 #' within a set of \code{\link{data-Polygon}}'s

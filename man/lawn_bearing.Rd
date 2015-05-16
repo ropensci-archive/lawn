@@ -2,7 +2,7 @@
 % Please edit documentation in R/bearing.R
 \name{lawn_bearing}
 \alias{lawn_bearing}
-\title{Bearing}
+\title{Get geographic bearing between two points}
 \usage{
 lawn_bearing(start, end, lint = FALSE)
 }

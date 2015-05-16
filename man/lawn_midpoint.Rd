@@ -2,7 +2,7 @@
 % Please edit documentation in R/midpoint.R
 \name{lawn_midpoint}
 \alias{lawn_midpoint}
-\title{Midpoint}
+\title{Get a point midway between two points}
 \usage{
 lawn_midpoint(pt1, pt2, lint = FALSE)
 }

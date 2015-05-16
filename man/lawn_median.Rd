@@ -2,7 +2,7 @@
 % Please edit documentation in R/median.R
 \name{lawn_median}
 \alias{lawn_median}
-\title{Median}
+\title{Median value of a field among points within polygons}
 \usage{
 lawn_median(polygons, points, in_field, out_field, lint = FALSE)
 }
