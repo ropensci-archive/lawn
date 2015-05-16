@@ -1,6 +1,6 @@
 Package: lawn
-Title: R Client for 'Turfjs' for 'Geospatial' Analysis
-Description: R client for 'Turfjs' (http://turfjs.org/) for
+Title: Client for 'Turfjs' for 'Geospatial' Analysis
+Description: Client for 'Turfjs' (http://turfjs.org/) for
     'geospatial' analysis. The package revolves around using 'GeoJSON'
     data. Functions are included for creating 'GeoJSON' data objects,
     measuring aspects of 'GeoJSON', and combining, transforming,
