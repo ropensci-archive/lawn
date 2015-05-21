@@ -20,6 +20,6 @@ Each feature is a assigned a class matching it's GeoJSON data type
 }
 \examples{
 as_feature(lawn_random())
-as_feature(lawn_random("polygons"))
+# as_feature(lawn_random("polygons"))
 }
 

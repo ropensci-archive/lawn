@@ -8,7 +8,7 @@
 #' (e.g., point, polygon, linestring).
 #' @examples
 #' as_feature(lawn_random())
-#' as_feature(lawn_random("polygons"))
+#' # as_feature(lawn_random("polygons"))
 as_feature <- function(x) {
   if (is(x, "featurecollection")) {
     ct$eval(sprintf("var x = %s;", convert(x)))

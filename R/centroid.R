@@ -30,5 +30,5 @@ lawn_centroid <- function(features, lint = FALSE) {
   fts <- convert(features)
   lawnlint(fts, lint)
   ct$eval(sprintf("var ctr = turf.centroid(%s);", fts))
-  structure(ct$get("ctr"), class = "centroid")
+  structure(ct$get("ctr"), class = "point")
 }

@@ -26,14 +26,14 @@ a <- lawn_centroid(poly)
 b <- lawn_centroid(serbia)
 
 test_that("lawn_centroid works", {
-  expect_is(a, "centroid")
+  expect_is(a, "point")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
   expect_is(a$geometry, "list")
   expect_is(a$geometry$type, "character")
   expect_is(a$geometry$coordinates, "numeric")
 
-  expect_is(b, "centroid")
+  expect_is(b, "point")
   expect_is(unclass(b), "list")
   expect_equal(length(b$properties), 0)
 })
