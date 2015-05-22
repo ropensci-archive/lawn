@@ -24,7 +24,7 @@ Flip x,y to y,x, and vice versa
 # a point
 serbia <- '{
   "type": "Feature",
-  "properties": {},
+  "properties": {"color": "red"},
   "geometry": {
     "type": "Point",
     "coordinates": [20.566406, 43.421008]

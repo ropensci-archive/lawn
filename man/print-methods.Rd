@@ -6,6 +6,8 @@
 \arguments{
 \item{x}{input}
 
+\item{n}{(integer) Number of rows to print, when properties is large object}
+
 \item{...}{print options}
 }
 \description{
@@ -37,5 +39,80 @@ lawn_linestring(linestring1, properties = list(name = 'line1', distance = 145))
 
 # featurecollection
 lawn_featurecollection(lawn_data$featurecollection_eg1)
+
+# feature
+serbia <- '{
+  "type": "Feature",
+  "properties": {"color": "red"},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [20.566406, 43.421008]
+   }
+}'
+lawn_flip(serbia)
+
+# multipoint
+mpt <- '{
+ "type": "FeatureCollection",
+ "features": [
+   {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "Point",
+       "coordinates": [19.026432, 47.49134]
+     }
+   }, {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "Point",
+       "coordinates": [19.074497, 47.509548]
+     }
+   }
+ ]
+}'
+x <- lawn_combine(mpt)
+x$properties <- data.frame(color = c("red", "green"),
+                           size = c("small", "large"),
+                           popultion = c(5000, 10000L))
+x
+
+# multilinestring
+mlstring <- '{
+ "type": "FeatureCollection",
+ "features": [
+   {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "LineString",
+       "coordinates": [
+         [-21.964416, 64.148203],
+         [-21.956176, 64.141316],
+         [-21.93901, 64.135924],
+         [-21.927337, 64.136673]
+       ]
+     }
+   }, {
+     "type": "Feature",
+     "properties": {},
+     "geometry": {
+       "type": "LineString",
+       "coordinates": [
+         [-21.929054, 64.127985],
+         [-21.912918, 64.134726],
+         [-21.916007, 64.141016],
+         [-21.930084, 64.14446]
+       ]
+     }
+   }
+ ]
+}'
+x <- lawn_combine(mlstring)
+x$properties <- data.frame(color = c("red", "green"),
+                           size = c("small", "large"),
+                           popultion = c(5000, 10000L))
+x
 }
 
