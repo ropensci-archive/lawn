@@ -9,9 +9,18 @@ lawn
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=2ECC71)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
 
-`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library. 
+`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library.
 
 ## Install
+
+The latest release of `lawn` is available from CRAN.  To install:
+
+
+```r
+install.packages("lawn")
+```
+
+To install the development version:
 
 
 ```r
@@ -19,6 +28,7 @@ install.packages("devtools")
 devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
+
 
 
 ```r
@@ -111,8 +121,8 @@ lawn_random(n = 2)
 #> 
 #> $features
 #>      type geometry.type geometry.coordinates
-#> 1 Feature         Point  167.30619, 25.17848
-#> 2 Feature         Point  -32.10306, 53.43144
+#> 1 Feature         Point 156.64582, -14.15674
+#> 2 Feature         Point   41.80835, 71.51460
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -125,12 +135,12 @@ lawn_random(n = 5)
 #> [1] "FeatureCollection"
 #> 
 #> $features
-#>      type geometry.type   geometry.coordinates
-#> 1 Feature         Point    -58.67052, 28.36528
-#> 2 Feature         Point    86.82092, -86.67376
-#> 3 Feature         Point -170.679818, -5.010867
-#> 4 Feature         Point    15.52654, -19.65143
-#> 5 Feature         Point   104.18723, -71.66213
+#>      type geometry.type geometry.coordinates
+#> 1 Feature         Point -43.33472, -10.69157
+#> 2 Feature         Point -33.59234, -19.95378
+#> 3 Feature         Point  108.70868, 30.10512
+#> 4 Feature         Point  152.61656, 29.28532
+#> 5 Feature         Point  -43.01556, 75.53017
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -148,8 +158,8 @@ gr_point(2)
 #> 
 #> $features
 #>      type geometry.type  geometry.coordinates
-#> 1 Feature         Point -172.45147, -68.39409
-#> 2 Feature         Point  -11.68456, -57.68366
+#> 1 Feature         Point -147.66037, -82.87004
+#> 2 Feature         Point  135.32629, -59.67756
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -160,7 +170,7 @@ Positions
 
 ```r
 gr_position()
-#> [1]  22.57551 -32.57410
+#> [1] -106.24924  -81.34686
 ```
 
 Polygons
@@ -174,8 +184,8 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> $features
 #>      type geometry.type
 #> 1 Feature       Polygon
-#>                                                                                                                       geometry.coordinates
-#> 1 -116.51079, -115.41952, -115.09452, -118.31157, -116.71443, -116.51079, -44.39019, -43.85438, -46.92479, -47.53488, -41.12107, -44.39019
+#>                                                                                                                 geometry.coordinates
+#> 1 -74.29221, -74.83090, -75.16191, -76.50330, -75.67180, -74.29221, -62.37067, -66.04085, -68.03920, -70.61932, -66.25079, -62.37067
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -192,7 +202,7 @@ lawn_sample(dat, 1)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        600         Point   10.71579, 59.90478
+#> 1 Feature        300         Point   10.79544, 59.93162
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -206,8 +216,8 @@ lawn_sample(dat, 2)
 #> 
 #> $features
 #>      type population geometry.type geometry.coordinates
-#> 1 Feature        300         Point   10.79544, 59.93162
-#> 2 Feature        200         Point   10.72403, 59.92681
+#> 1 Feature        200         Point   10.80643, 59.90891
+#> 2 Feature        300         Point   10.79544, 59.93162
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"
@@ -222,8 +232,8 @@ lawn_sample(dat, 3)
 #> $features
 #>      type population geometry.type geometry.coordinates
 #> 1 Feature        300         Point   10.79544, 59.93162
-#> 2 Feature        200         Point   10.80643, 59.90891
-#> 3 Feature        600         Point   10.71579, 59.90478
+#> 2 Feature        200         Point   10.72403, 59.92681
+#> 3 Feature        100         Point   10.74600, 59.90857
 #> 
 #> attr(,"class")
 #> [1] "featurecollection"

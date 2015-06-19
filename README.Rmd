@@ -20,11 +20,20 @@ knitr::opts_chunk$set(
 
 ## Install
 
+The latest release of `lawn` is available from CRAN.  To install:
+
+```{r eval=FALSE}
+install.packages("lawn")
+```
+
+To install the development version:
+
 ```{r eval=FALSE}
 install.packages("devtools")
 devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
+
 
 ```{r}
 library("lawn")
