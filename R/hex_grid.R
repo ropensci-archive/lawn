@@ -17,7 +17,6 @@
 #' @examples
 #' lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
 #' lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')
-#' lawn_hex_grid(c(-96,31,-84,40), 10, 'miles')
 lawn_hex_grid <- function(extent, cellWidth, units) {
   ct$eval(sprintf("var hg = turf.hexGrid(%s, %s, '%s');", toj(extent), cellWidth, units))
   as.fc(ct$get("hg"))

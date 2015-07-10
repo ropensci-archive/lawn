@@ -27,7 +27,6 @@ grid as described in Hexagonal Grids
 \examples{
 lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
 lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')
-lawn_hex_grid(c(-96,31,-84,40), 10, 'miles')
 }
 \seealso{
 Other interpolation: \code{\link{lawn_isolines}};
