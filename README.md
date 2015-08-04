@@ -5,7 +5,7 @@ lawn
 
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
-[![Coverage Status](https://coveralls.io/repos/ropensci/lawn/badge.svg)](https://coveralls.io/r/ropensci/lawn)
+[![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=2ECC71)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
 
