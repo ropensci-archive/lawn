@@ -7,6 +7,7 @@
 #'
 #' @importFrom methods is
 #' @importFrom stats setNames
+#' @importFrom utils head
 #' @name lawn-package
 #' @aliases lawn
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}

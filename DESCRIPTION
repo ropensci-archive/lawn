@@ -19,6 +19,7 @@ VignetteBuilder: knitr
 Imports:
     methods,
     stats,
+    utils,
     V8,
     jsonlite,
     magrittr
