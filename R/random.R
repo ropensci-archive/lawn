@@ -21,11 +21,9 @@
 #' ## set of points
 #' lawn_random(n = 2)
 #' lawn_random(n = 10)
-#' lawn_random(n = 1000)
 #' ## set of polygons
 #' lawn_random('polygons', 2)
 #' lawn_random('polygons', 10)
-#' lawn_random('polygons', 1000)
 #' # with options
 #' lawn_random(bbox = c(-70, 40, -60, 60))
 #' lawn_random(num_vertices = 5)
