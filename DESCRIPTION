@@ -6,7 +6,7 @@ Description: Client for 'Turfjs' (http://turfjs.org/) for
     measuring aspects of 'GeoJSON', and combining, transforming,
     and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.1.4
+Version: 0.1.4.9000
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
