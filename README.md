@@ -6,7 +6,7 @@ lawn
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=2ECC71)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library.
@@ -25,10 +25,8 @@ To install the development version:
 
 ```r
 install.packages("devtools")
-devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
-
 
 
 ```r
@@ -101,7 +99,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -82.9 -47.8 137.5 87.4
+#>   Bounding box: -109.5 -57.0 178.4 -45.7
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -111,7 +109,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -88.5 -80.7 162.7 31.1
+#>   Bounding box: -165.5 -85.7 102.4 67.4
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -125,7 +123,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: 168.6 22.5 179.4 79.4
+#>   Bounding box: 168.8 -87.1 176.5 12.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -136,7 +134,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 141.487700  -1.177591
+#> [1] 153.81914 -14.46048
 ```
 
 Polygons
@@ -145,7 +143,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -7.1 83.3 -4.0 86.7
+#>   Bounding box: -18.9 -89.7 -12.6 -84.0
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -178,7 +176,7 @@ lawn_sample(dat, 2)
 ```r
 lawn_sample(dat, 3)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 3
 #>   No. points: 6
 #>   Properties: NULL

@@ -11,3 +11,4 @@ vignettes/img
 .V8history
 cran-comments.md
 
+^CONDUCT\.md$

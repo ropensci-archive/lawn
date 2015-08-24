@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=2ECC71)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library.
@@ -30,10 +30,8 @@ To install the development version:
 
 ```{r eval=FALSE}
 install.packages("devtools")
-devtools::install_github("rstudio/leaflet")
 devtools::install_github("ropensci/lawn")
 ```
-
 
 ```{r}
 library("lawn")
@@ -186,5 +184,6 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 * Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
 * License: MIT
 * Get citation information for `lawn` in R doing `citation(package = 'lawn')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
