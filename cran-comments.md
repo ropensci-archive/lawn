@@ -1,8 +1,8 @@
-I have read and agree to the the CRAN policies at 
-http://cran.r-project.org/web/packages/policies.html
+R CMD CHECK passed on my local OS X install with R 3.2.2 and
+R development version, Ubuntu running on Travis-CI, and Win-Builder.
 
-R CMD CHECK passed on my local OS X install with R 3.2.0 and
-R development version, Ubuntu running on Travis-CI, and Windows
-R 3.2 and devel on a virtualbox Windows install.
+This submission fixes a test not passing on CRAN, now imports all
+non-base R functions (i.e., from methods, stats, and utils), and a 
+few other changes.
 
 Thanks! Scott Chamberlain
