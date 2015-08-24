@@ -9,7 +9,7 @@ lawn
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
 
-`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) Javascript library.
+`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
 
 ## Install
 
@@ -99,7 +99,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -78.2 -20.1 36.4 57.4
+#>   Bounding box: 4.1 -87.7 16.2 -73.0
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -109,7 +109,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -142.2 -87.9 178.5 61.8
+#>   Bounding box: -91.1 -75.7 159.0 82.5
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -123,7 +123,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: 53.6 -3.5 162.6 -2.5
+#>   Bounding box: -174.4 62.3 -7.4 81.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -134,7 +134,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] -53.49811  37.68077
+#> [1] -19.73739  72.91413
 ```
 
 Polygons
@@ -143,7 +143,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: 32.3 23.1 37.6 29.5
+#>   Bounding box: -30.6 10.1 -26.1 15.4
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -156,7 +156,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.8 59.9 10.8 59.9
+#>   Bounding box: 10.7 59.9 10.7 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: NULL
