@@ -99,7 +99,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -109.5 -57.0 178.4 -45.7
+#>   Bounding box: -78.2 -20.1 36.4 57.4
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -109,7 +109,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -165.5 -85.7 102.4 67.4
+#>   Bounding box: -142.2 -87.9 178.5 61.8
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -123,7 +123,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: 168.8 -87.1 176.5 12.9
+#>   Bounding box: 53.6 -3.5 162.6 -2.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -134,7 +134,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 153.81914 -14.46048
+#> [1] -53.49811  37.68077
 ```
 
 Polygons
@@ -143,7 +143,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -18.9 -89.7 -12.6 -84.0
+#>   Bounding box: 32.3 23.1 37.6 29.5
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -156,7 +156,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: NULL
@@ -255,5 +255,6 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 * Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
 * License: MIT
 * Get citation information for `lawn` in R doing `citation(package = 'lawn')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
