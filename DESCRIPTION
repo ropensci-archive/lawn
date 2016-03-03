@@ -27,6 +27,6 @@ Suggests:
     testthat,
     knitr,
     leaflet
-Enhances:
-    maps,
+Enhances: maps,
     geojsonio
+RoxygenNote: 5.0.1
