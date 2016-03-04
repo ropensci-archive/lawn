@@ -37,7 +37,7 @@ poly <- '{
      ]]
   }
 }'
-lawn_centroid(poly)
+lawn_centroid(features = poly)
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},

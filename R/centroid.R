@@ -25,7 +25,7 @@
 #'      ]]
 #'   }
 #' }'
-#' lawn_centroid(poly)
+#' lawn_centroid(features = poly)
 lawn_centroid <- function(features, lint = FALSE) {
   fts <- convert(features)
   lawnlint(fts, lint)
