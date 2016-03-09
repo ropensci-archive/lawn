@@ -1,14 +1,17 @@
 language: r
+sudo: false
+cache: packages
 
-before_install:
-- sudo apt-get install libv8-dev
+addons:
+  apt:
+    packages:
+      - libv8-dev
 
 r_packages:
 - maps
-- covr
 
 r_github_packages:
-- jeroenooms/V8
+- covr
 
 after_success:
 - Rscript -e 'covr::codecov()'
