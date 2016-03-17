@@ -26,7 +26,8 @@ Imports:
 Suggests:
     testthat,
     knitr,
-    leaflet
+    leaflet,
+    covr
 Enhances: maps,
     geojsonio
 RoxygenNote: 5.0.1
