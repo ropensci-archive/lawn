@@ -29,12 +29,12 @@ test_that("lawn_extent returns correct classes", {
 
 test_that("lawn_extent returns correct values", {
   expect_equal(length(a), 4)
-  expect_less_than(a[1], 20)
-  expect_less_than(a[2], 60)
+  expect_lt(a[1], 20)
+  expect_lt(a[2], 60)
 
   expect_equal(length(b), 4)
-  expect_less_than(b[1], 0)
-  expect_less_than(b[2], 50)
+  expect_lt(b[1], 0)
+  expect_lt(b[2], 50)
 })
 
 test_that("lawn_extent fails correctly", {

@@ -158,16 +158,16 @@ test_that("lawn_hex_grid returns correct classes", {
 })
 
 test_that("tolerance parameter works as expected", {
-  expect_less_than(length(lawn_simplify(feature, 0.01)$geometry$coordinates[,,1]),
+  expect_lt(length(lawn_simplify(feature, 0.01)$geometry$coordinates[,,1]),
                    length(lawn_simplify(feature, 0.001)$geometry$coordinates[,,1]))
-  expect_less_than(length(lawn_simplify(feature, 0.02)$geometry$coordinates[,,1]),
+  expect_lt(length(lawn_simplify(feature, 0.02)$geometry$coordinates[,,1]),
                    length(lawn_simplify(feature, 0.01)$geometry$coordinates[,,1]))
 })
 
 test_that("high_quality parameter works as expected", {
   # in this case settingn to FALSE does result in fewer vertices,
   # but not with many values of tolerance
-  expect_less_than(length(lawn_simplify(feature2, 6)$geometry$coordinates[,,1]),
+  expect_lt(length(lawn_simplify(feature2, 6)$geometry$coordinates[,,1]),
                    length(lawn_simplify(feature2, 6, TRUE)$geometry$coordinates[,,1]))
 })
 

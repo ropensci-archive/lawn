@@ -48,6 +48,6 @@ test_that("lawn_union works", {
 
 test_that("lawn_union fails correctly", {
   expect_error(lawn_union(), "missing, with no default")
-  expect_error(lawn_union("afa", "asd"), "Error : ReferenceError: afa is not defined\n")
+  expect_error(lawn_union("afa", "asd"), "ReferenceError: afa is not defined")
   expect_error(lawn_union(stuff = "adf"), "unused argument")
 })

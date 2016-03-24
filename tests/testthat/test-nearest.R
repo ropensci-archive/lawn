@@ -49,8 +49,8 @@ test_that("lawn_nearest returns correct classes", {
 })
 
 test_that("expected values", {
-  expect_less_than(lawn_nearest(point, lawn_data$points_average)$geometry$coordinates[1], 20)
-  expect_less_than(lawn_nearest(point, lawn_data$points_aggregate)$geometry$coordinates[1], 5)
+  expect_lt(lawn_nearest(point, lawn_data$points_average)$geometry$coordinates[1], 20)
+  expect_lt(lawn_nearest(point, lawn_data$points_aggregate)$geometry$coordinates[1], 5)
 })
 
 test_that("lawn_nearest fails correctly", {

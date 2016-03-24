@@ -17,9 +17,9 @@ test_that("lawn_point_grid returns correct classes", {
 })
 
 test_that("cellWidth parameter works as expected", {
-  expect_less_than(NROW(a$features$geometry), NROW(b$features$geometry))
-  expect_less_than(NROW(b$features$geometry), NROW(d$features$geometry))
-  expect_less_than(NROW(a$features$geometry), NROW(d$features$geometry))
+  expect_lt(NROW(a$features$geometry), NROW(b$features$geometry))
+  expect_lt(NROW(b$features$geometry), NROW(d$features$geometry))
+  expect_lt(NROW(a$features$geometry), NROW(d$features$geometry))
 })
 
 test_that("lawn_point_grid fails correctly", {

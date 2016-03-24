@@ -14,10 +14,10 @@ test_that("lawn_size returns correct classes", {
 })
 
 test_that("factor parameter works as expected", {
-  expect_less_than(max(abs(a)), max(abs(b)))
-  expect_less_than(max(abs(a)), max(abs(d)))
-  expect_less_than(max(abs(b)), max(abs(d)))
-  expect_less_than(max(abs(d)), max(abs(e)))
+  expect_lt(max(abs(a)), max(abs(b)))
+  expect_lt(max(abs(a)), max(abs(d)))
+  expect_lt(max(abs(b)), max(abs(d)))
+  expect_lt(max(abs(d)), max(abs(e)))
 })
 
 test_that("lawn_size fails correctly", {

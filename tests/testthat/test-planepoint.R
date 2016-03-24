@@ -26,9 +26,9 @@ test_that("lawn_planepoint returns correct classes", {
 })
 
 test_that("give right values", {
-  expect_less_than(lawn_planepoint(lawn_point(c(-75.3221, 39.229)), triangle), 90)
-  expect_less_than(lawn_planepoint(lawn_point(c(-75.3221, 39.129)), triangle), 106)
-  expect_less_than(lawn_planepoint(lawn_point(c(-75.3221, 39.029)), triangle), 125)
+  expect_lt(lawn_planepoint(lawn_point(c(-75.3221, 39.229)), triangle), 90)
+  expect_lt(lawn_planepoint(lawn_point(c(-75.3221, 39.129)), triangle), 106)
+  expect_lt(lawn_planepoint(lawn_point(c(-75.3221, 39.029)), triangle), 125)
 })
 
 test_that("lawn_planepoint fails correctly", {

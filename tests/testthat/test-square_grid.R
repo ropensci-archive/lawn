@@ -23,9 +23,9 @@ test_that("cellWidth parameter works as expected", {
   expect_equal(length(a$features$geometry$coordinates), 1)
   expect_equal(length(b$features$geometry$coordinates), 9)
   expect_equal(length(d$features$geometry$coordinates), 64)
-  expect_less_than(length(a$features$geometry$coordinates),
+  expect_lt(length(a$features$geometry$coordinates),
                    length(b$features$geometry$coordinates))
-  expect_less_than(length(b$features$geometry$coordinates),
+  expect_lt(length(b$features$geometry$coordinates),
                    length(d$features$geometry$coordinates))
 })
 

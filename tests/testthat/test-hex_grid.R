@@ -14,11 +14,11 @@ test_that("lawn_hex_grid returns correct classes", {
 })
 
 test_that("cellWidth parameter works as expected", {
-  expect_less_than(length(a$features$geometry$coordinates),
+  expect_lt(length(a$features$geometry$coordinates),
                    length(b$features$geometry$coordinates))
-  expect_less_than(length(a$features$geometry$coordinates),
+  expect_lt(length(a$features$geometry$coordinates),
                    length(d$features$geometry$coordinates))
-  expect_less_than(length(b$features$geometry$coordinates),
+  expect_lt(length(b$features$geometry$coordinates),
                    length(d$features$geometry$coordinates))
 })
 

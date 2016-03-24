@@ -20,9 +20,9 @@ test_that("lawn_sample returns correct classes", {
 })
 
 test_that("n parameter works as expected", {
-  expect_less_than(NROW(a$features), NROW(b$features))
-  expect_less_than(NROW(a$features), NROW(d$features))
-  expect_less_than(NROW(b$features), NROW(d$features))
+  expect_lt(NROW(a$features), NROW(b$features))
+  expect_lt(NROW(a$features), NROW(d$features))
+  expect_lt(NROW(b$features), NROW(d$features))
 })
 
 test_that("lawn_sample fails correctly", {

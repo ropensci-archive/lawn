@@ -38,7 +38,7 @@ test_that("gr_point works", {
   expect_equal(pt_bb$type, "FeatureCollection")
   expect_is(pt_bb$features, "data.frame")
 
-  expect_more_than(NROW(pt2$features), NROW(pt1$features))
+  expect_gt(NROW(pt2$features), NROW(pt1$features))
   expect_equal(NROW(pt1$features), NROW(pt_bb$features))
 
   # fails well

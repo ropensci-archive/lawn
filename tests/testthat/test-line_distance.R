@@ -28,9 +28,9 @@ test_that("lawn_line_distance returns correct classes", {
 })
 
 test_that("right dimensions", {
-  expect_less_than(d, e)
-  expect_less_than(e, b)
-  expect_less_than(b, a)
+  expect_lt(d, e)
+  expect_lt(e, b)
+  expect_lt(b, a)
   expect_equal(length(lawn_line_distance(line, 'miles')), 1)
 })
 

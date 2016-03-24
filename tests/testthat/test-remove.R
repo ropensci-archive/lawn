@@ -16,7 +16,7 @@ test_that("lawn_remove returns correct classes", {
 })
 
 test_that("property parameter works as expected", {
-  expect_less_than(length(a$features$geometry$coordinates),
+  expect_lt(length(a$features$geometry$coordinates),
                    length(b$features$geometry$coordinates))
 })
 

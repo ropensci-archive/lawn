@@ -10,8 +10,8 @@ test_that("lawn_center works", {
   expect_is(a$geometry$type, "character")
   expect_is(a$geometry$coordinates, "numeric")
 
-  expect_less_than(lawn_center(lawn_data$filter_features)$geometry$coordinates[1], 0)
-  expect_less_than(lawn_center(lawn_data$polygons_within)$geometry$coordinates[1], 0)
+  expect_lt(lawn_center(lawn_data$filter_features)$geometry$coordinates[1], 0)
+  expect_lt(lawn_center(lawn_data$polygons_within)$geometry$coordinates[1], 0)
 })
 
 test_that("lawn_center fails correctly", {

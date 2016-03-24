@@ -24,7 +24,7 @@ end <- '{
 
 test_that("lawn_bearing works", {
   expect_is(lawn_bearing(start, end), "numeric")
-  expect_less_than(lawn_bearing(start, end), 0)
+  expect_lt(lawn_bearing(start, end), 0)
 })
 
 start_bad1 <- '{
