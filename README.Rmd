@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/lawn)](http://cran.rstudio.com/web/packages/lawn)
+[![cran version](http://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
 
