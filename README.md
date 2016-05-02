@@ -99,7 +99,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: 4.1 -87.7 16.2 -73.0
+#>   Bounding box: -60.9 43.4 59.9 57.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -109,7 +109,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -91.1 -75.7 159.0 82.5
+#>   Bounding box: -137.6 -77.2 167.4 85.8
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -123,7 +123,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -174.4 62.3 -7.4 81.5
+#>   Bounding box: -80.6 71.6 -60.2 88.1
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -134,7 +134,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] -19.73739  72.91413
+#> [1] 24.779369  6.632737
 ```
 
 Polygons
@@ -143,7 +143,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -30.6 10.1 -26.1 15.4
+#>   Bounding box: 129.8 55.9 136.0 59.8
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -156,7 +156,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: NULL
