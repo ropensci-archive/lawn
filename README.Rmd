@@ -179,6 +179,12 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 
 ![map1](inst/img/map2.png)
 
+## Contributors
+
+* [Scott Chamberlain](https://github.com/sckott)
+* [Jeff Hollister](https://github.com/thanhleviet)
+* [Thanh Lê](https://github.com/thanhleviet)
+
 ## Meta
 
 * Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
