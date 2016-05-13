@@ -13,6 +13,10 @@ r_packages:
 after_success:
 - Rscript -e 'covr::codecov()'
 
+r:
+  - release
+  - devel
+
 notifications:
   email:
     on_success: change
