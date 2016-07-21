@@ -11,7 +11,7 @@
 #' @template lint
 #' @family classification
 #' @return An array of the break values
-#' @examples
+#' @examples \dontrun{
 #' pts <- '{
 #'  "type": "FeatureCollection",
 #'  "features": [
@@ -67,6 +67,7 @@
 #' lawn_quantile(pts, 'population', c(25, 50, 75, 95))
 #' lawn_quantile(pts, 'population', c(25, 50, 75))
 #' lawn_quantile(pts, 'population', c(1, 50, 99.9))
+#' }
 lawn_quantile <- function(input, field, percentiles, lint = FALSE) {
   input <- convert(input)
   lawnlint(input, lint)

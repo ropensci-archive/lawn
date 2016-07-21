@@ -33,12 +33,14 @@ and an array of translations and outputs an identical FeatureCollection with
 the output field property populated
 }
 \examples{
+\dontrun{
 t1 <- list(list(0, 200, "small"), list(200, 400, "medium"), list(400, 600, "large"))
 lawn_reclass(lawn_data$points_average, 'population', 'size', t1)
 lawn_reclass(lawn_data$points_average, 'population', 'number', t1)
 
 t2 <- list(list(0, 150, "small"), list(150, 700, "big"))
 lawn_reclass(lawn_data$points_average, 'population', 'size', t2)
+}
 }
 \seealso{
 Other classification: \code{\link{lawn_jenks}},

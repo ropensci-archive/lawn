@@ -31,9 +31,11 @@ Calculates the population standard deviation (i.e. denominator = n, not n-1) of
 values from \code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 ex_polys <- lawn_data$polygons_aggregate
 ex_pts <- lawn_data$points_aggregate
 lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
+}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

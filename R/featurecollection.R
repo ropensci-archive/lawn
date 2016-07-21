@@ -193,6 +193,6 @@ lawn_featurecollection.featurecollection <- function(features) {
 do_fc <- function(features) {
   fts <- unlist(sapply(features, as.turf))
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
-  ct$eval("var feet = turf.featurecollection(features);")
+  ct$eval("var feet = turf.featureCollection(features);")
   as.fc(ct$get("feet"))
 }

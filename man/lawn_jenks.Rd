@@ -26,11 +26,13 @@ Takes a set of \code{\link{data-Feature}}'s and returns an array of the Jenks
 Natural breaks for a given property
 }
 \examples{
-lawn_jenks(lawn_data$points_average, 'population', 0)
+\dontrun{
+lawn_jenks(input = lawn_data$points_average, field = 'population', numberOfBreaks = 0)
 lawn_jenks(lawn_data$points_average, 'population', 1)
 lawn_jenks(lawn_data$points_average, 'population', 2)
 lawn_jenks(lawn_data$points_average, 'population', 3)
 lawn_jenks(lawn_data$points_average, 'population', 4)
+}
 }
 \references{
 Jenks Natural breaks

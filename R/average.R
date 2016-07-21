@@ -14,12 +14,13 @@
 #' @template lint
 #' @family aggregations
 #' @return polygons with the value of outField set to the calculated averages
-#' @examples
+#' @examples \dontrun{
 #' # using data in the package
 #' cat(lawn_data$points_average)
 #' cat(lawn_data$polygons_average)
 #' lawn_average(polygons = lawn_data$polygons_average,
 #'              points = lawn_data$points_average, 'population')
+#' }
 lawn_average <- function(polygons, points, field, outputField = 'average', lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   ct$eval(sprintf('var polygons = %s;', polygons))

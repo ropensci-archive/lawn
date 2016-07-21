@@ -29,9 +29,12 @@ Calculates the minimum value of a field for a set of \code{\link{data-Point}}'s
 within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
 lawn_min(poly, pt, 'population', 'min')
+lawn_min(poly, pt, 'population', 'min') \%>\% view
+}
 }
 \seealso{
 Other aggregations: \code{\link{lawn_aggregate}},

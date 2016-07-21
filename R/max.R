@@ -9,11 +9,10 @@
 #' @family aggregations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @examples
+#' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
 #' lawn_max(poly, pt, 'population', 'max')
-#' @examples \dontrun{
 #' lawn_max(poly, pt, 'population', 'max') %>% view
 #' }
 lawn_max <- function(polygons, points, in_field, out_field, lint = FALSE) {

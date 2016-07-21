@@ -12,11 +12,12 @@
 #' @template lint
 #' @family aggregations
 #' @return a \code{\link{data-FeatureCollection}}
-#' @examples
+#' @examples \dontrun{
 #' # using data in the package
 #' cat(lawn_data$points_count)
 #' cat(lawn_data$polygons_count)
 #' lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+#' }
 lawn_count <- function(polygons, points, countField = 'pt_count', lint = FALSE) {
   lawnlint(list(polygons, points), lint)
   ct$eval(sprintf('var polygons = %s;', polygons))

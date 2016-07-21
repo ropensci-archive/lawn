@@ -27,7 +27,7 @@ Filter a FeatureCollection by a given property and value
 }
 \examples{
 cat(lawn_data$filter_features)
-lawn_filter(lawn_data$filter_features, 'species', 'oak')
+lawn_filter(features = lawn_data$filter_features, key = 'species', value = 'oak')
 lawn_filter(lawn_data$filter_features, 'species', 'maple')
 lawn_filter(lawn_data$filter_features, 'species', 'redwood')
 }

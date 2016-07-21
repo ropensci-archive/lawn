@@ -9,11 +9,10 @@
 #' @family aggregations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @examples
+#' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
 #' lawn_sum(poly, pt, 'population', 'sum')
-#' @examples \dontrun{
 #' lawn_sum(poly, pt, 'population', 'sum') %>% view
 #' }
 lawn_sum <- function(polygons, points, in_field, out_field, lint = FALSE) {

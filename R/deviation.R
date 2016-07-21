@@ -16,10 +16,11 @@
 #' \code{\link{data-FeatureCollection}}
 #'
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
-#' @examples
+#' @examples \dontrun{
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
 #' lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
+#' }
 lawn_deviation <- function(polys, pts, inField, outField, lint = FALSE) {
   polys <- convert(polys)
   pts <- convert(pts)

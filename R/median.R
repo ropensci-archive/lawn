@@ -9,11 +9,10 @@
 #' @family aggregations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @examples
+#' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
 #' lawn_median(poly, pt, 'population', 'median')
-#' @examples \dontrun{
 #' lawn_median(poly, pt, 'population', 'median') %>% view
 #' }
 lawn_median <- function(polygons, points, in_field, out_field, lint = FALSE) {

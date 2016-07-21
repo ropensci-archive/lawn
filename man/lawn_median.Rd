@@ -29,9 +29,12 @@ Calculates the variance value of a field for a set of \code{\link{data-Point}}'s
 within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
 lawn_median(poly, pt, 'population', 'median')
+lawn_median(poly, pt, 'population', 'median') \%>\% view
+}
 }
 \seealso{
 Other aggregations: \code{\link{lawn_aggregate}},

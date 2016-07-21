@@ -37,7 +37,7 @@ lawn_aggregate <- function(polys, pts, agg = list(c("count", "", "num_of_pts")),
   pts <- convert(pts)
   lawnlint(list(polys, pts), lint)
   agg <- make_agg_array(agg)
-  ct$eval(sprintf("var aggreg = turf.aggregate(%s, %s, %s);", polys, pts, agg))
+  ct$eval(sprintf("var aggreg = turf.collect(%s, %s, %s);", polys, pts, agg))
   as.fc(ct$get("aggreg"))
 }
 

@@ -58,6 +58,6 @@ lawn_erase <- function(poly1, poly2, lint = FALSE) {
   poly1 <- convert(poly1)
   poly2 <- convert(poly2)
   lawnlint(list(poly1, poly2), lint)
-  ct$eval(sprintf("var er = turf.erase(%s, %s);", poly1, poly2))
+  ct$eval(sprintf("var er = turf.difference(%s, %s);", poly1, poly2))
   structure(ct$get("er"), class = "polygon")
 }

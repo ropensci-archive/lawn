@@ -27,10 +27,12 @@ Calculates the number of \code{\link{data-Point}}'s that fall within the set
 of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 # using data in the package
 cat(lawn_data$points_count)
 cat(lawn_data$polygons_count)
 lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+}
 }
 \seealso{
 Other aggregations: \code{\link{lawn_aggregate}},
