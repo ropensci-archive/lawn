@@ -86,6 +86,6 @@ lawn_quantile(pts, 'population', c(1, 50, 99.9))
 }
 \seealso{
 Other classification: \code{\link{lawn_jenks}},
-  \code{\link{lawn_nearest}}, \code{\link{lawn_reclass}}
+  \code{\link{lawn_nearest}}
 }
 

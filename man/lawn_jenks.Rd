@@ -40,6 +40,6 @@ Jenks Natural breaks
 }
 \seealso{
 Other classification: \code{\link{lawn_nearest}},
-  \code{\link{lawn_quantile}}, \code{\link{lawn_reclass}}
+  \code{\link{lawn_quantile}}
 }
 

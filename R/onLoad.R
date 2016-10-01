@@ -1,16 +1,16 @@
-#' @importFrom V8 new_context
+#' @importFrom V8 v8
 ct <- NULL
 rand <- NULL
 ht <- NULL
 
 .onLoad <- function(libname, pkgname){
-  ct <<- new_context();
-  ct$source(system.file("js/turf2.js", package = pkgname))
+  ct <<- V8::v8();
+  ct$source(system.file("js/turf3.js", package = pkgname))
   ct$source(system.file("js/cloner.js", package = pkgname))
 
-  rand <<- new_context();
+  rand <<- V8::v8();
   rand$source(system.file("js/geojson_random.js", package = pkgname))
 
-  ht <<- new_context();
+  ht <<- V8::v8();
   ht$source(system.file("js/geojsonhint.js", package = pkgname))
 }

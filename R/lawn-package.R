@@ -5,6 +5,8 @@
 #' coordinates. See \url{http://geojson.io/} for a tool to easily create GeoJSON
 #' in a browser.
 #'
+#' @seealso \code{\link{lawn-defunct}}
+#'
 #' @importFrom methods is
 #' @importFrom stats setNames
 #' @importFrom utils head
