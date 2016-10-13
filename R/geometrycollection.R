@@ -36,7 +36,6 @@
 #'    }
 #' ]'
 #' lawn_geometrycollection(x)
-#' }
 lawn_geometrycollection <- function(coordinates, properties = NULL) {
   ct$eval(sprintf("var geocoll = turf.geometryCollection(%s, %s);",
                   convert(coordinates), toj(properties)))

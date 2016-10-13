@@ -2,11 +2,11 @@
 
 ## turf
 
-Currently (as of 2016-10-12) using geojsonhint v3.5.1
+Currently (as of 2016-10-13) using geojsonhint v3.5.2
 
 To recreate `inst/js/turf3.js`:
 
-Download the minified file from <https://npmcdn.com/@turf/turf@3.5.1/turf.min.js>
+Download the minified file from <https://npmcdn.com/@turf/turf@3.5.2/turf.min.js>
 to `inst/js` directory in the `lawn` package
 
 ## simple-statistics
