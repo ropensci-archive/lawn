@@ -3,7 +3,8 @@
 #' Takes a polygon \code{\link{data-Polygon}} and returns a bbox
 #'
 #' @export
-#' @param polygons a FeatureCollection of \code{\link{data-Polygon}} features
+#' @param x a FeatureCollection of \code{\link{data-Polygon}} features
+#' @template lint
 #' @family measurements
 #' @return a bounding box
 #' @examples

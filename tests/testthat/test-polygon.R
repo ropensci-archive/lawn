@@ -31,6 +31,6 @@ test_that("lawn_polygon works", {
 })
 
 test_that("lawn_polygon fails correctly", {
-  expect_error(lawn_polygon(), "argument \"rings\" is missing, with no default")
+  expect_error(lawn_polygon(), "argument \"coordinates\" is missing, with no default")
   expect_error(lawn_polygon("stuff"), "stuff is not defined")
 })

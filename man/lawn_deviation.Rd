@@ -8,28 +8,29 @@ lawn_deviation(polygons, points, in_field, out_field = "deviation",
   lint = FALSE)
 }
 \arguments{
+\item{polygons}{Polygon(s) defining area to aggregate.}
+
+\item{points}{Points with values to aggregate.}
+
+\item{in_field}{Characater for the name of the field on \code{pts} on
+which you wish to perfrom the aggregation}
+
+\item{out_field}{Characater for the name of the field on the ouput
+polygon FeatureCollection that will store the resultant value.}
+
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
-
-\item{polys}{Polygon(s) defining area to aggregate.}
-
-\item{pts}{Points with values to aggregate.}
-
-\item{inField}{Characater for the name of the field on \code{pts} on which you wish to perfrom
-the aggregation}
-
-\item{outField}{Characater for the name of the field on the ouput polygon FeatureCollection
-that will store the resultant value.}
 }
 \value{
 polygons with appended field representing deviation, as a
 \code{\link{data-FeatureCollection}}
 }
 \description{
-Calculates the population standard deviation (i.e. denominator = n, not n-1) of
-values from \code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s
+Calculates the population standard deviation (i.e. denominator = n,
+not n-1) of values from \code{\link{data-Point}}'s within a set of
+\code{\link{data-Polygon}}'s
 }
 \examples{
 \dontrun{

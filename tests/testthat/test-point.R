@@ -19,7 +19,7 @@ test_that("lawn_point works", {
 })
 
 test_that("lawn_point fails correctly", {
-  expect_error(lawn_point(), "argument \"x\" is missing, with no default")
-  expect_error(lawn_point(x = 5), "Coordinates must be an array")
+  expect_error(lawn_point(), "argument \"coordinates\" is missing, with no default")
+  expect_error(lawn_point(5), "Coordinates must be an array")
   expect_error(lawn_point(NULL), "Coordinates must be an array")
 })

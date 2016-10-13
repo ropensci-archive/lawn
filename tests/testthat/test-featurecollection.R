@@ -139,7 +139,7 @@ test_that("lawn_featurecollection works - centroid", {
 
 # fails well ----------------------------
 test_that("lawn_featurecollection fails correctly", {
-  expect_error(lawn_featurecollection(), "no applicable method")
-  expect_error(lawn_featurecollection(5), "applied to an object of class")
+  expect_error(lawn_featurecollection(), "argument \"features\" is missing, with no default")
+  expect_error(lawn_featurecollection(5), "no 'lawn_featurecollection' method for numeric")
   expect_error(lawn_featurecollection(rings), "applied to an object of class \"list\"")
 })

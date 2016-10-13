@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param geometry any geojson geometry
+#' @template lint
 #' @family data functions
 #' @examples \dontrun{
 #' # points

@@ -7,9 +7,9 @@
 #'
 #' @param polygons Geojson \code{\link{data-Polygon}}'s
 #' @param points Geojson \code{\link{data-Point}}'s
-#' @param field (character) The field in the points features from which to pull
+#' @param in_field (character) The field in the points features from which to pull
 #' values to average
-#' @param outputField (character) The field in polygons to put results of the
+#' @param out_field (character) The field in polygons to put results of the
 #' averages
 #' @template lint
 #' @family aggregations

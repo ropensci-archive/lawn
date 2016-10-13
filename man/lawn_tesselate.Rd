@@ -4,15 +4,15 @@
 \alias{lawn_tesselate}
 \title{Tesselate}
 \usage{
-lawn_tesselate(poly, lint = FALSE)
+lawn_tesselate(polygon, lint = FALSE)
 }
 \arguments{
+\item{polygon}{input Polygon feaure}
+
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
 default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
-
-\item{poly1}{input Polygon feaure}
 }
 \value{
 a \code{\link{data-FeatureCollection}}
