@@ -25,7 +25,7 @@ as.turf.polygon <- function(x, ...) {
 
 #' @export
 as.turf.linestring <- function(x, ...) {
-  fixq(sprintf("turf.linestring(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.lineString(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export

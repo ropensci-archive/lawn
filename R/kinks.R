@@ -23,7 +23,7 @@
 #' lawn_kinks(poly, TRUE)
 #' @examples \dontrun{
 #' poly %>% view
-#' lawn_kinks(poly)$intersections %>% view
+#' lawn_kinks(poly) %>% view
 #' }
 lawn_kinks <- function(input, lint = FALSE) {
   lawnlint(input, lint)

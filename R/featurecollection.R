@@ -114,9 +114,9 @@ lawn_featurecollection.list <- function(features) {
     lawn_featurecollection(jsonlite::toJSON(features))
   } else {
     do_fc(lapply(features, function(z){
-      if (is(z, "character")) {
+      if (inherits(z, "character")) {
         lawn_featurecollection(z)
-      } else if (is(z, "featurecollection")) {
+      } else if (inherits(z, "featurecollection")) {
         type <- tolower(z$features$geometry$type)
         switch(type,
                polygon = lawn_polygon(z$features$geometry$coordinates[[1]]),
@@ -191,7 +191,7 @@ lawn_featurecollection.featurecollection <- function(features) {
 }
 
 do_fc <- function(features) {
-  fts <- unlist(sapply(features, as.turf))
+  fts <- unlist(vapply(features, as.turf, ""))
   ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featureCollection(features);")
   as.fc(ct$get("feet"))

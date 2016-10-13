@@ -4,7 +4,7 @@
 \alias{lawn_sum}
 \title{Sum of a field among points within polygons}
 \usage{
-lawn_sum(polygons, points, in_field, out_field, lint = FALSE)
+lawn_sum(polygons, points, in_field, out_field = "sum", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
@@ -32,8 +32,7 @@ within a set of \code{\link{data-Polygon}}'s
 \dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
-lawn_sum(poly, pt, 'population', 'sum')
-lawn_sum(poly, pt, 'population', 'sum') \%>\% view
+lawn_sum(poly, pt, 'population')
 }
 }
 \seealso{

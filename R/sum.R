@@ -12,13 +12,9 @@
 #' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' lawn_sum(poly, pt, 'population', 'sum')
-#' lawn_sum(poly, pt, 'population', 'sum') %>% view
+#' lawn_sum(poly, pt, 'population')
 #' }
-lawn_sum <- function(polygons, points, in_field, out_field, lint = FALSE) {
-  py <- convert(polygons)
-  pt <- convert(points)
+lawn_sum <- function(polygons, points, in_field, out_field = "sum", lint = FALSE) {
   lawnlint(list(polygons, points), lint)
-  ct$eval(sprintf("var sumed = turf.sum(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  as.fc(ct$get("sumed"))
+  calc_math("sum", convert(polygons), convert(points), in_field, out_field)
 }

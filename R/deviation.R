@@ -19,16 +19,9 @@
 #' @examples \dontrun{
 #' ex_polys <- lawn_data$polygons_aggregate
 #' ex_pts <- lawn_data$points_aggregate
-#' lawn_deviation(ex_polys, ex_pts, "population", "pop_sd")
+#' lawn_deviation(ex_polys, ex_pts, "population")
 #' }
-lawn_deviation <- function(polys, pts, inField, outField, lint = FALSE) {
-  polys <- convert(polys)
-  pts <- convert(pts)
-  lawnlint(list(polys, pts), lint)
-  ct$eval(sprintf("var polys = %s;", polys))
-  ct$eval(sprintf("var pts = %s;", pts))
-  ct$eval(sprintf("var inField = '%s';", inField))
-  ct$eval(sprintf("var outField = '%s';", outField))
-  ct$eval("var dev = turf.deviation(polys, pts, inField, outField);")
-  as.fc(ct$get("dev"))
+lawn_deviation <- function(polygons, points, in_field, out_field = "deviation", lint = FALSE) {
+  lawnlint(list(polygons, points), lint)
+  calc_math("standardDeviation", convert(polygons), convert(points), in_field, out_field)
 }

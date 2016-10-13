@@ -18,7 +18,7 @@ test_that("lawn_flip works", {
 })
 
 test_that("lawn_flip fails correctly", {
-  expect_equal(lawn_flip(5, FALSE), 5)
+  expect_error(lawn_flip(5, FALSE), "Unknown Geometry Type")
   expect_error(lawn_flip(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
   expect_error(lawn_flip("adfdfasds"), "ReferenceError")
 

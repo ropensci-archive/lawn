@@ -15,15 +15,18 @@ test_that("lawn_median returns correct classes", {
 })
 
 test_that("in_field and out_field parameter works as expected", {
-  expect_equal(length(lawn_median(poly, pt, 'population2', 'median')$features$properties), 1)
-  expect_named(lawn_median(poly, pt, 'population', 'bears')$features$properties, 'bears')
+  expect_equal(
+    length(na.omit(lawn_median(poly, pt, 'population2', 'median')$features$properties$median)),
+    0)
+  expect_named(lawn_median(poly, pt, 'population', 'bears')$features$properties,
+               c('values', 'bears'))
 })
 
 test_that("lawn_median fails correctly", {
   # missing arguments
   expect_error(lawn_median(), "argument \"polygons\" is missing, with no default")
   # wrong in_field param leads to no ouput for median
-  ## FIXME - this should be 0, opened issue in the turf.js repo
-  expect_equal(length(lawn_median(poly, pt, 'population2', 'median')$features$properties), 1)
+  expect_equal(
+    length(na.omit(lawn_median(poly, pt, 'population2', 'median')$features$properties$median)), 0)
   expect_error(lawn_median(poly, "{}", 'population', 'median'), "Cannot call method")
 })

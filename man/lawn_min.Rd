@@ -4,7 +4,7 @@
 \alias{lawn_min}
 \title{Minimum value of a field among points within polygons}
 \usage{
-lawn_min(polygons, points, in_field, out_field, lint = FALSE)
+lawn_min(polygons, points, in_field, out_field = "min", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
@@ -32,8 +32,7 @@ within a set of \code{\link{data-Polygon}}'s
 \dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
-lawn_min(poly, pt, 'population', 'min')
-lawn_min(poly, pt, 'population', 'min') \%>\% view
+lawn_min(poly, pt, 'population')
 }
 }
 \seealso{

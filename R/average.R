@@ -21,11 +21,7 @@
 #' lawn_average(polygons = lawn_data$polygons_average,
 #'              points = lawn_data$points_average, 'population')
 #' }
-lawn_average <- function(polygons, points, field, outputField = 'average', lint = FALSE) {
+lawn_average <- function(polygons, points, in_field, out_field = 'average', lint = FALSE) {
   lawnlint(list(polygons, points), lint)
-  ct$eval(sprintf('var polygons = %s;', polygons))
-  ct$eval(sprintf('var points = %s;', points))
-  #ct$eval(sprintf("var avg = turf.average(polygons, points, '%s', '%s');", field, outputField))
-  ct$eval(sprintf("var avg = turf.collect(polygons, points, '%s', '%s');", field, outputField))
-  as.fc(ct$get("avg"))
+  calc_math("mean", convert(polygons), convert(points), in_field, out_field)
 }

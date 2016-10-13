@@ -18,12 +18,10 @@ a <- lawn_kinks(poly)
 
 test_that("lawn_kinks works", {
   expect_is(a, "list")
-  expect_is(a$intersections, "list")
-  expect_null(a$fixed)
-  expect_is(a$intersections$features, "data.frame")
-  expect_is(a$intersections$features$type, "character")
-  expect_is(a$intersections$features$geometry, "data.frame")
-  expect_equivalent(round(a$intersections$features$geometry$coordinates[[1]][1]), -12)
+  expect_is(a$features, "data.frame")
+  expect_is(a$features$type, "character")
+  expect_is(a$features$geometry, "data.frame")
+  expect_equivalent(round(a$features$geometry$coordinates[[1]][1]), -12)
 })
 
 test_that("lawn_kinks fails correctly", {

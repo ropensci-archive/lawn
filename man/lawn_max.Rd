@@ -4,7 +4,7 @@
 \alias{lawn_max}
 \title{Maximum value of a field among points within polygons}
 \usage{
-lawn_max(polygons, points, in_field, out_field, lint = FALSE)
+lawn_max(polygons, points, in_field, out_field = "max", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
@@ -32,8 +32,7 @@ within a set of \code{\link{data-Polygon}}'s
 \dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
-lawn_max(poly, pt, 'population', 'max')
-lawn_max(poly, pt, 'population', 'max') \%>\% view
+lawn_max(poly, pt, 'population')
 }
 }
 \seealso{

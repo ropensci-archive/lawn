@@ -198,13 +198,13 @@ cat_props <- function(x) {
 }
 
 cat_props_df <- function(x, n) {
-  if (length(x$properties) != 0) {
+  if (length(x$features$properties) != 0) {
     cat("  Properties: ", sep = "\n")
-    if (is(x$properties, "data.frame")) {
-      trunc_mat(x$properties, n = n)
+    if (inherits(x$features$properties, "data.frame")) {
+      trunc_mat(x$features$properties, n = n)
     } else {
-      for (i in seq_along(x$properties)) {
-        cat(sprintf("     %s: %s", names(x$properties[i]), x$properties[[i]]), sep = "\n")
+      for (i in seq_along(x$features$properties)) {
+        cat(sprintf("     %s: %s", names(x$features$properties[i]), x$features$properties[[i]]), sep = "\n")
       }
     }
   } else {
