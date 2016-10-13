@@ -97,7 +97,7 @@ lawn_polygon(rings)
 Count number of points within polygons
 
 ```{r}
-lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count, "population")
 ```
 
 ## average
@@ -106,8 +106,8 @@ Average value of a field for a set of points within a set of polygons
 
 ```{r}
 lawn_average(polygons = lawn_data$polygons_average,
-             points = lawn_data$points_average,
-             field = 'population')
+             points = lawn_data$points_average, 
+             in_field = 'population')
 ```
 
 ## distance

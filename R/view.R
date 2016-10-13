@@ -130,7 +130,7 @@ view.featurecollection <- function(x) {
 }
 
 make_view_obj <- function(x) {
-  make_view(toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
+  make_view(jsonlite::toJSON(unclass(x), auto_unbox = TRUE, digits = 22))
 }
 
 #' @export

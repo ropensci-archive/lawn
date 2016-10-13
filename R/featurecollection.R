@@ -107,6 +107,12 @@ lawn_featurecollection <- function(features) {
   UseMethod("lawn_featurecollection")
 }
 
+# no method, method
+#' @export
+lawn_featurecollection.default <- function(features) {
+  stop("no 'lawn_featurecollection' method for ", class(features), call. = FALSE)
+}
+
 # from a list, could be many different things in the list ----
 #' @export
 lawn_featurecollection.list <- function(features) {
@@ -136,12 +142,27 @@ lawn_featurecollection.point <- function(features) {
 }
 
 #' @export
+lawn_featurecollection.multipoint <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
 lawn_featurecollection.polygon <- function(features) {
   do_fc(list(features))
 }
 
 #' @export
+lawn_featurecollection.multipolygon <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
 lawn_featurecollection.linestring <- function(features) {
+  do_fc(list(features))
+}
+
+#' @export
+lawn_featurecollection.multilinestring <- function(features) {
   do_fc(list(features))
 }
 

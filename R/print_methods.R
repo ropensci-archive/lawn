@@ -124,7 +124,7 @@ print.multipoint <- function(x, n = 10, ...) {
   cat("<MultiPoint>", sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
   cat(sprintf("  No. points: %s", NROW(x$geometry$coordinates)), sep = "\n")
-  cat_props_df(x, n)
+  cat_props_df2(x, n)
 }
 
 #' @export
@@ -143,7 +143,7 @@ print.multipolygon <- function(x, n = 10, ...) {
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
   cat(sprintf("  No. polygons: %s", length(x$coordinates)), sep = "\n")
   cat(sprintf("  No. points: %s", length(unlist(x$coordinates))), sep = "\n")
-  cat_props_df(x, n)
+  cat_props_df2(x, n)
 }
 
 #' @export
@@ -162,7 +162,7 @@ print.multilinestring <- function(x, n = 10, ...) {
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
   cat(sprintf("  No. lines: %s", NROW(x$geometry$coordinates)), sep = "\n")
   cat(sprintf("  No. points: %s", length(x$geometry$coordinates)), sep = "\n")
-  cat_props_df(x, n)
+  cat_props_df2(x, n)
 }
 
 #' @export
@@ -173,6 +173,16 @@ print.featurecollection <- function(x, n = 10, ...) {
   cat(sprintf("  No. features: %s", length(x$features$geometry$coordinates)), sep = "\n")
   cat(sprintf("  No. points: %s", length(unlist(x$features$geometry$coordinates, recursive = TRUE))), sep = "\n")
   cat_props_df(x, n)
+}
+
+#' @export
+#' @noRd
+print.geometrycollection <- function(x, n = 10, ...) {
+  cat("<GeometryCollection>", sep = "\n")
+  cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
+  cat(sprintf("  No. geometries: %s", NROW(x$geometry$geometries)), sep = "\n")
+  cat(sprintf("  No. points: %s", length(unlist(x$geometry$geometries$coordinates, recursive = TRUE))), sep = "\n")
+  cat_props_df2(x, n)
 }
 
 #' @export
@@ -191,6 +201,21 @@ cat_props <- function(x) {
     cat("  Properties: ", sep = "\n")
     for (i in seq_along(x$properties)) {
       cat(sprintf("     %s: %s", names(x$properties[i]), x$properties[[i]]), sep = "\n")
+    }
+  } else {
+    props_null()
+  }
+}
+
+cat_props_df2 <- function(x, n) {
+  if (length(x$properties) != 0) {
+    cat("  Properties: ", sep = "\n")
+    if (inherits(x$properties, "data.frame")) {
+      trunc_mat(x$properties, n = n)
+    } else {
+      for (i in seq_along(x$properties)) {
+        cat(sprintf("     %s: %s", names(x$properties[i]), x$properties[[i]]), sep = "\n")
+      }
     }
   } else {
     props_null()

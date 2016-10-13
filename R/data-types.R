@@ -33,7 +33,7 @@
 #'
 #' Example JSON: \code{{ "type": "MultiPoint", "coordinates": [ [100.0, 0.0], [101.0, 1.0] ] }}
 #'
-#' Creation of multipoint in \code{lawn} coming soon
+#' See: \code{\link{lawn_multipoint}}
 #'
 #' @section Polygon:
 #'
@@ -62,7 +62,7 @@
 #'   ]
 #' }}
 #'
-#' Creation of multipolygon in \code{lawn} coming soon
+#' See: \code{\link{lawn_multipolygon}}
 #'
 #' @section LineString:
 #'
@@ -93,7 +93,7 @@
 #'   ]
 #' }}
 #'
-#' Creation of multilinestring in \code{lawn} coming soon
+#' See: \code{\link{lawn_multilinestring}}
 #'
 #' @section Feature:
 #'
@@ -108,6 +108,8 @@
 #'  \item If a feature has a commonly used identifier, that identifier should be
 #'  included as a member of the feature object with the name "id".
 #' }
+#'
+#' See: \code{\link{lawn_feature}}
 #'
 #' @section FeatureCollection:
 #'
@@ -138,7 +140,7 @@
 #'  ]
 #' }}
 #'
-#' Creation of geometrycollection in \code{lawn} coming soon
+#' See: \code{\link{lawn_geometrycollection}}
 #'
 #' @name data-types
 #' @aliases data-Point data-MultiPoint data-Polygon data-MultiPolygon data-LineString

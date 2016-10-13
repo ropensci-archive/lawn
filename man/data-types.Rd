@@ -54,7 +54,7 @@ For type "MultiPoint", the "coordinates" member must be an array of positions.
 
 Example JSON: \code{{ "type": "MultiPoint", "coordinates": [ [100.0, 0.0], [101.0, 1.0] ] }}
 
-Creation of multipoint in \code{lawn} coming soon
+See: \code{\link{lawn_multipoint}}
 }
 
 \section{Polygon}{
@@ -87,7 +87,7 @@ Example JSON:
   ]
 }}
 
-Creation of multipolygon in \code{lawn} coming soon
+See: \code{\link{lawn_multipolygon}}
 }
 
 \section{LineString}{
@@ -122,7 +122,7 @@ Example JSON:
   ]
 }}
 
-Creation of multilinestring in \code{lawn} coming soon
+See: \code{\link{lawn_multilinestring}}
 }
 
 \section{Feature}{
@@ -139,6 +139,8 @@ A GeoJSON object with the type "Feature" is a feature object:
  \item If a feature has a commonly used identifier, that identifier should be
  included as a member of the feature object with the name "id".
 }
+
+See: \code{\link{lawn_feature}}
 }
 
 \section{FeatureCollection}{
@@ -173,6 +175,6 @@ Example JSON:
  ]
 }}
 
-Creation of geometrycollection in \code{lawn} coming soon
+See: \code{\link{lawn_geometrycollection}}
 }
 

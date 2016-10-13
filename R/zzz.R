@@ -80,7 +80,15 @@ lintit <- function(z) {
   }
 }
 
+as.p <- function(x) structure(x, class = "point")
+as.mp <- function(x) structure(x, class = "multipoint")
+as.l <- function(x) structure(x, class = "linestring")
+as.ml <- function(x) structure(x, class = "multilinestring")
+as.pol <- function(x) structure(x, class = "polygon")
+as.mpol <- function(x) structure(x, class = "multipolygon")
+as.f <- function(x) structure(x, class = "feature")
 as.fc <- function(x) structure(x, class = "featurecollection")
+as.gc <- function(x) structure(x, class = "geometrycollection")
 
 pluck <- function(x, name, type) {
   if (missing(type)) {

@@ -1,7 +1,7 @@
 #' Create a point
 #'
 #' @export
-#' @param x A pair of points in a vector, list or json, of the form
+#' @param coordinates A pair of points in a vector, list or json, of the form
 #' \code{e.g., c(longitude,latitude)}
 #' @param properties A list of properties. Default: NULL
 #' @family data functions
@@ -14,7 +14,8 @@
 #'
 #' # Make a FeatureCollection
 #' lawn_featurecollection(lawn_point(c(-74.5, 40)))
-lawn_point <- function(x, properties = NULL) {
-  ct$eval(sprintf("var pt = turf.point(%s, %s);", convert(x), toj(properties)))
+lawn_point <- function(coordinates, properties = NULL) {
+  ct$eval(sprintf("var pt = turf.point(%s, %s);",
+                  convert(coordinates), toj(properties)))
   structure(ct$get("pt"), class = "point")
 }

@@ -33,8 +33,14 @@ lawn_filter(lawn_data$filter_features, 'species', 'redwood')
 }
 \seealso{
 Other data functions: \code{\link{lawn_featurecollection}},
-  \code{\link{lawn_linestring}}, \code{\link{lawn_point}},
-  \code{\link{lawn_polygon}}, \code{\link{lawn_random}},
-  \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
+  \code{\link{lawn_feature}},
+  \code{\link{lawn_geometrycollection}},
+  \code{\link{lawn_linestring}},
+  \code{\link{lawn_multilinestring}},
+  \code{\link{lawn_multipoint}},
+  \code{\link{lawn_multipolygon}},
+  \code{\link{lawn_point}}, \code{\link{lawn_polygon}},
+  \code{\link{lawn_random}}, \code{\link{lawn_remove}},
+  \code{\link{lawn_sample}}
 }
 
