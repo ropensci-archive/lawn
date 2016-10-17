@@ -36,8 +36,8 @@ lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
-  \code{\link{lawn_average}}, \code{\link{lawn_deviation}},
+Other aggregations: \code{\link{lawn_average}},
+  \code{\link{lawn_collect}}, \code{\link{lawn_deviation}},
   \code{\link{lawn_max}}, \code{\link{lawn_median}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}

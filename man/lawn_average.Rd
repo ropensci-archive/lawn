@@ -40,7 +40,7 @@ lawn_average(polygons = lawn_data$polygons_average,
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
+Other aggregations: \code{\link{lawn_collect}},
   \code{\link{lawn_count}}, \code{\link{lawn_deviation}},
   \code{\link{lawn_max}}, \code{\link{lawn_median}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},

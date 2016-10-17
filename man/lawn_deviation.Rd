@@ -43,8 +43,8 @@ lawn_deviation(ex_polys, ex_pts, "population")
 Jeff Hollister \email{hollister.jeff@epa.gov}
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
-  \code{\link{lawn_average}}, \code{\link{lawn_count}},
+Other aggregations: \code{\link{lawn_average}},
+  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
   \code{\link{lawn_max}}, \code{\link{lawn_median}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
