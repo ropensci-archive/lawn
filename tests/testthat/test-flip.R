@@ -23,14 +23,14 @@ test_that("lawn_flip fails correctly", {
   expect_error(lawn_flip("adfdfasds"), "ReferenceError")
 
   bad1 <- '{"type":"Feature","properties":{},"geometry":{"type":"point","coordinates":[20.566406,43.421008]}}'
-  expect_error(lawn_flip(bad1, TRUE), "The type point is unknown")
+  expect_error(lawn_flip(bad1, TRUE), "Line 1 - Expected Point but got point \\(case sensitive\\)")
 
   bad2 <- '{"type":"Feature","properties":{},"geometry":{"type":"Point","cordinates":[20.566406,43.421008]}}'
-  expect_error(lawn_flip(bad2, TRUE), '"coordinates" property required')
+  expect_error(lawn_flip(bad2, TRUE), '"coordinates" member required')
 
   bad3 <- '{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[20.566406 43.421008]}}'
   expect_error(lawn_flip(bad3, TRUE), 'parse error')
 
   bad4 <- '{"typ":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[20.566406, 43.421008]}}'
-  expect_error(lawn_flip(bad4, TRUE), 'The type property is required and was not found')
+  expect_error(lawn_flip(bad4, TRUE), 'Line 1 - "type" member required')
 })

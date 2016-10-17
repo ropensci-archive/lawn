@@ -40,5 +40,5 @@ test_that("lawn_extent returns correct values", {
 test_that("lawn_extent fails correctly", {
   expect_error(lawn_extent(), "argument \"input\" is missing, with no default")
   expect_error(lawn_extent(5), "Unknown Geometry Type")
-  expect_error(lawn_extent("{}", TRUE), "The type property is required and was not found")
+  expect_error(lawn_extent("{}", TRUE), "Line 1 - \"type\" member required")
 })

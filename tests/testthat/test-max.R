@@ -28,5 +28,6 @@ test_that("lawn_max fails correctly", {
   # can't pass in a character string to cellWidth
   expect_error(lawn_max(poly, "{}", 'population', 'max'), "Cannot call method")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_max(poly, "{}", 'population', 'max', lint = TRUE), "The type property is required")
+  expect_error(lawn_max(poly, "{}", 'population', 'max', lint = TRUE),
+               'Line 1 - "type" member required')
 })

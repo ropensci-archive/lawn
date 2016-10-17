@@ -76,6 +76,6 @@ test_that("lawn_combine works", {
 test_that("lawn_combine fails correctly", {
   expect_error(lawn_combine(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
   expect_error(lawn_combine("ex_polys", TRUE), "invalid char in json text")
-  expect_error(lawn_combine("{}", TRUE), "Line 1 - The type property is required and was not found")
+  expect_error(lawn_combine("{}", TRUE), "Line 1 - \"type\" member required")
   expect_error(lawn_combine(sub("FeatureCollection", "adfadf", fc1), TRUE), "The type adfadf is unknown")
 })

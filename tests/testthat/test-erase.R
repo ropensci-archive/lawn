@@ -81,15 +81,15 @@ test_that("lawn_erase works", {
 test_that("lawn_erase fails correctly", {
   expect_error(lawn_erase(), "argument \"poly1\" is missing, with no default")
   expect_error(lawn_erase("A", "B"), "A is not defined")
-  expect_error(lawn_erase(poly1, "{}", lint = TRUE), "The type property is required and was not found")
+  expect_error(lawn_erase(poly1, "{}", lint = TRUE), "\"type\" member required")
   expect_error(lawn_erase(poly1, '{"type": "Feature"}', lint = TRUE),
-               '"properties" property required \nLine 1 - "geometry" property required')
+               '"properties" member required \nLine 1 - "geometry" member required')
   expect_error(lawn_erase(poly1, '{"type": "Feature", "geometry": {}}', lint = TRUE),
-               'Line 1 - "properties" property required \nLine 1 - The type property is required and was not found')
+               'Line 1 - "properties" member required \nLine 1 - \"type\" member required')
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {}}', lint = TRUE),
-               'The type property is required and was not found')
+               'Line 1 - "type" member required')
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {"type": {}}}', lint = TRUE),
-               'Line 1 - The type \\[object Object\\] is unknown')
+               'Line 1 - "type" member should be string, but is an object instead')
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {"type": "Point", "coordinates": []}}', lint = TRUE),
                'Line 1 - position must have 2 or more elements')
 })

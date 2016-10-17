@@ -13,5 +13,5 @@ ht <- NULL
   rand$source(system.file("js/geojson_random.js", package = pkgname))
 
   ht <<- V8::v8();
-  ht$source(system.file("js/geojsonhint.js", package = pkgname))
+  ht$source(system.file("js/geojsonhint-v2beta.js", package = pkgname))
 }

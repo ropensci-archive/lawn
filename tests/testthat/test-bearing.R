@@ -49,8 +49,8 @@ start_bad2 <- '{
 }'
 
 test_that("lawn_bearing linting works correctly", {
-  expect_error(lawn_bearing(start_bad1, end, lint = TRUE), "Line 1 - \"coordinates\" property required")
-  expect_error(lawn_bearing(start_bad2, end, lint = TRUE), "Line 1 - \"geometry\" property required")
+  expect_error(lawn_bearing(start_bad1, end, lint = TRUE), "Line 1 - \"coordinates\" member required")
+  expect_error(lawn_bearing(start_bad2, end, lint = TRUE), "Line 1 - \"geometry\" member required")
 })
 
 test_that("lawn_bearing fails correctly", {

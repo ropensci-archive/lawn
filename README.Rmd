@@ -42,7 +42,7 @@ library("lawn")
 Count number of points within polygons
 
 ```{r}
-lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
 ```
 
 ## average
