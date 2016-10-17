@@ -11,6 +11,12 @@
  \item \code{\link{lawn_reclass}}: Function removed. The \code{reclass}
  method in turf.js has been removed.
  See \url{https://github.com/Turfjs/turf/issues/306}
+ \item \code{\link{lawn_jenks}}: Function removed. The \code{reclass}
+ method in turf.js has been removed.
+ See \url{https://github.com/Turfjs/turf/issues/306}
+ \item \code{\link{lawn_quantile}}: Function removed. The \code{reclass}
+ method in turf.js has been removed.
+ See \url{https://github.com/Turfjs/turf/issues/306}
 }
 }
 

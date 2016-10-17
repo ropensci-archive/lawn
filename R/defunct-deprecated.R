@@ -16,6 +16,26 @@ lawn_reclass <- function(...) {
   .Defunct(msg = "lawn_reclass is defunct - it has been removed from turf.js")
 }
 
+#' Get Jenks breaks
+#'
+#' This function is defunct
+#'
+#' @keywords internal
+lawn_jenks <- function(...) {
+  .Defunct(msg = "lawn_jenks is defunct - it has been removed from turf.js")
+}
+
+#' Calculate quantiles
+#'
+#' This function is defunct
+#'
+#' @keywords internal
+lawn_quantile <- function(...) {
+  .Defunct(msg = "lawn_quantile is defunct - it has been removed from turf.js")
+}
+
+
+
 #' Defunct functions in \pkg{lawn}
 #'
 #' \itemize{
@@ -23,6 +43,12 @@ lawn_reclass <- function(...) {
 #'  method in turf.js has been removed.
 #'  See \url{https://github.com/Turfjs/turf/issues/306}
 #'  \item \code{\link{lawn_reclass}}: Function removed. The \code{reclass}
+#'  method in turf.js has been removed.
+#'  See \url{https://github.com/Turfjs/turf/issues/306}
+#'  \item \code{\link{lawn_jenks}}: Function removed. The \code{reclass}
+#'  method in turf.js has been removed.
+#'  See \url{https://github.com/Turfjs/turf/issues/306}
+#'  \item \code{\link{lawn_quantile}}: Function removed. The \code{reclass}
 #'  method in turf.js has been removed.
 #'  See \url{https://github.com/Turfjs/turf/issues/306}
 #' }
