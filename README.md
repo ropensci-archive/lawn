@@ -105,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -179.6 11.9 96.8 59.8
+#>   Bounding box: -162.5 2.2 -111.4 69.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -179.1 -79.1 128.8 65.8
+#>   Bounding box: -170.9 -68.1 148.1 81.0
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: 114.4 51.6 155.6 70.5
+#>   Bounding box: -133.8 76.8 106.0 82.8
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 48.90621 32.75471
+#> [1]  36.67973 -52.58608
 ```
 
 Polygons
@@ -149,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -13.2 78.8 -8.7 83.3
+#>   Bounding box: 159.0 -85.7 164.6 -82.8
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -162,7 +162,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: 
@@ -180,7 +180,7 @@ lawn_sample(dat, 2)
 #>   Properties: 
 #>   population
 #> 1        100
-#> 2        300
+#> 2        200
 ```
 
 
@@ -194,7 +194,7 @@ lawn_sample(dat, 3)
 #>   population
 #> 1        100
 #> 2        600
-#> 3        200
+#> 3        300
 ```
 
 ## extent
@@ -236,10 +236,10 @@ dat <- '{
    }
 }'
 lawn_buffer(dat, 1, "miles")
-#> <FeatureCollection>
+#> <Feature>
+#>   Type: Polygon
 #>   Bounding box: -112.1 46.6 -112.0 46.6
-#>   No. features: 0
-#>   No. points: 0
+#>   No. points: 74
 #>   Properties: NULL
 ```
 
@@ -268,7 +268,7 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 ## Contributors
 
 * [Scott Chamberlain](https://github.com/sckott)
-* [Jeff Hollister](https://github.com/thanhleviet)
+* [Jeff Hollister](https://github.com/jhollist)
 * [Thanh Lê](https://github.com/thanhleviet)
 
 ## Meta

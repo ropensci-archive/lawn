@@ -45,18 +45,18 @@
 #' # buffer a point
 #' lawn_buffer(lawn_point(c(-74.50,40)), 100, "meters")
 #'
-#' @examples \dontrun{
-#' lawn_featurecollection(list(
-#'    pt,
-#'    lawn_buffer(pt, 5)
-#' )) %>% view
-#' }
 lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
+
   input <- convert(input)
   lawnlint(input, lint)
   units <- match.arg(units, c("meters", "feet", "kilometers", "miles", "degrees"))
   ct$eval(sprintf("var units = '%s';", units))
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))
-  as.fc(ct$get("buff"))
+  output <- ct$get("buff")
+  if(output$type == "Feature"){
+    return(as.f(output))
+  } else if(output$type == "FeatureCollection") {
+    return(as.fc(output))
+  }
 }
