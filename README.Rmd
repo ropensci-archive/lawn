@@ -182,7 +182,7 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 ## Contributors
 
 * [Scott Chamberlain](https://github.com/sckott)
-* [Jeff Hollister](https://github.com/thanhleviet)
+* [Jeff Hollister](https://github.com/jhollist)
 * [Thanh Lê](https://github.com/thanhleviet)
 
 ## Meta
