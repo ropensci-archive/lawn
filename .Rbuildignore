@@ -7,8 +7,6 @@ inst/img
 CONTRIBUTING.md
 ^\.httr-oauth$
 man-roxygen
-vignettes/img
 .V8history
 cran-comments.md
-
 ^CONDUCT\.md$
