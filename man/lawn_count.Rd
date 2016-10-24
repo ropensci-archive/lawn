@@ -4,15 +4,16 @@
 \alias{lawn_count}
 \title{Count number of points within polygons}
 \usage{
-lawn_count(polygons, points, countField = "pt_count", lint = FALSE)
+lawn_count(polygons, points, in_field, out_field = "count", lint = FALSE)
 }
 \arguments{
-\item{polygons}{Geojson polygons}
+\item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
 
-\item{points}{Geojson points}
+\item{points}{a FeatureCollection of \code{\link{data-Point}} features}
 
-\item{countField}{(character) A field to append to the attributes of the Polygon features
-representing Point counts}
+\item{in_field}{(character) the field in input data to analyze}
+
+\item{out_field}{(character) the field in which to store results}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -27,14 +28,16 @@ Calculates the number of \code{\link{data-Point}}'s that fall within the set
 of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 # using data in the package
 cat(lawn_data$points_count)
 cat(lawn_data$polygons_count)
-lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
+}
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
-  \code{\link{lawn_average}}, \code{\link{lawn_deviation}},
+Other aggregations: \code{\link{lawn_average}},
+  \code{\link{lawn_collect}}, \code{\link{lawn_deviation}},
   \code{\link{lawn_max}}, \code{\link{lawn_median}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}

@@ -39,12 +39,15 @@ Count number of points within polygons
 
 
 ```r
-lawn_count(polygons = lawn_data$polygons_count, points = lawn_data$points_count)
+lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
 #> <FeatureCollection>
 #>   Bounding box: -112.1 46.6 -112.0 46.6
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties: NULL
+#>   Properties: 
+#>     values count
+#> 1 200, 600     2
+#> 2              0
 ```
 
 ## average
@@ -58,7 +61,10 @@ lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_av
 #>   Bounding box: 10.7 59.9 10.9 59.9
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties: NULL
+#>   Properties: 
+#>          values average
+#> 1 200, 600, 100     300
+#> 2      200, 300     250
 ```
 
 ## distance
@@ -99,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -60.9 43.4 59.9 57.9
+#>   Bounding box: -162.5 2.2 -111.4 69.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -109,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -137.6 -77.2 167.4 85.8
+#>   Bounding box: -170.9 -68.1 148.1 81.0
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -123,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -80.6 71.6 -60.2 88.1
+#>   Bounding box: -133.8 76.8 106.0 82.8
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -134,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 24.779369  6.632737
+#> [1]  36.67973 -52.58608
 ```
 
 Polygons
@@ -143,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: 129.8 55.9 136.0 59.8
+#>   Bounding box: 159.0 -85.7 164.6 -82.8
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -159,7 +165,9 @@ lawn_sample(dat, 1)
 #>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
-#>   Properties: NULL
+#>   Properties: 
+#>   population
+#> 1        200
 ```
 
 
@@ -169,7 +177,10 @@ lawn_sample(dat, 2)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
-#>   Properties: NULL
+#>   Properties: 
+#>   population
+#> 1        100
+#> 2        200
 ```
 
 
@@ -179,7 +190,11 @@ lawn_sample(dat, 3)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 3
 #>   No. points: 6
-#>   Properties: NULL
+#>   Properties: 
+#>   population
+#> 1        100
+#> 2        600
+#> 3        300
 ```
 
 ## extent
@@ -221,9 +236,9 @@ dat <- '{
    }
 }'
 lawn_buffer(dat, 1, "miles")
-#> <FeatureCollection>
+#> <Feature>
+#>   Type: Polygon
 #>   Bounding box: -112.1 46.6 -112.0 46.6
-#>   No. features: 1
 #>   No. points: 74
 #>   Properties: NULL
 ```
@@ -253,7 +268,7 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 ## Contributors
 
 * [Scott Chamberlain](https://github.com/sckott)
-* [Jeff Hollister](https://github.com/thanhleviet)
+* [Jeff Hollister](https://github.com/jhollist)
 * [Thanh Lê](https://github.com/thanhleviet)
 
 ## Meta

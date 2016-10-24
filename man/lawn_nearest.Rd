@@ -64,8 +64,4 @@ against <- '{
 lawn_nearest(point, against)
 
 }
-\seealso{
-Other classification: \code{\link{lawn_jenks}},
-  \code{\link{lawn_quantile}}, \code{\link{lawn_reclass}}
-}
 

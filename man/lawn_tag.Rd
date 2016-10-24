@@ -4,16 +4,17 @@
 \alias{lawn_tag}
 \title{Spatial join of points and polygons}
 \usage{
-lawn_tag(points, polygons, poly_id, containing_polyid, lint = FALSE)
+lawn_tag(points, polygons, field, out_field, lint = FALSE)
 }
 \arguments{
 \item{points}{Input \code{\link{data-Point}}}
 
-\item{polygons}{Input \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}}
+\item{polygons}{Input \code{\link{data-Polygon}} or
+\code{\link{data-MultiPolygon}}}
 
-\item{poly_id}{property in polygons to add to joined Point features}
+\item{field}{property in polygons to add to joined Point features}
 
-\item{containing_polyid}{property in points in which to store joined
+\item{out_field}{property in points in which to store joined
 property from polygons}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
@@ -29,10 +30,12 @@ Takes a set of \code{\link{data-Point}}'s and a set of
 \code{\link{data-Polygon}}'s and performs a spatial join
 }
 \examples{
-pts <- lawn_random(n = 30)
-polys <- lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
-polys$features$properties <-
-   data.frame(fill = c("#f92", "295"), stroke = 1:2, `fill-opacity` = 2:3)
+bbox <- c(0, 0, 10, 10)
+pts <- lawn_random(n = 30, bbox = bbox)
+polys <- lawn_triangle_grid(bbox, 50, 'miles')
+polys$features$properties$fill <- "#f92"
+polys$features$properties$stroke <- 0
+polys$features$properties$`fill-opacity` <- 1
 lawn_tag(pts, polys, 'fill', 'marker-color')
 }
 \seealso{

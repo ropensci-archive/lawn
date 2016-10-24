@@ -15,17 +15,25 @@ test_that("lawn_variance returns correct classes", {
 })
 
 test_that("cellWidth parameter works as expected", {
-  expect_equal(length(lawn_variance(poly, pt, 'population2', 'max')$features$properties), 1)
-  expect_named(lawn_variance(poly, pt, 'population', 'bears')$features$properties, 'bears')
+  expect_equal(
+    length(na.omit(lawn_variance(poly, pt, 'population2')$features$properties$variance)),
+    0
+  )
+  expect_named(lawn_variance(poly, pt, 'population', 'bears')$features$properties,
+               c('values', 'bears'))
 })
 
 test_that("lawn_variance fails correctly", {
   # missing arguments
   expect_error(lawn_variance(), "argument \"polygons\" is missing, with no default")
   # wrong in_field param leads to no ouput for max
-  expect_equal(length(lawn_variance(poly, pt, 'population2', 'max')$features$properties), 1)
+  expect_equal(
+    length(na.omit(lawn_variance(poly, pt, 'population2')$features$properties$variance)),
+    0
+  )
   # can't pass in a character string to cellWidth
   expect_error(lawn_variance(poly, "{}", 'population', 'max'), "Cannot call method")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_variance(poly, "{}", 'population', 'max', lint = TRUE), "The type property is required")
+  expect_error(lawn_variance(poly, "{}", 'population', 'max', lint = TRUE),
+               'Line 1 - "type" member required')
 })

@@ -20,6 +20,12 @@ lawn_bbox_polygon <- function(bbox) {
   structure(ct$get("bbp"), class = "polygon")
 }
 
+lawn_bbox <- function(x) {
+  lawnlint(x, lint)
+  ct$eval(sprintf("var bbp = turf.bbox(%s);", convert(x)))
+  structure(ct$get("bbp"), class = "polygon")
+}
+
 all_numeric <- function(x) {
   if (!all(vapply(x, is.numeric, logical(1)))) {
     stop("All values must be numeric", call. = FALSE)

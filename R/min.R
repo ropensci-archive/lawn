@@ -9,17 +9,12 @@
 #' @family aggregations
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @examples
+#' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' lawn_min(poly, pt, 'population', 'min')
-#' @examples \dontrun{
-#' lawn_min(poly, pt, 'population', 'min') %>% view
+#' lawn_min(poly, pt, 'population')
 #' }
-lawn_min <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_min <- function(polygons, points, in_field, out_field = "min", lint = FALSE) {
   lawnlint(list(polygons, points), lint)
-  py <- convert(polygons)
-  pt <- convert(points)
-  ct$eval(sprintf("var min = turf.min(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  as.fc(ct$get("min"))
+  calc_math("min", convert(polygons), convert(points), in_field, out_field)
 }

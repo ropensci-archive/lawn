@@ -11,8 +11,8 @@ test_that("lawn_square returns correct classes", {
 test_that("lawn_square fails correctly", {
   # missing arguments
   expect_error(lawn_square(), "argument \"bbox\" is missing, with no default")
-  # only length 3 input gives NAs
-  expect_true(is.na(lawn_square(c(1, 2, 4))[1]))
+  # only length 3 gives error message
+  expect_error(lawn_square(c(1, 2, 4)), "A coordinate, feature, or point geometry is required")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_square(c(1, 2, 4, "a")), "a is not defined")
+  expect_error(lawn_square(c(1, 2, 4, "a")), "TypeError: Object 1 has no method 'slice'")
 })

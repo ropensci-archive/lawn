@@ -6,7 +6,7 @@ obj_names <- c('eval', 'assign', 'validate', 'call',
 test_that("onload for turf.js worked", {
   expect_is(ct, "V8")
   expect_true(all(obj_names %in% ls(ct)))
-  expect_true(grepl("function", ct$eval("turf.min")))
+  expect_true(grepl("function", ct$eval("turf.collect")))
 })
 
 test_that("onload for geojson-random worked", {

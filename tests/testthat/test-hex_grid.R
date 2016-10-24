@@ -30,5 +30,5 @@ test_that("lawn_hex_grid fails correctly", {
   # can't pass in a character string to cellWidth
   expect_error(lawn_hex_grid(c(-96, 31, -84, 40), "the", 'miles'), "the is not defined")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), 50, 'doesntexist'), "unknown option given to \"units\"")
+  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), 50, 'doesntexist'), "Invalid unit")
 })

@@ -23,19 +23,19 @@ test_that("lint parameter works correctly", {
   # linting isn't envoked b/c bad JSON
   expect_error(lawn_erase("A", "B", lint = TRUE), "invalid char in json text")
   # lint: everything missing
-  expect_error(lawn_erase(poly1, "{}", lint = TRUE), "The type property is required and was not found")
+  expect_error(lawn_erase(poly1, "{}", lint = TRUE), "Line 1 - \"type\" member required")
   # lint: properties and geometry slots missing
   expect_error(lawn_erase(poly1, '{"type": "Feature"}', lint = TRUE),
-               '"properties" property required \nLine 1 - "geometry" property required')
+               '"properties" member required \nLine 1 - "geometry" member required')
   # lint: properties missing, and type within geometry slot missing
   expect_error(lawn_erase(poly1, '{"type": "Feature", "geometry": {}}', lint = TRUE),
-               'Line 1 - "properties" property required \nLine 1 - The type property is required and was not found')
-  # lint: type property within geometry slot missing
+               'Line 1 - \"properties\" member required \nLine 1 - \"type\" member required')
+  # lint: type member within geometry slot missing
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {}}', lint = TRUE),
-               'The type property is required and was not found')
+               'Line 1 - "type" member required')
   # lint: object within geometry slot missing
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {"type": {}}}', lint = TRUE),
-               'Line 1 - The type \\[object Object\\] is unknown')
+               'Line 1 - "type" member should be string, but is an object instead')
 
   # lint: coordinates data within geometry slot missing
   expect_error(lawn_erase(poly1, '{"type": "Feature", "properties": {}, "geometry": {"type": "Point", "coordinates": []}}', lint = TRUE),

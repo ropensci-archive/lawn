@@ -11,17 +11,12 @@
 #' @template lint
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
 #' properties listed as \code{out_field}
-#' @examples
+#' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average
-#' lawn_variance(poly, pt, 'population', 'variance')
-#' @examples \dontrun{
-#' lawn_variance(poly, pt, 'population', 'variance') %>% view
+#' lawn_variance(poly, pt, 'population')
 #' }
-lawn_variance <- function(polygons, points, in_field, out_field, lint = FALSE) {
+lawn_variance <- function(polygons, points, in_field, out_field = "variance", lint = FALSE) {
   lawnlint(list(polygons, points), lint)
-  py <- convert(polygons)
-  pt <- convert(points)
-  ct$eval(sprintf("var variance = turf.variance(%s, %s, '%s', '%s');", py, pt, in_field, out_field))
-  as.fc(ct$get("variance"))
+  calc_math("variance", convert(polygons), convert(points), in_field, out_field)
 }

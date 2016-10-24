@@ -54,6 +54,16 @@
 lawn_merge <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
-  ct$eval(sprintf("var mrg = turf.merge(%s);", fc))
+  ct$eval('
+    mg = function merge(polys) {
+      var merged = clone(polys.features[0]), features = polys.features;
+      for (var i = 0, len = features.length; i < len; i++) {
+        var poly = features[i];
+        if (poly.geometry) merged = turf.union(merged, poly);
+      }
+      return merged;
+    }
+  ')
+  ct$eval(sprintf("var mrg = mg(%s);", fc))
   structure(ct$get("mrg"), class = "polygon")
 }

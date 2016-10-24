@@ -77,5 +77,5 @@ test_that("lawn_concave fails correctly", {
   expect_error(lawn_concave(), "argument \"points\" is missing, with no default")
   expect_error(lawn_concave("a"), "a is not defined")
   expect_error(lawn_concave(points, "stuff"), "stuff is not defined")
-  expect_error(lawn_concave(points, 1, "stuff"), "unknown option given to \"units\"")
+  expect_error(lawn_concave(points, 1, "stuff"), "Invalid unit")
 })

@@ -4,17 +4,18 @@
 \alias{lawn_average}
 \title{Average of a field among points within polygons}
 \usage{
-lawn_average(polygons, points, field, outputField = "average", lint = FALSE)
+lawn_average(polygons, points, in_field, out_field = "average",
+  lint = FALSE)
 }
 \arguments{
 \item{polygons}{Geojson \code{\link{data-Polygon}}'s}
 
 \item{points}{Geojson \code{\link{data-Point}}'s}
 
-\item{field}{(character) The field in the points features from which to pull
+\item{in_field}{(character) The field in the points features from which to pull
 values to average}
 
-\item{outputField}{(character) The field in polygons to put results of the
+\item{out_field}{(character) The field in polygons to put results of the
 averages}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
@@ -30,14 +31,16 @@ Calculate the average value of a field for a set of \code{\link{data-Point}}'s
 within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 # using data in the package
 cat(lawn_data$points_average)
 cat(lawn_data$polygons_average)
 lawn_average(polygons = lawn_data$polygons_average,
              points = lawn_data$points_average, 'population')
 }
+}
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
+Other aggregations: \code{\link{lawn_collect}},
   \code{\link{lawn_count}}, \code{\link{lawn_deviation}},
   \code{\link{lawn_max}}, \code{\link{lawn_median}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},

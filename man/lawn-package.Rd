@@ -16,4 +16,7 @@ Scott Chamberlain \email{myrmecocystus@gmail.com}
 
 Jeff Hollister \email{hollister.jeff@epa.gov}
 }
+\seealso{
+\code{\link{lawn-defunct}}
+}
 

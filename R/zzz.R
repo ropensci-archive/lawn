@@ -80,7 +80,15 @@ lintit <- function(z) {
   }
 }
 
+as.p <- function(x) structure(x, class = "point")
+as.mp <- function(x) structure(x, class = "multipoint")
+as.l <- function(x) structure(x, class = "linestring")
+as.ml <- function(x) structure(x, class = "multilinestring")
+as.pol <- function(x) structure(x, class = "polygon")
+as.mpol <- function(x) structure(x, class = "multipolygon")
+as.f <- function(x) structure(x, class = "feature")
 as.fc <- function(x) structure(x, class = "featurecollection")
+as.gc <- function(x) structure(x, class = "geometrycollection")
 
 pluck <- function(x, name, type) {
   if (missing(type)) {
@@ -88,4 +96,12 @@ pluck <- function(x, name, type) {
   } else {
     vapply(x, "[[", name, FUN.VALUE = type)
   }
+}
+
+calc_math <- function(op, py, pt, in_field, out_field) {
+  ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', 'values');", py, pt, in_field))
+  ct$eval(sprintf("fc.features.forEach(function (feature) {
+    feature.properties.%s = ss.%s(feature.properties.values);
+  });", out_field, op))
+  as.fc(ct$get("fc"))
 }

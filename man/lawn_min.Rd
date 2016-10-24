@@ -4,7 +4,7 @@
 \alias{lawn_min}
 \title{Minimum value of a field among points within polygons}
 \usage{
-lawn_min(polygons, points, in_field, out_field, lint = FALSE)
+lawn_min(polygons, points, in_field, out_field = "min", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
@@ -29,13 +29,15 @@ Calculates the minimum value of a field for a set of \code{\link{data-Point}}'s
 within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
-lawn_min(poly, pt, 'population', 'min')
+lawn_min(poly, pt, 'population')
+}
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
-  \code{\link{lawn_average}}, \code{\link{lawn_count}},
+Other aggregations: \code{\link{lawn_average}},
+  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
   \code{\link{lawn_deviation}}, \code{\link{lawn_max}},
   \code{\link{lawn_median}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}

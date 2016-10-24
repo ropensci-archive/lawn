@@ -33,7 +33,7 @@ test_that("as.turf works", {
 
   expect_true(grepl("turf.point", a))
   expect_true(grepl("turf.polygon", b))
-  expect_true(grepl("turf.linestring", d))
+  expect_true(grepl("turf.lineString", d))
   expect_true(grepl("turf.point", e))
   # expect_true(grepl("turf.point", f))
 })

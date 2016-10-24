@@ -4,7 +4,7 @@
 \alias{lawn_median}
 \title{Median value of a field among points within polygons}
 \usage{
-lawn_median(polygons, points, in_field, out_field, lint = FALSE)
+lawn_median(polygons, points, in_field, out_field = "median", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
@@ -25,17 +25,19 @@ A FeatureCollection of \code{\link{data-Polygon}} features with
 properties listed as \code{out_field}
 }
 \description{
-Calculates the variance value of a field for a set of \code{\link{data-Point}}'s
-within a set of \code{\link{data-Polygon}}'s
+Calculates the \strong{median} value of a field for a set of
+\code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s
 }
 \examples{
+\dontrun{
 poly <- lawn_data$polygons_average
 pt <- lawn_data$points_average
-lawn_median(poly, pt, 'population', 'median')
+lawn_median(polygons=poly, points=pt, in_field='population')
+}
 }
 \seealso{
-Other aggregations: \code{\link{lawn_aggregate}},
-  \code{\link{lawn_average}}, \code{\link{lawn_count}},
+Other aggregations: \code{\link{lawn_average}},
+  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
   \code{\link{lawn_deviation}}, \code{\link{lawn_max}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}

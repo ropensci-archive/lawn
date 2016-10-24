@@ -4,10 +4,10 @@
 \alias{lawn_polygon}
 \title{Create a polygon}
 \usage{
-lawn_polygon(rings, properties = NULL)
+lawn_polygon(coordinates, properties = NULL)
 }
 \arguments{
-\item{rings}{A list of LinearRings, or in json}
+\item{coordinates}{A list of LinearRings, or in json}
 
 \item{properties}{A list of properties}
 }
@@ -25,6 +25,7 @@ rings <- list(list(
    c(-2.215118, 53.464547),
    c(-2.275543, 53.464547)
 ))
+lawn_polygon(rings)
 lawn_polygon(rings, properties = list(name = 'poly1', population = 400))
 
 # Make a FeatureCollection
@@ -33,7 +34,12 @@ lawn_featurecollection(lawn_polygon(rings))
 }
 \seealso{
 Other data functions: \code{\link{lawn_featurecollection}},
-  \code{\link{lawn_filter}}, \code{\link{lawn_linestring}},
+  \code{\link{lawn_feature}}, \code{\link{lawn_filter}},
+  \code{\link{lawn_geometrycollection}},
+  \code{\link{lawn_linestring}},
+  \code{\link{lawn_multilinestring}},
+  \code{\link{lawn_multipoint}},
+  \code{\link{lawn_multipolygon}},
   \code{\link{lawn_point}}, \code{\link{lawn_random}},
   \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
 }

@@ -73,7 +73,7 @@ Jeff Hollister \email{hollister.jeff@epa.gov}
 \seealso{
 Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},
-  \code{\link{lawn_convex}}, \code{\link{lawn_erase}},
+  \code{\link{lawn_convex}}, \code{\link{lawn_difference}},
   \code{\link{lawn_merge}}, \code{\link{lawn_simplify}},
   \code{\link{lawn_union}}
 }

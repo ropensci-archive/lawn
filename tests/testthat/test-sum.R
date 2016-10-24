@@ -14,8 +14,8 @@ test_that("lawn_sum returns correct classes", {
 })
 
 test_that("in_field and out_field parameters works as expected", {
-  expect_named(lawn_sum(poly, pt, 'population', 'sum')$features$properties, "sum")
-  expect_named(lawn_sum(poly, pt, 'population', 'stuff')$features$properties, "stuff")
+  expect_named(lawn_sum(poly, pt, 'population')$features$properties, c('values', "sum"))
+  expect_named(lawn_sum(poly, pt, 'population', 'stuff')$features$properties, c('values', "stuff"))
   expect_true(is.na(lawn_sum(poly, pt, 'population2', 'sum')$features$properties$sum[1]))
 })
 

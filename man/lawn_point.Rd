@@ -4,10 +4,10 @@
 \alias{lawn_point}
 \title{Create a point}
 \usage{
-lawn_point(x, properties = NULL)
+lawn_point(coordinates, properties = NULL)
 }
 \arguments{
-\item{x}{A pair of points in a vector, list or json, of the form
+\item{coordinates}{A pair of points in a vector, list or json, of the form
 \code{e.g., c(longitude,latitude)}}
 
 \item{properties}{A list of properties. Default: NULL}
@@ -29,7 +29,12 @@ lawn_featurecollection(lawn_point(c(-74.5, 40)))
 }
 \seealso{
 Other data functions: \code{\link{lawn_featurecollection}},
-  \code{\link{lawn_filter}}, \code{\link{lawn_linestring}},
+  \code{\link{lawn_feature}}, \code{\link{lawn_filter}},
+  \code{\link{lawn_geometrycollection}},
+  \code{\link{lawn_linestring}},
+  \code{\link{lawn_multilinestring}},
+  \code{\link{lawn_multipoint}},
+  \code{\link{lawn_multipolygon}},
   \code{\link{lawn_polygon}}, \code{\link{lawn_random}},
   \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
 }

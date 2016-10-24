@@ -49,12 +49,12 @@ start_bad2 <- '{
 }'
 
 test_that("lawn_bearing linting works correctly", {
-  expect_error(lawn_bearing(start_bad1, end, lint = TRUE), "Line 1 - \"coordinates\" property required")
-  expect_error(lawn_bearing(start_bad2, end, lint = TRUE), "Line 1 - \"geometry\" property required")
+  expect_error(lawn_bearing(start_bad1, end, lint = TRUE), "Line 1 - \"coordinates\" member required")
+  expect_error(lawn_bearing(start_bad2, end, lint = TRUE), "Line 1 - \"geometry\" member required")
 })
 
 test_that("lawn_bearing fails correctly", {
   expect_error(lawn_bearing(), "argument \"start\" is missing, with no default")
   expect_error(lawn_bearing(start), "argument \"end\" is missing, with no default")
-  expect_error(lawn_bearing(4, 5), "Cannot read property 'coordinates' of undefined")
+  expect_error(lawn_bearing(4, 5), "A coordinate, feature, or point geometry is required")
 })
