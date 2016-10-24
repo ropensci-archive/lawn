@@ -2,8 +2,8 @@
 
 * local OS X install, R 3.3.1
 * ubuntu 12.04 (on travis-ci), R 3.3.1
-* win-builder (devel and release)
-* R-hub (Windows devel and release)
+* win-builder
+* R-hub (Windows old-rel, Linux-release)
 
 ## R CMD check results
 
