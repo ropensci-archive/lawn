@@ -1,14 +1,27 @@
-R CMD CHECK passed on my local OS X install with R 3.2.5 and
-R development version, Ubuntu running on Travis-CI, and Win-Builder.
+## Test environments
 
-This submission fixes tests.
+* local OS X install, R 3.3.1
+* ubuntu 12.04 (on travis-ci), R 3.3.1
+* win-builder (devel and release)
+* R-hub (Windows devel and release)
 
-This package is currently archived on CRAN. This submission fixes
-errors in the test suite that caused the package to be archived.
+## R CMD check results
 
-Since this is a new submission since it has been archived:
+0 errors | 0 warnings | 1 note
 
-I have read and agree to the the CRAN policies at
-http://cran.r-project.org/web/packages/policies.html
+   License components with restrictions and base license permitting such:
+     MIT + file LICENSE
+   File 'LICENSE':
+     YEAR: 2016
+     COPYRIGHT HOLDER: Scott Chamberlain
 
-Scott Chamberlain
+## Reverse dependencies
+
+There are no reverse dependencies.
+
+---
+
+This version includes an update for the Javascript library 
+turf that this package wraps. 
+
+Thanks! Scott Chamberlain

@@ -105,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -162.5 2.2 -111.4 69.5
+#>   Bounding box: -63.0 -12.4 168.8 45.2
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -170.9 -68.1 148.1 81.0
+#>   Bounding box: -171.4 -50.5 135.5 51.6
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -133.8 76.8 106.0 82.8
+#>   Bounding box: -81.8 -58.5 170.6 43.8
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1]  36.67973 -52.58608
+#> [1]  46.78765 -69.55507
 ```
 
 Polygons
@@ -149,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: 159.0 -85.7 164.6 -82.8
+#>   Bounding box: -28.2 20.3 -20.6 29.0
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -167,19 +167,19 @@ lawn_sample(dat, 1)
 #>   No. points: 2
 #>   Properties: 
 #>   population
-#> 1        200
+#> 1        300
 ```
 
 
 ```r
 lawn_sample(dat, 2)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.8 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: 
 #>   population
-#> 1        100
+#> 1        300
 #> 2        200
 ```
 
@@ -192,9 +192,9 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        100
-#> 2        600
-#> 3        300
+#> 1        600
+#> 2        300
+#> 3        200
 ```
 
 ## extent
