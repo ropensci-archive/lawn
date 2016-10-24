@@ -10,3 +10,4 @@ man-roxygen
 .V8history
 cran-comments.md
 ^CONDUCT\.md$
+^cran-comments\.md$
