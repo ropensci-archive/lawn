@@ -38,6 +38,6 @@ lawn_circle <- function(center, radius, steps = FALSE, units = "kilometers",
                         lint = FALSE) {
   lawnlint(center, lint)
   ct$eval(sprintf("var xx = turf.circle(%s, %s, %s, '%s');",
-                  convert(center), radius, steps, units))
+                  convert(center), radius, tolower(steps), units))
   structure(ct$get("xx"), class = "polygon")
 }
