@@ -1,6 +1,6 @@
 #' Buffer a feature
 #'
-#' Calculates a buffer for input features for a given radius
+#' Calculates a buffer for input features for a given radius.
 #'
 #' @export
 #' @param input A Feature or FeatureCollection
@@ -46,6 +46,8 @@
 #' lawn_buffer(lawn_point(c(-74.50,40)), 100, "meters")
 #'
 lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
+  # This code has been contributed by Jeff Hollister, US EPA
+  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   input <- convert(input)
   lawnlint(input, lint)

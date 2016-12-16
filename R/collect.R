@@ -24,6 +24,9 @@
 #' lawn_collect(ex_polys, ex_pts, 'population', 'stuff') %>% view
 #' }
 lawn_collect <- function(polygons, points, in_field, out_field, lint = FALSE) {
+  # This code has been contributed by Jeff Hollister, US EPA
+  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+
   lawnlint(list(polygons, points), lint)
   ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', '%s');",
                   convert(polygons),
