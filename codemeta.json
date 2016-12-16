@@ -1,0 +1,30 @@
+{
+  "@context": "https://raw.githubusercontent.com/mbjones/codemeta/master/codemeta.jsonld",
+  "@type": "Code",
+  "author": [
+    {
+      "@id": "0000-0003-1444-9135",
+      "@type": "Person",
+      "email": "myrmecocystus@gmail.com",
+      "name": "Scott Chamberlain",
+      "affiliation": "rOpenSci"
+    },
+    {
+      "@id": "0000-0002-9254-9740",
+      "@type": "Person",
+      "email": "hollister.jeff@epa.gov",
+      "name": "Jeffrey W. Hollister",
+      "affiliation": "US Environmental Protection Agency, Atlantic Ecology Division"
+    }
+  ],
+  "identifier": "",
+  "codeRepository": "https://github.com/ropensci/lawn",
+  "datePublished": "2016-12-16",
+  "dateModified": "2016-12-16",
+  "dateCreated": "2016-12-16",
+  "description": "This is an R package to provide access to the Turfjs library in R",
+  "keywords": "geospatial, javascript, GeoJSON",
+  "license": "MIT",
+  "title": "lawn: An R client for Turfjs for Geospatial Analysis",
+  "version": "v0.3.1"
+}
