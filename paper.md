@@ -1,5 +1,5 @@
 ---
-title: 'lawn: An R client for Turfjs for Geospatial Analysis'
+title: 'lawn: An R client for Turf.js for Geospatial Analysis'
 tags:
   - geospatial
   - GeoJSON
