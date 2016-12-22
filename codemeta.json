@@ -22,9 +22,9 @@
   "datePublished": "2016-12-16",
   "dateModified": "2016-12-16",
   "dateCreated": "2016-12-16",
-  "description": "This is an R package to provide access to the Turf.js library in R",
+  "description": "This is an R package to provide access to the Turf javascript library in R",
   "keywords": "geospatial, javascript, GeoJSON",
   "license": "MIT",
-  "title": "lawn: An R client for Turf.js for Geospatial Analysis",
+  "title": "lawn: An R client for the Turf javascript library for Geospatial Analysis",
   "version": "v0.3.1"
 }
