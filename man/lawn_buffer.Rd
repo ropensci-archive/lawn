@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \description{
-Calculates a buffer for input features for a given radius
+Calculates a buffer for input features for a given radius.
 }
 \examples{
 # From a Point
