@@ -1,5 +1,5 @@
 ---
-title: 'lawn: An R client for the Turf javascript library for Geospatial Analysis'
+title: 'lawn: An R client for the Turf Javascript Library for Geospatial Analysis'
 tags:
   - geospatial
   - GeoJSON
