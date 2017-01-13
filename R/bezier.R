@@ -2,15 +2,15 @@
 #'
 #' Takes a \code{\link{data-LineString}} and returns a curved version
 #' by applying a \href{http://en.wikipedia.org/wiki/Bezier_spline}{Bezier}
-#' spline algorithm
+#' spline algorithm.
 #'
 #' @export
-#' @param line input \code{\link{data-LineString}}
-#' @param resolution time in milliseconds between points
-#' @param sharpness	a measure of how curvy the path should be between splines
+#' @param line Input \code{\link{data-LineString}}.
+#' @param resolution Time in milliseconds between points.
+#' @param sharpness	A measure of how curvy the path should be between splines.
 #' @template lint
 #' @family transformations
-#' @return \code{\link{data-LineString}} curved line
+#' @return A \code{\link{data-LineString}} curved line.
 #' @examples
 #' pts <- '[
 #'    [-21.964416, 64.148203],

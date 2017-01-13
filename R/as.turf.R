@@ -1,7 +1,7 @@
 #' Coerce to turf.js javascript function call
 #'
-#' @param x Input
-#' @param ... Ignored
+#' @param x Input data to be coerced.
+#' @param ... Ignored.
 #' @export
 #' @keywords internal
 as.turf <- function(x, ...) {
