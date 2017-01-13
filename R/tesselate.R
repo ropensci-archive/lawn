@@ -5,7 +5,7 @@
 #' triangles using earcut (\url{https://github.com/mapbox/earcut})
 #'
 #' @export
-#' @param polygon input Polygon feaure
+#' @param polygon input \code{\link{data-Polygon}} feature
 #' @template lint
 #' @family assertions
 #' @return a \code{\link{data-FeatureCollection}}

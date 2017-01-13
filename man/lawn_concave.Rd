@@ -20,7 +20,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-Polygon}} a concave hull
+a concave hull \code{\link{data-Polygon}}
 }
 \description{
 Takes a set of \code{\link{data-Point}}'s and returns a concave hull polygon.

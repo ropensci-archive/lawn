@@ -7,7 +7,7 @@
 lawn_sample(features = NULL, n = 100, lint = FALSE)
 }
 \arguments{
-\item{features}{A FeatureCollection}
+\item{features}{A \code{\link{data-FeatureCollection}}}
 
 \item{n}{(integer) Number of features to generate}
 

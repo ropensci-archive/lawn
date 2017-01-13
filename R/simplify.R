@@ -6,7 +6,7 @@
 #' @export
 #' @param feature a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
 #' feature to be simplified
-#' @param tolerance (numeric) Simplification tolerance
+#' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01
 #' @param high_quality (boolean) Whether or not to spend more time to create a
 #' higher-quality simplification with a different algorithm. Default: \code{FALSE}
 #' @return a simplified feature

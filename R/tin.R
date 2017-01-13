@@ -5,7 +5,7 @@
 #'
 #' @export
 #' @param pt input points
-#' @param propertyName name of the property from which to pull z values This is
+#' @param propertyName name of the property from which to pull z values. This is
 #' optional: if not given, then there will be no extra data added to the derived
 #' triangles.
 #' @template lint

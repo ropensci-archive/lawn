@@ -1,12 +1,12 @@
 #' Average of a field among points within polygons
 #'
-#' Calculate the average value of a field for a set of \code{\link{data-Point}}'s
-#' within a set of \code{\link{data-Polygon}}'s
+#' Calculate the average value of a field for a set of \code{\link{data-Point}}s
+#' within a set of \code{\link{data-Polygon}}s
 #'
 #' @export
 #'
-#' @param polygons Geojson \code{\link{data-Polygon}}'s
-#' @param points Geojson \code{\link{data-Point}}'s
+#' @param polygons Geojson \code{\link{data-Polygon}}s
+#' @param points Geojson \code{\link{data-Point}}s
 #' @param in_field (character) The field in the points features from which to pull
 #' values to average
 #' @param out_field (character) The field in polygons to put results of the

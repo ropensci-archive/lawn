@@ -23,8 +23,6 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a
-
 a \code{\link{data-Polygon}}
 }
 \description{

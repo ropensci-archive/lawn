@@ -20,8 +20,8 @@ objects. Default: \code{FALSE}}
 A \code{\link{data-Point}} as a Feature
 }
 \description{
-Takes a reference \code{\link{data-Point}} and a set of points and returns the point from
-the set closest to the reference
+Takes a reference \code{\link{data-Point}} and a set of points to compare it
+against and returns the point from the set closest to the reference
 }
 \examples{
 point <- '{

@@ -28,7 +28,7 @@ What will be returned?
  of the polygon
  \item Given a \code{\link{data-LineString}}, the point will be along
  the string
- \item Given a \code{\link{data-Point}}, the point will the same as
+ \item Given a \code{\link{data-Point}}, the point will be the same as
  the input
 }
 }
