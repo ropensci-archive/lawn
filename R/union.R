@@ -67,6 +67,9 @@
 #' lawn_union(x1, x2) %>% view()
 #' }
 lawn_union <- function(poly1, poly2, lint = FALSE) {
+  # This code has been contributed by Jeff Hollister, US EPA
+  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+
   poly1 <- unclass(as_feature(poly1))
   poly2 <- unclass(as_feature(poly2))
   poly1 <- convert(poly1)

@@ -15,7 +15,7 @@ Convert a FeatureCollection to a Feature
 \details{
 If there are more than one feature within the featurecollection,
 each feature is split out into a separate feature, returned in a list.
-Each feature is a assigned a class matching it's GeoJSON data type
+Each feature is assigned a class matching it's GeoJSON data type
 (e.g., point, polygon, linestring).
 }
 \examples{

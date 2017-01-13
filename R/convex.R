@@ -9,7 +9,7 @@
 #' @param input input points in a \code{\link{data-FeatureCollection}}
 #' @template lint
 #' @family transformations
-#' @return \code{\link{data-Polygon}} a convex hull
+#' @return a convex hull \code{\link{data-Polygon}}
 #' @examples
 #' points <- '{
 #'   "type": "FeatureCollection",

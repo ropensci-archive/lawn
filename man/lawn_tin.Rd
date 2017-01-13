@@ -9,7 +9,7 @@ lawn_tin(pt, propertyName = NULL, lint = FALSE)
 \arguments{
 \item{pt}{input points}
 
-\item{propertyName}{name of the property from which to pull z values This is
+\item{propertyName}{name of the property from which to pull z values. This is
 optional: if not given, then there will be no extra data added to the derived
 triangles.}
 

@@ -10,7 +10,7 @@
 #' @param units	used for maxEdge distance (miles [default] or kilometers)
 #' @template lint
 #' @family transformations
-#' @return \code{\link{data-Polygon}} a concave hull
+#' @return a concave hull \code{\link{data-Polygon}}
 #' @examples
 #' points <- '{
 #'   "type": "FeatureCollection",

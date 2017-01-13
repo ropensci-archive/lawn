@@ -9,7 +9,6 @@
 #' @param steps (integer) number of steps
 #' @param units (character) (default kilometers) ) miles, kilometers,
 #' degrees, or radians
-#' @return a
 #' @template lint
 #' @family assertions
 #' @return a \code{\link{data-Polygon}}

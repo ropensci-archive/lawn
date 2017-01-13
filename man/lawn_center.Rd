@@ -7,7 +7,7 @@
 lawn_center(features, lint = FALSE)
 }
 \arguments{
-\item{features}{input featurs, as a \code{\link{data-FeatureCollection}}}
+\item{features}{input features, as a \code{\link{data-FeatureCollection}}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

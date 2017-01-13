@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-FeatureCollection}} - a filtered collection with only
+a filtered \code{\link{data-FeatureCollection}} with only
 features that match input key and value
 }
 \description{

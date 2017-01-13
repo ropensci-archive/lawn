@@ -7,7 +7,7 @@
 lawn_tesselate(polygon, lint = FALSE)
 }
 \arguments{
-\item{polygon}{input Polygon feaure}
+\item{polygon}{input \code{\link{data-Polygon}} feature}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

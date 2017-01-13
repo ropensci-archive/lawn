@@ -1,6 +1,6 @@
 #' Distance between two points
 #'
-#' Calculates the distance between two \code{\link{data-Point}}'s in degress,
+#' Calculates the distance between two \code{\link{data-Point}}s in degress,
 #' radians, miles, or kilometers. Uses the
 #' \href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula}
 #' to account for global curvature.

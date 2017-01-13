@@ -11,3 +11,7 @@ man-roxygen
 cran-comments.md
 ^CONDUCT\.md$
 ^cran-comments\.md$
+^paper\.bib$
+^paper\.md$
+^generate\.sh$
+^codemeta\.json$

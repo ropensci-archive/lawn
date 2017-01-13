@@ -11,7 +11,7 @@ lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
 \item{feature}{a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
 feature to be simplified}
 
-\item{tolerance}{(numeric) Simplification tolerance}
+\item{tolerance}{(numeric) Simplification tolerance.  Default value is 0.01}
 
 \item{high_quality}{(boolean) Whether or not to spend more time to create a
 higher-quality simplification with a different algorithm. Default: \code{FALSE}}

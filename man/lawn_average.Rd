@@ -8,9 +8,9 @@ lawn_average(polygons, points, in_field, out_field = "average",
   lint = FALSE)
 }
 \arguments{
-\item{polygons}{Geojson \code{\link{data-Polygon}}'s}
+\item{polygons}{Geojson \code{\link{data-Polygon}}s}
 
-\item{points}{Geojson \code{\link{data-Point}}'s}
+\item{points}{Geojson \code{\link{data-Point}}s}
 
 \item{in_field}{(character) The field in the points features from which to pull
 values to average}
@@ -27,8 +27,8 @@ objects. Default: \code{FALSE}}
 polygons with the value of outField set to the calculated averages
 }
 \description{
-Calculate the average value of a field for a set of \code{\link{data-Point}}'s
-within a set of \code{\link{data-Polygon}}'s
+Calculate the average value of a field for a set of \code{\link{data-Point}}s
+within a set of \code{\link{data-Polygon}}s
 }
 \examples{
 \dontrun{

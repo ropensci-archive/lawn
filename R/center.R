@@ -4,7 +4,7 @@
 #' absolute center point of all features
 #'
 #' @export
-#' @param features input featurs, as a \code{\link{data-FeatureCollection}}
+#' @param features input features, as a \code{\link{data-FeatureCollection}}
 #' @template lint
 #' @family measurements
 #' @return a \code{\link{data-Point}} feature at the absolute center point of

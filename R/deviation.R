@@ -24,6 +24,9 @@
 #' }
 lawn_deviation <- function(polygons, points, in_field, out_field = "deviation",
                            lint = FALSE) {
+  # This code has been contributed by Jeff Hollister, US EPA
+  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+
   lawnlint(list(polygons, points), lint)
   calc_math("standardDeviation", convert(polygons), convert(points),
             in_field, out_field)

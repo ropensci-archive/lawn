@@ -105,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -63.0 -12.4 168.8 45.2
+#>   Bounding box: -179.0 -64.9 175.4 -1.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -171.4 -50.5 135.5 51.6
+#>   Bounding box: -91.1 3.7 140.0 54.0
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -81.8 -58.5 170.6 43.8
+#>   Bounding box: 26.9 -29.1 82.8 44.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1]  46.78765 -69.55507
+#> [1] 147.16514 -10.64865
 ```
 
 Polygons
@@ -149,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -28.2 20.3 -20.6 29.0
+#>   Bounding box: -59.5 51.8 -52.7 54.3
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -162,25 +162,25 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.8 59.9 10.8 59.9
+#>   Bounding box: 10.7 59.9 10.7 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: 
 #>   population
-#> 1        300
+#> 1        200
 ```
 
 
 ```r
 lawn_sample(dat, 2)
 #> <FeatureCollection>
-#>   Bounding box: 10.8 59.9 10.8 59.9
+#>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: 
 #>   population
-#> 1        300
-#> 2        200
+#> 1        600
+#> 2        300
 ```
 
 
@@ -192,8 +192,8 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        600
-#> 2        300
+#> 1        300
+#> 2        600
 #> 3        200
 ```
 
@@ -277,5 +277,8 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 * License: MIT
 * Get citation information for `lawn` in R doing `citation(package = 'lawn')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+## Additional disclaimer
+Portions of this code have been contributed by Jeff Hollister, US EPA.  As such, that code is subjec to the following disclaimer: <https://www.epa.gov/home/github-contribution-disclaimer>
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
