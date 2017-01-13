@@ -14,6 +14,7 @@
 #' view(lawn_data$polygons_count)
 #'
 #' # from json (a jsonlite class)
+#' library(jsonlite)
 #' x <- minify(lawn_data$points_count)
 #' class(x)
 #' view(x)
