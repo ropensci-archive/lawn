@@ -4,10 +4,10 @@
 #' Internally, this implements a Monotone chain algorithm
 #'
 #' @export
-#' @param points input points in a \code{\link{data-FeatureCollection}}
-#' @param maxEdge the size of an edge necessary for part of the hull to
-#' become concave (in miles)
-#' @param units	used for maxEdge distance (miles [default] or kilometers)
+#' @param points Input points in a \code{\link{data-FeatureCollection}}.
+#' @param maxEdge The size of an edge necessary for part of the hull to
+#' become concave (in miles).
+#' @param units	Used for maxEdge distance (miles [default] or kilometers).
 #' @template lint
 #' @family transformations
 #' @return a concave hull \code{\link{data-Polygon}}

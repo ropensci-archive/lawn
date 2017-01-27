@@ -1,9 +1,9 @@
 #' Flip x,y to y,x, and vice versa
 #'
 #' @export
-#' @param input Feature of features
+#' @param input Feature of features.
 #' @template lint
-#' @return a \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}
+#' @return A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}.
 #' @examples
 #' # a point
 #' serbia <- '{

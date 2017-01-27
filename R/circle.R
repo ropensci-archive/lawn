@@ -4,11 +4,11 @@
 #' a radius in degrees, radians, miles, or kilometers; and steps for precision
 #'
 #' @export
-#' @param center the center \code{\link{data-Point}}
-#' @param radius (integer) radius of the circle
-#' @param steps (integer) number of steps
-#' @param units (character) (default kilometers) ) miles, kilometers,
-#' degrees, or radians
+#' @param center The center \code{\link{data-Point}}
+#' @param radius (integer) Radius of the circle.
+#' @param steps (integer) Number of steps.
+#' @param units (character) Miles, kilometers (default),
+#' degrees, or radians.
 #' @template lint
 #' @family assertions
 #' @return a \code{\link{data-Polygon}}

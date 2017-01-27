@@ -5,7 +5,8 @@
 #' (west, south, east, north).
 #'
 #' @export
-#' @param input A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}
+#' @param input A \code{\link{data-Feature}} or
+#' \code{\link{data-FeatureCollection}}.
 #' @template lint
 #' @family measurements
 #' @return A bounding box, numeric vector of length 4

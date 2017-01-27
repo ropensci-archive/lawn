@@ -4,7 +4,7 @@
 #' \code{\link{data-Polygon}} that encompasses all vertices.
 #'
 #' @export
-#' @param fc \code{\link{data-FeatureCollection}}
+#' @param fc A \code{\link{data-FeatureCollection}}.
 #' @template lint
 #' @family measurements
 #' @return a rectangular \code{\link{data-Polygon}} feature that

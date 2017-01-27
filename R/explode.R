@@ -3,7 +3,7 @@
 #' Takes a feature or set of features and returns all positions as points
 #'
 #' @export
-#' @param input Feature of features
+#' @param input Feature of features.
 #' @template lint
 #' @return a \code{\link{data-FeatureCollection}} of points
 #' @examples

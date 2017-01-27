@@ -8,7 +8,7 @@
 #' @param polygons Polygon(s) defining area to aggregate.
 #' @param points Points with values to aggregate.
 #' @param in_field Characater for the name of the field on \code{pts} on
-#' which you wish to perfrom the aggregation
+#' which you wish to perfrom the aggregation.
 #' @param out_field Characater for the name of the field on the ouput
 #' polygon FeatureCollection that will store the resultant value.
 #' @template lint
