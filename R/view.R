@@ -125,6 +125,11 @@ view.multilinestring <- function(x) {
 }
 
 #' @export
+view.feature <- function(x) {
+  make_view_obj(x)
+}
+
+#' @export
 view.featurecollection <- function(x) {
   make_view_obj(x)
 }
