@@ -4,8 +4,8 @@
 #' the intersection of the two
 #'
 #' @export
-#' @param poly1 A \code{\link{data-Polygon}}
-#' @param poly2 A \code{\link{data-Polygon}}
+#' @param poly1 A \code{\link{data-Polygon}}.
+#' @param poly2 A \code{\link{data-Polygon}}.
 #' @template lint
 #' @family transformations
 #' @details Polygons with just a shared boundary will return the boundary. Polygons

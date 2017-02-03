@@ -1,9 +1,9 @@
 #' Lawn print methods to provide summary view
 #'
 #' @name print-methods
-#' @param x input
-#' @param n (integer) Number of rows to print, when properties is large object
-#' @param ... print options
+#' @param x Input.
+#' @param n (integer) Number of rows to print, when properties is large object.
+#' @param ... Print options.
 #' @examples
 #' # point
 #' lawn_point(c(-74.5, 40))

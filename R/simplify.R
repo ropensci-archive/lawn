@@ -1,18 +1,18 @@
 #' Simplify GeoJSON data
 #'
 #' Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-#' and returns a simplified version
+#' and returns a simplified version.
 #'
 #' @export
-#' @param feature a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-#' feature to be simplified
-#' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01
+#' @param feature A \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+#' feature to be simplified.
+#' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01.
 #' @param high_quality (boolean) Whether or not to spend more time to create a
 #' higher-quality simplification with a different algorithm. Default: \code{FALSE}
-#' @return a simplified feature
+#' @return A simplified feature.
 #' @template lint
 #' @family transformations
-#' @return A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}
+#' @return A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}.
 #' @details Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
 #' to perform simplification.
 #'

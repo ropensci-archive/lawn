@@ -4,10 +4,10 @@
 #' the line in between those points
 #'
 #' @export
-#' @param line line to snap to
-#' @param point point to snap from
+#' @param line Line to snap to.
+#' @param point point to snap from.
 #' @template lint
-#' @return A \code{\link{data-Point}}
+#' @return A \code{\link{data-Point}}.
 #' @examples
 #' line <- '{
 #'   "type": "Feature",

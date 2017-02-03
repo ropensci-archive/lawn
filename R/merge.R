@@ -5,12 +5,12 @@
 #' returns a \code{\link{data-MultiPolygon}} feature.
 #'
 #' @export
-#' @param fc input polygons, as \code{\link{data-FeatureCollection}}
+#' @param fc Input polygons, as \code{\link{data-FeatureCollection}}.
 #' @template lint
 #' @family transformations
 #' @seealso \code{\link{lawn_union}}
-#' @return merged \code{\link{data-Polygon}} or multipolygon
-#' \code{\link{data-MultiPolygon}}
+#' @return Merged \code{\link{data-Polygon}} or multipolygon
+#' \code{\link{data-MultiPolygon}}.
 #' @examples
 #' polygons <- '{
 #'   "type": "FeatureCollection",

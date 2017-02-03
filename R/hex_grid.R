@@ -8,12 +8,12 @@
 #'
 #' @export
 #'
-#' @param extent (numeric) extent in [minX, minY, maxX, maxY] order
-#' @param cellWidth (integer) width of each cell
-#' @param units (character) units to use for cellWidth, one of 'miles' or
-#' 'kilometers'
+#' @param extent (numeric) Extent in [minX, minY, maxX, maxY] order.
+#' @param cellWidth (integer) Width of each cell.
+#' @param units (character) Units to use for cellWidth, one of 'miles' or
+#' 'kilometers'.
 #' @family interpolation
-#' @return \code{\link{data-FeatureCollection}} grid of points
+#' @return A \code{\link{data-FeatureCollection}} grid of points.
 #' @examples
 #' lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
 #' lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')

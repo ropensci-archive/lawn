@@ -4,15 +4,15 @@
 #' union of the two
 #'
 #' @export
-#' @param poly1 A polygon
-#' @param poly2 A polygon
+#' @param poly1 A polygon.
+#' @param poly2 A polygon.
 #' @template lint
 #' @family transformations
-#' @return a combined \code{\link{data-Polygon}} or
-#' \code{\link{data-MultiPolygon}} feature
+#' @return A combined \code{\link{data-Polygon}} or
+#' \code{\link{data-MultiPolygon}} feature.
 #'
 #' @details Contiguous polygons are combined, non-contiguous polygons are returned
-#' as MultiPolygon
+#' as MultiPolygon.
 #' @seealso \code{\link{lawn_merge}}
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
