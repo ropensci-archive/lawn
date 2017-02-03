@@ -6,7 +6,7 @@
 #' that implements a Monotone chain hull
 #'
 #' @export
-#' @param input input points in a \code{\link{data-FeatureCollection}}
+#' @param input Input points in a \code{\link{data-FeatureCollection}}.
 #' @template lint
 #' @family transformations
 #' @return a convex hull \code{\link{data-Polygon}}

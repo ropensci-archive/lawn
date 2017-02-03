@@ -5,7 +5,7 @@
 #' @param input A feature or featurecollection of polygons.
 #' @template lint
 #' @family measurements
-#' @return value in square meters
+#' @return A numeric in square meters
 #' @examples
 #' lawn_area(lawn_data$poly)
 #' lawn_area(lawn_data$multipoly)

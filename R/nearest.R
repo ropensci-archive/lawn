@@ -5,11 +5,11 @@
 #'
 #' @export
 #'
-#' @param point The reference point, a \code{\link{data-Feature}}
-#' @param against Input point set, a \code{\link{data-FeatureCollection}}
+#' @param point The reference point, a \code{\link{data-Feature}}.
+#' @param against Input point set, a \code{\link{data-FeatureCollection}}.
 #' @template lint
 #' @family classification
-#' @return A \code{\link{data-Point}} as a Feature
+#' @return A \code{\link{data-Point}} as a Feature.
 #' @examples
 #' point <- '{
 #'   "type": "Feature",

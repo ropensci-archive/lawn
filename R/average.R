@@ -5,15 +5,15 @@
 #'
 #' @export
 #'
-#' @param polygons Geojson \code{\link{data-Polygon}}s
-#' @param points Geojson \code{\link{data-Point}}s
-#' @param in_field (character) The field in the points features from which to pull
-#' values to average
+#' @param polygons Geojson \code{\link{data-Polygon}}s.
+#' @param points Geojson \code{\link{data-Point}}s.
+#' @param in_field (character) The field in the points feature from which to pull
+#' values to average.
 #' @param out_field (character) The field in polygons to put results of the
-#' averages
+#' averages.
 #' @template lint
 #' @family aggregations
-#' @return polygons with the value of outField set to the calculated averages
+#' @return Polygons with the value of out_field set to the calculated averages.
 #' @examples \dontrun{
 #' # using data in the package
 #' cat(lawn_data$points_average)

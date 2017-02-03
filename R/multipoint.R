@@ -3,10 +3,10 @@
 #' @export
 #' @param coordinates A list of point pairs, either as a list or json, of the
 #' form e.g. \code{list(c(longitude, latitude), c(longitude, latitude))} or
-#' as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}
+#' as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}.
 #' @param properties A list of properties. Default: NULL
 #' @family data functions
-#' @return a \code{\link{data-MultiPoint}} feature
+#' @return A \code{\link{data-MultiPoint}} feature.
 #' @examples
 #' lawn_multipoint(list(c(-74.5, 40), c(-77.5, 45)))
 #' lawn_multipoint("[[-74.5,40],[-77.5,45]]")

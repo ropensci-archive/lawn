@@ -1,10 +1,10 @@
 #' Create a multilinestring
 #'
 #' @export
-#' @param coordinates A list of Positions
-#' @param properties A list of properties
+#' @param coordinates A list of positions.
+#' @param properties A list of properties.
 #' @family data functions
-#' @return a \code{\link{data-MultiLineString}} feature
+#' @return A \code{\link{data-MultiLineString}} feature.
 #' @examples
 #' mlstr <- '[
 #'   [

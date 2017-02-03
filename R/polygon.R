@@ -1,10 +1,10 @@
 #' Create a polygon
 #'
 #' @export
-#' @param coordinates A list of LinearRings, or in json
-#' @param properties A list of properties
+#' @param coordinates A list of LinearRings, or in json.
+#' @param properties A list of properties.
 #' @family data functions
-#' @return a \code{\link{data-Polygon}} feature
+#' @return A \code{\link{data-Polygon}} feature.
 #' @examples
 #' rings <- list(list(
 #'    c(-2.275543, 53.464547),

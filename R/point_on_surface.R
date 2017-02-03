@@ -4,8 +4,8 @@
 #' \code{\link{data-GeoJSON}} object.
 #'
 #' @export
-#' @param x any \code{\link{data-GeoJSON}} object
-#' @return A point on the surface of \code{x}
+#' @param x Any \code{\link{data-GeoJSON}} object.
+#' @return A point on the surface of \code{x}.
 #' @template lint
 #' @family measurements
 #' @details What will be returned?

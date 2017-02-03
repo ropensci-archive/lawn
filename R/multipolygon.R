@@ -1,10 +1,10 @@
 #' Create a multipolygon
 #'
 #' @export
-#' @param coordinates A list of LinearRings, or in json
-#' @param properties A list of properties
+#' @param coordinates A list of LinearRings, or in json.
+#' @param properties A list of properties.
 #' @family data functions
-#' @return a \code{\link{data-MultiPolygon}} feature
+#' @return A \code{\link{data-MultiPolygon}} feature.
 #' @examples
 #' rings <- list(
 #'   list(list(

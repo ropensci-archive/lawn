@@ -5,7 +5,7 @@
 #'
 #' @importFrom jsonlite fromJSON
 #' @export
-#' @param fc A \code{\link{data-FeatureCollection}} of any type
+#' @param fc A \code{\link{data-FeatureCollection}} of any type.
 #' @template lint
 #' @examples
 #' # combine points

@@ -7,10 +7,10 @@
 #' for global curvature.
 #'
 #' @export
-#' @param start	starting point \code{\link{data-Point}}
-#' @param distance distance from the starting point
-#' @param bearing	ranging from -180 to 180
-#' @param units	miles, kilometers, degrees, or radians
+#' @param start	Starting point \code{\link{data-Point}}.
+#' @param distance Distance from the starting point.
+#' @param bearing	Ranging from -180 to 180.
+#' @param units	Miles, kilometers, degrees, or radians.
 #' @template lint
 #' @family measurements
 #' @return destination \code{\link{data-Point}}

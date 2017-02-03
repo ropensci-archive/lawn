@@ -2,10 +2,10 @@
 #'
 #' @export
 #' @param coordinates A pair of points in a vector, list or json, of the form
-#' \code{e.g., c(longitude,latitude)}
+#' \code{e.g., c(longitude,latitude)}.
 #' @param properties A list of properties. Default: NULL
 #' @family data functions
-#' @return a \code{\link{data-Point}} feature
+#' @return A \code{\link{data-Point}} feature.
 #' @examples
 #' lawn_point(c(-74.5, 40))
 #' lawn_point(list(-74.5, 40))

@@ -4,8 +4,8 @@
 #' the second polygon from the first.
 #'
 #' @export
-#' @param poly1 input Polygon feaure
-#' @param poly2 Polygon feature to erase from poly1
+#' @param poly1 Input Polygon feaure.
+#' @param poly2 Polygon feature to erase from poly1.
 #' @template lint
 #' @family transformations
 #' @return a \code{\link{data-Polygon}} feature showing the area of poly1
