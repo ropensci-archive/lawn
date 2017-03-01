@@ -6,13 +6,13 @@
 #'
 #' @export
 #'
-#' @param point Input point
-#' @param polygon Input polygon or multipolygon
+#' @param point Input point.
+#' @param polygon Input polygon or multipolygon.
 #' @template lint
 #' @family joins
 #' @return \code{TRUE} if the Point IS inside the Polygon, \code{FALSE} if
-#' the Point IS NOT inside the Polygon
-#' @details The polygon can be convex or concave. The function accounts for holes
+#' the Point IS NOT inside the Polygon.
+#' @details The polygon can be convex or concave. The function accounts for holes.
 #' @examples
 #' point1 <- '{
 #'   "type": "Feature",

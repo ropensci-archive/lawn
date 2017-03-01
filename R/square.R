@@ -4,9 +4,9 @@
 #' box that would contain the input.
 #'
 #' @export
-#' @param bbox A bounding box
+#' @param bbox A bounding box.
 #' @family measurements
-#' @return A square surrounding bbox, numeric vector of length four
+#' @return A square surrounding bbox, numeric vector of length four.
 #' @examples
 #' bbox <- c(-20, -20, -15, 0)
 #' lawn_square(bbox)

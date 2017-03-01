@@ -7,9 +7,10 @@
 #'
 #' @export
 #'
-#' @param from Origin point
-#' @param to Destination point
+#' @param from Origin point.
+#' @param to Destination point.
 #' @param units (character) Can be degrees, radians, miles, or kilometers
+#' (default).
 #' @template lint
 #' @family measurements
 #' @return Single numeric value

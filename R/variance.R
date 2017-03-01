@@ -1,16 +1,16 @@
 #' Variance of a field among points within polygons
 #'
 #' Calculates the variance value of a field for a set of \code{\link{data-Point}}'s
-#' within a set of \code{\link{data-Polygon}}'s
+#' within a set of \code{\link{data-Polygon}}'s.
 #'
 #' @export
 #' @template math
 #' @family aggregations
-#' @return a FeatureCollection of \code{\link{data-Polygon}} features with
-#' properties listed as \code{out_field}
+#' @return A FeatureCollection of \code{\link{data-Polygon}} features with
+#' properties listed as \code{out_field}.
 #' @template lint
 #' @return A FeatureCollection of \code{\link{data-Polygon}} features with
-#' properties listed as \code{out_field}
+#' properties listed as \code{out_field}.
 #' @examples \dontrun{
 #' poly <- lawn_data$polygons_average
 #' pt <- lawn_data$points_average

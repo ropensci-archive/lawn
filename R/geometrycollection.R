@@ -1,10 +1,10 @@
 #' Create a geometrycollection
 #'
 #' @export
-#' @param coordinates A list of GeoJSON geometries, or in json
-#' @param properties A list of properties
+#' @param coordinates A list of GeoJSON geometries, or in json.
+#' @param properties A list of properties.
 #' @family data functions
-#' @return a \code{\link{data-GeometryCollection}} feature
+#' @return A \code{\link{data-GeometryCollection}} feature.
 #' @examples
 #' x <- list(
 #'   list(

@@ -1,7 +1,7 @@
 #' Create a Feature
 #'
 #' @export
-#' @param geometry any geojson geometry
+#' @param geometry Any geojson geometry.
 #' @template lint
 #' @family data functions
 #' @examples \dontrun{

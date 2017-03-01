@@ -1,16 +1,16 @@
 #' Create a Triangulated Irregular Network
 #'
 #' Takes a set of \code{\link{data-Point}}'s and the name of a z-value property
-#' and creates a Triangulated Irregular Network (TIN)
+#' and creates a Triangulated Irregular Network (TIN).
 #'
 #' @export
-#' @param pt input points
-#' @param propertyName name of the property from which to pull z values. This is
+#' @param pt Input points.
+#' @param propertyName Name of the property from which to pull z values. This is
 #' optional: if not given, then there will be no extra data added to the derived
 #' triangles.
 #' @template lint
 #' @family interpolation
-#' @return TIN output, as a \code{\link{data-FeatureCollection}}
+#' @return TIN output, as a \code{\link{data-FeatureCollection}}.
 #' @details Data returned as a collection of Polygons. These are often used for
 #' developing elevation contour maps or stepped heat visualizations.
 #'

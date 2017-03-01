@@ -6,12 +6,12 @@
 #'
 #' @export
 #'
-#' @param features A set of input features
-#' @param property Property to filter
-#' @param value Value to filter
+#' @param features A set of input features.
+#' @param property Property to filter.
+#' @param value Value to filter.
 #' @template lint
 #' @family data functions
-#' @return A \code{\link{data-FeatureCollection}}
+#' @return A \code{\link{data-FeatureCollection}}.
 #' @examples
 #' cat(lawn_data$remove_features)
 #' lawn_remove(lawn_data$remove_features, 'marker-color', '#00f')

@@ -2,13 +2,13 @@
 #'
 #' @export
 #'
-#' @param features A \code{\link{data-FeatureCollection}}
-#' @param key (character) The property on which to filter
-#' @param value (character) The value of that property on which to filter
+#' @param features A \code{\link{data-FeatureCollection}}.
+#' @param key (character) The property on which to filter.
+#' @param value (character) The value of that property on which to filter.
 #' @template lint
 #' @family data functions
-#' @return a filtered \code{\link{data-FeatureCollection}} with only
-#' features that match input key and value
+#' @return S filtered \code{\link{data-FeatureCollection}} with only
+#' features that match input key and value.
 #' @examples
 #' cat(lawn_data$filter_features)
 #' lawn_filter(features = lawn_data$filter_features, key = 'species', value = 'oak')

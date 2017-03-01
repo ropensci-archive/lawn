@@ -4,11 +4,11 @@
 #' between them
 #'
 #' @export
-#' @param pt1 First point
-#' @param pt2 Second point
+#' @param pt1 First point.
+#' @param pt2 Second point.
 #' @template lint
 #' @family measurements
-#' @return A \code{\link{data-Point}} midway between pt1 and pt2
+#' @return A \code{\link{data-Point}} midway between pt1 and pt2.
 #' @examples
 #' pt1 <- '{
 #'   "type": "Feature",

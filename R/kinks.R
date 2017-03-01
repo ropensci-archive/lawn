@@ -1,7 +1,7 @@
 #' Get points at all self-intersections of a polygon
 #'
 #' @export
-#' @param input Feature of features
+#' @param input Feature of features.
 #' @template lint
 #' @examples
 #' poly <- '{

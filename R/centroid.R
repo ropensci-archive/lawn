@@ -6,7 +6,7 @@
 #'
 #' @export
 #'
-#' @param features Input features
+#' @param features Input features.
 #' @template lint
 #' @family measurements
 #' @return Feature - centroid of the input features

@@ -1,14 +1,14 @@
 #' Get geographic bearing between two points
 #'
 #' Takes two \code{\link{data-Point}}'s and finds the geographic bearing
-#' between them
+#' between them.
 #'
 #' @export
-#' @param start starting \code{\link{data-Point}}
-#' @param end ending \code{\link{data-Point}}
+#' @param start Starting \code{\link{data-Point}}.
+#' @param end Ending \code{\link{data-Point}}.
 #' @template lint
 #' @family measurements
-#' @return bearing (numeric) in decimal degrees
+#' @return A numeric value of the bearing in degrees.
 #' @examples
 #' start <- '{
 #'  "type": "Feature",
