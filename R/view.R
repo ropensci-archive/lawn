@@ -4,8 +4,8 @@
 #' @param x Input, a geojson character string or list.
 #' @param ... Any geojson object, as list, json, or point, polygon, etc. class.
 #' @return Opens a map with the geojson object(s).
-#' @details \code{view_} is a special interface to \code{view} to accept arbitrary
-#' input via \code{...}.
+#' @details \code{view_} is a special interface to \code{view} to accept
+#' arbitrary input via \code{...}.
 #' @examples \dontrun{
 #' # from character string
 #' view(lawn_data$polygons_average)
@@ -66,7 +66,8 @@
 #'
 #' # From a geo_list object from geojsonio package
 #' # library("geojsonio")
-#' # vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+#' # vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0),
+#'   c(100.0,1.0), c(100.0,0.0))
 #' # x <- geojson_list(vecs, geometry="polygon")
 #' # view_(x)
 #' # view_(x, lawn_point(c(101, 0)))
@@ -153,11 +154,13 @@ make_view <- function(x) {
   leaflet::leaflet() %>%
     leaflet::addTiles() %>%
     leaflet::addGeoJSON(jsonlite::fromJSON(x, FALSE)) %>%
-    leaflet::fitBounds(lng1 = b$lng1, lat1 = b$lat1, lng2 = b$lng2, lat2 = b$lat2)
+    leaflet::fitBounds(lng1 = b$lng1, lat1 = b$lat1, lng2 = b$lng2,
+                       lat2 = b$lat2)
 }
 
 make_bounds <- function(z) {
-  b <- as.list(setNames(lawn_extent(z), c("lng1", "lat1", "lng2", "lat2")))
+  b <- as.list(stats::setNames(lawn_extent(z),
+                               c("lng1", "lat1", "lng2", "lat2")))
   if (b$lng1 == b$lng2 || b$lat1 == b$lat2) {
     Map("+", b, c(-1, -1, 1, 1))
   } else {

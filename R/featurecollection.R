@@ -176,7 +176,7 @@ lawn_featurecollection.centroid <- function(features) {
 #' @export
 lawn_featurecollection.character <- function(features) {
   res <- tryCatch(jsonlite::fromJSON(features), error = function(e) e)
-  if (!is(res, "simpleError")) {
+  if (!inherits(res, "simpleError")) {
     if (res$type == "FeatureCollection") {
       structure(res, class = "featurecollection")
     } else {

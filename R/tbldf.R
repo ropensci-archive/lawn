@@ -6,7 +6,7 @@ trunc_mat <- function(x, n = NULL){
     if (is.na(rows) || rows > 100) { n <- 10 }
     else { n <- rows }
   }
-  df <- as.data.frame(head(x, n))
+  df <- as.data.frame(utils::head(x, n))
   if (nrow(df) == 0)
     return()
   #   is_list <- vapply(df, is.list, logical(1))
@@ -115,6 +115,6 @@ obj_type <- function (x)
     paste0("<S3:", paste0(class(x), collapse = ", "), ">")
   }
   else {
-    paste0("<S4:", paste0(is(x), collapse = ", "), ">")
+    paste0("<S4:", paste0(inherits(x), collapse = ", "), ">")
   }
 }

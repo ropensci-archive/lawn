@@ -21,8 +21,8 @@ Opens a map with the geojson object(s).
 Visualize geojson
 }
 \details{
-\code{view_} is a special interface to \code{view} to accept arbitrary
-input via \code{...}.
+\code{view_} is a special interface to \code{view} to accept
+arbitrary input via \code{...}.
 }
 \examples{
 \dontrun{
@@ -85,7 +85,8 @@ view_(lawn_point(c(-30, 20)),
 
 # From a geo_list object from geojsonio package
 # library("geojsonio")
-# vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+# vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0),
+  c(100.0,1.0), c(100.0,0.0))
 # x <- geojson_list(vecs, geometry="polygon")
 # view_(x)
 # view_(x, lawn_point(c(101, 0)))

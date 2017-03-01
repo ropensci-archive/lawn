@@ -10,7 +10,7 @@
 #' as_feature(lawn_random())
 #' # as_feature(lawn_random("polygons"))
 as_feature <- function(x) {
-  if (is(x, "featurecollection")) {
+  if (inherits(x, "featurecollection")) {
     ct$eval(sprintf("var x = %s;", convert(x)))
     tmp <- ct$get("x.features", simplifyVector = FALSE)
     tmp <- lapply(tmp, function(z) {

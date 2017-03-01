@@ -65,7 +65,7 @@ is_type <- function(x, type) {
 lintit <- function(z) {
   ht$eval(sprintf("var out = geojsonhint.hint('%s');", jsonlite::minify(z)))
   tmp_ <- ht$get("out")
-  tmp <- if (is(tmp_, "data.frame")) {
+  tmp <- if (inherits(tmp_, "data.frame")) {
     paste0("\n", apply(tmp_, 1, function(w) {
       ww <- as.list(w)
       sprintf("Line %s - %s", ww['line'], ww['message'])
