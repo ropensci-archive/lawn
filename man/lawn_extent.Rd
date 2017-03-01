@@ -7,7 +7,8 @@
 lawn_extent(input, lint = FALSE)
 }
 \arguments{
-\item{input}{A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}}
+\item{input}{A \code{\link{data-Feature}} or
+\code{\link{data-FeatureCollection}}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -48,6 +49,7 @@ lawn_extent(dat)
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

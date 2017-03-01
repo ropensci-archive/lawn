@@ -7,7 +7,7 @@
 lawn_feature(geometry, lint = FALSE)
 }
 \arguments{
-\item{geometry}{any geojson geometry}
+\item{geometry}{Any geojson geometry.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

@@ -7,9 +7,9 @@
 lawn_midpoint(pt1, pt2, lint = FALSE)
 }
 \arguments{
-\item{pt1}{First point}
+\item{pt1}{First point.}
 
-\item{pt2}{Second point}
+\item{pt2}{Second point.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Point}} midway between pt1 and pt2
+A \code{\link{data-Point}} midway between pt1 and pt2.
 }
 \description{
 Takes two \code{\link{data-Point}}'s and returns a point midway
@@ -54,6 +54,7 @@ lawn_featurecollection(list(
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

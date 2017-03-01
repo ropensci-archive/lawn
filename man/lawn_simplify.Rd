@@ -8,10 +8,10 @@ lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
   lint = FALSE)
 }
 \arguments{
-\item{feature}{a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-feature to be simplified}
+\item{feature}{A \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+feature to be simplified.}
 
-\item{tolerance}{(numeric) Simplification tolerance.  Default value is 0.01}
+\item{tolerance}{(numeric) Simplification tolerance.  Default value is 0.01.}
 
 \item{high_quality}{(boolean) Whether or not to spend more time to create a
 higher-quality simplification with a different algorithm. Default: \code{FALSE}}
@@ -22,13 +22,13 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a simplified feature
+A simplified feature.
 
-A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}
+A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}.
 }
 \description{
 Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
-and returns a simplified version
+and returns a simplified version.
 }
 \details{
 Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})

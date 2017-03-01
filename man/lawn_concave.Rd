@@ -7,12 +7,12 @@
 lawn_concave(points, maxEdge = 1, units = "miles", lint = FALSE)
 }
 \arguments{
-\item{points}{input points in a \code{\link{data-FeatureCollection}}}
+\item{points}{Input points in a \code{\link{data-FeatureCollection}}.}
 
-\item{maxEdge}{the size of an edge necessary for part of the hull to
-become concave (in miles)}
+\item{maxEdge}{The size of an edge necessary for part of the hull to
+become concave (in miles).}
 
-\item{units}{used for maxEdge distance (miles [default] or kilometers)}
+\item{units}{Used for maxEdge distance (miles [default] or kilometers).}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

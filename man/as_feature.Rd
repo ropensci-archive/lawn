@@ -7,7 +7,7 @@
 as_feature(x)
 }
 \arguments{
-\item{x}{A \code{\link{data-FeatureCollection}}}
+\item{x}{A \code{\link{data-FeatureCollection}}.}
 }
 \description{
 Convert a FeatureCollection to a Feature

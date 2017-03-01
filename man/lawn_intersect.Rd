@@ -7,9 +7,9 @@
 lawn_intersect(poly1, poly2, lint = FALSE)
 }
 \arguments{
-\item{poly1}{A \code{\link{data-Polygon}}}
+\item{poly1}{A \code{\link{data-Polygon}}.}
 
-\item{poly2}{A \code{\link{data-Polygon}}}
+\item{poly2}{A \code{\link{data-Polygon}}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

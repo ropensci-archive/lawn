@@ -13,7 +13,7 @@ lawn_deviation(polygons, points, in_field, out_field = "deviation",
 \item{points}{Points with values to aggregate.}
 
 \item{in_field}{Characater for the name of the field on \code{pts} on
-which you wish to perfrom the aggregation}
+which you wish to perfrom the aggregation.}
 
 \item{out_field}{Characater for the name of the field on the ouput
 polygon FeatureCollection that will store the resultant value.}

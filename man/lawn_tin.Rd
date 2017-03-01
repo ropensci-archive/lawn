@@ -7,9 +7,9 @@
 lawn_tin(pt, propertyName = NULL, lint = FALSE)
 }
 \arguments{
-\item{pt}{input points}
+\item{pt}{Input points.}
 
-\item{propertyName}{name of the property from which to pull z values. This is
+\item{propertyName}{Name of the property from which to pull z values. This is
 optional: if not given, then there will be no extra data added to the derived
 triangles.}
 
@@ -19,11 +19,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-TIN output, as a \code{\link{data-FeatureCollection}}
+TIN output, as a \code{\link{data-FeatureCollection}}.
 }
 \description{
 Takes a set of \code{\link{data-Point}}'s and the name of a z-value property
-and creates a Triangulated Irregular Network (TIN)
+and creates a Triangulated Irregular Network (TIN).
 }
 \details{
 Data returned as a collection of Polygons. These are often used for

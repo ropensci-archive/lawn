@@ -7,10 +7,10 @@
 lawn_square(bbox)
 }
 \arguments{
-\item{bbox}{A bounding box}
+\item{bbox}{A bounding box.}
 }
 \value{
-A square surrounding bbox, numeric vector of length four
+A square surrounding bbox, numeric vector of length four.
 }
 \description{
 Takes a bounding box and calculates the minimum square bounding
@@ -28,6 +28,7 @@ lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) \%>
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

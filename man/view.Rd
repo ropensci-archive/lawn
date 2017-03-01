@@ -10,19 +10,19 @@ view(x)
 view_(...)
 }
 \arguments{
-\item{x}{Input, a geojson character string or list}
+\item{x}{Input, a geojson character string or list.}
 
-\item{...}{Any geojson object, as list, json, or point, polygon, etc. class}
+\item{...}{Any geojson object, as list, json, or point, polygon, etc. class.}
 }
 \value{
-Opens a map with the geojson object(s)
+Opens a map with the geojson object(s).
 }
 \description{
 Visualize geojson
 }
 \details{
 \code{view_} is a special interface to \code{view} to accept arbitrary
-input via \code{...}
+input via \code{...}.
 }
 \examples{
 \dontrun{

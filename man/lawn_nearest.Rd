@@ -7,9 +7,9 @@
 lawn_nearest(point, against, lint = FALSE)
 }
 \arguments{
-\item{point}{The reference point, a \code{\link{data-Feature}}}
+\item{point}{The reference point, a \code{\link{data-Feature}}.}
 
-\item{against}{Input point set, a \code{\link{data-FeatureCollection}}}
+\item{against}{Input point set, a \code{\link{data-FeatureCollection}}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Point}} as a Feature
+A \code{\link{data-Point}} as a Feature.
 }
 \description{
 Takes a reference \code{\link{data-Point}} and a set of points to compare it

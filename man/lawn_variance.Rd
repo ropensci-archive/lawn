@@ -22,15 +22,15 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a FeatureCollection of \code{\link{data-Polygon}} features with
-properties listed as \code{out_field}
+A FeatureCollection of \code{\link{data-Polygon}} features with
+properties listed as \code{out_field}.
 
 A FeatureCollection of \code{\link{data-Polygon}} features with
-properties listed as \code{out_field}
+properties listed as \code{out_field}.
 }
 \description{
 Calculates the variance value of a field for a set of \code{\link{data-Point}}'s
-within a set of \code{\link{data-Polygon}}'s
+within a set of \code{\link{data-Polygon}}'s.
 }
 \examples{
 \dontrun{

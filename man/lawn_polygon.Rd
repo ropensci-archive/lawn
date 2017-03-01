@@ -7,12 +7,12 @@
 lawn_polygon(coordinates, properties = NULL)
 }
 \arguments{
-\item{coordinates}{A list of LinearRings, or in json}
+\item{coordinates}{A list of LinearRings, or in json.}
 
-\item{properties}{A list of properties}
+\item{properties}{A list of properties.}
 }
 \value{
-a \code{\link{data-Polygon}} feature
+A \code{\link{data-Polygon}} feature.
 }
 \description{
 Create a polygon

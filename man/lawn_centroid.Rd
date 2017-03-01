@@ -7,7 +7,7 @@
 lawn_centroid(features, lint = FALSE)
 }
 \arguments{
-\item{features}{Input features}
+\item{features}{Input features.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -43,6 +43,7 @@ lawn_centroid(features = poly)
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

@@ -7,9 +7,9 @@
 as.turf(x, ...)
 }
 \arguments{
-\item{x}{Input}
+\item{x}{Input data to be coerced.}
 
-\item{...}{Ignored}
+\item{...}{Ignored.}
 }
 \description{
 Coerce to turf.js javascript function call

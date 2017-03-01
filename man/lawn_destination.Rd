@@ -7,13 +7,13 @@
 lawn_destination(start, distance, bearing, units, lint = FALSE)
 }
 \arguments{
-\item{start}{starting point \code{\link{data-Point}}}
+\item{start}{Starting point \code{\link{data-Point}}.}
 
-\item{distance}{distance from the starting point}
+\item{distance}{Distance from the starting point.}
 
-\item{bearing}{ranging from -180 to 180}
+\item{bearing}{Ranging from -180 to 180.}
 
-\item{units}{miles, kilometers, degrees, or radians}
+\item{units}{Miles, kilometers, degrees, or radians.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -54,6 +54,7 @@ lawn_destination(pt, 200, 90, "miles") \%>\% view
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},
   \code{\link{lawn_extent}},

@@ -7,13 +7,13 @@
 lawn_isolines(points, z, resolution, breaks, lint = FALSE)
 }
 \arguments{
-\item{points}{Input points}
+\item{points}{Input points.}
 
-\item{z}{(character) the property name in points from which z-values will be pulled}
+\item{z}{(character) The property name in points from which z-values will be pulled.}
 
-\item{resolution}{(numeric) resolution of the underlying grid}
+\item{resolution}{(numeric) Resolution of the underlying grid.}
 
-\item{breaks}{(numeric) where to draw contours}
+\item{breaks}{(numeric) Where to draw contours.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -21,8 +21,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-FeatureCollection}} of isolines
-(\code{\link{data-LineString}} features)
+A \code{\link{data-FeatureCollection}} of isolines
+(\code{\link{data-LineString}} features).
 }
 \description{
 Takes \code{\link{data-Point}}'s with z-values and an array of value

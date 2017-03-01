@@ -22,7 +22,7 @@ objects. Default: \code{FALSE}}
 }
 \value{
 A FeatureCollection of \code{\link{data-Polygon}} features with
-properties listed as \code{out_field}
+properties listed as \code{out_field}.
 }
 \description{
 Calculates the minimum value of a field for a set of \code{\link{data-Point}}'s

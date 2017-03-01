@@ -7,11 +7,12 @@
 lawn_along(line, distance, units, lint = FALSE)
 }
 \arguments{
-\item{line}{input \code{\link{data-LineString}}}
+\item{line}{An input \code{\link{data-LineString}}.}
 
-\item{distance}{distance along the line}
+\item{distance}{Distance along the line.}
 
-\item{units}{can be degrees, radians, miles (default), or kilometers}
+\item{units}{Units for the \code{distance} argument. Can be degrees, radians,
+miles (default), or kilometers.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -19,7 +20,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-Point}} distance units along the line
+A \code{\link{data-Point}} distance units along the line.
 }
 \description{
 Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
@@ -42,8 +43,9 @@ lawn_featurecollection(list(res, lawn_linestring(pts))) \%>\% view
 \seealso{
 Other measurements: \code{\link{lawn_area}},
   \code{\link{lawn_bbox_polygon}}, \code{\link{lawn_bbox}},
-  \code{\link{lawn_bearing}}, \code{\link{lawn_center}},
-  \code{\link{lawn_centroid}},
+  \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
+  \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},
   \code{\link{lawn_extent}},

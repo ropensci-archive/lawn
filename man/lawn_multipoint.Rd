@@ -9,12 +9,12 @@ lawn_multipoint(coordinates, properties = NULL)
 \arguments{
 \item{coordinates}{A list of point pairs, either as a list or json, of the
 form e.g. \code{list(c(longitude, latitude), c(longitude, latitude))} or
-as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}}
+as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}.}
 
 \item{properties}{A list of properties. Default: NULL}
 }
 \value{
-a \code{\link{data-MultiPoint}} feature
+A \code{\link{data-MultiPoint}} feature.
 }
 \description{
 Create a multipoint

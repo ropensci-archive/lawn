@@ -7,9 +7,9 @@
 lawn_difference(poly1, poly2, lint = FALSE)
 }
 \arguments{
-\item{poly1}{input Polygon feaure}
+\item{poly1}{Input Polygon feaure.}
 
-\item{poly2}{Polygon feature to erase from poly1}
+\item{poly2}{Polygon feature to erase from poly1.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

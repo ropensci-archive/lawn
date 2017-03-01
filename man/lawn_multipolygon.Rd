@@ -7,12 +7,12 @@
 lawn_multipolygon(coordinates, properties = NULL)
 }
 \arguments{
-\item{coordinates}{A list of LinearRings, or in json}
+\item{coordinates}{A list of LinearRings, or in json.}
 
-\item{properties}{A list of properties}
+\item{properties}{A list of properties.}
 }
 \value{
-a \code{\link{data-MultiPolygon}} feature
+A \code{\link{data-MultiPolygon}} feature.
 }
 \description{
 Create a multipolygon

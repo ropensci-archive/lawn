@@ -7,11 +7,11 @@
 lawn_line_slice(point1, point2, line, lint = FALSE)
 }
 \arguments{
-\item{point1}{Starting point}
+\item{point1}{Starting point.}
 
-\item{point2}{Stopping point}
+\item{point2}{Stopping point.}
 
-\item{line}{Line to slice}
+\item{line}{Line to slice.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-LineString}}
+A \code{\link{data-LineString}}.
 }
 \description{
 Takes a line, a start Point, and a stop point and returns the line in

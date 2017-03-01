@@ -7,7 +7,7 @@
 lawn_convex(input, lint = FALSE)
 }
 \arguments{
-\item{input}{input points in a \code{\link{data-FeatureCollection}}}
+\item{input}{Input points in a \code{\link{data-FeatureCollection}}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

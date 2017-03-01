@@ -7,15 +7,15 @@
 lawn_hex_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) extent in [minX, minY, maxX, maxY] order}
+\item{extent}{(numeric) Extent in [minX, minY, maxX, maxY] order.}
 
-\item{cellWidth}{(integer) width of each cell}
+\item{cellWidth}{(integer) Width of each cell.}
 
-\item{units}{(character) units to use for cellWidth, one of 'miles' or
-'kilometers'}
+\item{units}{(character) Units to use for cellWidth, one of 'miles' or
+'kilometers'.}
 }
 \value{
-\code{\link{data-FeatureCollection}} grid of points
+A \code{\link{data-FeatureCollection}} grid of points.
 }
 \description{
 Takes a bounding box and a cell size in degrees and returns a

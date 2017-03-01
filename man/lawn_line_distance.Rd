@@ -7,9 +7,9 @@
 lawn_line_distance(line, units, lint = FALSE)
 }
 \arguments{
-\item{line}{Line to measure, a \code{\link{data-LineString}}}
+\item{line}{Line to measure, a \code{\link{data-LineString}}.}
 
-\item{units}{Can be degrees, radians, miles, or kilometers}
+\item{units}{Can be degrees, radians, miles, or kilometers.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,7 +17,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-length of the input line (numeric)
+Length of the input line (numeric).
 }
 \description{
 Takes a \code{\link{data-LineString}} and measures its length in
@@ -48,6 +48,7 @@ lawn_line_distance(line, 'degrees')
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

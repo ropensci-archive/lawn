@@ -7,7 +7,7 @@
 lawn_center(features, lint = FALSE)
 }
 \arguments{
-\item{features}{input features, as a \code{\link{data-FeatureCollection}}}
+\item{features}{Input features, as a \code{\link{data-FeatureCollection}}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -15,12 +15,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-Point}} feature at the absolute center point of
-all input features
+A \code{\link{data-Point}} feature at the absolute center point of
+all input features.
 }
 \description{
 Takes a \code{\link{data-FeatureCollection}} and returns the
-absolute center point of all features
+absolute center point of all features.
 }
 \examples{
 lawn_center(lawn_data$points_average)
@@ -34,6 +34,7 @@ lawn_center(lawn_data$points_average) \%>\% view
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
   \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
   \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},

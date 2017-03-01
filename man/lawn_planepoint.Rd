@@ -7,9 +7,9 @@
 lawn_planepoint(pt, triangle, lint = FALSE)
 }
 \arguments{
-\item{pt}{the Point for which a z-value will be calculated}
+\item{pt}{The Point for which a z-value will be calculated.}
 
-\item{triangle}{a Polygon feature with three vertices}
+\item{triangle}{A Polygon feature with three vertices.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,12 +17,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-the z-value for pt (numeric)
+The z-value for pt (numeric).
 }
 \description{
 Takes a triangular plane as a \code{\link{data-Polygon}} and a
 \code{\link{data-Point}} within that triangle and returns the
-z-value at that point
+z-value at that point.
 }
 \details{
 The Polygon needs to have properties a, b, and c that define

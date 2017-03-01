@@ -4,11 +4,11 @@
 \alias{print-methods}
 \title{Lawn print methods to provide summary view}
 \arguments{
-\item{x}{input}
+\item{x}{Input.}
 
-\item{n}{(integer) Number of rows to print, when properties is large object}
+\item{n}{(integer) Number of rows to print, when properties is large object.}
 
-\item{...}{print options}
+\item{...}{Print options.}
 }
 \description{
 Lawn print methods to provide summary view

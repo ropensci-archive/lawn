@@ -9,7 +9,7 @@ lawn_featurecollection(features)
 \arguments{
 \item{features}{Input features, can be json as json or character class,
 or a point, polygon, linestring, or centroid class, or many of those
-things in a list}
+things in a list.}
 }
 \description{
 Create a FeatureCollection

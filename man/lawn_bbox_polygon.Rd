@@ -7,14 +7,14 @@
 lawn_bbox_polygon(bbox)
 }
 \arguments{
-\item{bbox}{an Array of bounding box coordinates in the form:
-[xLow, yLow, xHigh, yHigh]}
+\item{bbox}{An array of bounding box coordinates in the form:
+[xLow, yLow, xHigh, yHigh].}
 }
 \value{
-a \code{\link{data-Polygon}} representation of the bounding box
+A \code{\link{data-Polygon}} representation of the bounding box.
 }
 \description{
-Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}
+Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}.
 }
 \examples{
 bbox <- c(0, 0, 10, 10)
@@ -27,8 +27,9 @@ lawn_bbox_polygon(c(1, 3, 5, 50)) \%>\% view
 \seealso{
 Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_area}}, \code{\link{lawn_bbox}},
-  \code{\link{lawn_bearing}}, \code{\link{lawn_center}},
-  \code{\link{lawn_centroid}},
+  \code{\link{lawn_bearing}},
+  \code{\link{lawn_center_of_mass}},
+  \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
   \code{\link{lawn_destination}},
   \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},
   \code{\link{lawn_extent}},

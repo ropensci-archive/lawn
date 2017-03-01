@@ -7,11 +7,12 @@
 lawn_buffer(input, dist, units = "kilometers", lint = FALSE)
 }
 \arguments{
-\item{input}{A Feature or FeatureCollection}
+\item{input}{A Feature or FeatureCollection.}
 
-\item{dist}{distance used to buffer the input}
+\item{dist}{Distance used to buffer the input.}
 
-\item{units}{(character) Can be miles, feet, kilometers (default), meters, or degrees}
+\item{units}{Units of the \code{dist} argument.  Can be miles, feet,
+kilometers (default), meters, or degrees.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

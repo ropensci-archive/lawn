@@ -7,11 +7,11 @@
 lawn_filter(features, key, value, lint = FALSE)
 }
 \arguments{
-\item{features}{A \code{\link{data-FeatureCollection}}}
+\item{features}{A \code{\link{data-FeatureCollection}}.}
 
-\item{key}{(character) The property on which to filter}
+\item{key}{(character) The property on which to filter.}
 
-\item{value}{(character) The value of that property on which to filter}
+\item{value}{(character) The value of that property on which to filter.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -19,8 +19,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a filtered \code{\link{data-FeatureCollection}} with only
-features that match input key and value
+S filtered \code{\link{data-FeatureCollection}} with only
+features that match input key and value.
 }
 \description{
 Filter a FeatureCollection by a given property and value

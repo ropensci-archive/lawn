@@ -7,7 +7,7 @@
 lawn_kinks(input, lint = FALSE)
 }
 \arguments{
-\item{input}{Feature of features}
+\item{input}{Feature of features.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

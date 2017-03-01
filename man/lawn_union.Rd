@@ -7,9 +7,9 @@
 lawn_union(poly1, poly2, lint = FALSE)
 }
 \arguments{
-\item{poly1}{A polygon}
+\item{poly1}{A polygon.}
 
-\item{poly2}{A polygon}
+\item{poly2}{A polygon.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,8 +17,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a combined \code{\link{data-Polygon}} or
-\code{\link{data-MultiPolygon}} feature
+A combined \code{\link{data-Polygon}} or
+\code{\link{data-MultiPolygon}} feature.
 }
 \description{
 Finds the interesection of two \code{\link{data-Polygon}}'s and returns the
@@ -26,7 +26,7 @@ union of the two
 }
 \details{
 Contiguous polygons are combined, non-contiguous polygons are returned
-as MultiPolygon
+as MultiPolygon.
 }
 \examples{
 poly1 <- '{

@@ -8,12 +8,12 @@ lawn_point(coordinates, properties = NULL)
 }
 \arguments{
 \item{coordinates}{A pair of points in a vector, list or json, of the form
-\code{e.g., c(longitude,latitude)}}
+\code{e.g., c(longitude,latitude)}.}
 
 \item{properties}{A list of properties. Default: NULL}
 }
 \value{
-a \code{\link{data-Point}} feature
+A \code{\link{data-Point}} feature.
 }
 \description{
 Create a point
