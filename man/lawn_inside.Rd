@@ -21,12 +21,13 @@ objects. Default: \code{FALSE}}
 the Point IS NOT inside the Polygon.
 }
 \description{
-Takes a \code{\link{data-Point}} and a \code{\link{data-Polygon}} or
-\code{\link{data-MultiPolygon}} and determines if the point
+Takes a \link{data-Point} and a \link{data-Polygon} or
+\link{data-MultiPolygon} and determines if the point
 resides inside the polygon
 }
 \details{
-The polygon can be convex or concave. The function accounts for holes.
+The polygon can be convex or concave. The function accounts for
+holes.
 }
 \examples{
 point1 <- '{

@@ -5,7 +5,8 @@
 \alias{gr_point}
 \alias{gr_position}
 \alias{gr_polygon}
-\title{Return a FeatureCollection with N number of features with random coordinates}
+\title{Return a FeatureCollection with N number of features with
+random coordinates}
 \usage{
 gr_point(n = 10, bbox = NULL)
 
@@ -14,27 +15,30 @@ gr_position(bbox = NULL)
 gr_polygon(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL)
 }
 \arguments{
-\item{n}{(integer) Number of features to create. Default: 10 (points), 1 (polygons)}
+\item{n}{(integer) Number of features to create. Default: 10 (points),
+1 (polygons)}
 
-\item{bbox}{(numeric) A bounding box of length 4, of the form west, south, east,
-north order. By default, no bounding box is passed in.}
+\item{bbox}{(numeric) A bounding box of length 4, of the form west, south,
+east, north order. By default, no bounding box is passed in.}
 
 \item{vertices}{(integer) Number coordinates each Polygon will contain.
 Default: 10}
 
-\item{max_radial_length}{(integer) Maximum number of decimal degrees latitude or
-longitude that a vertex can reach out of the center of the Polygon. Default: 10}
+\item{max_radial_length}{(integer) Maximum number of decimal degrees
+latitude or longitude that a vertex can reach out of the center of the
+Polygon. Default: 10}
 }
 \value{
-A \code{\link{data-FeatureCollection}} for point and polygon, or numeric
+A \link{data-FeatureCollection} for point and polygon, or numeric
 vector for position.
 }
 \description{
-Return a FeatureCollection with N number of features with random coordinates
+Return a FeatureCollection with N number of features with
+random coordinates
 }
 \details{
-These functions create either random points, polygons, or positions (single
-long/lat coordinate pairs).
+These functions create either random points, polygons, or
+positions (single long/lat coordinate pairs).
 }
 \examples{
 # Random points
@@ -67,5 +71,5 @@ gr_polygon(1, 5, 5, c(50, 50, 60, 60))
 \url{https://github.com/mapbox/geojson-random}
 }
 \seealso{
-\code{\link{lawn_random}}
+\link{lawn_random}
 }

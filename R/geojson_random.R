@@ -1,21 +1,24 @@
-#' Return a FeatureCollection with N number of features with random coordinates
+#' Return a FeatureCollection with N number of features with
+#' random coordinates
 #'
 #' @export
 #' @name georandom
 #'
-#' @param n (integer) Number of features to create. Default: 10 (points), 1 (polygons)
+#' @param n (integer) Number of features to create. Default: 10 (points),
+#' 1 (polygons)
 #' @param vertices (integer) Number coordinates each Polygon will contain.
 #' Default: 10
-#' @param max_radial_length (integer) Maximum number of decimal degrees latitude or
-#' longitude that a vertex can reach out of the center of the Polygon. Default: 10
-#' @param bbox (numeric) A bounding box of length 4, of the form west, south, east,
-#' north order. By default, no bounding box is passed in.
-#' @return A \code{\link{data-FeatureCollection}} for point and polygon, or numeric
+#' @param max_radial_length (integer) Maximum number of decimal degrees
+#' latitude or longitude that a vertex can reach out of the center of the
+#' Polygon. Default: 10
+#' @param bbox (numeric) A bounding box of length 4, of the form west, south,
+#' east, north order. By default, no bounding box is passed in.
+#' @return A [data-FeatureCollection] for point and polygon, or numeric
 #' vector for position.
-#' @references \url{https://github.com/mapbox/geojson-random}
-#' @details These functions create either random points, polygons, or positions (single
-#' long/lat coordinate pairs).
-#' @seealso \code{\link{lawn_random}}
+#' @references <https://github.com/mapbox/geojson-random>
+#' @details These functions create either random points, polygons, or
+#' positions (single long/lat coordinate pairs).
+#' @seealso [lawn_random]
 #' @examples
 #' # Random points
 #' gr_point(5)
@@ -51,7 +54,8 @@ gr_point <- function(n = 10, bbox = NULL) {
     rand$eval(sprintf("var pt = georandom.point(%s);", n))
   } else {
     check_bbox(bbox)
-    rand$eval(sprintf("var pt = georandom.point(%s, %s);", n, jsonlite::toJSON(bbox)))
+    rand$eval(sprintf("var pt = georandom.point(%s, %s);", n,
+                      jsonlite::toJSON(bbox)))
   }
   as.fc(rand$get("pt"))
 }
@@ -63,19 +67,23 @@ gr_position <- function(bbox = NULL) {
     rand$eval("var pos = georandom.position();")
   } else {
     check_bbox(bbox)
-    rand$eval(sprintf("var pos = georandom.position(%s);", jsonlite::toJSON(bbox)))
+    rand$eval(sprintf("var pos = georandom.position(%s);",
+                      jsonlite::toJSON(bbox)))
   }
   rand$get("pos")
 }
 
 #' @export
 #' @rdname georandom
-gr_polygon <- function(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL) {
+gr_polygon <- function(n = 1, vertices = 10, max_radial_length = 10,
+                       bbox = NULL) {
   if (is.null(bbox)) {
-    rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s);", n, vertices, max_radial_length))
+    rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s);",
+                      n, vertices, max_radial_length))
   } else {
     check_bbox(bbox)
-    rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s, %s);", n, vertices, max_radial_length, jsonlite::toJSON(bbox)))
+    rand$eval(sprintf("var polys = georandom.polygon(%s, %s, %s, %s);",
+                      n, vertices, max_radial_length, jsonlite::toJSON(bbox)))
   }
   as.fc(rand$get("polys"))
 }

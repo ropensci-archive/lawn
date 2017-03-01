@@ -15,7 +15,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-FeatureCollection}}
+a \link{data-FeatureCollection}
 }
 \description{
 Flattens any GeoJSON to a FeatureCollection

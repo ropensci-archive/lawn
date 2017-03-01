@@ -1,9 +1,9 @@
 #' Make a bounding box from a polygon
 #'
-#' Takes a polygon \code{\link{data-Polygon}} and returns a bbox
+#' Takes a polygon [data-Polygon] and returns a bbox
 #'
 #' @export
-#' @param x A FeatureCollection of \code{\link{data-Polygon}} features.
+#' @param x A FeatureCollection of [data-Polygon] features.
 #' @template lint
 #' @family measurements
 #' @return A bounding box.

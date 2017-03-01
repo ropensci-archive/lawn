@@ -12,7 +12,7 @@ lawn_multilinestring(coordinates, properties = NULL)
 \item{properties}{A list of properties.}
 }
 \value{
-A \code{\link{data-MultiLineString}} feature.
+A \link{data-MultiLineString} feature.
 }
 \description{
 Create a multilinestring

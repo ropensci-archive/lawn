@@ -15,7 +15,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}.
+A \link{data-Feature} or \link{data-FeatureCollection}.
 }
 \description{
 Flip x,y to y,x, and vice versa

@@ -21,7 +21,8 @@ bbox <- c(-20, -20, -15, 0)
 lawn_square(bbox)
 \dontrun{
 sq <- lawn_square(bbox)
-lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) \%>\% view
+lawn_featurecollection(list(lawn_bbox_polygon(bbox),
+  lawn_bbox_polygon(sq))) \%>\% view
 }
 }
 \seealso{

@@ -1,13 +1,13 @@
 #' Get closest point on linestring to reference point
 #'
-#' Takes a line, a start \code{\link{data-Point}}, and a stop point and returns
+#' Takes a line, a start [data-Point], and a stop point and returns
 #' the line in between those points
 #'
 #' @export
 #' @param line Line to snap to.
 #' @param point point to snap from.
 #' @template lint
-#' @return A \code{\link{data-Point}}.
+#' @return A [data-Point].
 #' @examples
 #' line <- '{
 #'   "type": "Feature",

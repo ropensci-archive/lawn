@@ -8,13 +8,13 @@ lawn_bbox_polygon(bbox)
 }
 \arguments{
 \item{bbox}{An array of bounding box coordinates in the form:
-[xLow, yLow, xHigh, yHigh].}
+\code{[xLow, yLow, xHigh, yHigh]}.}
 }
 \value{
-A \code{\link{data-Polygon}} representation of the bounding box.
+A \link{data-Polygon} representation of the bounding box.
 }
 \description{
-Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}.
+Takes a bbox and returns an equivalent polygon \link{data-Polygon}.
 }
 \examples{
 bbox <- c(0, 0, 10, 10)

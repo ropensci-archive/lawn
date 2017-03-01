@@ -1,13 +1,13 @@
 #' Get center point
 #'
-#' Takes a \code{\link{data-FeatureCollection}} and returns the
+#' Takes a [data-FeatureCollection] and returns the
 #' absolute center point of all features.
 #'
 #' @export
-#' @param features Input features, as a \code{\link{data-FeatureCollection}}.
+#' @param features Input features, as a [data-FeatureCollection].
 #' @template lint
 #' @family measurements
-#' @return A \code{\link{data-Point}} feature at the absolute center point of
+#' @return A [data-Point] feature at the absolute center point of
 #' all input features.
 #' @examples
 #' lawn_center(lawn_data$points_average)

@@ -1,13 +1,13 @@
 #' Calculate envelope around features
 #'
 #' Takes any number of features and returns a rectangular
-#' \code{\link{data-Polygon}} that encompasses all vertices.
+#' [data-Polygon] that encompasses all vertices.
 #'
 #' @export
-#' @param fc A \code{\link{data-FeatureCollection}}.
+#' @param fc A [data-FeatureCollection].
 #' @template lint
 #' @family measurements
-#' @return a rectangular \code{\link{data-Polygon}} feature that
+#' @return a rectangular [data-Polygon] feature that
 #' encompasses all vertices
 #' @examples
 #' fc <- '{

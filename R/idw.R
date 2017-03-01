@@ -8,7 +8,7 @@
 #' chemical dispersion surface...) from a set of spatially scattered points.
 #'
 #' @export
-#' @param controlPoints A \code{\link{data-FeatureCollection}}, Sampled
+#' @param controlPoints A [data-FeatureCollection], Sampled
 #' points with known value
 #' @param valueField (character) GeoJSON field containing the known value
 #' to interpolate on
@@ -18,7 +18,7 @@
 #' radians, miles, or kilometers
 #' @template lint
 #' @family grids
-#' @return a \code{\link{data-FeatureCollection}} containing the dissolved
+#' @return a [data-FeatureCollection] containing the dissolved
 #' polygons
 #' @examples
 #' x <- '{

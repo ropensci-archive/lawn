@@ -7,7 +7,7 @@
 lawn_convex(input, lint = FALSE)
 }
 \arguments{
-\item{input}{Input points in a \code{\link{data-FeatureCollection}}.}
+\item{input}{Input points in a \link{data-FeatureCollection}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -15,10 +15,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a convex hull \code{\link{data-Polygon}}
+a convex hull \link{data-Polygon}
 }
 \description{
-Takes a set of \code{\link{data-Point}}'s and returns a convex
+Takes a set of \link{data-Point}'s and returns a convex
 hull polygon. Internally, this uses the
 \href{https://github.com/mikolalysenko/convex-hull}{convex-hull} module
 that implements a Monotone chain hull

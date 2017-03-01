@@ -2,11 +2,11 @@
 #' that multipart features within the collection are not supported
 #'
 #' @export
-#' @param features A \code{\link{data-FeatureCollection}}.
+#' @param features A [data-FeatureCollection].
 #' @param key (character) The property on which to filter.
 #' @template lint
 #' @family assertions
-#' @return a \code{\link{data-FeatureCollection}} containing the dissolved
+#' @return a [data-FeatureCollection] containing the dissolved
 #' polygons
 #' @examples
 #' cat(lawn_data$filter_features)

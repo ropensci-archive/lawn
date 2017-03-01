@@ -4,8 +4,8 @@
 #' @param x Input, a geojson character string or list.
 #' @param ... Any geojson object, as list, json, or point, polygon, etc. class.
 #' @return Opens a map with the geojson object(s).
-#' @details \code{view_} is a special interface to \code{view} to accept
-#' arbitrary input via \code{...}.
+#' @details `view_` is a special interface to `view` to accept
+#' arbitrary input via `...`.
 #' @examples \dontrun{
 #' # from character string
 #' view(lawn_data$polygons_average)

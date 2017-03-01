@@ -12,7 +12,7 @@ lawn_line_slice_along(startDist, stopDist, line, units = "kilometers",
 
 \item{stopDist}{distance along the line to ending point}
 
-\item{line}{Line to slice, a \code{\link{data-LineString}}}
+\item{line}{Line to slice, a \link{data-LineString}}
 
 \item{units}{can be degrees, radians, miles, or kilometers (default)}
 
@@ -22,7 +22,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-LineString}}, the sliced line
+A \link{data-LineString}, the sliced line
 }
 \description{
 Takes a line, a specified distance along the line to a start Point, and

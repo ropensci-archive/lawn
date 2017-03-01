@@ -7,7 +7,7 @@
 lawn_combine(fc, lint = FALSE)
 }
 \arguments{
-\item{fc}{A \code{\link{data-FeatureCollection}} of any type.}
+\item{fc}{A \link{data-FeatureCollection} of any type.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

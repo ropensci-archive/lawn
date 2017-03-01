@@ -8,10 +8,10 @@
 #' @export
 #' @param startDist distance along the line to starting point
 #' @param stopDist distance along the line to ending point
-#' @param line Line to slice, a \code{\link{data-LineString}}
+#' @param line Line to slice, a [data-LineString]
 #' @param units can be degrees, radians, miles, or kilometers (default)
 #' @template lint
-#' @return A \code{\link{data-LineString}}, the sliced line
+#' @return A [data-LineString], the sliced line
 #' @examples
 #' line <- '{
 #'   "type": "Feature",

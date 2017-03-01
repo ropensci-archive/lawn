@@ -25,12 +25,12 @@ objects. Default: \code{FALSE}}
 }
 \value{
 polygons with appended field representing deviation, as a
-\code{\link{data-FeatureCollection}}
+\link{data-FeatureCollection}
 }
 \description{
 Calculates the population standard deviation (i.e. denominator = n,
-not n-1) of values from \code{\link{data-Point}}'s within a set of
-\code{\link{data-Polygon}}'s
+not n-1) of values from \link{data-Point}'s within a set of
+\link{data-Polygon}'s
 }
 \examples{
 \dontrun{

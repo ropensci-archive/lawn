@@ -7,7 +7,7 @@
 lawn_propeach(x, fun = NULL, lint = FALSE)
 }
 \arguments{
-\item{x}{any \code{\link{data-GeoJSON}} object}
+\item{x}{any \link{data-GeoJSON} object}
 
 \item{fun}{a Javascript function. if not given, returns self}
 

@@ -17,11 +17,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-Polygon}} feature showing the area of poly1
+a \link{data-Polygon} feature showing the area of poly1
 excluding the area of poly2
 }
 \description{
-Finds the difference between two \code{\link{data-Polygon}}'s by clipping
+Finds the difference between two \link{data-Polygon}'s by clipping
 the second polygon from the first.
 }
 \examples{

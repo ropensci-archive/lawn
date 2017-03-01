@@ -19,10 +19,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-TIN output, as a \code{\link{data-FeatureCollection}}.
+TIN output, as a \link{data-FeatureCollection}.
 }
 \description{
-Takes a set of \code{\link{data-Point}}'s and the name of a z-value property
+Takes a set of \link{data-Point}'s and the name of a z-value property
 and creates a Triangulated Irregular Network (TIN).
 }
 \details{

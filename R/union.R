@@ -1,6 +1,6 @@
 #' Merge polygons
 #'
-#' Finds the interesection of two \code{\link{data-Polygon}}'s and returns the
+#' Finds the interesection of two [data-Polygon]'s and returns the
 #' union of the two
 #'
 #' @export
@@ -8,12 +8,12 @@
 #' @param poly2 A polygon.
 #' @template lint
 #' @family transformations
-#' @return A combined \code{\link{data-Polygon}} or
-#' \code{\link{data-MultiPolygon}} feature.
+#' @return A combined [data-Polygon] or
+#' [data-MultiPolygon] feature.
 #'
-#' @details Contiguous polygons are combined, non-contiguous polygons are returned
-#' as MultiPolygon.
-#' @seealso \code{\link{lawn_merge}}
+#' @details Contiguous polygons are combined, non-contiguous polygons
+#' are returned as MultiPolygon.
+#' @seealso [lawn_merge]
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{
@@ -68,7 +68,8 @@
 #' }
 lawn_union <- function(poly1, poly2, lint = FALSE) {
   # This code has been contributed by Jeff Hollister, US EPA
-  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+  # Please read the following disclaimer:
+  # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   poly1 <- unclass(as_feature(poly1))
   poly2 <- unclass(as_feature(poly2))

@@ -5,7 +5,7 @@
 #' @export
 #' @param input A Feature or FeatureCollection.
 #' @param dist Distance used to buffer the input.
-#' @param units Units of the \code{dist} argument.  Can be miles, feet,
+#' @param units Units of the `dist` argument.  Can be miles, feet,
 #'              kilometers (default), meters, or degrees.
 #' @template lint
 #' @family transformations
@@ -48,18 +48,20 @@
 #'
 lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
   # This code has been contributed by Jeff Hollister, US EPA
-  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+  # Please read the following disclaimer:
+  # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   input <- convert(input)
   lawnlint(input, lint)
-  units <- match.arg(units, c("meters", "feet", "kilometers", "miles", "degrees"))
+  units <- match.arg(units, c("meters", "feet", "kilometers",
+                              "miles", "degrees"))
   ct$eval(sprintf("var units = '%s';", units))
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))
   output <- ct$get("buff")
-  if(output$type == "Feature"){
+  if (output$type == "Feature") {
     return(as.f(output))
-  } else if(output$type == "FeatureCollection") {
+  } else if (output$type == "FeatureCollection") {
     return(as.fc(output))
   }
 }

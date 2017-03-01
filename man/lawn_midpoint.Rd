@@ -17,10 +17,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Point}} midway between pt1 and pt2.
+A \link{data-Point} midway between pt1 and pt2.
 }
 \description{
-Takes two \code{\link{data-Point}}'s and returns a point midway
+Takes two \link{data-Point}'s and returns a point midway
 between them
 }
 \examples{

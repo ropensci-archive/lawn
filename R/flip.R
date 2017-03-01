@@ -3,7 +3,7 @@
 #' @export
 #' @param input Feature of features.
 #' @template lint
-#' @return A \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}.
+#' @return A [data-Feature] or [data-FeatureCollection].
 #' @examples
 #' # a point
 #' serbia <- '{

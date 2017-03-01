@@ -8,7 +8,7 @@ lawn_idw(controlPoints, valueField, b, cellWidth, units = "kilometers",
   lint = FALSE)
 }
 \arguments{
-\item{controlPoints}{A \code{\link{data-FeatureCollection}}, Sampled
+\item{controlPoints}{A \link{data-FeatureCollection}, Sampled
 points with known value}
 
 \item{valueField}{(character) GeoJSON field containing the known value
@@ -27,7 +27,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-FeatureCollection}} containing the dissolved
+a \link{data-FeatureCollection} containing the dissolved
 polygons
 }
 \description{

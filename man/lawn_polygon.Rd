@@ -12,7 +12,7 @@ lawn_polygon(coordinates, properties = NULL)
 \item{properties}{A list of properties.}
 }
 \value{
-A \code{\link{data-Polygon}} feature.
+A \link{data-Polygon} feature.
 }
 \description{
 Create a polygon

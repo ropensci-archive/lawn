@@ -12,7 +12,7 @@ lawn_linestring(coordinates, properties = NULL)
 \item{properties}{A list of properties.}
 }
 \value{
-A \code{\link{data-LineString}} feature.
+A \link{data-LineString} feature.
 }
 \description{
 Create a linestring

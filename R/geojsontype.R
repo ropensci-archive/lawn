@@ -1,7 +1,7 @@
 #' Enforce expectations about types of GeoJSON objects.
 #'
 #' @export
-#' @param x value of any \code{\link{data-GeoJSON}} object. required.
+#' @param x value of any [data-GeoJSON] object. required.
 #' @param type expected GeoJSON type. required.
 #' @param name name of calling function. required.
 #' @template lint

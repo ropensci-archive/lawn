@@ -9,7 +9,8 @@ lawn_isolines(points, z, resolution, breaks, lint = FALSE)
 \arguments{
 \item{points}{Input points.}
 
-\item{z}{(character) The property name in points from which z-values will be pulled.}
+\item{z}{(character) The property name in points from which z-values will
+be pulled.}
 
 \item{resolution}{(numeric) Resolution of the underlying grid.}
 
@@ -21,16 +22,17 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-FeatureCollection}} of isolines
-(\code{\link{data-LineString}} features).
+A \link{data-FeatureCollection} of isolines
+(\link{data-LineString} features).
 }
 \description{
-Takes \code{\link{data-Point}}'s with z-values and an array of value
+Takes \link{data-Point}'s with z-values and an array of value
 breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
 }
 \examples{
 pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
-pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)), stringsAsFactors = FALSE)
+pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)),
+  stringsAsFactors = FALSE)
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 lawn_isolines(pts, 'z', 15, breaks)
 

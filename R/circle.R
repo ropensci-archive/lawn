@@ -1,17 +1,17 @@
 #' circle
 #'
-#' Takes a \code{\link{data-Point}} and calculates the circle polygon given
+#' Takes a [data-Point] and calculates the circle polygon given
 #' a radius in degrees, radians, miles, or kilometers; and steps for precision
 #'
 #' @export
-#' @param center The center \code{\link{data-Point}}
+#' @param center The center [data-Point]
 #' @param radius (integer) Radius of the circle.
 #' @param steps (integer) Number of steps.
 #' @param units (character) Miles, kilometers (default),
 #' degrees, or radians.
 #' @template lint
 #' @family assertions
-#' @return a \code{\link{data-Polygon}}
+#' @return a [data-Polygon]
 #' @examples
 #' pt <- '{
 #'   "type": "Feature",

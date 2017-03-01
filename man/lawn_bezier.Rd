@@ -7,7 +7,7 @@
 lawn_bezier(line, resolution = 10000L, sharpness = 0.85, lint = FALSE)
 }
 \arguments{
-\item{line}{Input \code{\link{data-LineString}}.}
+\item{line}{Input \link{data-LineString}.}
 
 \item{resolution}{Time in milliseconds between points.}
 
@@ -19,10 +19,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-LineString}} curved line.
+A \link{data-LineString} curved line.
 }
 \description{
-Takes a \code{\link{data-LineString}} and returns a curved version
+Takes a \link{data-LineString} and returns a curved version
 by applying a \href{http://en.wikipedia.org/wiki/Bezier_spline}{Bezier}
 spline algorithm.
 }
@@ -38,7 +38,8 @@ lawn_bezier(lawn_linestring(pts), 9000L)
 lawn_bezier(lawn_linestring(pts), 9000L, 0.65)
 \dontrun{
 lawn_bezier(lawn_linestring(pts)) \%>\% view
-lawn_featurecollection(list(lawn_linestring(pts), lawn_bezier(lawn_linestring(pts)))) \%>\% view
+lawn_featurecollection(list(lawn_linestring(pts),
+  lawn_bezier(lawn_linestring(pts)))) \%>\% view
 }
 }
 \seealso{

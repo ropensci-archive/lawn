@@ -7,9 +7,9 @@
 lawn_intersect(poly1, poly2, lint = FALSE)
 }
 \arguments{
-\item{poly1}{A \code{\link{data-Polygon}}.}
+\item{poly1}{A \link{data-Polygon}.}
 
-\item{poly2}{A \code{\link{data-Polygon}}.}
+\item{poly2}{A \link{data-Polygon}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -17,15 +17,15 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-\code{\link{data-Polygon}}, \code{\link{data-MultiLineString}}, or undefined
+\link{data-Polygon}, \link{data-MultiLineString}, or undefined
 }
 \description{
-Finds the interesection of two \code{\link{data-Polygon}}'s and returns just
+Finds the interesection of two \link{data-Polygon}'s and returns just
 the intersection of the two
 }
 \details{
-Polygons with just a shared boundary will return the boundary. Polygons
-that do not intersect will return \code{NULL}.
+Polygons with just a shared boundary will return the boundary.
+Polygons that do not intersect will return \code{NULL}.
 }
 \examples{
 poly1 <- '{

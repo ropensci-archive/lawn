@@ -7,7 +7,7 @@
 lawn_tesselate(polygon, lint = FALSE)
 }
 \arguments{
-\item{polygon}{Input \code{\link{data-Polygon}} feature.}
+\item{polygon}{Input \link{data-Polygon} feature.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -15,11 +15,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-FeatureCollection}}.
+A \link{data-FeatureCollection}.
 }
 \description{
-Tesselates a \code{\link{data-Polygon}} into a
-\code{\link{data-FeatureCollection}} of
+Tesselates a \link{data-Polygon} into a
+\link{data-FeatureCollection} of
 triangles using earcut (\url{https://github.com/mapbox/earcut})
 }
 \examples{

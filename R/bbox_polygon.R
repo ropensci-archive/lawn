@@ -1,12 +1,12 @@
 #' Make a polygon from a bounding box
 #'
-#' Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}.
+#' Takes a bbox and returns an equivalent polygon [data-Polygon].
 #'
 #' @export
 #' @param bbox An array of bounding box coordinates in the form:
-#' [xLow, yLow, xHigh, yHigh].
+#' `[xLow, yLow, xHigh, yHigh]`.
 #' @family measurements
-#' @return A \code{\link{data-Polygon}} representation of the bounding box.
+#' @return A [data-Polygon] representation of the bounding box.
 #' @examples
 #' bbox <- c(0, 0, 10, 10)
 #' lawn_bbox_polygon(bbox)

@@ -1,7 +1,7 @@
 #' Iterate over property objects in any GeoJSON object
 #'
 #' @export
-#' @param x any \code{\link{data-GeoJSON}} object
+#' @param x any [data-GeoJSON] object
 #' @param fun a Javascript function. if not given, returns self
 #' @template lint
 #' @return matrix of coordinates, where each row in the matrix is a

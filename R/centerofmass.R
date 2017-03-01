@@ -1,15 +1,15 @@
 #' Center of mass
 #'
-#' Takes a \code{\link{data-Feature}} or a \code{\link{data-FeatureCollection}}
+#' Takes a [data-Feature] or a [data-FeatureCollection]
 #' and returns its center of mass using formula
-#' https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon
+#' <https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon>
 #'
 #' @export
-#' @param x a \code{\link{data-Feature}} or
-#' \code{\link{data-FeatureCollection}}
+#' @param x a [data-Feature] or
+#' [data-FeatureCollection]
 #' @template lint
 #' @family measurements
-#' @return a \code{\link{data-Point}}
+#' @return a [data-Point]
 #' @examples
 #' x <- '{
 #'  "type": "Feature",

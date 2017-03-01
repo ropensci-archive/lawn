@@ -7,8 +7,8 @@
 lawn_center_of_mass(x, lint = FALSE)
 }
 \arguments{
-\item{x}{a \code{\link{data-Feature}} or
-\code{\link{data-FeatureCollection}}}
+\item{x}{a \link{data-Feature} or
+\link{data-FeatureCollection}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -16,12 +16,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-Point}}
+a \link{data-Point}
 }
 \description{
-Takes a \code{\link{data-Feature}} or a \code{\link{data-FeatureCollection}}
+Takes a \link{data-Feature} or a \link{data-FeatureCollection}
 and returns its center of mass using formula
-https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon
+\url{https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon}
 }
 \examples{
 x <- '{

@@ -21,12 +21,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A FeatureCollection of \code{\link{data-Polygon}} features with
+A FeatureCollection of \link{data-Polygon} features with
 properties listed as \code{out_field}.
 }
 \description{
 Calculates the \strong{median} value of a field for a set of
-\code{\link{data-Point}}'s within a set of \code{\link{data-Polygon}}'s.
+\link{data-Point}'s within a set of \link{data-Polygon}'s.
 }
 \examples{
 \dontrun{

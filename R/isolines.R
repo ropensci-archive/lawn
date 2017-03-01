@@ -1,21 +1,23 @@
 #' Generate Isolines
 #'
-#' Takes \code{\link{data-Point}}'s with z-values and an array of value
-#' breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
+#' Takes [data-Point]'s with z-values and an array of value
+#' breaks and generates [isolines](http://en.wikipedia.org/wiki/Isoline)
 #'
 #' @export
 #'
 #' @param points Input points.
-#' @param z (character) The property name in points from which z-values will be pulled.
+#' @param z (character) The property name in points from which z-values will
+#' be pulled.
 #' @param resolution (numeric) Resolution of the underlying grid.
 #' @param breaks (numeric) Where to draw contours.
 #' @template lint
 #' @family interpolation
-#' @return A \code{\link{data-FeatureCollection}} of isolines
-#' (\code{\link{data-LineString}} features).
+#' @return A [data-FeatureCollection] of isolines
+#' ([data-LineString] features).
 #' @examples
 #' pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
-#' pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)), stringsAsFactors = FALSE)
+#' pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)),
+#'   stringsAsFactors = FALSE)
 #' breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 #' lawn_isolines(pts, 'z', 15, breaks)
 #'

@@ -109,7 +109,8 @@ lawn_featurecollection(cent)
 
 # From a geo_list object from geojsonio package
 # library("geojsonio")
-# vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+# vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0),
+#   c(100.0,0.0))
 # x <- geojson_list(vecs, geometry="polygon")
 # lawn_featurecollection(x)
 }

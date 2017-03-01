@@ -4,7 +4,7 @@
 #' @param coordinates A list of positions.
 #' @param properties A list of properties.
 #' @family data functions
-#' @return A \code{\link{data-MultiLineString}} feature.
+#' @return A [data-MultiLineString] feature.
 #' @examples
 #' mlstr <- '[
 #'   [

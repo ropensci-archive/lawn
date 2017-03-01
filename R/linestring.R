@@ -4,7 +4,7 @@
 #' @param coordinates A list of positions.
 #' @param properties A list of properties.
 #' @family data functions
-#' @return A \code{\link{data-LineString}} feature.
+#' @return A [data-LineString] feature.
 #' @examples
 #' linestring1 <- '[
 #'    [-21.964416, 64.148203],
@@ -34,6 +34,7 @@
 #' lawn_linestring(pts)
 lawn_linestring <- function(coordinates, properties = NULL) {
   # TODO: need to find way to fail well when unacceptable items passed in
-  ct$eval(sprintf("var poly = turf.lineString(%s, %s);", convert(coordinates), toj(properties)))
+  ct$eval(sprintf("var poly = turf.lineString(%s, %s);", convert(coordinates),
+                  toj(properties)))
   as.l(ct$get("poly"))
 }

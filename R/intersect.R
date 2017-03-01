@@ -1,16 +1,16 @@
 #' Intersection
 #'
-#' Finds the interesection of two \code{\link{data-Polygon}}'s and returns just
+#' Finds the interesection of two [data-Polygon]'s and returns just
 #' the intersection of the two
 #'
 #' @export
-#' @param poly1 A \code{\link{data-Polygon}}.
-#' @param poly2 A \code{\link{data-Polygon}}.
+#' @param poly1 A [data-Polygon].
+#' @param poly2 A [data-Polygon].
 #' @template lint
 #' @family transformations
-#' @details Polygons with just a shared boundary will return the boundary. Polygons
-#' that do not intersect will return \code{NULL}.
-#' @return \code{\link{data-Polygon}}, \code{\link{data-MultiLineString}}, or undefined
+#' @details Polygons with just a shared boundary will return the boundary.
+#' Polygons that do not intersect will return `NULL`.
+#' @return [data-Polygon], [data-MultiLineString], or undefined
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
 #' @examples
 #' poly1 <- '{
@@ -72,7 +72,8 @@
 #' }
 lawn_intersect <- function(poly1, poly2, lint = FALSE) {
   # This code has been contributed by Jeff Hollister, US EPA
-  # Please read the following disclaimer: \url{https://www.epa.gov/home/github-contribution-disclaimer}
+  # Please read the following disclaimer:
+  # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   poly1 <- unclass(as_feature(poly1))
   poly2 <- unclass(as_feature(poly2))

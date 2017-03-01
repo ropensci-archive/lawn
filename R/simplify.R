@@ -1,20 +1,20 @@
 #' Simplify GeoJSON data
 #'
-#' Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+#' Takes a [data-LineString] or [data-Polygon]
 #' and returns a simplified version.
 #'
 #' @export
-#' @param feature A \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+#' @param feature A [data-LineString] or [data-Polygon]
 #' feature to be simplified.
 #' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01.
 #' @param high_quality (boolean) Whether or not to spend more time to create a
-#' higher-quality simplification with a different algorithm. Default: \code{FALSE}
+#' higher-quality simplification with a different algorithm. Default: `FALSE`
 #' @return A simplified feature.
 #' @template lint
 #' @family transformations
-#' @return A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}.
-#' @details Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
-#' to perform simplification.
+#' @return A Feature of either [data-Polygon] or [data-LineString].
+#' @details Internally uses simplify-js
+#' (<http://mourner.github.io/simplify-js/>) to perform simplification.
 #'
 #' @examples
 #' feature <- '{
@@ -51,9 +51,12 @@
 #' @examples \dontrun{
 #' lawn_simplify(feature, tolerance = 0.01) %>% view
 #' }
-lawn_simplify <- function(feature, tolerance = 0.01, high_quality = FALSE, lint = FALSE) {
+lawn_simplify <- function(feature, tolerance = 0.01, high_quality = FALSE,
+                          lint = FALSE) {
+
   lawnlint(feature, lint)
   stopifnot(is.logical(high_quality))
-  ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature), tolerance, tolower(high_quality)))
+  ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature),
+                  tolerance, tolower(high_quality)))
   structure(ct$get("simp"), class = tolower(ct$get("simp.geometry.type")))
 }

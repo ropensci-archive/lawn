@@ -7,7 +7,7 @@
 lawn_point_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) Extent in [minX, minY, maxX, maxY] order.}
+\item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
 
 \item{cellWidth}{(integer) Width of each cell.}
 
@@ -15,11 +15,11 @@ lawn_point_grid(extent, cellWidth, units)
 'kilometers'.}
 }
 \value{
-\code{\link{data-FeatureCollection}} grid of points.
+\link{data-FeatureCollection} grid of points.
 }
 \description{
 Takes a bounding box and a cell depth and returns a set of
-\code{\link{data-Point}}'s in a grid
+\link{data-Point}'s in a grid
 }
 \examples{
 lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')

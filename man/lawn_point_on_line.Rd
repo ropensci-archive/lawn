@@ -17,10 +17,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Point}}.
+A \link{data-Point}.
 }
 \description{
-Takes a line, a start \code{\link{data-Point}}, and a stop point and returns
+Takes a line, a start \link{data-Point}, and a stop point and returns
 the line in between those points
 }
 \examples{

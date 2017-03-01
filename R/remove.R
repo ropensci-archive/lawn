@@ -1,7 +1,7 @@
 #' Remove things from a FeatureCollection
 #'
-#' Takes a \code{\link{data-FeatureCollection}} of any type, a property, and a
-#' value and returns a \code{\link{data-FeatureCollection}} with features
+#' Takes a [data-FeatureCollection] of any type, a property, and a
+#' value and returns a [data-FeatureCollection] with features
 #' matching that property-value pair removed.
 #'
 #' @export
@@ -11,7 +11,7 @@
 #' @param value Value to filter.
 #' @template lint
 #' @family data functions
-#' @return A \code{\link{data-FeatureCollection}}.
+#' @return A [data-FeatureCollection].
 #' @examples
 #' cat(lawn_data$remove_features)
 #' lawn_remove(lawn_data$remove_features, 'marker-color', '#00f')

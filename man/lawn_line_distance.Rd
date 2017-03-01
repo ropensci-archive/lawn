@@ -7,7 +7,7 @@
 lawn_line_distance(line, units, lint = FALSE)
 }
 \arguments{
-\item{line}{Line to measure, a \code{\link{data-LineString}}.}
+\item{line}{Line to measure, a \link{data-LineString}.}
 
 \item{units}{Can be degrees, radians, miles, or kilometers.}
 
@@ -20,7 +20,7 @@ objects. Default: \code{FALSE}}
 Length of the input line (numeric).
 }
 \description{
-Takes a \code{\link{data-LineString}} and measures its length in
+Takes a \link{data-LineString} and measures its length in
 the specified units.
 }
 \examples{

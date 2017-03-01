@@ -1,7 +1,7 @@
 #' Iterate over property objects in any GeoJSON object
 #'
 #' @export
-#' @param x any \code{\link{data-GeoJSON}} object
+#' @param x any [data-GeoJSON] object
 #' @param fun (character) a Javascript function. if not given, returns self
 #' @param excludeWrapCoord (logical) whether or not to include
 #' the final coordinate of LinearRings that wraps the ring in its iteration.

@@ -21,7 +21,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A FeatureCollection of \code{\link{data-Polygon}} features with
+A FeatureCollection of \link{data-Polygon} features with
 properties listed as \code{out_field}
 }
 \description{

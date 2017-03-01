@@ -1,16 +1,16 @@
 #' Get a point at a distance along a line
 #'
-#' Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
+#' Takes a [data-LineString] and returns a [data-Point]
 #' at a specified distance along the line.
 #'
 #' @export
-#' @param line An input \code{\link{data-LineString}}.
+#' @param line An input [data-LineString].
 #' @param distance Distance along the line.
-#' @param units	Units for the \code{distance} argument. Can be degrees, radians,
-#'              miles (default), or kilometers.
+#' @param units	Units for the `distance` argument. Can be degrees, radians,
+#' miles (default), or kilometers.
 #' @template lint
 #' @family measurements
-#' @return A \code{\link{data-Point}} distance units along the line.
+#' @return A [data-Point] distance units along the line.
 #' @examples
 #' pts <- '[
 #'    [-21.964416, 64.148203],

@@ -47,21 +47,21 @@ lawn_aggregate <- function(...) {
 #' Defunct functions in \pkg{lawn}
 #'
 #' \itemize{
-#'  \item \code{\link{lawn_size}}: Function removed. The \code{size}
+#'  \item [lawn_size]: Function removed. The `size`
 #'  method in turf.js has been removed.
-#'  See \url{https://github.com/Turfjs/turf/issues/306}
-#'  \item \code{\link{lawn_reclass}}: Function removed. The \code{reclass}
+#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  \item [lawn_reclass]: Function removed. The `reclass`
 #'  method in turf.js has been removed.
-#'  See \url{https://github.com/Turfjs/turf/issues/306}
-#'  \item \code{\link{lawn_jenks}}: Function removed. The \code{jenks}
+#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  \item [lawn_jenks]: Function removed. The `jenks`
 #'  method in turf.js has been removed.
-#'  See \url{https://github.com/Turfjs/turf/issues/306}
-#'  \item \code{\link{lawn_quantile}}: Function removed. The \code{quantile}
+#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  \item [lawn_quantile]: Function removed. The `quantile`
 #'  method in turf.js has been removed.
-#'  See \url{https://github.com/Turfjs/turf/issues/306}
-#'  \item \code{\link{lawn_aggregate}}: Function removed. The \code{aggregate}
+#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  \item [lawn_aggregate]: Function removed. The `aggregate`
 #'  method in turf.js has been removed.
-#'  See \url{https://github.com/Turfjs/turf/issues/306}
+#'  See <https://github.com/Turfjs/turf/issues/306>
 #' }
 #'
 #' @name lawn-defunct

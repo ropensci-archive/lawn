@@ -2,7 +2,7 @@
 #' or a single coordinate.
 #'
 #' @export
-#' @param x any \code{\link{data-GeoJSON}} object
+#' @param x any [data-GeoJSON] object
 #' @template lint
 #' @return matrix of coordinates, where each row in the matrix is a
 #' coordinate pair

@@ -7,8 +7,8 @@
 lawn_truncate(x, precision = 6, coordinates = 2, lint = FALSE)
 }
 \arguments{
-\item{x}{any \code{\link{data-Feature}} or
-\code{\link{data-FeatureCollection}}}
+\item{x}{any \link{data-Feature} or
+\link{data-FeatureCollection}}
 
 \item{precision}{(integer) coordinate decimal precision. default: 6}
 
@@ -21,7 +21,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}
+a \link{data-Feature} or \link{data-FeatureCollection}
 with truncated geometry
 }
 \description{

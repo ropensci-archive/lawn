@@ -7,10 +7,10 @@
 lawn_tag(points, polygons, field, out_field, lint = FALSE)
 }
 \arguments{
-\item{points}{Input \code{\link{data-Point}}.}
+\item{points}{Input \link{data-Point}.}
 
-\item{polygons}{Input \code{\link{data-Polygon}} or
-\code{\link{data-MultiPolygon}}.}
+\item{polygons}{Input \link{data-Polygon} or
+\link{data-MultiPolygon}.}
 
 \item{field}{Property in polygons to add to joined Point features.}
 
@@ -23,11 +23,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-Points with containing_polyid property containing values from poly_id.
+Points with containing_polyid property containing values
+from poly_id.
 }
 \description{
-Takes a set of \code{\link{data-Point}}'s and a set of
-\code{\link{data-Polygon}}'s and performs a spatial join.
+Takes a set of \link{data-Point}'s and a set of
+\link{data-Polygon}'s and performs a spatial join.
 }
 \examples{
 bbox <- c(0, 0, 10, 10)

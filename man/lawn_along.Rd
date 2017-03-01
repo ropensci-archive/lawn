@@ -7,7 +7,7 @@
 lawn_along(line, distance, units, lint = FALSE)
 }
 \arguments{
-\item{line}{An input \code{\link{data-LineString}}.}
+\item{line}{An input \link{data-LineString}.}
 
 \item{distance}{Distance along the line.}
 
@@ -20,10 +20,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-Point}} distance units along the line.
+A \link{data-Point} distance units along the line.
 }
 \description{
-Takes a \code{\link{data-LineString}} and returns a \code{\link{data-Point}}
+Takes a \link{data-LineString} and returns a \link{data-Point}
 at a specified distance along the line.
 }
 \examples{

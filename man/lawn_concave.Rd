@@ -7,12 +7,12 @@
 lawn_concave(points, maxEdge = 1, units = "miles", lint = FALSE)
 }
 \arguments{
-\item{points}{Input points in a \code{\link{data-FeatureCollection}}.}
+\item{points}{Input points in a \link{data-FeatureCollection}.}
 
 \item{maxEdge}{The size of an edge necessary for part of the hull to
 become concave (in miles).}
 
-\item{units}{Used for maxEdge distance (miles [default] or kilometers).}
+\item{units}{Used for maxEdge distance (miles (default) or kilometers).}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -20,10 +20,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a concave hull \code{\link{data-Polygon}}
+a concave hull \link{data-Polygon}
 }
 \description{
-Takes a set of \code{\link{data-Point}}'s and returns a concave hull polygon.
+Takes a set of \link{data-Point}'s and returns a concave hull polygon.
 Internally, this implements a Monotone chain algorithm
 }
 \examples{

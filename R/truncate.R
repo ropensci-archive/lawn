@@ -4,14 +4,14 @@
 #' of the geometry.
 #'
 #' @export
-#' @param x any \code{\link{data-Feature}} or
-#' \code{\link{data-FeatureCollection}}
+#' @param x any [data-Feature] or
+#' [data-FeatureCollection]
 #' @param precision (integer) coordinate decimal precision. default: 6
 #' @param coordinates (integer) maximum number of coordinates (primarly used
 #' to remove z coordinates). default: 2
 #' @template lint
 #' @family misc
-#' @return a \code{\link{data-Feature}} or \code{\link{data-FeatureCollection}}
+#' @return a [data-Feature] or [data-FeatureCollection]
 #' with truncated geometry
 #' @examples
 #' cat(lawn_data$filter_features)

@@ -12,7 +12,7 @@ lawn_geometrycollection(coordinates, properties = NULL)
 \item{properties}{A list of properties.}
 }
 \value{
-A \code{\link{data-GeometryCollection}} feature.
+A \link{data-GeometryCollection} feature.
 }
 \description{
 Create a geometrycollection

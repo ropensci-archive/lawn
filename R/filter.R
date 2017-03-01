@@ -2,16 +2,17 @@
 #'
 #' @export
 #'
-#' @param features A \code{\link{data-FeatureCollection}}.
+#' @param features A [data-FeatureCollection].
 #' @param key (character) The property on which to filter.
 #' @param value (character) The value of that property on which to filter.
 #' @template lint
 #' @family data functions
-#' @return S filtered \code{\link{data-FeatureCollection}} with only
+#' @return S filtered [data-FeatureCollection] with only
 #' features that match input key and value.
 #' @examples
 #' cat(lawn_data$filter_features)
-#' lawn_filter(features = lawn_data$filter_features, key = 'species', value = 'oak')
+#' lawn_filter(features = lawn_data$filter_features, key = 'species',
+#'   value = 'oak')
 #' lawn_filter(lawn_data$filter_features, 'species', 'maple')
 #' lawn_filter(lawn_data$filter_features, 'species', 'redwood')
 lawn_filter <- function(features, key, value, lint = FALSE) {

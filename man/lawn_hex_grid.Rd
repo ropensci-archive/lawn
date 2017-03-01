@@ -7,7 +7,7 @@
 lawn_hex_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) Extent in [minX, minY, maxX, maxY] order.}
+\item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
 
 \item{cellWidth}{(integer) Width of each cell.}
 
@@ -15,12 +15,12 @@ lawn_hex_grid(extent, cellWidth, units)
 'kilometers'.}
 }
 \value{
-A \code{\link{data-FeatureCollection}} grid of points.
+A \link{data-FeatureCollection} grid of points.
 }
 \description{
 Takes a bounding box and a cell size in degrees and returns a
-\code{\link{data-FeatureCollection}} of flat-topped hexagons
-(\code{\link{data-Polygon}} features) aligned in an "odd-q" vertical
+\link{data-FeatureCollection} of flat-topped hexagons
+(\link{data-Polygon} features) aligned in an "odd-q" vertical
 grid as described in Hexagonal Grids
 \url{http://www.redblobgames.com/grids/hexagons/}
 }

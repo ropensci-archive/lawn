@@ -19,11 +19,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-FeatureCollection}}.
+A \link{data-FeatureCollection}.
 }
 \description{
-Takes a \code{\link{data-FeatureCollection}} of any type, a property, and a
-value and returns a \code{\link{data-FeatureCollection}} with features
+Takes a \link{data-FeatureCollection} of any type, a property, and a
+value and returns a \link{data-FeatureCollection} with features
 matching that property-value pair removed.
 }
 \examples{

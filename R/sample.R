@@ -1,14 +1,14 @@
 #' Return features from FeatureCollection at random
 #'
-#' Takes a \code{\link{data-FeatureCollection}} and returns a
-#' \code{\link{data-FeatureCollection}} with given number of features at random.
+#' Takes a [data-FeatureCollection] and returns a
+#' [data-FeatureCollection] with given number of features at random.
 #'
 #' @export
-#' @param features A \code{\link{data-FeatureCollection}}.
+#' @param features A [data-FeatureCollection].
 #' @param n (integer) Number of features to generate.
 #' @template lint
 #' @family data functions
-#' @return A \code{\link{data-FeatureCollection}}.
+#' @return A [data-FeatureCollection].
 #'
 #' @examples
 #' lawn_sample(lawn_data$points_average, 1)

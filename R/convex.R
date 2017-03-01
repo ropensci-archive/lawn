@@ -1,15 +1,15 @@
 #' Convex hull polygon
 #'
-#' Takes a set of \code{\link{data-Point}}'s and returns a convex
+#' Takes a set of [data-Point]'s and returns a convex
 #' hull polygon. Internally, this uses the
-#' \href{https://github.com/mikolalysenko/convex-hull}{convex-hull} module
+#' [convex-hull](https://github.com/mikolalysenko/convex-hull) module
 #' that implements a Monotone chain hull
 #'
 #' @export
-#' @param input Input points in a \code{\link{data-FeatureCollection}}.
+#' @param input Input points in a [data-FeatureCollection].
 #' @template lint
 #' @family transformations
-#' @return a convex hull \code{\link{data-Polygon}}
+#' @return a convex hull [data-Polygon]
 #' @examples
 #' points <- '{
 #'   "type": "FeatureCollection",

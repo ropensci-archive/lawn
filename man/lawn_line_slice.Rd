@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A \code{\link{data-LineString}}.
+A \link{data-LineString}.
 }
 \description{
 Takes a line, a start Point, and a stop point and returns the line in

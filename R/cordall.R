@@ -1,11 +1,11 @@
 #' Get all coordinates from any GeoJSON object, returning an array
 #' of coordinate arrays.
 #'
-#' Takes any \code{\link{data-GeoJSON}} and returns an array of
+#' Takes any [data-GeoJSON] and returns an array of
 #' coordinate arrays
 #'
 #' @export
-#' @param x any \code{\link{data-GeoJSON}} object
+#' @param x any [data-GeoJSON] object
 #' @template lint
 #' @return matrix of coordinates, where each row in the matrix is a
 #' coordinate pair

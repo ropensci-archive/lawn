@@ -26,7 +26,8 @@
 #'    [-21.927337, 64.136673]
 #' ]'
 #' lawn_linestring(linestring1)
-#' lawn_linestring(linestring1, properties = list(name = 'line1', distance = 145))
+#' lawn_linestring(linestring1, properties = list(name = 'line1',
+#'   distance = 145))
 #'
 #' # featurecollection
 #' lawn_featurecollection(lawn_data$featurecollection_eg1)
@@ -114,7 +115,8 @@ print.point <- function(x, ...) {
   cat("<Point>", sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
   pt <- x$geometry$coordinates
-  cat(sprintf("  Coordinates: %s", sprintf("%.1f %.1f", pt[1], pt[2])), sep = "\n")
+  cat(sprintf("  Coordinates: %s", sprintf("%.1f %.1f", pt[1], pt[2])),
+      sep = "\n")
   cat_props(x)
 }
 
@@ -132,7 +134,8 @@ print.multipoint <- function(x, n = 10, ...) {
 print.polygon <- function(x, ...) {
   cat("<Polygon>", sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
-  cat(sprintf("  No. points: %s", length(x$geometry$coordinates[,,1])), sep = "\n")
+  cat(sprintf("  No. points: %s", length(x$geometry$coordinates[,,1])),
+      sep = "\n")
   cat_props(x)
 }
 
@@ -170,8 +173,10 @@ print.multilinestring <- function(x, n = 10, ...) {
 print.featurecollection <- function(x, n = 10, ...) {
   cat("<FeatureCollection>", sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
-  cat(sprintf("  No. features: %s", length(x$features$geometry$coordinates)), sep = "\n")
-  cat(sprintf("  No. points: %s", length(unlist(x$features$geometry$coordinates, recursive = TRUE))), sep = "\n")
+  cat(sprintf("  No. features: %s", length(x$features$geometry$coordinates)),
+      sep = "\n")
+  cat(sprintf("  No. points: %s", length(unlist(x$features$geometry$coordinates,
+                                                recursive = TRUE))), sep = "\n")
   cat_props_df(x, n)
 }
 
@@ -181,7 +186,9 @@ print.geometrycollection <- function(x, n = 10, ...) {
   cat("<GeometryCollection>", sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
   cat(sprintf("  No. geometries: %s", NROW(x$geometry$geometries)), sep = "\n")
-  cat(sprintf("  No. points: %s", length(unlist(x$geometry$geometries$coordinates, recursive = TRUE))), sep = "\n")
+  cat(sprintf("  No. points: %s",
+              length(unlist(x$geometry$geometries$coordinates,
+                            recursive = TRUE))), sep = "\n")
   cat_props_df2(x, n)
 }
 
@@ -191,7 +198,8 @@ print.feature <- function(x, n = 10, ...) {
   cat("<Feature>", sep = "\n")
   cat(sprintf("  Type: %s", x$geometry$type), sep = "\n")
   cat(sprintf("  Bounding box: %s", cat_bbox(x)), sep = "\n")
-  cat(sprintf("  No. points: %s", length(unlist(x$geometry$coordinates, recursive = TRUE))), sep = "\n")
+  cat(sprintf("  No. points: %s", length(unlist(x$geometry$coordinates,
+                                                recursive = TRUE))), sep = "\n")
   cat_props(x)
 }
 
@@ -200,7 +208,8 @@ cat_props <- function(x) {
   if (length(x$properties) != 0) {
     cat("  Properties: ", sep = "\n")
     for (i in seq_along(x$properties)) {
-      cat(sprintf("     %s: %s", names(x$properties[i]), x$properties[[i]]), sep = "\n")
+      cat(sprintf("     %s: %s", names(x$properties[i]),
+                  x$properties[[i]]), sep = "\n")
     }
   } else {
     props_null()
@@ -214,7 +223,8 @@ cat_props_df2 <- function(x, n) {
       trunc_mat(x$properties, n = n)
     } else {
       for (i in seq_along(x$properties)) {
-        cat(sprintf("     %s: %s", names(x$properties[i]), x$properties[[i]]), sep = "\n")
+        cat(sprintf("     %s: %s", names(x$properties[i]),
+                    x$properties[[i]]), sep = "\n")
       }
     }
   } else {
@@ -229,7 +239,8 @@ cat_props_df <- function(x, n) {
       trunc_mat(x$features$properties, n = n)
     } else {
       for (i in seq_along(x$features$properties)) {
-        cat(sprintf("     %s: %s", names(x$features$properties[i]), x$features$properties[[i]]), sep = "\n")
+        cat(sprintf("     %s: %s", names(x$features$properties[i]),
+                    x$features$properties[[i]]), sep = "\n")
       }
     }
   } else {

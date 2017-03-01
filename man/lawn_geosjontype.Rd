@@ -7,7 +7,7 @@
 lawn_geosjontype(x, type, name, lint = FALSE)
 }
 \arguments{
-\item{x}{value of any \code{\link{data-GeoJSON}} object. required.}
+\item{x}{value of any \link{data-GeoJSON} object. required.}
 
 \item{type}{expected GeoJSON type. required.}
 

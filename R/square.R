@@ -12,7 +12,8 @@
 #' lawn_square(bbox)
 #' @examples \dontrun{
 #' sq <- lawn_square(bbox)
-#' lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) %>% view
+#' lawn_featurecollection(list(lawn_bbox_polygon(bbox),
+#'   lawn_bbox_polygon(sq))) %>% view
 #' }
 lawn_square <- function(bbox) {
   ct$eval(sprintf("var sq = turf.square(%s);", convert(bbox)))

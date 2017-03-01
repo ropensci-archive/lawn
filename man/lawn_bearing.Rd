@@ -7,9 +7,9 @@
 lawn_bearing(start, end, lint = FALSE)
 }
 \arguments{
-\item{start}{Starting \code{\link{data-Point}}.}
+\item{start}{Starting \link{data-Point}.}
 
-\item{end}{Ending \code{\link{data-Point}}.}
+\item{end}{Ending \link{data-Point}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -20,7 +20,7 @@ objects. Default: \code{FALSE}}
 A numeric value of the bearing in degrees.
 }
 \description{
-Takes two \code{\link{data-Point}}'s and finds the geographic bearing
+Takes two \link{data-Point}'s and finds the geographic bearing
 between them.
 }
 \examples{

@@ -7,7 +7,7 @@
 lawn_bbox(x, lint = FALSE)
 }
 \arguments{
-\item{x}{A FeatureCollection of \code{\link{data-Polygon}} features.}
+\item{x}{A FeatureCollection of \link{data-Polygon} features.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -18,7 +18,7 @@ objects. Default: \code{FALSE}}
 A bounding box.
 }
 \description{
-Takes a polygon \code{\link{data-Polygon}} and returns a bbox
+Takes a polygon \link{data-Polygon} and returns a bbox
 }
 \examples{
 bbox <- c(0, 0, 10, 10)

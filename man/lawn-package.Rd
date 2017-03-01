@@ -6,16 +6,16 @@
 \alias{lawn}
 \title{R client for turf.js for geospatial analysis}
 \description{
-turf.js uses GeoJSON for all geographic data, and expects the data to be standard
-\href{http://en.wikipedia.org/wiki/World_Geodetic_System}{WGS84} longitude,latitude
-coordinates. See \url{http://geojson.io/} for a tool to easily create GeoJSON
-in a browser.
+turf.js uses GeoJSON for all geographic data, and expects the data to be
+standard \href{http://en.wikipedia.org/wiki/World_Geodetic_System}{WGS84}
+longitude,latitude coordinates. See \url{http://geojson.io/} for a tool to
+easily create GeoJSON in a browser.
 }
 \seealso{
-\code{\link{lawn-defunct}}
+\link{lawn-defunct}
 }
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain (\email{myrmecocystus@gmail.com})
 
-Jeff Hollister \email{hollister.jeff@epa.gov}
+Jeff Hollister (\email{hollister.jeff@epa.gov})
 }

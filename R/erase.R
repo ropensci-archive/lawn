@@ -1,6 +1,6 @@
 #' Difference
 #'
-#' Finds the difference between two \code{\link{data-Polygon}}'s by clipping
+#' Finds the difference between two [data-Polygon]'s by clipping
 #' the second polygon from the first.
 #'
 #' @export
@@ -8,7 +8,7 @@
 #' @param poly2 Polygon feature to erase from poly1.
 #' @template lint
 #' @family transformations
-#' @return a \code{\link{data-Polygon}} feature showing the area of poly1
+#' @return a [data-Polygon] feature showing the area of poly1
 #' excluding the area of poly2
 #' @examples
 #' poly1 <- '{

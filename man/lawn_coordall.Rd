@@ -8,7 +8,7 @@ of coordinate arrays.}
 lawn_coordall(x, lint = FALSE)
 }
 \arguments{
-\item{x}{any \code{\link{data-GeoJSON}} object}
+\item{x}{any \link{data-GeoJSON} object}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -20,7 +20,7 @@ matrix of coordinates, where each row in the matrix is a
 coordinate pair
 }
 \description{
-Takes any \code{\link{data-GeoJSON}} and returns an array of
+Takes any \link{data-GeoJSON} and returns an array of
 coordinate arrays
 }
 \examples{

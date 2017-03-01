@@ -17,16 +17,16 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A combined \code{\link{data-Polygon}} or
-\code{\link{data-MultiPolygon}} feature.
+A combined \link{data-Polygon} or
+\link{data-MultiPolygon} feature.
 }
 \description{
-Finds the interesection of two \code{\link{data-Polygon}}'s and returns the
+Finds the interesection of two \link{data-Polygon}'s and returns the
 union of the two
 }
 \details{
-Contiguous polygons are combined, non-contiguous polygons are returned
-as MultiPolygon.
+Contiguous polygons are combined, non-contiguous polygons
+are returned as MultiPolygon.
 }
 \examples{
 poly1 <- '{
@@ -81,7 +81,7 @@ lawn_union(x1, x2) \%>\% view()
 }
 }
 \seealso{
-\code{\link{lawn_merge}}
+\link{lawn_merge}
 
 Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},

@@ -8,7 +8,7 @@ lawn_circle(center, radius, steps = FALSE, units = "kilometers",
   lint = FALSE)
 }
 \arguments{
-\item{center}{The center \code{\link{data-Point}}}
+\item{center}{The center \link{data-Point}}
 
 \item{radius}{(integer) Radius of the circle.}
 
@@ -23,10 +23,10 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-Polygon}}
+a \link{data-Polygon}
 }
 \description{
-Takes a \code{\link{data-Point}} and calculates the circle polygon given
+Takes a \link{data-Point} and calculates the circle polygon given
 a radius in degrees, radians, miles, or kilometers; and steps for precision
 }
 \examples{

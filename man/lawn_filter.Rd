@@ -7,7 +7,7 @@
 lawn_filter(features, key, value, lint = FALSE)
 }
 \arguments{
-\item{features}{A \code{\link{data-FeatureCollection}}.}
+\item{features}{A \link{data-FeatureCollection}.}
 
 \item{key}{(character) The property on which to filter.}
 
@@ -19,7 +19,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-S filtered \code{\link{data-FeatureCollection}} with only
+S filtered \link{data-FeatureCollection} with only
 features that match input key and value.
 }
 \description{
@@ -27,7 +27,8 @@ Filter a FeatureCollection by a given property and value
 }
 \examples{
 cat(lawn_data$filter_features)
-lawn_filter(features = lawn_data$filter_features, key = 'species', value = 'oak')
+lawn_filter(features = lawn_data$filter_features, key = 'species',
+  value = 'oak')
 lawn_filter(lawn_data$filter_features, 'species', 'maple')
 lawn_filter(lawn_data$filter_features, 'species', 'redwood')
 }

@@ -20,8 +20,8 @@ objects. Default: \code{FALSE}}
 The z-value for pt (numeric).
 }
 \description{
-Takes a triangular plane as a \code{\link{data-Polygon}} and a
-\code{\link{data-Point}} within that triangle and returns the
+Takes a triangular plane as a \link{data-Polygon} and a
+\link{data-Point} within that triangle and returns the
 z-value at that point.
 }
 \details{

@@ -7,7 +7,7 @@
 lawn_square_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) Extent in [minX, minY, maxX, maxY] order.}
+\item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
 
 \item{cellWidth}{(integer) Width of each cell.}
 
@@ -15,11 +15,11 @@ lawn_square_grid(extent, cellWidth, units)
 'kilometers'.}
 }
 \value{
-\code{\link{data-FeatureCollection}} grid of polygons.
+\link{data-FeatureCollection} grid of polygons.
 }
 \description{
 Takes a bounding box and a cell depth and returns a set of square
-\code{\link{data-Polygon}}'s in a grid.
+\link{data-Polygon}'s in a grid.
 }
 \examples{
 lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')

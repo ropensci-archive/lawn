@@ -7,7 +7,7 @@
 lawn_merge(fc, lint = FALSE)
 }
 \arguments{
-\item{fc}{Input polygons, as \code{\link{data-FeatureCollection}}.}
+\item{fc}{Input polygons, as \link{data-FeatureCollection}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -15,13 +15,13 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-Merged \code{\link{data-Polygon}} or multipolygon
-\code{\link{data-MultiPolygon}}.
+Merged \link{data-Polygon} or multipolygon
+\link{data-MultiPolygon}.
 }
 \description{
-Takes a set of \code{\link{data-Polygon}}'s and returns a single
+Takes a set of \link{data-Polygon}'s and returns a single
 merged polygon feature. If the input polygon features are not contiguous,
-returns a \code{\link{data-MultiPolygon}} feature.
+returns a \link{data-MultiPolygon} feature.
 }
 \examples{
 polygons <- '{
@@ -65,7 +65,7 @@ lawn_merge(polygons) \%>\% view
 }
 }
 \seealso{
-\code{\link{lawn_union}}
+\link{lawn_union}
 
 Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},

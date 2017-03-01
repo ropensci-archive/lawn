@@ -35,7 +35,8 @@ linestring1 <- '[
    [-21.927337, 64.136673]
 ]'
 lawn_linestring(linestring1)
-lawn_linestring(linestring1, properties = list(name = 'line1', distance = 145))
+lawn_linestring(linestring1, properties = list(name = 'line1',
+  distance = 145))
 
 # featurecollection
 lawn_featurecollection(lawn_data$featurecollection_eg1)

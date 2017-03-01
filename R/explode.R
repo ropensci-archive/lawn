@@ -5,7 +5,7 @@
 #' @export
 #' @param input Feature of features.
 #' @template lint
-#' @return a \code{\link{data-FeatureCollection}} of points
+#' @return a [data-FeatureCollection] of points
 #' @examples
 #' poly <- '{
 #'  "type": "Feature",

@@ -1,6 +1,6 @@
 #' Get a point midway between two points
 #'
-#' Takes two \code{\link{data-Point}}'s and returns a point midway
+#' Takes two [data-Point]'s and returns a point midway
 #' between them
 #'
 #' @export
@@ -8,7 +8,7 @@
 #' @param pt2 Second point.
 #' @template lint
 #' @family measurements
-#' @return A \code{\link{data-Point}} midway between pt1 and pt2.
+#' @return A [data-Point] midway between pt1 and pt2.
 #' @examples
 #' pt1 <- '{
 #'   "type": "Feature",

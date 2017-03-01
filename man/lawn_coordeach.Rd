@@ -7,7 +7,7 @@
 lawn_coordeach(x, fun = NULL, excludeWrapCoord = FALSE, lint = FALSE)
 }
 \arguments{
-\item{x}{any \code{\link{data-GeoJSON}} object}
+\item{x}{any \link{data-GeoJSON} object}
 
 \item{fun}{(character) a Javascript function. if not given, returns self}
 

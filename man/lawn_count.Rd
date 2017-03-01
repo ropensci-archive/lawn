@@ -21,11 +21,11 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-FeatureCollection}}
+a \link{data-FeatureCollection}
 }
 \description{
-Calculates the number of \code{\link{data-Point}}'s that fall within the set
-of \code{\link{data-Polygon}}'s
+Calculates the number of \link{data-Point}'s that fall within the set
+of \link{data-Polygon}'s
 }
 \examples{
 \dontrun{

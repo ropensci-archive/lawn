@@ -99,7 +99,8 @@
 #'
 #' # From a geo_list object from geojsonio package
 #' # library("geojsonio")
-#' # vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0), c(100.0,0.0))
+#' # vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0),
+#' #   c(100.0,0.0))
 #' # x <- geojson_list(vecs, geometry="polygon")
 #' # lawn_featurecollection(x)
 #' }
@@ -110,7 +111,8 @@ lawn_featurecollection <- function(features) {
 # no method, method
 #' @export
 lawn_featurecollection.default <- function(features) {
-  stop("no 'lawn_featurecollection' method for ", class(features), call. = FALSE)
+  stop("no 'lawn_featurecollection' method for ", class(features),
+       call. = FALSE)
 }
 
 # from a list, could be many different things in the list ----
@@ -127,7 +129,8 @@ lawn_featurecollection.list <- function(features) {
         switch(type,
                polygon = lawn_polygon(z$features$geometry$coordinates[[1]]),
                point = lawn_point(z$features$geometry$coordinates[[1]]),
-               linestring = lawn_linestring(z$features$geometry$coordinates[[1]]))
+               linestring =
+                 lawn_linestring(z$features$geometry$coordinates[[1]]))
       } else {
         z
       }
@@ -213,7 +216,8 @@ lawn_featurecollection.featurecollection <- function(features) {
 
 do_fc <- function(features) {
   fts <- unlist(vapply(features, as.turf, ""))
-  ct$eval(sprintf("var features = %s;", sprintf("[ %s ]", paste0(fts, collapse = ", "))))
+  ct$eval(sprintf("var features = %s;", sprintf("[ %s ]",
+                                                paste0(fts, collapse = ", "))))
   ct$eval("var feet = turf.featureCollection(features);")
   as.fc(ct$get("feet"))
 }

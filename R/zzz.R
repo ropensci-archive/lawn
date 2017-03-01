@@ -53,12 +53,16 @@ is_type <- function(x, type) {
   } else if ("features" %in% keys) {
     ht$eval(sprintf("var val = %s.type;", jsonlite::minify(x)))
     top <- ht$get('val')
-    ht$eval(sprintf("var vals = %s.features.map(function(x) {return x.geometry.type});", jsonlite::minify(x)))
+    ht$eval(
+      sprintf(
+        "var vals = %s.features.map(function(x) {return x.geometry.type});",
+        jsonlite::minify(x)))
     lower <- ht$get('vals')
     xtype <- list(top = top, lower = lower)
   }
 
-  if (xtype != type) stop(sprintf("input should be of type '%s'", type), call. = FALSE)
+  if (xtype != type) stop(sprintf("input should be of type '%s'", type),
+                          call. = FALSE)
 }
 
 ## use geojsonhint to lint geojson input
@@ -99,7 +103,8 @@ pluck <- function(x, name, type) {
 }
 
 calc_math <- function(op, py, pt, in_field, out_field) {
-  ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', 'values');", py, pt, in_field))
+  ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', 'values');",
+                  py, pt, in_field))
   ct$eval(sprintf("fc.features.forEach(function (feature) {
     feature.properties.%s = ss.%s(feature.properties.values);
   });", out_field, op))

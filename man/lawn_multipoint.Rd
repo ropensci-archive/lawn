@@ -2,7 +2,7 @@
 % Please edit documentation in R/multipoint.R
 \name{lawn_multipoint}
 \alias{lawn_multipoint}
-\title{Create a multipoint}
+\title{MultiPoint}
 \usage{
 lawn_multipoint(coordinates, properties = NULL)
 }
@@ -11,10 +11,10 @@ lawn_multipoint(coordinates, properties = NULL)
 form e.g. \code{list(c(longitude, latitude), c(longitude, latitude))} or
 as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}.}
 
-\item{properties}{A list of properties. Default: NULL}
+\item{properties}{A list of properties. Default: \code{NULL}}
 }
 \value{
-A \code{\link{data-MultiPoint}} feature.
+A \link{data-MultiPoint} feature.
 }
 \description{
 Create a multipoint

@@ -7,7 +7,7 @@
 lawn_destination(start, distance, bearing, units, lint = FALSE)
 }
 \arguments{
-\item{start}{Starting point \code{\link{data-Point}}.}
+\item{start}{Starting point \link{data-Point}.}
 
 \item{distance}{Distance from the starting point.}
 
@@ -21,14 +21,14 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-destination \code{\link{data-Point}}
+destination \link{data-Point}
 }
 \description{
-Takes a \code{\link{data-Point}} and calculates the location of a
-destination point given a distance in degrees, radians, miles, or kilometers; and
-bearing in degrees. Uses the
-\href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula} to account
-for global curvature.
+Takes a \link{data-Point} and calculates the location of a
+destination point given a distance in degrees, radians, miles, or
+kilometers; and bearing in degrees. Uses the
+\href{http://en.wikipedia.org/wiki/Haversine_formula}{Haversine formula} to
+account for global curvature.
 }
 \examples{
 pt <- '{

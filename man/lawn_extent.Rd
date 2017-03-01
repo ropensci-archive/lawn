@@ -7,8 +7,8 @@
 lawn_extent(input, lint = FALSE)
 }
 \arguments{
-\item{input}{A \code{\link{data-Feature}} or
-\code{\link{data-FeatureCollection}}.}
+\item{input}{A \link{data-Feature} or
+\link{data-FeatureCollection}.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

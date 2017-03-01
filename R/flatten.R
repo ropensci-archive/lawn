@@ -6,7 +6,7 @@
 #' @param x any valid GeoJSON with multi-geometry Feature's
 #' @template lint
 #' @family misc
-#' @return a \code{\link{data-FeatureCollection}}
+#' @return a [data-FeatureCollection]
 #' @examples
 #' x <- '{
 #' "type": "MultiPolygon",

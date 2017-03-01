@@ -8,7 +8,7 @@ lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
   lint = FALSE)
 }
 \arguments{
-\item{feature}{A \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+\item{feature}{A \link{data-LineString} or \link{data-Polygon}
 feature to be simplified.}
 
 \item{tolerance}{(numeric) Simplification tolerance.  Default value is 0.01.}
@@ -24,15 +24,15 @@ objects. Default: \code{FALSE}}
 \value{
 A simplified feature.
 
-A Feature of either \code{\link{data-Polygon}} or \code{\link{data-LineString}}.
+A Feature of either \link{data-Polygon} or \link{data-LineString}.
 }
 \description{
-Takes a \code{\link{data-LineString}} or \code{\link{data-Polygon}}
+Takes a \link{data-LineString} or \link{data-Polygon}
 and returns a simplified version.
 }
 \details{
-Internally uses simplify-js (\url{http://mourner.github.io/simplify-js/})
-to perform simplification.
+Internally uses simplify-js
+(\url{http://mourner.github.io/simplify-js/}) to perform simplification.
 }
 \examples{
 feature <- '{

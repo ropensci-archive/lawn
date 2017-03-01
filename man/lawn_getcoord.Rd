@@ -8,7 +8,7 @@ or a single coordinate.}
 lawn_getcoord(x, lint = FALSE)
 }
 \arguments{
-\item{x}{any \code{\link{data-GeoJSON}} object}
+\item{x}{any \link{data-GeoJSON} object}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

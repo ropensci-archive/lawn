@@ -8,7 +8,7 @@ that multipart features within the collection are not supported}
 lawn_dissolve(features, key, lint = FALSE)
 }
 \arguments{
-\item{features}{A \code{\link{data-FeatureCollection}}.}
+\item{features}{A \link{data-FeatureCollection}.}
 
 \item{key}{(character) The property on which to filter.}
 
@@ -18,7 +18,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-FeatureCollection}} containing the dissolved
+a \link{data-FeatureCollection} containing the dissolved
 polygons
 }
 \description{
