@@ -67,9 +67,18 @@ poly2 <- '{
 }'
 lawn_union(poly1, poly2)
 
+\dontrun{
+view(poly1)
+view(poly2)
+lawn_union(poly1, poly2) \%>\% view()
+
+x1 <- lawn_buffer(lawn_point(c(-122.6375, 45.53)), 1500, "meters")
+x2 <- lawn_buffer(lawn_point(c(-122.6475, 45.53)), 1500, "meters")
+lawn_union(x1, x2)
+view(x1)
+view(x2)
+lawn_union(x1, x2) \%>\% view()
 }
-\author{
-Jeff Hollister \email{hollister.jeff@epa.gov}
 }
 \seealso{
 \code{\link{lawn_merge}}
@@ -80,4 +89,6 @@ Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
   \code{\link{lawn_simplify}}
 }
-
+\author{
+Jeff Hollister \email{hollister.jeff@epa.gov}
+}

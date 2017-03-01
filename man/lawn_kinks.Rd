@@ -35,5 +35,8 @@ poly <- '{
 lawn_kinks(poly)
 # lint input object
 # lawn_kinks(poly, TRUE)
+\dontrun{
+poly \%>\% view
+lawn_kinks(poly) \%>\% view
 }
-
+}

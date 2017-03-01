@@ -19,6 +19,10 @@ Takes a bbox and returns an equivalent polygon \code{\link{data-Polygon}}
 \examples{
 bbox <- c(0, 0, 10, 10)
 lawn_bbox_polygon(bbox)
+\dontrun{
+lawn_bbox_polygon(bbox) \%>\% view
+lawn_bbox_polygon(c(1, 3, 5, 50)) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -33,4 +37,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

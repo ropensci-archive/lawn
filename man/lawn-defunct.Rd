@@ -22,4 +22,3 @@
  See \url{https://github.com/Turfjs/turf/issues/306}
 }
 }
-

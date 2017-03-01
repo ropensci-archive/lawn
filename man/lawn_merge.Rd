@@ -59,6 +59,10 @@ polygons <- '{
   ]
 }'
 lawn_merge(polygons)
+\dontrun{
+lawn_featurecollection(polygons) \%>\% view
+lawn_merge(polygons) \%>\% view
+}
 }
 \seealso{
 \code{\link{lawn_union}}
@@ -69,4 +73,3 @@ Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_intersect}},
   \code{\link{lawn_simplify}}, \code{\link{lawn_union}}
 }
-

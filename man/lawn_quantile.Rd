@@ -10,4 +10,3 @@ lawn_quantile(...)
 This function is defunct
 }
 \keyword{internal}
-

@@ -35,5 +35,10 @@ lawn_flip(serbia)
 # a featurecollection
 pts <- lawn_random("points")
 lawn_flip(pts)
+\dontrun{
+lawn_data$points_average \%>\% view
+lawn_flip(lawn_data$points_average) \%>\% view
+lawn_data$polygons_average \%>\% view
+lawn_flip(lawn_data$polygons_average) \%>\% view
 }
-
+}

@@ -42,8 +42,15 @@ pt <- '{
 }'
 
 lawn_circle(pt, radius = 5, steps = 10)
+\dontrun{
+lawn_circle(pt, radius = 5, steps = 10) \%>\% view
+lawn_circle(pt, radius = 4, steps = 10) \%>\% view
+lawn_circle(pt, radius = 3, steps = 10) \%>\% view
+lawn_circle(pt, radius = 10, steps = 10) \%>\% view
+lawn_circle(pt, radius = 5, steps = 5) \%>\% view
+lawn_circle(pt, radius = 5, steps = 4) \%>\% view
+}
 }
 \seealso{
 Other assertions: \code{\link{lawn_tesselate}}
 }
-

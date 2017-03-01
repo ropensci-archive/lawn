@@ -10,4 +10,3 @@ lawn_aggregate(...)
 This function is defunct
 }
 \keyword{internal}
-

@@ -61,5 +61,8 @@ lawn_line_slice(start, stop, line)
 
 # lint input objects
 lawn_line_slice(start, stop, line, TRUE)
+\dontrun{
+line \%>\% view
+lawn_line_slice(point1 = start, point2 = stop, line) \%>\% view
 }
-
+}

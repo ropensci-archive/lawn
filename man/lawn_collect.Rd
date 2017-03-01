@@ -38,9 +38,9 @@ res$type
 res$features
 res$features$properties
 
+\dontrun{
+lawn_collect(ex_polys, ex_pts, 'population', 'stuff') \%>\% view
 }
-\author{
-Jeff Hollister \email{hollister.jeff@epa.gov}
 }
 \seealso{
 Other aggregations: \code{\link{lawn_average}},
@@ -49,4 +49,6 @@ Other aggregations: \code{\link{lawn_average}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
 }
-
+\author{
+Jeff Hollister \email{hollister.jeff@epa.gov}
+}

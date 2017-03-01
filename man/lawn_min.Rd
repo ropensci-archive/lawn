@@ -42,4 +42,3 @@ Other aggregations: \code{\link{lawn_average}},
   \code{\link{lawn_median}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
 }
-

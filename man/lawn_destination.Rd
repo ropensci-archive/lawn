@@ -45,6 +45,10 @@ lawn_destination(pt, 50, 90, "miles")
 lawn_destination(pt, 100, 90, "miles")
 lawn_destination(pt, 2, 45, "kilometers")
 lawn_destination(pt, 2, 30, "degrees")
+\dontrun{
+pt \%>\% view
+lawn_destination(pt, 200, 90, "miles") \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -58,4 +62,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

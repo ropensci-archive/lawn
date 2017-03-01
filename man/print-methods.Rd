@@ -115,4 +115,3 @@ x$properties <- data.frame(color = c("red", "green"),
                            popultion = c(5000, 10000L))
 x
 }
-

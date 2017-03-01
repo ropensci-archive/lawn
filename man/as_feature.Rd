@@ -22,4 +22,3 @@ Each feature is assigned a class matching it's GeoJSON data type
 as_feature(lawn_random())
 # as_feature(lawn_random("polygons"))
 }
-

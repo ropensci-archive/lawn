@@ -10,4 +10,3 @@ lawn_jenks(...)
 This function is defunct
 }
 \keyword{internal}
-

@@ -76,6 +76,9 @@ points <- '{
     ]
 }'
 lawn_concave(points, 1)
+\dontrun{
+lawn_concave(points) \%>\% view
+}
 }
 \seealso{
 Other transformations: \code{\link{lawn_bezier}},
@@ -84,4 +87,3 @@ Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
   \code{\link{lawn_simplify}}, \code{\link{lawn_union}}
 }
-

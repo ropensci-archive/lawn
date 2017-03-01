@@ -41,6 +41,14 @@ pt2 <- '{
   }
 }'
 lawn_midpoint(pt1, pt2)
+\dontrun{
+lawn_midpoint(pt1, pt2) \%>\% view
+lawn_featurecollection(list(
+  lawn_point(fromJSON(pt1)$geometry$coordinates),
+  lawn_point(fromJSON(pt2)$geometry$coordinates),
+  structure(lawn_midpoint(pt1, pt2), class = "point")
+)) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -54,4 +62,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

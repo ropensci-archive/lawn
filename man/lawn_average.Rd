@@ -46,4 +46,3 @@ Other aggregations: \code{\link{lawn_collect}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
 }
-

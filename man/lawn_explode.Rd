@@ -38,5 +38,10 @@ poly <- '{
  }
 }'
 lawn_explode(poly)
+\dontrun{
+lawn_data$polygons_average \%>\% view
+lawn_explode(lawn_data$polygons_average) \%>\% view
+lawn_data$polygons_within \%>\% view
+lawn_explode(lawn_data$polygons_within) \%>\% view
 }
-
+}

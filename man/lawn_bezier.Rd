@@ -36,6 +36,10 @@ pts <- '[
 lawn_bezier(lawn_linestring(pts))
 lawn_bezier(lawn_linestring(pts), 9000L)
 lawn_bezier(lawn_linestring(pts), 9000L, 0.65)
+\dontrun{
+lawn_bezier(lawn_linestring(pts)) \%>\% view
+lawn_featurecollection(list(lawn_linestring(pts), lawn_bezier(lawn_linestring(pts)))) \%>\% view
+}
 }
 \seealso{
 Other transformations: \code{\link{lawn_buffer}},
@@ -44,4 +48,3 @@ Other transformations: \code{\link{lawn_buffer}},
   \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
   \code{\link{lawn_simplify}}, \code{\link{lawn_union}}
 }
-

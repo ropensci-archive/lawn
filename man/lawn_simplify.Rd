@@ -66,6 +66,9 @@ feature <- '{
 }'
 
 lawn_simplify(feature, tolerance = 0.01)
+\dontrun{
+lawn_simplify(feature, tolerance = 0.01) \%>\% view
+}
 }
 \seealso{
 Other transformations: \code{\link{lawn_bezier}},
@@ -74,4 +77,3 @@ Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
   \code{\link{lawn_union}}
 }
-

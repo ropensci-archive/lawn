@@ -19,6 +19,10 @@ box that would contain the input.
 \examples{
 bbox <- c(-20, -20, -15, 0)
 lawn_square(bbox)
+\dontrun{
+sq <- lawn_square(bbox)
+lawn_featurecollection(list(lawn_bbox_polygon(bbox), lawn_bbox_polygon(sq))) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -32,4 +36,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_midpoint}},
   \code{\link{lawn_point_on_surface}}
 }
-

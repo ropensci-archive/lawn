@@ -31,6 +31,9 @@ lawn_polygon(rings, properties = list(name = 'poly1', population = 400))
 # Make a FeatureCollection
 lawn_featurecollection(lawn_polygon(rings))
 
+\dontrun{
+lawn_featurecollection(lawn_polygon(rings)) \%>\% view
+}
 }
 \seealso{
 Other data functions: \code{\link{lawn_featurecollection}},
@@ -43,4 +46,3 @@ Other data functions: \code{\link{lawn_featurecollection}},
   \code{\link{lawn_point}}, \code{\link{lawn_random}},
   \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
 }
-

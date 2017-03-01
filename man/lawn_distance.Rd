@@ -58,4 +58,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

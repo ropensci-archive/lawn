@@ -33,6 +33,11 @@ pts <- '[
    [-21.927337, 64.136673]
 ]'
 lawn_along(lawn_linestring(pts), 1, 'miles')
+\dontrun{
+lawn_along(lawn_linestring(pts), 1, 'miles') \%>\% view
+res <- lawn_along(lawn_linestring(pts), 1, 'miles')
+lawn_featurecollection(list(res, lawn_linestring(pts))) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_area}},
@@ -47,4 +52,3 @@ Other measurements: \code{\link{lawn_area}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

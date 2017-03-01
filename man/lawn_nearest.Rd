@@ -63,5 +63,7 @@ against <- '{
 }'
 lawn_nearest(point, against)
 
+\dontrun{
+lawn_nearest(point, against) \%>\% view
 }
-
+}

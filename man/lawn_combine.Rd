@@ -74,5 +74,10 @@ fc2 <- '{
  ]
 }'
 lawn_combine(fc2)
+\dontrun{
+fc1 \%>\% view
+lawn_combine(fc1) \%>\% view
+fc2 \%>\% view
+lawn_combine(fc2) \%>\% view
 }
-
+}

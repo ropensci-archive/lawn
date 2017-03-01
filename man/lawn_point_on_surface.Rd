@@ -59,4 +59,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_line_distance}},
   \code{\link{lawn_midpoint}}, \code{\link{lawn_square}}
 }
-

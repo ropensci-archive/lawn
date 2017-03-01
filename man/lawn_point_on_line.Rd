@@ -51,5 +51,9 @@ lawn_point_on_line(line, pt)
 
 # lint input objects
 lawn_point_on_line(line, pt, TRUE)
+\dontrun{
+line \%>\% view
+pt \%>\% view
+lawn_point_on_line(line, pt) \%>\% view
 }
-
+}

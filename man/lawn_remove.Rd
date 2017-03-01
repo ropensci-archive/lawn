@@ -42,4 +42,3 @@ Other data functions: \code{\link{lawn_featurecollection}},
   \code{\link{lawn_point}}, \code{\link{lawn_polygon}},
   \code{\link{lawn_random}}, \code{\link{lawn_sample}}
 }
-

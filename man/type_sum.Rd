@@ -2,16 +2,16 @@
 % Please edit documentation in R/tbldf.R
 \name{type_sum}
 \alias{type_sum}
-\alias{type_sum.Date}
-\alias{type_sum.POSIXt}
-\alias{type_sum.array}
-\alias{type_sum.character}
 \alias{type_sum.default}
+\alias{type_sum.character}
+\alias{type_sum.Date}
 \alias{type_sum.factor}
 \alias{type_sum.integer}
 \alias{type_sum.logical}
+\alias{type_sum.array}
 \alias{type_sum.matrix}
 \alias{type_sum.numeric}
+\alias{type_sum.POSIXt}
 \title{Type summary}
 \usage{
 type_sum(x)
@@ -40,4 +40,3 @@ type_sum(x)
 Type summary
 }
 \keyword{internal}
-

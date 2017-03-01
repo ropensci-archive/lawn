@@ -34,4 +34,3 @@ lawn_within(lawn_data$points_within, lawn_data$polygons_within)
 Other joins: \code{\link{lawn_inside}},
   \code{\link{lawn_tag}}
 }
-

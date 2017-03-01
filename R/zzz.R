@@ -105,3 +105,5 @@ calc_math <- function(op, py, pt, in_field, out_field) {
   });", out_field, op))
   as.fc(ct$get("fc"))
 }
+
+`%||%` <- function(x, y) if (is.null(x)) y else x

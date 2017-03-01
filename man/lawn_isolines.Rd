@@ -34,6 +34,9 @@ pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)), stringsAs
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 lawn_isolines(pts, 'z', 15, breaks)
 
+\dontrun{
+lawn_isolines(pts, 'z', 15, breaks) \%>\% view
+}
 }
 \seealso{
 Other interpolation: \code{\link{lawn_hex_grid}},
@@ -42,4 +45,3 @@ Other interpolation: \code{\link{lawn_hex_grid}},
   \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}},
   \code{\link{lawn_triangle_grid}}
 }
-

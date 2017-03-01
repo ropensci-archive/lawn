@@ -43,8 +43,11 @@ lawn_tesselate(poly)
 
 xx <- jsonlite::fromJSON(lawn_data$polygons_within, FALSE)
 lawn_tesselate(xx$features[[1]])
+\dontrun{
+lawn_tesselate(xx$features[[1]]) \%>\% view
+lawn_tesselate(poly) \%>\% view
+}
 }
 \seealso{
 Other assertions: \code{\link{lawn_circle}}
 }
-

@@ -59,6 +59,15 @@ poly2 <- '{
   }
 }'
 lawn_difference(poly1, poly2)
+\dontrun{
+lawn_featurecollection(list(poly1, poly2)) \%>\% view
+lawn_difference(poly1, poly2) \%>\% view
+fc <- lawn_featurecollection(list(
+   lawn_polygon(fromJSON(poly1)$geometry$coordinates),
+   lawn_polygon(fromJSON(poly2)$geometry$coordinates)
+))
+view(fc)
+}
 }
 \seealso{
 Other transformations: \code{\link{lawn_bezier}},
@@ -67,4 +76,3 @@ Other transformations: \code{\link{lawn_bezier}},
   \code{\link{lawn_merge}}, \code{\link{lawn_simplify}},
   \code{\link{lawn_union}}
 }
-

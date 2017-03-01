@@ -3,8 +3,8 @@
 \name{georandom}
 \alias{georandom}
 \alias{gr_point}
-\alias{gr_polygon}
 \alias{gr_position}
+\alias{gr_polygon}
 \title{Return a FeatureCollection with N number of features with random coordinates}
 \usage{
 gr_point(n = 10, bbox = NULL)
@@ -69,4 +69,3 @@ gr_polygon(1, 5, 5, c(50, 50, 60, 60))
 \seealso{
 \code{\link{lawn_random}}
 }
-

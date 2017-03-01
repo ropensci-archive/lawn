@@ -2,12 +2,64 @@
 
 ## turf
 
-Currently (as of 2016-10-13) using `turf.js` `v3.5.2`
+Currently (as of 2017-02-28) using `turf` `v3.10.4`
 
-To recreate `inst/js/turf3.js`:
+To recreate `inst/js/turf3104.js`:
 
-Download the minified file from <https://npmcdn.com/@turf/turf@3.5.2/turf.min.js>
+Download the minified file from <https://npmcdn.com/@turf/turf@3.10.4/turf.min.js>
 to `inst/js` directory in the `lawn` package
+
+
+
+## @turf/meta
+
+Currently (as of 2017-02-28) using `turf/meta` `v3.10.4`
+
+To recreate `inst/js/turf-meta.js`:
+
+```
+npm install @turf/meta
+```
+
+Browserify
+
+```
+echo "global.turfmeta = require('@turf/meta');" > in.js
+browserify in.js -o turf-meta.js
+```
+
+Copy js file into the `inst/js` directory in the `lawn` package
+
+```
+cp turf-meta.js lawn/inst/js/
+```
+
+
+
+## @turf/invariant
+
+Currently (as of 2017-02-28) using `turf/invariant` `v3.10.4`
+
+To recreate `inst/js/turf-invariant.js`:
+
+```
+npm install @turf/invariant
+```
+
+Browserify
+
+```
+echo "global.turfinvariant = require('@turf/invariant');" > in.js
+browserify in.js -o turf-invariant.js
+```
+
+Copy js file into the `inst/js` directory in the `lawn` package
+
+```
+cp turf-invariant.js lawn/inst/js/
+```
+
+
 
 ## simple-statistics
 

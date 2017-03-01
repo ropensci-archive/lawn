@@ -24,6 +24,11 @@ absolute center point of all features
 }
 \examples{
 lawn_center(lawn_data$points_average)
+\dontrun{
+lawn_center(lawn_data$points_average) \%>\% view
+lawn_featurecollection(lawn_data$points_average) \%>\% view
+lawn_center(lawn_data$points_average) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -38,4 +43,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

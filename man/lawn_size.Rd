@@ -10,4 +10,3 @@ lawn_size(...)
 This function is defunct
 }
 \keyword{internal}
-

@@ -57,6 +57,10 @@ fc <- '{
   ]
 }'
 lawn_envelope(fc)
+\dontrun{
+fc \%>\% view
+lawn_envelope(fc) \%>\% view
+}
 }
 \seealso{
 Other measurements: \code{\link{lawn_along}},
@@ -70,4 +74,3 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
-

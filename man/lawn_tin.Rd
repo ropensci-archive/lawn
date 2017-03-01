@@ -36,6 +36,10 @@ represent the corners of the triangle.
 \examples{
 pts <- lawn_random(bbox = c(-70, 40, -60, 60))
 lawn_tin(pts)
+\dontrun{
+lawn_tin(pts) \%>\% view
+lawn_tin(lawn_random(bbox = c(-70, 40, -60, 10))) \%>\% view
+}
 }
 \seealso{
 Other interpolation: \code{\link{lawn_hex_grid}},
@@ -45,4 +49,3 @@ Other interpolation: \code{\link{lawn_hex_grid}},
   \code{\link{lawn_square_grid}},
   \code{\link{lawn_triangle_grid}}
 }
-

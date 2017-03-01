@@ -46,4 +46,3 @@ Other aggregations: \code{\link{lawn_average}},
   \code{\link{lawn_median}}, \code{\link{lawn_min}},
   \code{\link{lawn_sum}}
 }
-

@@ -15,4 +15,3 @@ as.turf(x, ...)
 Coerce to turf.js javascript function call
 }
 \keyword{internal}
-
