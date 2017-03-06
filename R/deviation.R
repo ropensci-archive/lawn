@@ -7,9 +7,9 @@
 #' @export
 #' @param polygons Polygon(s) defining area to aggregate.
 #' @param points Points with values to aggregate.
-#' @param in_field Characater for the name of the field on `pts` on
-#' which you wish to perfrom the aggregation.
-#' @param out_field Characater for the name of the field on the ouput
+#' @param in_field Character for the name of the field on `pts` on
+#' which you wish to perform the aggregation.
+#' @param out_field Character for the name of the field on the output
 #' polygon FeatureCollection that will store the resultant value.
 #' @template lint
 #' @family aggregations

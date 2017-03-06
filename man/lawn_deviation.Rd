@@ -12,10 +12,10 @@ lawn_deviation(polygons, points, in_field, out_field = "deviation",
 
 \item{points}{Points with values to aggregate.}
 
-\item{in_field}{Characater for the name of the field on \code{pts} on
-which you wish to perfrom the aggregation.}
+\item{in_field}{Character for the name of the field on \code{pts} on
+which you wish to perform the aggregation.}
 
-\item{out_field}{Characater for the name of the field on the ouput
+\item{out_field}{Character for the name of the field on the output
 polygon FeatureCollection that will store the resultant value.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time

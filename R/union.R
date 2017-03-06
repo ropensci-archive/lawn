@@ -1,6 +1,6 @@
 #' Merge polygons
 #'
-#' Finds the interesection of two [data-Polygon]'s and returns the
+#' Finds the intersection of two [data-Polygon]'s and returns the
 #' union of the two
 #'
 #' @export

@@ -1,6 +1,6 @@
 #' Intersection
 #'
-#' Finds the interesection of two [data-Polygon]'s and returns just
+#' Finds the intersection of two [data-Polygon]'s and returns just
 #' the intersection of the two
 #'
 #' @export

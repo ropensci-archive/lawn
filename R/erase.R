@@ -4,7 +4,7 @@
 #' the second polygon from the first.
 #'
 #' @export
-#' @param poly1 Input Polygon feaure.
+#' @param poly1 Input Polygon feature.
 #' @param poly2 Polygon feature to erase from poly1.
 #' @template lint
 #' @family transformations

@@ -20,7 +20,7 @@ objects. Default: \code{FALSE}}
 \link{data-Polygon}, \link{data-MultiLineString}, or undefined
 }
 \description{
-Finds the interesection of two \link{data-Polygon}'s and returns just
+Finds the intersection of two \link{data-Polygon}'s and returns just
 the intersection of the two
 }
 \details{
