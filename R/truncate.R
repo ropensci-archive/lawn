@@ -7,7 +7,7 @@
 #' @param x any [data-Feature] or
 #' [data-FeatureCollection]
 #' @param precision (integer) coordinate decimal precision. default: 6
-#' @param coordinates (integer) maximum number of coordinates (primarly used
+#' @param coordinates (integer) maximum number of coordinates (primarily used
 #' to remove z coordinates). default: 2
 #' @template lint
 #' @family misc

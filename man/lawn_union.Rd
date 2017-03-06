@@ -21,7 +21,7 @@ A combined \link{data-Polygon} or
 \link{data-MultiPolygon} feature.
 }
 \description{
-Finds the interesection of two \link{data-Polygon}'s and returns the
+Finds the intersection of two \link{data-Polygon}'s and returns the
 union of the two
 }
 \details{

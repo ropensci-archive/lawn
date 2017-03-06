@@ -12,7 +12,7 @@ lawn_truncate(x, precision = 6, coordinates = 2, lint = FALSE)
 
 \item{precision}{(integer) coordinate decimal precision. default: 6}
 
-\item{coordinates}{(integer) maximum number of coordinates (primarly used
+\item{coordinates}{(integer) maximum number of coordinates (primarily used
 to remove z coordinates). default: 2}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
