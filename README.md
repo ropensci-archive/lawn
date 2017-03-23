@@ -252,7 +252,7 @@ lawn_buffer(dat, 1, "miles")
 view(lawn_data$points_average)
 ```
 
-![map1](https://github.com/ropensci/lawn/blob/master/inst/img/map1.png)
+![map1](tools/map1.png)
 
 Or during process of manipulating geojson, view at mostly any time.
 
@@ -263,7 +263,7 @@ Here, we sample at random two points from the same dataset just viewed.
 lawn_sample(lawn_data$points_average, 2) %>% view()
 ```
 
-![map1](https://github.com/ropensci/lawn/blob/master/inst/img/map2.png)
+![map1](tools/map2.png)
 
 ## Contributors
 
