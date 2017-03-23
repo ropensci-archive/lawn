@@ -44,7 +44,7 @@ lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
 #>   Bounding box: -112.1 46.6 -112.0 46.6
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties: 
+#>   Properties:
 #>     values count
 #> 1 200, 600     2
 #> 2              0
@@ -61,7 +61,7 @@ lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_av
 #>   Bounding box: 10.7 59.9 10.9 59.9
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties: 
+#>   Properties:
 #>          values average
 #> 1 200, 600, 100     300
 #> 2      200, 300     250
@@ -165,7 +165,7 @@ lawn_sample(dat, 1)
 #>   Bounding box: 10.7 59.9 10.7 59.9
 #>   No. features: 1
 #>   No. points: 2
-#>   Properties: 
+#>   Properties:
 #>   population
 #> 1        200
 ```
@@ -177,7 +177,7 @@ lawn_sample(dat, 2)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
-#>   Properties: 
+#>   Properties:
 #>   population
 #> 1        600
 #> 2        300
@@ -190,7 +190,7 @@ lawn_sample(dat, 3)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 3
 #>   No. points: 6
-#>   Properties: 
+#>   Properties:
 #>   population
 #> 1        300
 #> 2        600
@@ -252,7 +252,7 @@ lawn_buffer(dat, 1, "miles")
 view(lawn_data$points_average)
 ```
 
-![map1](inst/img/map1.png)
+![map1](https://github.com/ropensci/lawn/blob/master/inst/img/map1.png)
 
 Or during process of manipulating geojson, view at mostly any time.
 
@@ -263,7 +263,7 @@ Here, we sample at random two points from the same dataset just viewed.
 lawn_sample(lawn_data$points_average, 2) %>% view()
 ```
 
-![map1](inst/img/map2.png)
+![map1](https://github.com/ropensci/lawn/blob/master/inst/img/map2.png)
 
 ## Contributors
 
