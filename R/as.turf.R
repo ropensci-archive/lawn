@@ -9,43 +9,57 @@ as.turf <- function(x, ...) {
 }
 
 #' @export
+as.turf.feature <- function(x, ...) {
+  fixq(sprintf("turf.feature(%s, %s)", toj(x$geometry),
+               toj(x$properties, auto_unbox = TRUE)))
+}
+
+#' @export
 as.turf.point <- function(x, ...) {
-  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.multipoint <- function(x, ...) {
-  fixq(sprintf("turf.multiPoint(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.multiPoint(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.centroid <- function(x, ...) {
-  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.point(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.polygon <- function(x, ...) {
-  fixq(sprintf("turf.polygon(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.polygon(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.multipolygon <- function(x, ...) {
-  fixq(sprintf("turf.multiPolygon(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.multiPolygon(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.linestring <- function(x, ...) {
-  fixq(sprintf("turf.lineString(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.lineString(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.multilinestring <- function(x, ...) {
-  fixq(sprintf("turf.multiLineString(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.multiLineString(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export
 as.turf.geometrycollection <- function(x, ...) {
-  fixq(sprintf("turf.geometryCollection(%s, %s)", toj(x$geometry$coordinates), toj(x$properties, auto_unbox = TRUE)))
+  fixq(sprintf("turf.geometryCollection(%s, %s)", toj(x$geometry$coordinates),
+               toj(x$properties, auto_unbox = TRUE)))
 }
 
 #' @export

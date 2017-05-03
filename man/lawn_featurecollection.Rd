@@ -107,6 +107,18 @@ poly <- '{
 cent <- lawn_centroid(poly)
 lawn_featurecollection(cent)
 
+# from a feature
+pt <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+   "type": "Point",
+   "coordinates": [-90.548630, 14.616599]
+  }
+}'
+x <- lawn_buffer(pt, 5)
+lawn_featurecollection(x)
+
 # From a geo_list object from geojsonio package
 # library("geojsonio")
 # vecs <- list(c(100.0,0.0), c(101.0,0.0), c(101.0,1.0), c(100.0,1.0),

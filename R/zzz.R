@@ -49,7 +49,9 @@ is_type <- function(x, type) {
   keys <- ht$get('keys')
   if ("geometry" %in% keys) {
     ht$eval(sprintf("var val = %s.geometry.type;", jsonlite::minify(x)))
-    xtype <- ht$get('val')
+    lower <- ht$get('val')
+    ht$eval(sprintf("var top = %s.type;", jsonlite::minify(x)))
+    top <- ht$get('top')
   } else if ("features" %in% keys) {
     ht$eval(sprintf("var val = %s.type;", jsonlite::minify(x)))
     top <- ht$get('val')
@@ -58,11 +60,15 @@ is_type <- function(x, type) {
         "var vals = %s.features.map(function(x) {return x.geometry.type});",
         jsonlite::minify(x)))
     lower <- ht$get('vals')
-    xtype <- list(top = top, lower = lower)
+    #xtype <- c(top, lower)
   }
 
-  if (xtype != type) stop(sprintf("input should be of type '%s'", type),
-                          call. = FALSE)
+  if (!top %in% type) {
+    stop(
+      sprintf("%s should be of type '%s'", deparse(substitute(x)),
+              paste0(type, collapse = "', '")
+      ), call. = FALSE)
+  }
 }
 
 ## use geojsonhint to lint geojson input

@@ -29,6 +29,19 @@ the polygons.
 cat(lawn_data$points_within)
 cat(lawn_data$polygons_within)
 lawn_within(lawn_data$points_within, lawn_data$polygons_within)
+
+pt <- '{
+ "type": "Feature",
+ "properties": {},
+ "geometry": {
+    "type": "Point",
+    "coordinates": [-90.548630, 14.616599]
+  }
+}'
+poly <- lawn_featurecollection(lawn_buffer(pt, 5))
+pts <- lawn_featurecollection(lawn_point(c(-90.55, 14.62)))
+
+lawn_within(pts, poly)
 }
 \seealso{
 Other joins: \code{\link{lawn_inside}},

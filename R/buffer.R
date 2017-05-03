@@ -3,10 +3,10 @@
 #' Calculates a buffer for input features for a given radius.
 #'
 #' @export
-#' @param input A Feature or FeatureCollection.
-#' @param dist Distance used to buffer the input.
-#' @param units Units of the `dist` argument.  Can be miles, feet,
-#'              kilometers (default), meters, or degrees.
+#' @param input A [data-Feature] or [data-FeatureCollection]
+#' @param dist (integer/numeric) Distance used to buffer the input.
+#' @param units (character) Units of the `dist` argument.  Can be miles, feet,
+#' kilometers (default), meters, or degrees.
 #' @template lint
 #' @family transformations
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
@@ -53,6 +53,7 @@ lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
 
   input <- convert(input)
   lawnlint(input, lint)
+  is_type(input, type = c("Feature", "FeatureCollection"))
   units <- match.arg(units, c("meters", "feet", "kilometers",
                               "miles", "degrees"))
   ct$eval(sprintf("var units = '%s';", units))
