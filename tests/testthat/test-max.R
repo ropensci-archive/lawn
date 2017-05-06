@@ -15,7 +15,7 @@ test_that("lawn_max returns correct classes", {
 })
 
 test_that("in_field and out_field parameter works as expected", {
-  expect_equal(length(na.omit(lawn_max(poly, pt, 'population2')$features$properties$max)), 0)
+  expect_null(lawn_max(poly, pt, 'population2')$features$properties$max)
   expect_named(lawn_max(poly, pt, 'population', 'bears')$features$properties,
                c('values', 'bears'))
 })
@@ -24,7 +24,7 @@ test_that("lawn_max fails correctly", {
   # missing arguments
   expect_error(lawn_max(), "argument \"polygons\" is missing, with no default")
   # wrong in_field param leads to no ouput for max
-  expect_equal(length(na.omit(lawn_max(poly, pt, 'population2')$features$properties$max)), 0)
+  expect_null(lawn_max(poly, pt, 'population2')$features$properties$max)
   # can't pass in a character string to cellWidth
   expect_error(lawn_max(poly, "{}", 'population', 'max'), "Cannot call method")
   # can't pass in a character string to cellWidth

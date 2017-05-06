@@ -17,5 +17,5 @@ test_that("lawn_average works", {
 
 test_that("lawn_average fails correctly", {
   expect_error(lawn_min(), "argument \"polygons\" is missing, with no default")
-  expect_equal(length(na.omit(lawn_min(poly, pt, 'population2', 'min')$features$properties$min)), 0)
+  expect_null(lawn_min(poly, pt, 'population2', 'min')$features$properties$min)
 })

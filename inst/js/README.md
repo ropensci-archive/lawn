@@ -63,12 +63,14 @@ cp turf-invariant.js lawn/inst/js/
 
 ## simple-statistics
 
-Currently (as of 2016-10-12) using `simple-statistics` `v2.1.0`
+Currently (as of 2017-05-06) using `simple-statistics` `v4.1.0`
 
 To recreate `inst/js/simple-statistics.js`:
 
-Download the minified file from <https://npmcdn.com/simple-statistics@2.0.1/dist/simple-statistics.min.js>
+Download the minified file from <https://npmcdn.com/simple-statistics@4.1.0/dist/simple-statistics.min.js>
 to `inst/js` directory in the `lawn` package
+
+
 
 ## geojsonhint
 
