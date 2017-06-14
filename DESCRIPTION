@@ -27,8 +27,7 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    leaflet,
-    covr
+    leaflet
 Enhances: maps,
     geojsonio
 RoxygenNote: 6.0.1
