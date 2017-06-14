@@ -4,10 +4,12 @@
 \alias{lawn_center}
 \title{Get center point}
 \usage{
-lawn_center(features, lint = FALSE)
+lawn_center(features, properties = NULL, lint = FALSE)
 }
 \arguments{
 \item{features}{Input features, as a \link{data-FeatureCollection}.}
+
+\item{properties}{A list of properties. Default: \code{NULL}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -24,6 +26,8 @@ absolute center point of all features.
 }
 \examples{
 lawn_center(lawn_data$points_average)
+lawn_center(lawn_data$points_average, properties = list(
+  foo = "bar", hello = "world"))
 \dontrun{
 lawn_center(lawn_data$points_average) \%>\% view
 lawn_featurecollection(lawn_data$points_average) \%>\% view
