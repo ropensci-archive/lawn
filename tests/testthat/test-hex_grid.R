@@ -24,11 +24,15 @@ test_that("cellWidth parameter works as expected", {
 
 test_that("lawn_hex_grid fails correctly", {
   # missing arguments
-  expect_error(lawn_hex_grid(), "argument \"extent\" is missing, with no default")
+  expect_error(lawn_hex_grid(),
+               "argument \"extent\" is missing, with no default")
   # empty featurecollection if bbox is not correct
-  expect_equal(length(lawn_hex_grid(c(-96, 31, -84), 10, 'miles')$features), 0)
+  expect_error(lawn_hex_grid(c(-96, 31, -84), 10, 'miles'),
+               "Coordinates must numbers")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), "the", 'miles'), "the is not defined")
+  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), "the", 'miles'),
+               "the is not defined")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), 50, 'doesntexist'), "Invalid unit")
+  expect_error(lawn_hex_grid(c(-96, 31, -84, 40), 50, 'doesntexist'),
+               "units is invalid")
 })

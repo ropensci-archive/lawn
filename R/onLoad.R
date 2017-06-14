@@ -5,7 +5,7 @@ ht <- NULL
 
 .onLoad <- function(libname, pkgname){
   ct <<- V8::v8();
-  ct$source(system.file("js/turf3104.js", package = pkgname))
+  ct$source(system.file("js/turf440.js", package = pkgname))
   ct$source(system.file("js/turf-meta.js", package = pkgname))
   ct$source(system.file("js/turf-invariant.js", package = pkgname))
   ct$source(system.file("js/cloner.js", package = pkgname))
@@ -15,5 +15,5 @@ ht <- NULL
   rand$source(system.file("js/geojson_random.js", package = pkgname))
 
   ht <<- V8::v8();
-  ht$source(system.file("js/geojsonhint-v2beta.js", package = pkgname))
+  ht$source(system.file("js/geojsonhint-v201.js", package = pkgname))
 }

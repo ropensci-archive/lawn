@@ -27,5 +27,5 @@ test_that("lawn_point_grid fails correctly", {
   expect_error(lawn_point_grid(), "argument \"extent\" is missing, with no default")
   # units value not allowed
   expect_error(lawn_point_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'adf'),
-               "Invalid unit")
+               "units is invalid")
 })

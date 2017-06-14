@@ -9,9 +9,9 @@ poly1 <- '{
     "type": "Polygon",
     "coordinates": [[
       [-46.738586, -23.596711],
-      [-46.738586, -23.458207],
-      [-46.560058, -23.458207],
       [-46.560058, -23.596711],
+      [-46.560058, -23.458207],
+      [-46.738586, -23.458207],
       [-46.738586, -23.596711]
     ]]
   }
@@ -81,6 +81,8 @@ test_that("lawn_erase works", {
 test_that("lawn_erase fails correctly", {
   expect_error(lawn_erase(), "argument \"poly1\" is missing, with no default")
   expect_error(lawn_erase("A", "B"), "A is not defined")
+  expect_error(lawn_erase(poly1, "{}"),
+               "<geojson> must be a Feature or Geometry Object")
   expect_error(lawn_erase(poly1, "{}", lint = TRUE), "\"type\" member required")
   expect_error(lawn_erase(poly1, '{"type": "Feature"}', lint = TRUE),
                '"properties" member required \nLine 1 - "geometry" member required')

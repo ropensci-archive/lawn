@@ -12,7 +12,7 @@ test_that("lawn_square fails correctly", {
   # missing arguments
   expect_error(lawn_square(), "argument \"bbox\" is missing, with no default")
   # only length 3 gives error message
-  expect_error(lawn_square(c(1, 2, 4)), "A coordinate, feature, or point geometry is required")
+  expect_error(lawn_square(c(1, 2, 4)), "coordinates must only contain numbers")
   # can't pass in a character string to cellWidth
   expect_error(lawn_square(c(1, 2, 4, "a")), "TypeError: Object 1 has no method 'slice'")
 })

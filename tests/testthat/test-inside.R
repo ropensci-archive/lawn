@@ -57,6 +57,8 @@ test_that("lawn_inside returns correct values", {
 
 test_that("lawn_inside fails correctly", {
   expect_error(lawn_inside(), "argument \"point\" is missing, with no default")
-  expect_error(lawn_inside("{}", poly), "A coordinate, feature, or point geometry is required")
-  expect_error(lawn_inside(point1, point2), "Cannot read property '0' of undefined")
+  expect_error(lawn_inside("{}", poly),
+               "No valid coordinates")
+  expect_error(lawn_inside(point1, point2),
+               "Cannot read property '0' of undefined")
 })

@@ -2,18 +2,18 @@
 
 ## turf
 
-Currently (as of 2017-02-28) using `turf` `v3.10.4`
+Currently (as of 2017-06-13) using `turf` `v4.4.0`
 
-To recreate `inst/js/turf3104.js`:
+To recreate `inst/js/turf440.js`:
 
-Download the minified file from <https://npmcdn.com/@turf/turf@3.10.4/turf.min.js>
+Download the minified file from <https://npmcdn.com/@turf/turf@4.4.0/turf.min.js>
 to `inst/js` directory in the `lawn` package
 
 
 
 ## @turf/meta
 
-Currently (as of 2017-02-28) using `turf/meta` `v3.10.4`
+Currently (as of 2017-06-13) using `turf/meta` `v4.4.0`
 
 To recreate `inst/js/turf-meta.js`:
 
@@ -38,7 +38,7 @@ cp turf-meta.js lawn/inst/js/
 
 ## @turf/invariant
 
-Currently (as of 2017-02-28) using `turf/invariant` `v3.10.4`
+Currently (as of 2017-06-13) using `turf/invariant` `v4.4.0`
 
 To recreate `inst/js/turf-invariant.js`:
 
@@ -74,32 +74,34 @@ to `inst/js` directory in the `lawn` package
 
 ## geojsonhint
 
-Currently (as of 2016-10-12) using `geojsonhint` `v2.0.0-beta2`
+Currently (as of 2017-06-13) using `geojsonhint` `v2.0.1`
 
-To recreate `inst/js/geojsohint-v2beta.js`:
+To recreate `inst/js/geojsohint-v201.js`:
 
 Install `geojsonhint` from NPM
 
 ```
-npm install geojsonhint
+npm i @mapbox/geojsonhint
 ```
 
 Browserify
 
 ```
-echo "global.geojsonhint = require('geojsonhint');" > in.js
-browserify in.js -o geojsohint-v2beta.js
+echo "global.geojsonhint = require('@mapbox/geojsonhint');" > in.js
+browserify in.js -o geojsohint-v201.js
 ```
 
 Copy js file into the `inst/js` directory in the `lawn` package
 
 ```
-cp geojsohint-v2beta.js lawn/inst/js
+cp geojsohint-v201.js lawn/inst/js
 ```
+
+
 
 ## clone
 
-Currently (as of 2016-10-12) using `clone` `v2.0.0-beta2`
+Currently (as of 2017-06-13) using `clone` `v2.1.1`
 
 To recreate `inst/js/cloner.js`:
 
@@ -122,9 +124,11 @@ Copy js file into the `inst/js` directory in the `lawn` package
 cp cloner.js lawn/inst/js
 ```
 
+
+
 ## geojson-random
 
-Currently (as of 2016-10-12) using `geojson-random` `v0.2.2`
+Currently (as of 2017-06-13) using `geojson-random` `v0.4.0`
 
 To recreate `inst/js/geojson_random.js`:
 

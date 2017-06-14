@@ -27,6 +27,6 @@ test_that("lawn_distance works", {
 
 test_that("lawn_distance fails correctly", {
   expect_error(lawn_distance(), "missing, with no default")
-  expect_error(lawn_distance(4, 5), "A coordinate, feature, or point geometry is required")
-  expect_error(lawn_distance(from, to, "km"), "Invalid unit")
+  expect_error(lawn_distance(4, 5), "No valid coordinates")
+  expect_error(lawn_distance(from, to, "km"), "units is invalid")
 })

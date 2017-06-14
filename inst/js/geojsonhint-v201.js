@@ -1,9 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (global){
-global.geojsonhint = require('geojsonhint');
+global.geojsonhint = require('@mapbox/geojsonhint');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"geojsonhint":2}],2:[function(require,module,exports){
+},{"@mapbox/geojsonhint":2}],2:[function(require,module,exports){
 var jsonlint = require('jsonlint-lines'),
   geojsonHintObject = require('./object');
 
@@ -142,7 +142,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#feature-collection-objects
+    // https://tools.ietf.org/html/rfc7946#section-3.3
     function FeatureCollection(featureCollection) {
         crs(featureCollection);
         bbox(featureCollection);
@@ -169,7 +169,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#positions
+    // https://tools.ietf.org/html/rfc7946#section-3.1.1
     function position(_, line) {
         if (!Array.isArray(_)) {
             return errors.push({
@@ -187,6 +187,7 @@ function hint(gj, options) {
         if (_.length > 3) {
             return errors.push({
                 message: 'position should not have more than 3 elements',
+                level: 'message',
                 line: _.__line__ || line
             });
         }
@@ -255,6 +256,7 @@ function hint(gj, options) {
                         message: 'the first and last positions in a LinearRing of coordinates must be the same',
                         line: line
                     });
+                    return true;
                 }
             } else if (type === 'Line' && coords.length < 2) {
                 return errors.push({
@@ -269,8 +271,11 @@ function hint(gj, options) {
                 line: line
             });
         } else {
-            coords.forEach(function(c) {
-                positionArray(c, type, depth - 1, c.__line__ || line);
+            var results = coords.map(function(c) {
+                return positionArray(c, type, depth - 1, c.__line__ || line);
+            });
+            return results.some(function(r) {
+                return r;
             });
         }
     }
@@ -337,7 +342,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#point
+    // https://tools.ietf.org/html/rfc7946#section-3.1.2
     function Point(point) {
         crs(point);
         bbox(point);
@@ -347,7 +352,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#polygon
+    // https://tools.ietf.org/html/rfc7946#section-3.1.6
     function Polygon(polygon) {
         crs(polygon);
         bbox(polygon);
@@ -358,7 +363,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#multipolygon
+    // https://tools.ietf.org/html/rfc7946#section-3.1.7
     function MultiPolygon(multiPolygon) {
         crs(multiPolygon);
         bbox(multiPolygon);
@@ -369,7 +374,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#linestring
+    // https://tools.ietf.org/html/rfc7946#section-3.1.4
     function LineString(lineString) {
         crs(lineString);
         bbox(lineString);
@@ -378,7 +383,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#multilinestring
+    // https://tools.ietf.org/html/rfc7946#section-3.1.5
     function MultiLineString(multiLineString) {
         crs(multiLineString);
         bbox(multiLineString);
@@ -387,7 +392,7 @@ function hint(gj, options) {
         }
     }
 
-    // http://geojson.org/geojson-spec.html#multipoint
+    // https://tools.ietf.org/html/rfc7946#section-3.1.3
     function MultiPoint(multiPoint) {
         crs(multiPoint);
         bbox(multiPoint);
@@ -396,6 +401,7 @@ function hint(gj, options) {
         }
     }
 
+    // https://tools.ietf.org/html/rfc7946#section-3.1.8
     function GeometryCollection(geometryCollection) {
         crs(geometryCollection);
         bbox(geometryCollection);
@@ -426,6 +432,7 @@ function hint(gj, options) {
         }
     }
 
+    // https://tools.ietf.org/html/rfc7946#section-3.2
     function Feature(feature) {
         crs(feature);
         bbox(feature);
@@ -458,7 +465,7 @@ function hint(gj, options) {
         }
         requiredProperty(feature, 'properties', 'object');
         if (!requiredProperty(feature, 'geometry', 'object')) {
-            // http://geojson.org/geojson-spec.html#feature-objects
+            // https://tools.ietf.org/html/rfc7946#section-3.2
             // tolerate null geometry
             if (feature.geometry) root(feature.geometry);
         }
@@ -525,10 +532,10 @@ function isRingClockwise (coords) {
 
 function isPolyRHR (coords) {
     if (coords && coords.length > 0) {
-        if (!isRingClockwise(coords[0]))
+        if (isRingClockwise(coords[0]))
             return false;
         var interiorCoords = coords.slice(1, coords.length);
-        if (interiorCoords.some(isRingClockwise))
+        if (!interiorCoords.every(isRingClockwise))
             return false;
     }
     return true;

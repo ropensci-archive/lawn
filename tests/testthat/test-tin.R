@@ -34,5 +34,5 @@ test_that("lawn_tin fails correctly", {
   # missing arguments
   expect_error(lawn_tin(), "argument \"pt\" is missing, with no default")
   # bad geojson input
-  expect_error(lawn_tin("{}"), "Cannot call method")
+  expect_error(lawn_tin("{}"), "points must be a FeatureCollection")
 })
