@@ -7,7 +7,7 @@
 #' @param line An input [data-LineString].
 #' @param distance Distance along the line.
 #' @param units	Units for the `distance` argument. Can be degrees, radians,
-#' miles (default), or kilometers.
+#' miles, or kilometers.
 #' @template lint
 #' @family measurements
 #' @return A [data-Point] distance units along the line.

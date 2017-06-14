@@ -12,7 +12,7 @@ lawn_along(line, distance, units, lint = FALSE)
 \item{distance}{Distance along the line.}
 
 \item{units}{Units for the \code{distance} argument. Can be degrees, radians,
-miles (default), or kilometers.}
+miles, or kilometers.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
