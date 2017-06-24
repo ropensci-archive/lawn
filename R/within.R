@@ -31,8 +31,8 @@
 lawn_within <- function(points, polygons, lint = FALSE) {
   points <- convert(points)
   polygons <- convert(polygons)
-  is_type(points, type = "FeatureCollection")
-  is_type(polygons, type = "FeatureCollection")
+  is_type(points, "FeatureCollection")
+  is_type(polygons, "FeatureCollection")
   lawnlint(list(points, polygons), lint)
   ct$eval(sprintf("var pts = turf.within(%s, %s);", points, polygons))
   as.fc(ct$get("pts"))

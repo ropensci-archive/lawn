@@ -16,7 +16,7 @@ objects. Default: \code{FALSE}}
 }
 \value{
 A bounding box, numeric vector of length 4, in
-\link{ minX, minY, maxX, maxY } order
+\code{[ minX, minY, maxX, maxY ]} order
 }
 \description{
 Calculates the extent of all input features in a FeatureCollection,

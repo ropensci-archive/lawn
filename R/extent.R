@@ -9,7 +9,7 @@
 #' @template lint
 #' @family measurements
 #' @return A bounding box, numeric vector of length 4, in
-#' [ minX, minY, maxX, maxY ] order
+#' `[ minX, minY, maxX, maxY ]` order
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)

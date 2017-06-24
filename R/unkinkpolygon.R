@@ -22,7 +22,7 @@
 #' view(x)
 #' view(lawn_unkinkpolygon(x))
 lawn_unkinkpolygon <- function(x, lint = FALSE) {
-  lawnlint(controlPoints, lint)
+  lawnlint(x, lint)
   ct$eval(sprintf('var out = turf.unkinkPolygon(%s);', x))
   as.fc(ct$get("out"))
 }
