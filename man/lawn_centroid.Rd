@@ -7,7 +7,8 @@
 lawn_centroid(features, properties = NULL, lint = FALSE)
 }
 \arguments{
-\item{features}{Input features, as a \link{data-Feature}.}
+\item{features}{Input features, as a \link{data-Feature} or
+\link{data-FeatureCollection}}
 
 \item{properties}{A list of properties. Default: \code{NULL}}
 
@@ -17,7 +18,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \link{data-Feature} - centroid of the input features
+a \link{data-Feature}<(\link{data-Point})> - centroid of the input features
 }
 \description{
 Takes one or more features and calculates the centroid using the arithmetic

@@ -7,11 +7,11 @@
 lawn_bezier(line, resolution = 10000L, sharpness = 0.85, lint = FALSE)
 }
 \arguments{
-\item{line}{Input \link{data-LineString}.}
+\item{line}{A \link{data-Feature} with a single \link{data-LineString}}
 
-\item{resolution}{Time in milliseconds between points.}
+\item{resolution}{Time in milliseconds between points}
 
-\item{sharpness}{A measure of how curvy the path should be between splines.}
+\item{sharpness}{A measure of how curvy the path should be between splines}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

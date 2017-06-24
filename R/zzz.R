@@ -19,58 +19,7 @@ lawnlint <- function(x, lint = FALSE) {
   }
 }
 
-# helper fxn
-
-#' check for correct feature type
-#'
-#' @noRd
-#' @examples
-#' x <- '{
-#'  "type": "Feature",
-#'   "properties": {
-#'     "fill": "#0f0"
-#'   },
-#'   "geometry": {
-#'     "type": "Polygon",
-#'     "coordinates": [[
-#'       [-46.738586, -23.596711],
-#'       [-46.738586, -23.458207],
-#'       [-46.560058, -23.458207],
-#'       [-46.560058, -23.596711],
-#'       [-46.738586, -23.596711]
-#'     ]]
-#'   }
-#' }'
-#' is_type(x, type = "Point")
-#'
-#' is_type(lawn_data$points_average, type = "")
-is_type <- function(x, type) {
-  ht$eval(sprintf("var keys = Object.keys(%s);", jsonlite::minify(x)))
-  keys <- ht$get('keys')
-  if ("geometry" %in% keys) {
-    ht$eval(sprintf("var val = %s.geometry.type;", jsonlite::minify(x)))
-    lower <- ht$get('val')
-    ht$eval(sprintf("var top = %s.type;", jsonlite::minify(x)))
-    top <- ht$get('top')
-  } else if ("features" %in% keys) {
-    ht$eval(sprintf("var val = %s.type;", jsonlite::minify(x)))
-    top <- ht$get('val')
-    ht$eval(
-      sprintf(
-        "var vals = %s.features.map(function(x) {return x.geometry.type});",
-        jsonlite::minify(x)))
-    lower <- ht$get('vals')
-    #xtype <- c(top, lower)
-  }
-
-  if (!top %in% type) {
-    stop(
-      sprintf("%s should be of type '%s'", deparse(substitute(x)),
-              paste0(type, collapse = "', '")
-      ), call. = FALSE)
-  }
-}
-
+# helper fxns
 ## use geojsonhint to lint geojson input
 lintit <- function(z) {
   ht$eval(sprintf("var out = geojsonhint.hint('%s');", jsonlite::minify(z)))
@@ -118,3 +67,12 @@ calc_math <- function(op, py, pt, in_field, out_field) {
 }
 
 `%||%` <- function(x, y) if (is.null(x)) y else x
+
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!class(x) %in% y) {
+      stop(deparse(substitute(x)), " must be of class ",
+           paste0(y, collapse = ", "), call. = FALSE)
+    }
+  }
+}

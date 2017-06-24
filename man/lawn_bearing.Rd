@@ -7,9 +7,9 @@
 lawn_bearing(start, end, lint = FALSE)
 }
 \arguments{
-\item{start}{Starting \link{data-Point}.}
+\item{start}{Starting \link{data-Feature} with a single \link{data-Point}}
 
-\item{end}{Ending \link{data-Point}.}
+\item{end}{Ending \link{data-Feature} with a single \link{data-Point}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

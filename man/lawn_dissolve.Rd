@@ -8,9 +8,9 @@ that multipart features within the collection are not supported}
 lawn_dissolve(features, key, lint = FALSE)
 }
 \arguments{
-\item{features}{A \link{data-FeatureCollection}.}
+\item{features}{A \link{data-FeatureCollection}<(\link{data-Polygon})>}
 
-\item{key}{(character) The property on which to filter.}
+\item{key}{(character) The property on which to filter}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -18,8 +18,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \link{data-FeatureCollection} containing the dissolved
-polygons
+a \link{data-FeatureCollection}<(\link{data-Polygon})> containing the
+dissolved polygons
 }
 \description{
 Dissolves a FeatureCollection of polygons based on a property. Note
@@ -27,8 +27,42 @@ that multipart features within the collection are not supported
 }
 \examples{
 cat(lawn_data$filter_features)
-lawn_dissolve(features = lawn_data$filter_features, key = 'species')
-lawn_dissolve(lawn_data$filter_features, 'species')
+x <- '{
+ "type": "FeatureCollection",
+ "features": [
+  {
+    "type": "Feature",
+    "properties": {
+      "combine": "yes"
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "combine": "yes"
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[0, -1], [0, 0], [1, 0], [1, -1], [0,-1]]]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "combine": "no"
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[1,-1],[1, 0], [2, 0], [2, -1], [1, -1]]]
+    }
+  }
+  ]
+}'
+lawn_dissolve(x, key = 'combine')
 }
 \seealso{
 Other assertions: \code{\link{lawn_circle}},

@@ -7,7 +7,7 @@
 lawn_filter(features, key, value, lint = FALSE)
 }
 \arguments{
-\item{features}{A \link{data-FeatureCollection}.}
+\item{features}{A \link{data-FeatureCollection}}
 
 \item{key}{(character) The property on which to filter.}
 

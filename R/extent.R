@@ -5,11 +5,11 @@
 #' (west, south, east, north).
 #'
 #' @export
-#' @param input A [data-Feature] or
-#' [data-FeatureCollection].
+#' @param input A [data-Feature] or [data-FeatureCollection]
 #' @template lint
 #' @family measurements
-#' @return A bounding box, numeric vector of length 4
+#' @return A bounding box, numeric vector of length 4, in
+#' [ minX, minY, maxX, maxY ] order
 #' @examples
 #' # From a FeatureCollection
 #' cat(lawn_data$points_average)
@@ -34,6 +34,7 @@
 lawn_extent <- function(input, lint = FALSE) {
   input <- convert(input)
   lawnlint(input, lint)
+  is_type(input, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var bbox = turf.bbox(%s);", input))
   ct$get("bbox")
 }

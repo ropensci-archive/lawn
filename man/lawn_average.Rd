@@ -8,12 +8,12 @@ lawn_average(polygons, points, in_field, out_field = "average",
   lint = FALSE)
 }
 \arguments{
-\item{polygons}{Geojson \link{data-Polygon}s.}
+\item{polygons}{A \link{data-FeatureCollection} of \link{data-Polygon}'s}
 
-\item{points}{Geojson \link{data-Point}s.}
+\item{points}{A \link{data-FeatureCollection} of \link{data-Point}'s}
 
-\item{in_field}{(character) The field in the points feature from which to pull
-values to average.}
+\item{in_field}{(character) The field in the points feature from which to
+pull values to average.}
 
 \item{out_field}{(character) The field in polygons to put results of the
 averages.}
@@ -24,7 +24,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-Polygons with the value of out_field set to the calculated averages.
+Polygons with the value of out_field set to the calculated averages
 }
 \description{
 Calculate the average value of a field for a set of \link{data-Point}s

@@ -6,11 +6,12 @@
 #'
 #' @export
 #'
-#' @param features Input features, as a [data-Feature].
+#' @param features Input features, as a [data-Feature] or
+#' [data-FeatureCollection]
 #' @param properties A list of properties. Default: `NULL`
 #' @template lint
 #' @family measurements
-#' @return a [data-Feature] - centroid of the input features
+#' @return a [data-Feature]<([data-Point])> - centroid of the input features
 #' @examples
 #' poly <- '{
 #'   "type": "Feature",
@@ -31,6 +32,7 @@
 lawn_centroid <- function(features, properties = NULL, lint = FALSE) {
   fts <- convert(features)
   lawnlint(fts, lint)
+  is_type(features, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var ctr = turf.centroid(%s, %s);", fts, toj(properties)))
   structure(ct$get("ctr"), class = "point")
 }

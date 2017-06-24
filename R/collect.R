@@ -29,6 +29,8 @@ lawn_collect <- function(polygons, points, in_field, out_field, lint = FALSE) {
   # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   lawnlint(list(polygons, points), lint)
+  is_type(polygons, type_top = "FeatureCollection", type_lower = "Polygon")
+  is_type(points, type_top = "FeatureCollection", type_lower = "Point")
   ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', '%s');",
                   convert(polygons),
                   convert(points),

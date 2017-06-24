@@ -8,14 +8,13 @@ lawn_circle(center, radius, steps = FALSE, units = "kilometers",
   lint = FALSE)
 }
 \arguments{
-\item{center}{The center \link{data-Point}}
+\item{center}{The center, a \link{data-Feature}<(\link{data-Point})>}
 
 \item{radius}{(integer) Radius of the circle.}
 
 \item{steps}{(integer) Number of steps.}
 
-\item{units}{(character) Miles, kilometers (default),
-degrees, or radians.}
+\item{units}{(character) Miles, kilometers (default), degrees, or radians}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -23,11 +22,12 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a \link{data-Polygon}
+a \link{data-Feature}<(\link{data-Polygon})>
 }
 \description{
 Takes a \link{data-Point} and calculates the circle polygon given
-a radius in degrees, radians, miles, or kilometers; and steps for precision
+a radius in degrees, radians, miles, or kilometers; and steps
+for precision
 }
 \examples{
 pt <- '{

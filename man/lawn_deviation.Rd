@@ -8,9 +8,11 @@ lawn_deviation(polygons, points, in_field, out_field = "deviation",
   lint = FALSE)
 }
 \arguments{
-\item{polygons}{Polygon(s) defining area to aggregate.}
+\item{polygons}{Polygon(s) (\link{data-FeatureCollection}<(\link{data-Polygon})>)
+defining area to aggregate}
 
-\item{points}{Points with values to aggregate.}
+\item{points}{Points (\link{data-FeatureCollection}<(\link{data-Point})>) with
+values to aggregate}
 
 \item{in_field}{Character for the name of the field on \code{pts} on
 which you wish to perform the aggregation.}

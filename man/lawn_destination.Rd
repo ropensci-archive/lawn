@@ -7,7 +7,7 @@
 lawn_destination(start, distance, bearing, units, lint = FALSE)
 }
 \arguments{
-\item{start}{Starting point \link{data-Point}.}
+\item{start}{Starting point, a \link{data-Feature}<\link{data-Point}>}
 
 \item{distance}{Distance from the starting point.}
 
@@ -21,7 +21,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-destination \link{data-Point}
+the calculated destination, a \link{data-Feature}<\link{data-Point}>
 }
 \description{
 Takes a \link{data-Point} and calculates the location of a

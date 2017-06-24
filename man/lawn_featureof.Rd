@@ -7,11 +7,11 @@
 lawn_featureof(x, type, name, lint = FALSE)
 }
 \arguments{
-\item{x}{a feature with an expected geometry type. required.}
+\item{x}{a \link{data-Feature} with an expected geometry type. required.}
 
-\item{type}{expected GeoJSON type. required.}
+\item{type}{(character) expected GeoJSON type. required.}
 
-\item{name}{name of calling function. required.}
+\item{name}{(character) name of calling function. required.}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by

@@ -7,13 +7,13 @@
 #' account for global curvature.
 #'
 #' @export
-#' @param start	Starting point [data-Point].
+#' @param start	Starting point, a [data-Feature]<[data-Point]>
 #' @param distance Distance from the starting point.
 #' @param bearing	Ranging from -180 to 180.
 #' @param units	Miles, kilometers, degrees, or radians.
 #' @template lint
 #' @family measurements
-#' @return destination [data-Point]
+#' @return the calculated destination, a [data-Feature]<[data-Point]>
 #' @examples
 #' pt <- '{
 #'   "type": "Feature",
@@ -39,6 +39,7 @@ lawn_destination <- function(start, distance, bearing, units, lint = FALSE) {
   units <- match.arg(units, c("miles", "kilometers", "degrees", "radians"))
   start <- convert(start)
   lawnlint(start, lint)
+  is_type(start, "Feature", "Point")
   ct$eval(sprintf("var dest = turf.destination(%s, %s, %s, '%s');",
                   start, distance, bearing, units))
   structure(ct$get("dest"), class = "point")

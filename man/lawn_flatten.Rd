@@ -7,7 +7,7 @@
 lawn_flatten(x, lint = FALSE)
 }
 \arguments{
-\item{x}{any valid GeoJSON with multi-geometry Feature's}
+\item{x}{any valid GeoJSON with multi-geometry \link{data-Feature}'s}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -21,15 +21,14 @@ a \link{data-FeatureCollection}
 Flattens any GeoJSON to a FeatureCollection
 }
 \examples{
-x <- '{
-"type": "MultiPolygon",
-"coordinates": [
-    [[[102.0, 2.0], [103.0, 2.0], [103.0, 3.0], [102.0, 3.0], [102.0, 2.0]]],
-    [[[100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0]],
-    [[100.2, 0.2], [100.8, 0.2], [100.8, 0.8], [100.2, 0.8], [100.2, 0.2]]]
-  ]
+x <- '{"type":"MultiPolygon","coordinates":[
+  [[[102,2],[103,2],[103,3],[102,3],[102,2]]],
+  [[[100,0],[101,0],[101,1],[100,1],[100,0]],
+  [[100.2,0.2],[100.2,0.8],[100.8,0.8],[100.8,0.2],[100.2,0.2]]]
+ ]
 }'
 lawn_flatten(x)
+lawn_flatten(x, TRUE)
 }
 \seealso{
 Other misc: \code{\link{lawn_truncate}}

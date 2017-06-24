@@ -7,9 +7,9 @@
 lawn_distance(from, to, units = "kilometers", lint = FALSE)
 }
 \arguments{
-\item{from}{Origin point.}
+\item{from}{Origin \link{data-Feature}<(\link{data-Point})>}
 
-\item{to}{Destination point.}
+\item{to}{Destination \link{data-Feature}<(\link{data-Point})>}
 
 \item{units}{(character) Can be degrees, radians, miles, or kilometers
 (default).}

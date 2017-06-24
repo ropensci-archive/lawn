@@ -19,6 +19,23 @@
 #'    [-21.927337, 64.136673]
 #' ]'
 #' lawn_along(lawn_linestring(pts), 1, 'miles')
+#'
+#' line <- '{
+#' "type": "Feature",
+#' "properties": {},
+#' "geometry": {
+#'   "type": "LineString",
+#'   "coordinates": [
+#'     [-77.031669, 38.878605],
+#'     [-77.029609, 38.881946],
+#'     [-77.020339, 38.884084],
+#'     [-77.025661, 38.885821],
+#'     [-77.021884, 38.889563],
+#'     [-77.019824, 38.892368]
+#'     ]
+#'  }
+#' }'
+#' lawn_along(line, distance = 1, units = 'miles')
 #' @examples \dontrun{
 #' lawn_along(lawn_linestring(pts), 1, 'miles') %>% view
 #' res <- lawn_along(lawn_linestring(pts), 1, 'miles')
@@ -27,6 +44,9 @@
 lawn_along <- function(line, distance, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
+  assert(line, 'character')
+  assert(distance, c('numeric', 'integer'))
+  is_type(line, type_top = "Feature", type_lower = "LineString")
   ct$eval(sprintf("var alg = turf.along(%s, %s, '%s');", line, distance, units))
   structure(ct$get("alg"), class = "point")
 }

@@ -7,7 +7,8 @@
 lawn_center(features, properties = NULL, lint = FALSE)
 }
 \arguments{
-\item{features}{Input features, as a \link{data-FeatureCollection}.}
+\item{features}{Input features, as a \link{data-Feature} or
+\link{data-FeatureCollection}}
 
 \item{properties}{A list of properties. Default: \code{NULL}}
 

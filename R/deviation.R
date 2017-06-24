@@ -5,8 +5,10 @@
 #' [data-Polygon]'s
 #'
 #' @export
-#' @param polygons Polygon(s) defining area to aggregate.
-#' @param points Points with values to aggregate.
+#' @param polygons Polygon(s) ([data-FeatureCollection]<([data-Polygon])>)
+#' defining area to aggregate
+#' @param points Points ([data-FeatureCollection]<([data-Point])>) with
+#' values to aggregate
 #' @param in_field Character for the name of the field on `pts` on
 #' which you wish to perform the aggregation.
 #' @param out_field Character for the name of the field on the output
@@ -29,6 +31,8 @@ lawn_deviation <- function(polygons, points, in_field, out_field = "deviation",
   # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   lawnlint(list(polygons, points), lint)
+  is_type(polygons, type_top = "FeatureCollection")
+  is_type(points, type_top = "FeatureCollection")
   calc_math("standardDeviation", convert(polygons), convert(points),
             in_field, out_field)
 }

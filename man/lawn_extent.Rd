@@ -7,8 +7,7 @@
 lawn_extent(input, lint = FALSE)
 }
 \arguments{
-\item{input}{A \link{data-Feature} or
-\link{data-FeatureCollection}.}
+\item{input}{A \link{data-Feature} or \link{data-FeatureCollection}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -16,7 +15,8 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-A bounding box, numeric vector of length 4
+A bounding box, numeric vector of length 4, in
+\link{ minX, minY, maxX, maxY } order
 }
 \description{
 Calculates the extent of all input features in a FeatureCollection,

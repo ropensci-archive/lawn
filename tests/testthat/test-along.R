@@ -23,6 +23,6 @@ test_that("lawn_along fails correctly", {
   expect_error(lawn_along(lawn_linestring(pts), 1), "argument \"units\" is missing, with no default")
   expect_error(lawn_along(lawn_linestring(pts), 1, "stuff"), "units is invalid")
   expect_error(lawn_along(lawn_linestring(pts), "asdfadf", "miles"), "ReferenceError: asdfadf is not defined")
-  expect_error(lawn_along("adsf", "asdfadf", "miles"), "ReferenceError: adsf is not defined")
+  expect_error(lawn_along("adsf", "asdfadf", "miles"), "distance must be of class numeric, integer")
   expect_error(lawn_along(5, 1, "miles"), "input must be a LineString Feature or Geometry")
 })

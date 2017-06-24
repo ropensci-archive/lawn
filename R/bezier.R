@@ -5,9 +5,9 @@
 #' spline algorithm.
 #'
 #' @export
-#' @param line Input [data-LineString].
-#' @param resolution Time in milliseconds between points.
-#' @param sharpness	A measure of how curvy the path should be between splines.
+#' @param line A [data-Feature] with a single [data-LineString]
+#' @param resolution Time in milliseconds between points
+#' @param sharpness	A measure of how curvy the path should be between splines
 #' @template lint
 #' @family transformations
 #' @return A [data-LineString] curved line.
@@ -31,6 +31,7 @@ lawn_bezier <- function(line, resolution = 10000L, sharpness = 0.85,
 
   line <- convert(line)
   lawnlint(line, lint)
+  is_type(line, type_top = "Feature", type_lower = "LineString")
   ct$eval(sprintf("var bz = turf.bezier(%s, %s, %s);", line, resolution,
                   sharpness))
   structure(ct$get("bz"), class = "linestring")

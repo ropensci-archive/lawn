@@ -5,11 +5,10 @@
 #' <https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon>
 #'
 #' @export
-#' @param x a [data-Feature] or
-#' [data-FeatureCollection]
+#' @param x a [data-Feature] or [data-FeatureCollection]
 #' @template lint
 #' @family measurements
-#' @return a [data-Point]
+#' @return a [data-Feature]<([data-Point])>
 #' @examples
 #' x <- '{
 #'  "type": "Feature",
@@ -30,6 +29,7 @@
 #' lawn_center_of_mass(lawn_data$polygons_average)
 lawn_center_of_mass <- function(x, lint = FALSE) {
   lawnlint(x, lint)
+  is_type(x, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf('var out = turf.centerOfMass(%s);', convert(x)))
   as.f(ct$get("out"))
 }

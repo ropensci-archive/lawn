@@ -8,6 +8,7 @@
 #' @seealso [lawn-defunct]
 #'
 #' @name lawn-package
+#' @importFrom jsonlite fromJSON
 #' @aliases lawn
 #' @author Scott Chamberlain (\email{myrmecocystus@@gmail.com})
 #' @author Jeff Hollister (\email{hollister.jeff@@epa.gov})

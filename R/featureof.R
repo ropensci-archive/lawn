@@ -1,9 +1,9 @@
 #' Enforce expectations about types of Feature inputs
 #'
 #' @export
-#' @param x a feature with an expected geometry type. required.
-#' @param type expected GeoJSON type. required.
-#' @param name name of calling function. required.
+#' @param x a [data-Feature] with an expected geometry type. required.
+#' @param type (character) expected GeoJSON type. required.
+#' @param name (character) name of calling function. required.
 #' @template lint
 #' @family invariant
 #' @return nothing if no problems - error message if a problem

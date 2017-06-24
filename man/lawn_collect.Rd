@@ -7,9 +7,11 @@
 lawn_collect(polygons, points, in_field, out_field, lint = FALSE)
 }
 \arguments{
-\item{polygons}{a FeatureCollection of \code{\link{data-Polygon}} features}
+\item{polygons}{a \code{\link{data-FeatureCollection}} of
+\code{\link{data-Polygon}} features}
 
-\item{points}{a FeatureCollection of \code{\link{data-Point}} features}
+\item{points}{a \code{\link{data-FeatureCollection}} of
+\code{\link{data-Point}} features}
 
 \item{in_field}{(character) the field in input data to analyze}
 

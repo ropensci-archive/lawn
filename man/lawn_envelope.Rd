@@ -7,7 +7,7 @@
 lawn_envelope(fc, lint = FALSE)
 }
 \arguments{
-\item{fc}{A \link{data-FeatureCollection}.}
+\item{fc}{A \link{data-Feature} or \link{data-FeatureCollection}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
 as the object to get linted increases in size, so probably use by
@@ -15,7 +15,7 @@ default for small objects, but not for large if you know they are good geojson
 objects. Default: \code{FALSE}}
 }
 \value{
-a rectangular \link{data-Polygon} feature that
+a rectangular \link{data-Feature}<(\link{data-Polygon})> that
 encompasses all vertices
 }
 \description{

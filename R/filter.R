@@ -2,7 +2,7 @@
 #'
 #' @export
 #'
-#' @param features A [data-FeatureCollection].
+#' @param features A [data-FeatureCollection]
 #' @param key (character) The property on which to filter.
 #' @param value (character) The value of that property on which to filter.
 #' @template lint
