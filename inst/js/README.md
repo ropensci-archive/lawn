@@ -2,13 +2,21 @@
 
 ## turf
 
-Currently (as of 2017-06-13) using `turf` `v4.4.0`
+Currently (as of 2017-07-26) using `turf` `v4.5.2`
 
-To recreate `inst/js/turf440.js`:
+To recreate `inst/js/turf452.js`:
 
-Download the minified file from <https://npmcdn.com/@turf/turf@4.4.0/turf.min.js>
+Download the minified file from <https://npmcdn.com/@turf/turf@4.5.2/turf.min.js>
 to `inst/js` directory in the `lawn` package
 
+List methods available
+
+```r
+library(V8)
+ct <- V8::v8()
+ct$source(system.file("js/turf452.js", package = 'lawn'))
+ct$get(JS('Object.keys(turf)'))
+```
 
 
 ## @turf/meta
