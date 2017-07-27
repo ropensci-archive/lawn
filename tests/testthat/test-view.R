@@ -93,7 +93,7 @@ test_that("view fails correctly", {
   # missing arguments
   expect_error(view(), "no applicable method")
   # wrong input
-  expect_error(view("a"), "a is not defined")
+  expect_error(view("a"), "not defined")
   # no method for data.frame's
   expect_error(view(mtcars), "no applicable method")
 })

@@ -18,7 +18,7 @@ linestring1 <- '[
 a <- as.turf(lawn_point(c(-74.5, 40)))
 b <- as.turf(lawn_polygon(rings))
 d <- as.turf(lawn_linestring(linestring1))
-e <- as.turf(lawn_centroid(lawn_polygon(rings)))
+e <- as.turf(lawn_centroid(lawn_polygon(rings))) # <-- THIS ONE
 
 # suppressPackageStartupMessages(library("geojsonio", quietly = TRUE))
 # f <- as.turf(geojson_list(c(-99.74,32.45)))

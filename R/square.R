@@ -16,6 +16,7 @@
 #'   lawn_bbox_polygon(sq))) %>% view
 #' }
 lawn_square <- function(bbox) {
+  assert(bbox, c('numeric', 'integer'))
   ct$eval(sprintf("var sq = turf.square(%s);", convert(bbox)))
   ct$get("sq")
 }

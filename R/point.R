@@ -5,7 +5,7 @@
 #' \code{e.g., c(longitude,latitude)}.
 #' @param properties A list of properties. Default: NULL
 #' @family data functions
-#' @return A [data-Point] feature.
+#' @return A [data-Feature]<([data-Point])>
 #' @examples
 #' lawn_point(c(-74.5, 40))
 #' lawn_point(list(-74.5, 40))

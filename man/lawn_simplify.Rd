@@ -8,18 +8,19 @@ lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
   lint = FALSE)
 }
 \arguments{
-\item{feature}{A \link{data-LineString} or \link{data-Polygon}
-feature to be simplified.}
+\item{feature}{A \link{data-Feature}<(\link{data-LineString}, \link{data-Polygon},
+\link{data-MultiLineString}, \link{data-MultiPolygon})>, or \link{data-FeatureCollection},
+or \link{data-GeometryCollection}}
 
 \item{tolerance}{(numeric) Simplification tolerance.  Default value is 0.01.}
 
 \item{high_quality}{(boolean) Whether or not to spend more time to create a
 higher-quality simplification with a different algorithm. Default: \code{FALSE}}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 A simplified feature.

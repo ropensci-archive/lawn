@@ -4,11 +4,11 @@
 #' that have no kinks.
 #'
 #' @export
-#' @param x A \code{\link{data-FeatureCollection}} of
-#' \code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}
+#' @param x A [data-FeatureCollection]<([data-Polygon])> or
+#' [data-FeatureCollection]<([data-MultiPolygon])>
 #' @template lint
 #' @family grids
-#' @return a \code{\link{data-FeatureCollection}} of \code{\link{data-Polygon}}
+#' @return a [data-FeatureCollection]<([data-Polygon])>
 #' @examples
 #' x <- '{
 #'   "type": "Feature",
@@ -23,6 +23,7 @@
 #' view(lawn_unkinkpolygon(x))
 lawn_unkinkpolygon <- function(x, lint = FALSE) {
   lawnlint(x, lint)
+  if (lint) is_type(x, "FeatureCollection", c("Polygon", "MultiPolygon"))
   ct$eval(sprintf('var out = turf.unkinkPolygon(%s);', x))
   as.fc(ct$get("out"))
 }

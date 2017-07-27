@@ -21,13 +21,23 @@
 #'     "coordinates": [[-83, 30], [-84, 36], [-78, 41]]
 #'   }
 #' }'
+#'
 #' lawn_line_offset(line, 2, 'miles')
 #' lawn_line_offset(line, 200, 'miles')
 #' lawn_line_offset(line, 0.5, 'radians')
 #' lawn_line_offset(line, 4, 'yards')
+#'
+#'
+#' line <- '{
+#'     "type": "LineString",
+#'     "coordinates": [[-83, 30], [-84, 36], [-78, 41]]
+#' }'
+#' lawn_line_offset(line, 4, 'yards')
 lawn_line_offset <- function(line, distance, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
+  assert(distance, c('numeric', 'integer'))
+  assert(units, "character")
   ct$eval(sprintf("var off = turf.lineOffset(%s, %s, '%s');",
                   line, distance, units))
   as.f(ct$get("off"))

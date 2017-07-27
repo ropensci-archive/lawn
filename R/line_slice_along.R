@@ -6,9 +6,9 @@
 #' extracting only the part of a route between two distances.
 #'
 #' @export
-#' @param startDist distance along the line to starting point
-#' @param stopDist distance along the line to ending point
-#' @param line Line to slice, a [data-LineString]
+#' @param startDist (numeric/integer) distance along the line to starting point
+#' @param stopDist (numeric/integer) distance along the line to ending point
+#' @param line Line to slice, a [data-Feature]<([data-LineString])>
 #' @param units can be degrees, radians, miles, or kilometers (default)
 #' @template lint
 #' @return A [data-LineString], the sliced line
@@ -38,7 +38,11 @@
 lawn_line_slice_along <- function(startDist, stopDist, line,
                                   units = "kilometers", lint = FALSE) {
 
+  assert(startDist, c('numeric', 'integer'))
+  assert(stopDist, c('numeric', 'integer'))
+  assert(units, 'character')
   lawnlint(line, lint)
+  if (lint) is_type(line, type_top = "Feature", type_lower = "LineString")
   ct$eval(sprintf("var exp = turf.lineSliceAlong(%s, %s, %s, '%s');",
                   convert(line), startDist, stopDist, units))
   structure(ct$get("exp"), class = "linestring")

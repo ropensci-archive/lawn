@@ -20,4 +20,5 @@ test_that("lawn_convex works", {
 test_that("lawn_convex fails correctly", {
   expect_error(lawn_convex(), "argument \"input\" is missing, with no default")
   expect_error(lawn_convex("stuff"), "stuff is not defined")
+  expect_error(lawn_convex("stuff", lint = TRUE), "invalid char")
 })

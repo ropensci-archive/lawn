@@ -9,14 +9,14 @@ lawn_tin(pt, propertyName = NULL, lint = FALSE)
 \arguments{
 \item{pt}{Input points.}
 
-\item{propertyName}{Name of the property from which to pull z values. This is
-optional: if not given, then there will be no extra data added to the derived
-triangles.}
+\item{propertyName}{(character) Name of the property from which to pull z
+values. This is optional: if not given, then there will be no extra data
+added to the derived triangles}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 TIN output, as a \link{data-FeatureCollection}.

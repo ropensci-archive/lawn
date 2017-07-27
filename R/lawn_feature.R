@@ -1,7 +1,8 @@
 #' Create a Feature
 #'
 #' @export
-#' @param geometry Any geojson geometry.
+#' @param geometry (character/json) Any geojson geometry.
+#' @param properties (list) list of properties, must be named
 #' @template lint
 #' @family data functions
 #' @examples \dontrun{
@@ -9,6 +10,9 @@
 #' ## single point
 #' pt <- '{"type":"Point","coordinates":[-75.343,39.984]}'
 #' lawn_feature(pt)
+#'
+#' ## with properties
+#' lawn_feature(pt, properties = list(foo = "bar"))
 #'
 #' ## many points in a list
 #' pts <- list(
@@ -18,8 +22,9 @@
 #' )
 #' lapply(pts, lawn_feature)
 #' }
-lawn_feature <- function(geometry, lint = FALSE) {
+lawn_feature <- function(geometry, properties = list(), lint = FALSE) {
   lawnlint(geometry, lint)
-  ct$eval(sprintf("var feet = turf.feature(%s);", convert(geometry)))
+  ct$eval(sprintf("var feet = turf.feature(%s, %s);",
+                  convert(geometry), convert(properties)))
   as.f(ct$get("feet"))
 }

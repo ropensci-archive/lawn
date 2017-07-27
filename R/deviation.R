@@ -31,8 +31,10 @@ lawn_deviation <- function(polygons, points, in_field, out_field = "deviation",
   # \url{https://www.epa.gov/home/github-contribution-disclaimer}
 
   lawnlint(list(polygons, points), lint)
-  is_type(polygons, type_top = "FeatureCollection")
-  is_type(points, type_top = "FeatureCollection")
+  if (lint) {
+    is_type(polygons, type_top = "FeatureCollection")
+    is_type(points, type_top = "FeatureCollection")
+  }
   calc_math("standardDeviation", convert(polygons), convert(points),
             in_field, out_field)
 }

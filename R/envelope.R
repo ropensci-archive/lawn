@@ -51,7 +51,7 @@
 lawn_envelope <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
-  is_type(fc, c("Feature", "FeatureCollection"))
+  if (lint) is_type(fc, c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var env = turf.envelope(%s);", fc))
   structure(ct$get("env"), class = "polygon")
 }

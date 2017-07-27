@@ -28,11 +28,13 @@
 #'   }
 #' }'
 #' lawn_centroid(features = poly)
+#' lawn_centroid(features = as.feature(poly))
 #' lawn_centroid(features = poly, properties = list(foo = "bar"))
 lawn_centroid <- function(features, properties = NULL, lint = FALSE) {
   fts <- convert(features)
   lawnlint(fts, lint)
-  is_type(features, type_top = c("Feature", "FeatureCollection"))
+  assert(fts, c('character', 'feature', 'featurecollection', 'json'))
+  if (lint) is_type(fts, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var ctr = turf.centroid(%s, %s);", fts, toj(properties)))
   structure(ct$get("ctr"), class = "point")
 }

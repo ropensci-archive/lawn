@@ -13,7 +13,7 @@ lawn_point(coordinates, properties = NULL)
 \item{properties}{A list of properties. Default: NULL}
 }
 \value{
-A \link{data-Point} feature.
+A \link{data-Feature}<(\link{data-Point})>
 }
 \description{
 Create a point

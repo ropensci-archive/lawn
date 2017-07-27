@@ -72,7 +72,7 @@
 lawn_combine <- function(fc, lint = FALSE) {
   fc <- convert(fc)
   lawnlint(fc, lint)
-  is_type(fc, type_top = "FeatureCollection")
+  if (lint) is_type(fc, type_top = "FeatureCollection")
   ct$eval(sprintf("var exp = turf.combine(%s);", fc))
   clz <- match.arg(tolower(fromJSON(fc)$features$geometry$type[1]),
                    c("point", "polygon", "linestring"))

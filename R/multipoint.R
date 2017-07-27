@@ -8,7 +8,7 @@
 #' as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}.
 #' @param properties A list of properties. Default: `NULL`
 #' @family data functions
-#' @return A [data-MultiPoint] feature.
+#' @return A [data-Feature]<([data-MultiPoint])>
 #' @examples
 #' lawn_multipoint(list(c(-74.5, 40), c(-77.5, 45)))
 #' lawn_multipoint("[[-74.5,40],[-77.5,45]]")

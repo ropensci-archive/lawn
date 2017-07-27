@@ -25,7 +25,9 @@ lawn_average <- function(polygons, points, in_field, out_field = 'average',
                          lint = FALSE) {
 
   lawnlint(list(polygons, points), lint)
-  is_type(polygons, type_top = "FeatureCollection")
-  is_type(points, type_top = "FeatureCollection")
+  if (lint) {
+    is_type(polygons, type_top = "FeatureCollection")
+    is_type(points, type_top = "FeatureCollection")
+  }
   calc_math("mean", convert(polygons), convert(points), in_field, out_field)
 }

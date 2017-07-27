@@ -11,10 +11,10 @@ lawn_within(points, polygons, lint = FALSE)
 
 \item{polygons}{\link{data-FeatureCollection} of polygons.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 Points that land within at least one polygon, as a

@@ -7,17 +7,17 @@
 lawn_midpoint(pt1, pt2, lint = FALSE)
 }
 \arguments{
-\item{pt1}{First point.}
+\item{pt1}{First \link{data-Feature}<(\link{data-Point})>}
 
-\item{pt2}{Second point.}
+\item{pt2}{Second \link{data-Feature}<(\link{data-Point})>}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-A \link{data-Point} midway between pt1 and pt2.
+A \link{data-Feature}<(\link{data-Point})> midway between pt1 and pt2
 }
 \description{
 Takes two \link{data-Point}'s and returns a point midway

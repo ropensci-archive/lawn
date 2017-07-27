@@ -41,7 +41,8 @@ test_that("lawn_centroid works", {
 test_that("lawn_centroid fails correctly", {
   expect_error(lawn_centroid(), "argument \"features\" is missing, with no default")
   expect_error(lawn_centroid(5), "Unknown Geometry Type")
-  expect_error(lawn_centroid(list()), "Unknown Geometry Type")
+  expect_error(lawn_centroid(5, lint = TRUE),
+               "The root of a GeoJSON object must be an object")
 
   # FIXME: address these at some point - failing on travis but not on my machine, v8 difference, or c++ compiler diff. perhaps
   wrong1 <- '{"type":"Feature","properties":{adfad},"geometry":{"type":"Point","coordinates":[20.566406,43.421008]}}'

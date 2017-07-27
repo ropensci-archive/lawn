@@ -7,22 +7,20 @@
 lawn_truncate(x, precision = 6, coordinates = 2, lint = FALSE)
 }
 \arguments{
-\item{x}{any \link{data-Feature} or
-\link{data-FeatureCollection}}
+\item{x}{any \link{data-Feature} or \link{data-FeatureCollection}}
 
 \item{precision}{(integer) coordinate decimal precision. default: 6}
 
 \item{coordinates}{(integer) maximum number of coordinates (primarily used
 to remove z coordinates). default: 2}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-a \link{data-Feature} or \link{data-FeatureCollection}
-with truncated geometry
+a \link{data-Feature} or \link{data-FeatureCollection} with truncated geometry
 }
 \description{
 Takes a GeoJSON Feature or FeatureCollection and truncates the precision

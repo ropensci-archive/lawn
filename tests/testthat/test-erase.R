@@ -83,6 +83,8 @@ test_that("lawn_erase fails correctly", {
   expect_error(lawn_erase("A", "B"), "A is not defined")
   expect_error(lawn_erase(poly1, "{}"),
                "<geojson> must be a Feature or Geometry Object")
+  expect_error(lawn_erase(poly1, "{}", lint = TRUE),
+               "member required")
   expect_error(lawn_erase(poly1, "{}", lint = TRUE), "\"type\" member required")
   expect_error(lawn_erase(poly1, '{"type": "Feature"}', lint = TRUE),
                '"properties" member required \nLine 1 - "geometry" member required')

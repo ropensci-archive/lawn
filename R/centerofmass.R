@@ -29,7 +29,7 @@
 #' lawn_center_of_mass(lawn_data$polygons_average)
 lawn_center_of_mass <- function(x, lint = FALSE) {
   lawnlint(x, lint)
-  is_type(x, type_top = c("Feature", "FeatureCollection"))
+  if (lint) is_type(x, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf('var out = turf.centerOfMass(%s);', convert(x)))
   as.f(ct$get("out"))
 }

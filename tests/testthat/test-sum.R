@@ -21,7 +21,7 @@ test_that("in_field and out_field parameters works as expected", {
 
 test_that("lawn_sum fails correctly", {
   # missing arguments
-  expect_error(lawn_sum(), "argument \"polygons\" is missing, with no default")
+  expect_error(lawn_sum(), "argument \"in_field\" is missing, with no default")
   # can't pass in a character string to cellWidth
   expect_error(lawn_sum(poly, "{}", 'population', 'sum'), "Cannot call method")
 })

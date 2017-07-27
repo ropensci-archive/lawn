@@ -16,5 +16,7 @@ test_that("lawn_count works", {
 test_that("count fails correctly", {
   expect_error(lawn_count(), "argument \"polygons\" is missing, with no default")
   expect_error(lawn_count(polygons = ply, points = 4, "population"),
-               "Cannot call method")
+               "Cannot call method 'map' of undefined")
+  expect_error(lawn_count(polygons = ply, points = 4, "population", lint = TRUE),
+               "Polygons and MultiPolygons should follow the right-hand rule")
 })

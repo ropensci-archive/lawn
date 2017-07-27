@@ -19,8 +19,10 @@ lawn_count <- function(polygons, points, in_field, out_field = 'count',
                        lint = FALSE) {
 
   lawnlint(list(polygons, points), lint)
-  is_type(polygons, "FeatureCollection", "Polygon")
-  is_type(points, "FeatureCollection", "Point")
+  if (lint) {
+    is_type(polygons, "FeatureCollection", "Polygon")
+    is_type(points, "FeatureCollection", "Point")
+  }
   ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', 'values');",
                   convert(polygons), convert(points), in_field))
   ct$eval(sprintf("fc.features.forEach(function (feature) {

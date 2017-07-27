@@ -50,6 +50,9 @@ lawn_transform_rotate <- function(x, angle, pivot = c(0, 0),
                                   mutate = FALSE, lint = FALSE) {
   x <- convert(x)
   lawnlint(x, lint)
+  assert(angle, c('numeric', 'integer'))
+  assert(pivot, c('numeric', 'integer'))
+  assert(mutate, 'logical')
   ct$eval(sprintf("var rot = turf.transformRotate(%s, %s, %s, %s);",
                   x, angle, toj(pivot), toj(mutate)))
   as.f(ct$get("rot"))

@@ -51,6 +51,8 @@ lawn_transform_scale <- function(x, factor, origin = "centroid",
                                  mutate = FALSE, lint = FALSE) {
   x <- convert(x)
   lawnlint(x, lint)
+  assert(origin, 'character')
+  assert(mutate, 'logical')
   ct$eval(sprintf("var sc = turf.transformScale(%s, %s, '%s', %s);",
                   x, factor, origin, toj(mutate)))
   as.f(ct$get("sc"))

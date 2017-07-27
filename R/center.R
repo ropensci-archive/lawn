@@ -23,7 +23,7 @@
 lawn_center <- function(features, properties = NULL, lint = FALSE) {
   features <- convert(features)
   lawnlint(features, lint)
-  is_type(features, type_top = c("Feature", "FeatureCollection"))
+  if (lint) is_type(features, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var cent = turf.center(%s, %s);", features, toj(properties)))
   structure(ct$get("cent"), class = "point")
 }

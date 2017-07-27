@@ -58,8 +58,10 @@ lawn_difference <- function(poly1, poly2, lint = FALSE) {
   poly1 <- convert(poly1)
   poly2 <- convert(poly2)
   lawnlint(list(poly1, poly2), lint)
-  is_type(poly1, "Feature", "Polygon")
-  is_type(poly2, "Feature", "Polygon")
+  if (lint) {
+    is_type(poly1, "Feature", "Polygon")
+    is_type(poly2, "Feature", "Polygon")
+  }
   ct$eval(sprintf("var er = turf.difference(%s, %s);", poly1, poly2))
   structure(ct$get("er"), class = "polygon")
 }

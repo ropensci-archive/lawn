@@ -7,15 +7,15 @@
 lawn_point_on_surface(x, lint = FALSE)
 }
 \arguments{
-\item{x}{Any \link{data-GeoJSON} object.}
+\item{x}{Any \link{data-GeoJSON} object}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-A point on the surface of \code{x}.
+A \link{data-Feature}<(\link{data-Point})> on the surface of \code{x}
 }
 \description{
 Finds a \link{data-Point} guaranteed to be on the surface of

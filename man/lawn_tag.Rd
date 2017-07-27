@@ -7,24 +7,24 @@
 lawn_tag(points, polygons, field, out_field, lint = FALSE)
 }
 \arguments{
-\item{points}{Input \link{data-Point}.}
+\item{points}{Input \link{data-FeatureCollection}<(\link{data-Point})>}
 
-\item{polygons}{Input \link{data-Polygon} or
-\link{data-MultiPolygon}.}
+\item{polygons}{Input \link{data-FeatureCollection}<(\link{data-Polygon})> or
+\link{data-FeatureCollection}<(\link{data-MultiPolygon})>}
 
 \item{field}{Property in polygons to add to joined Point features.}
 
 \item{out_field}{Property in points in which to store joined
 property from polygons.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 Points with containing_polyid property containing values
-from poly_id.
+from poly_id, as \link{data-FeatureCollection}<(\link{data-Point})>
 }
 \description{
 Takes a set of \link{data-Point}'s and a set of

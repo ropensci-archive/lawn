@@ -7,16 +7,16 @@
 lawn_unkinkpolygon(x, lint = FALSE)
 }
 \arguments{
-\item{x}{A \code{\link{data-FeatureCollection}} of
-\code{\link{data-Polygon}} or \code{\link{data-MultiPolygon}}}
+\item{x}{A \link{data-FeatureCollection}<(\link{data-Polygon})> or
+\link{data-FeatureCollection}<(\link{data-MultiPolygon})>}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-a \code{\link{data-FeatureCollection}} of \code{\link{data-Polygon}}
+a \link{data-FeatureCollection}<(\link{data-Polygon})>
 }
 \description{
 Takes a kinked polygon and returns a feature collection of polygons

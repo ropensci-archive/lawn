@@ -4,7 +4,7 @@
 #' @param coordinates A list of positions.
 #' @param properties A list of properties.
 #' @family data functions
-#' @return A [data-LineString] feature.
+#' @return A [data-Feature]<([data-LineString])>
 #' @examples
 #' linestring1 <- '[
 #'    [-21.964416, 64.148203],

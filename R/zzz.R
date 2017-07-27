@@ -58,6 +58,8 @@ pluck <- function(x, name, type) {
 }
 
 calc_math <- function(op, py, pt, in_field, out_field) {
+  assert(in_field, "character")
+  assert(out_field, "character")
   ct$eval(sprintf("var fc = turf.collect(%s, %s, '%s', 'values');",
                   py, pt, in_field))
   ct$eval(sprintf("fc.features.forEach(function (feature) {

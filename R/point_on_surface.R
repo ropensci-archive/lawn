@@ -4,8 +4,8 @@
 #' [data-GeoJSON] object.
 #'
 #' @export
-#' @param x Any [data-GeoJSON] object.
-#' @return A point on the surface of `x`.
+#' @param x Any [data-GeoJSON] object
+#' @return A [data-Feature]<([data-Point])> on the surface of `x`
 #' @template lint
 #' @family measurements
 #' @details What will be returned?
@@ -36,6 +36,7 @@
 lawn_point_on_surface <- function(x, lint = FALSE) {
   x <- convert(x)
   lawnlint(x, lint)
+  is_type(x, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var psf = turf.pointOnSurface(%s);", x))
   structure(ct$get("psf"), class = "point")
 }

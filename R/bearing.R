@@ -36,8 +36,10 @@ lawn_bearing <- function(start, end, lint = FALSE) {
   start <- convert(start)
   end <- convert(end)
   lawnlint(list(start, end), lint)
-  is_type(start, type_top = "Feature", type_lower = "Point")
-  is_type(end, type_top = "Feature", type_lower = "Point")
+  if (lint) {
+    is_type(start, type_top = "Feature", type_lower = "Point")
+    is_type(end, type_top = "Feature", type_lower = "Point")
+  }
   ct$eval(sprintf("var bear = turf.bearing(%s, %s);", start, end))
   ct$get("bear")
 }

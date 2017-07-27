@@ -17,5 +17,9 @@ test_that("lawn_center works", {
 test_that("lawn_center fails correctly", {
   expect_error(lawn_center(), "argument \"features\" is missing, with no default")
   expect_error(lawn_center(4), "Unknown Geometry Type")
+  expect_error(lawn_center(4, lint = TRUE),
+               "The root of a GeoJSON object must be an object")
   expect_error(lawn_center("a"), "a is not defined")
+  expect_error(lawn_center("a", lint = TRUE),
+               "invalid char in json text")
 })

@@ -8,18 +8,18 @@ lawn_line_slice_along(startDist, stopDist, line, units = "kilometers",
   lint = FALSE)
 }
 \arguments{
-\item{startDist}{distance along the line to starting point}
+\item{startDist}{(numeric/integer) distance along the line to starting point}
 
-\item{stopDist}{distance along the line to ending point}
+\item{stopDist}{(numeric/integer) distance along the line to ending point}
 
-\item{line}{Line to slice, a \link{data-LineString}}
+\item{line}{Line to slice, a \link{data-Feature}<(\link{data-LineString})>}
 
 \item{units}{can be degrees, radians, miles, or kilometers (default)}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 A \link{data-LineString}, the sliced line

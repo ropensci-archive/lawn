@@ -4,10 +4,10 @@
 #' the line in between those points
 #'
 #' @export
-#' @param line Line to snap to.
-#' @param point point to snap from.
+#' @param line [data-Feature]<([data-LineString])> to snap to
+#' @param point [data-Feature]<([data-Point])> to snap from
 #' @template lint
-#' @return A [data-Point].
+#' @return A [data-Feature]<([data-Point])>
 #' @examples
 #' line <- '{
 #'   "type": "Feature",
@@ -45,6 +45,10 @@ lawn_point_on_line <- function(line, point, lint = FALSE) {
   line <- convert(line)
   point <- convert(point)
   lawnlint(list(line, point), lint)
+  if (lint) {
+    is_type(line, type_top = "Feature", type_lower = "LineString")
+    is_type(point, type_top = "Feature", type_lower = "Point")
+  }
   ct$eval(sprintf("var exp = turf.pointOnLine(%s, %s);", line, point))
   structure(ct$get("exp"), class = "point")
 }

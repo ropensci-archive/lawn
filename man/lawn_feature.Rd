@@ -4,15 +4,17 @@
 \alias{lawn_feature}
 \title{Create a Feature}
 \usage{
-lawn_feature(geometry, lint = FALSE)
+lawn_feature(geometry, properties = list(), lint = FALSE)
 }
 \arguments{
-\item{geometry}{Any geojson geometry.}
+\item{geometry}{(character/json) Any geojson geometry.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{properties}{(list) list of properties, must be named}
+
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \description{
 Create a Feature
@@ -23,6 +25,9 @@ Create a Feature
 ## single point
 pt <- '{"type":"Point","coordinates":[-75.343,39.984]}'
 lawn_feature(pt)
+
+## with properties
+lawn_feature(pt, properties = list(foo = "bar"))
 
 ## many points in a list
 pts <- list(

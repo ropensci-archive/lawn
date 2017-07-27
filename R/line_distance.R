@@ -4,7 +4,8 @@
 #' the specified units.
 #'
 #' @export
-#' @param line Line to measure, a [data-LineString].
+#' @param line Line to measure, a [data-Feature]<([data-LineString])>,
+#' or [data-FeatureCollection]<([data-LineString])>
 #' @param units Can be degrees, radians, miles, or kilometers.
 #' @template lint
 #' @family measurements
@@ -32,6 +33,8 @@
 lawn_line_distance <- function(line, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
+  assert(units, "character")
+  if (lint) is_type(line, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var env = turf.lineDistance(%s, '%s');", line, units))
   ct$get("env")
 }

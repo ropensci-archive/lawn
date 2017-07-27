@@ -15,7 +15,7 @@ lawn_triangle_grid(extent, cellWidth, units)
 'kilometers'.}
 }
 \value{
-\link{data-FeatureCollection} grid of polygons.
+\link{data-FeatureCollection} grid of \link{data-Polygon}'s
 }
 \description{
 Takes a bounding box and a cell depth and returns a set of triangular

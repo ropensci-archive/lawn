@@ -11,10 +11,10 @@ lawn_difference(poly1, poly2, lint = FALSE)
 
 \item{poly2}{\link{data-Feature}<(\link{data-Polygon})> to erase from poly1}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 a \link{data-Feature}<(\link{data-Polygon})> feature showing the area of poly1

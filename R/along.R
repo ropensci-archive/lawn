@@ -45,7 +45,9 @@ lawn_along <- function(line, distance, units, lint = FALSE) {
   line <- convert(line)
   lawnlint(line, lint)
   assert(distance, c('numeric', 'integer'))
-  is_type(line, type_top = "Feature", type_lower = "LineString")
+  if (lint) {
+    is_type(line, type_top = "Feature", type_lower = "LineString")
+  }
   ct$eval(sprintf("var alg = turf.along(%s, %s, '%s');", line, distance, units))
   structure(ct$get("alg"), class = "point")
 }

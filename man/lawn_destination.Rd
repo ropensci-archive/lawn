@@ -15,10 +15,10 @@ lawn_destination(start, distance, bearing, units, lint = FALSE)
 
 \item{units}{Miles, kilometers, degrees, or radians.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 the calculated destination, a \link{data-Feature}<\link{data-Point}>

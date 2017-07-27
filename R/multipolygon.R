@@ -4,7 +4,7 @@
 #' @param coordinates A list of LinearRings, or in json.
 #' @param properties A list of properties.
 #' @family data functions
-#' @return A [data-MultiPolygon] feature.
+#' @return A [data-Feature]<([data-MultiPolygon])>
 #' @examples
 #' rings <- list(
 #'   list(list(

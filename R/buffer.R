@@ -53,7 +53,7 @@ lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
 
   input <- convert(input)
   lawnlint(input, lint)
-  is_type(input, type_top = c("Feature", "FeatureCollection"))
+  if (lint) is_type(input, type_top = c("Feature", "FeatureCollection"))
   units <- match.arg(units, c("meters", "feet", "kilometers",
                               "miles", "degrees"))
   ct$eval(sprintf("var units = '%s';", units))

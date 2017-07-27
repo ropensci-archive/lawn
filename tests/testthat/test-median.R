@@ -24,7 +24,7 @@ test_that("in_field and out_field parameter works as expected", {
 
 test_that("lawn_median fails correctly", {
   # missing arguments
-  expect_error(lawn_median(), "argument \"polygons\" is missing, with no default")
+  expect_error(lawn_median(), "argument \"in_field\" is missing, with no default")
   # wrong in_field param leads to no ouput for median
   expect_equal(
     length(na.omit(lawn_median(poly, pt, 'population2', 'median')$features$properties$median)), 0)

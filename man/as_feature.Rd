@@ -22,3 +22,7 @@ Each feature is assigned a class matching it's GeoJSON data type
 as_feature(lawn_random())
 # as_feature(lawn_random("polygons"))
 }
+\seealso{
+\link{as.feature} , which is similarly named, but has a different
+purpose
+}

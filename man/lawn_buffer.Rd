@@ -14,10 +14,10 @@ lawn_buffer(input, dist, units = "kilometers", lint = FALSE)
 \item{units}{(character) Units of the \code{dist} argument.  Can be miles, feet,
 kilometers (default), meters, or degrees.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \description{
 Calculates a buffer for input features for a given radius.

@@ -25,8 +25,14 @@ test_that("lawn_average works", {
 })
 
 test_that("lawn_average fails correctly", {
-  expect_error(lawn_average(), "argument \"polygons\" is missing, with no default")
-  expect_error(lawn_average(lawn_data$polygons_average), "argument \"points\" is missing, with no default")
-  expect_error(lawn_average(lawn_data$polygons_average, lawn_data$points_average), "argument \"in_field\" is missing, with no default")
-  expect_error(lawn_average(lawn_data$polygons_average, "styff", "population"), "ReferenceError: styff is not defined")
+  expect_error(lawn_average(),
+               "argument \"in_field\" is missing, with no default")
+  expect_error(lawn_average(lawn_data$polygons_average),
+               "argument \"in_field\" is missing, with no default")
+  expect_error(
+    lawn_average(lawn_data$polygons_average, lawn_data$points_average),
+    "argument \"in_field\" is missing, with no default")
+  expect_error(
+    lawn_average(lawn_data$polygons_average, "styff", "population"),
+    "styff is not defined")
 })

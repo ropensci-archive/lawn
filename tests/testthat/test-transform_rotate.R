@@ -32,7 +32,7 @@ test_that("lawn_transform_rotate fails correctly", {
   expect_error(lawn_transform_rotate(5), "argument \"angle\" is missing, with no default")
   expect_error(lawn_transform_rotate(list(), 100), "Unknown Geometry Type")
 
-  expect_error(lawn_transform_rotate(x, "adf"), "adf is not defined")
+  expect_error(lawn_transform_rotate(x, "adf"), "angle must be")
   expect_error(lawn_transform_rotate(x, 34, c(1, "ad")),
-               "coordinates must only contain numbers")
+               "class numeric")
 })

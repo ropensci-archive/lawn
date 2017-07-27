@@ -12,10 +12,10 @@ lawn_centroid(features, properties = NULL, lint = FALSE)
 
 \item{properties}{A list of properties. Default: \code{NULL}}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 a \link{data-Feature}<(\link{data-Point})> - centroid of the input features
@@ -41,6 +41,7 @@ poly <- '{
   }
 }'
 lawn_centroid(features = poly)
+lawn_centroid(features = as.feature(poly))
 lawn_centroid(features = poly, properties = list(foo = "bar"))
 }
 \seealso{

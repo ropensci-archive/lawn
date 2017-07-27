@@ -11,10 +11,10 @@ lawn_intersect(poly1, poly2, lint = FALSE)
 
 \item{poly2}{A \link{data-Polygon}.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 \link{data-Polygon}, \link{data-MultiLineString}, or undefined

@@ -5,10 +5,10 @@
 #' triangles using earcut (<https://github.com/mapbox/earcut>)
 #'
 #' @export
-#' @param polygon Input [data-Polygon] feature.
+#' @param polygon Input [data-Feature]<([data-Polygon])>
 #' @template lint
 #' @family assertions
-#' @return A [data-FeatureCollection].
+#' @return A [data-FeatureCollection]
 #' @examples
 #' poly <- '{
 #'  "type": "Feature",
@@ -37,6 +37,7 @@
 lawn_tesselate <- function(polygon, lint = FALSE) {
   poly <- convert(polygon)
   lawnlint(poly, lint)
+  if (lint) is_type(polygon, "Feature", "Polygon")
   ct$eval(sprintf("var er = turf.tesselate(%s);", poly))
   tmp <- ct$get("er")
   structure(tmp, class = tolower(tmp$type))

@@ -14,7 +14,7 @@ test_that("lawn_deviation works", {
 })
 
 test_that("lawn_deviation fails correctly", {
-  expect_error(lawn_deviation(), "argument \"polygons\" is missing, with no default")
-  expect_error(lawn_deviation(ex_polys), "argument \"points\" is missing, with no default")
+  expect_error(lawn_deviation(), "argument \"in_field\" is missing, with no default")
+  expect_error(lawn_deviation(ex_polys), "argument \"in_field\" is missing, with no default")
   expect_error(lawn_deviation(ex_polys, ex_pts), "argument \"in_field\" is missing, with no default")
 })

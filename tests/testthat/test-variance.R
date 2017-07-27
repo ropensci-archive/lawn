@@ -25,7 +25,7 @@ test_that("cellWidth parameter works as expected", {
 
 test_that("lawn_variance fails correctly", {
   # missing arguments
-  expect_error(lawn_variance(), "argument \"polygons\" is missing, with no default")
+  expect_error(lawn_variance(), "argument \"in_field\" is missing, with no default")
   # wrong in_field param leads to no ouput for max
   expect_equal(
     length(na.omit(lawn_variance(poly, pt, 'population2')$features$properties$variance)),

@@ -36,8 +36,10 @@ lawn_distance <- function(from, to, units = 'kilometers', lint = FALSE) {
   from <- convert(from)
   to <- convert(to)
   lawnlint(list(from, to), lint)
-  is_type(from, "Feature", "Point")
-  is_type(to, "Feature", "Point")
+  if (lint) {
+    is_type(from, "Feature", "Point")
+    is_type(to, "Feature", "Point")
+  }
   ct$eval(sprintf('var point1 = %s;', from))
   ct$eval(sprintf('var point2 = %s;', to))
   ct$eval(sprintf("var avg = turf.distance(point1, point2, '%s');", units))

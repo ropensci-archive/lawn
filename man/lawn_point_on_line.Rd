@@ -7,17 +7,17 @@
 lawn_point_on_line(line, point, lint = FALSE)
 }
 \arguments{
-\item{line}{Line to snap to.}
+\item{line}{\link{data-Feature}<(\link{data-LineString})> to snap to}
 
-\item{point}{point to snap from.}
+\item{point}{\link{data-Feature}<(\link{data-Point})> to snap from}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-A \link{data-Point}.
+A \link{data-Feature}<(\link{data-Point})>
 }
 \description{
 Takes a line, a start \link{data-Point}, and a stop point and returns

@@ -13,10 +13,10 @@ lawn_bezier(line, resolution = 10000L, sharpness = 0.85, lint = FALSE)
 
 \item{sharpness}{A measure of how curvy the path should be between splines}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 A \link{data-LineString} curved line.

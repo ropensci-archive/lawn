@@ -6,6 +6,8 @@
 #' each feature is split out into a separate feature, returned in a list.
 #' Each feature is assigned a class matching it's GeoJSON data type
 #' (e.g., point, polygon, linestring).
+#' @seealso [as.feature] , which is similarly named, but has a different
+#' purpose
 #' @examples
 #' as_feature(lawn_random())
 #' # as_feature(lawn_random("polygons"))

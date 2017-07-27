@@ -41,7 +41,8 @@ test_that("lawn_square_grid fails correctly", {
   expect_error(lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'stuff'),
                "units is invalid")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_square_grid(c(-96, 31, -84, 40), "the", 'miles'), "the is not defined")
+  expect_error(lawn_square_grid(c(-96, 31, -84, 40), "the", 'miles'),
+               "cellWidth must be")
   # can't pass in a character string to cellWidth
   expect_error(lawn_square_grid(c(-96, 31, -84, 40), 50, 'doesntexist'),
                "units is invalid")

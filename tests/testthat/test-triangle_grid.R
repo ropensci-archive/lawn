@@ -33,7 +33,8 @@ test_that("lawn_triangle_grid fails correctly", {
   expect_error(lawn_triangle_grid(c(-96, 31, -84), 10, 'miles'),
                "coordinates must only contain numbers")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_triangle_grid(c(-96, 31, -84, 40), "the", 'miles'), "the is not defined")
+  expect_error(lawn_triangle_grid(c(-96, 31, -84, 40), "the", 'miles'),
+               "must be of class")
   # can't pass in a character string to cellWidth
   expect_error(lawn_triangle_grid(c(-96, 31, -84, 40), 50, 'doesntexist'),
                "units is invalid")

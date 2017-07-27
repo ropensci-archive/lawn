@@ -7,18 +7,18 @@
 lawn_union(poly1, poly2, lint = FALSE)
 }
 \arguments{
-\item{poly1}{A polygon.}
+\item{poly1}{A \link{data-Feature}<(\link{data-Polygon})>}
 
-\item{poly2}{A polygon.}
+\item{poly2}{A \link{data-Feature}<(\link{data-Polygon})>}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
-A combined \link{data-Polygon} or
-\link{data-MultiPolygon} feature.
+\link{data-Feature}<(\link{data-Polygon})> or
+\link{data-Feature}<(\link{data-MultiPolygon})>
 }
 \description{
 Finds the intersection of two \link{data-Polygon}'s and returns the

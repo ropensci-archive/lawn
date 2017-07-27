@@ -23,4 +23,6 @@ test_that("lawn_envelope works", {
 test_that("lawn_envelope fails correctly", {
   expect_error(lawn_envelope(), "argument \"fc\" is missing, with no default")
   expect_error(lawn_envelope(5), "Unknown Geometry Type")
+  expect_error(lawn_envelope(5, lint = TRUE),
+               "The root of a GeoJSON object must be an object")
 })

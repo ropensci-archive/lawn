@@ -4,8 +4,9 @@
 #' and returns a simplified version.
 #'
 #' @export
-#' @param feature A [data-LineString] or [data-Polygon]
-#' feature to be simplified.
+#' @param feature A [data-Feature]<([data-LineString], [data-Polygon],
+#' [data-MultiLineString], [data-MultiPolygon])>, or [data-FeatureCollection],
+#' or [data-GeometryCollection]
 #' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01.
 #' @param high_quality (boolean) Whether or not to spend more time to create a
 #' higher-quality simplification with a different algorithm. Default: `FALSE`
@@ -55,7 +56,8 @@ lawn_simplify <- function(feature, tolerance = 0.01, high_quality = FALSE,
                           lint = FALSE) {
 
   lawnlint(feature, lint)
-  stopifnot(is.logical(high_quality))
+  assert(high_quality, "logical")
+  assert(tolerance, c("numeric", "integer"))
   ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature),
                   tolerance, tolower(high_quality)))
   structure(ct$get("simp"), class = tolower(ct$get("simp.geometry.type")))

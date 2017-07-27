@@ -14,10 +14,10 @@ lawn_line_offset(line, distance, units, lint = FALSE)
 \item{units}{Can be degrees, radians, miles, kilometers, inches,
 yards, meters}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 a \link{data-LineString}
@@ -37,8 +37,16 @@ line <- '{
     "coordinates": [[-83, 30], [-84, 36], [-78, 41]]
   }
 }'
+
 lawn_line_offset(line, 2, 'miles')
 lawn_line_offset(line, 200, 'miles')
 lawn_line_offset(line, 0.5, 'radians')
+lawn_line_offset(line, 4, 'yards')
+
+
+line <- '{
+    "type": "LineString",
+    "coordinates": [[-83, 30], [-84, 36], [-78, 41]]
+}'
 lawn_line_offset(line, 4, 'yards')
 }

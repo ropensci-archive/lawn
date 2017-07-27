@@ -5,11 +5,11 @@
 #'
 #' @export
 #'
-#' @param point The reference point, a [data-Feature].
-#' @param against Input point set, a [data-FeatureCollection].
+#' @param point The reference point, a [data-Feature]<([data-Point])>
+#' @param against Input point set, a [data-FeatureCollection]
 #' @template lint
 #' @family classification
-#' @return A [data-Point] as a Feature.
+#' @return A [data-Feature]<([data-Point])>
 #' @examples
 #' point <- '{
 #'   "type": "Feature",
@@ -57,6 +57,10 @@ lawn_nearest <- function(point, against, lint = FALSE) {
   point <- convert(point)
   against <- convert(against)
   lawnlint(list(point, against), lint)
+  if (lint) {
+    is_type(point, type_top = "Feature", type_lower = "Point")
+    is_type(against, type_top = "FeatureCollection", type_lower = "Point")
+  }
   ct$eval(sprintf("var nearest = turf.nearest(%s, %s);", point, against))
   structure(ct$get("nearest"), class = "point")
 }

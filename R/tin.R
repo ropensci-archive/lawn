@@ -5,9 +5,9 @@
 #'
 #' @export
 #' @param pt Input points.
-#' @param propertyName Name of the property from which to pull z values. This is
-#' optional: if not given, then there will be no extra data added to the derived
-#' triangles.
+#' @param propertyName (character) Name of the property from which to pull z
+#' values. This is optional: if not given, then there will be no extra data
+#' added to the derived triangles
 #' @template lint
 #' @family interpolation
 #' @return TIN output, as a [data-FeatureCollection].
@@ -27,6 +27,7 @@
 lawn_tin <- function(pt, propertyName = NULL, lint = FALSE) {
   pt <- convert(pt)
   lawnlint(pt, lint)
+  assert(propertyName, 'character')
   ct$eval(sprintf("var tin = turf.tin(%s, '%s');", pt, convert(propertyName)))
   as.fc(ct$get("tin"))
 }

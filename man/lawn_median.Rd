@@ -17,10 +17,10 @@ lawn_median(polygons, points, in_field, out_field = "median", lint = FALSE)
 
 \item{out_field}{(character) the field in which to store results}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 A FeatureCollection of \link{data-Polygon} features with

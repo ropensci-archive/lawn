@@ -4,11 +4,11 @@
 #' between those points
 #'
 #' @export
-#' @param point1 Starting point.
-#' @param point2 Stopping point.
-#' @param line Line to slice.
+#' @param point1 Starting [data-Feature]<([data-Point])>
+#' @param point2 Stopping [data-Feature]<([data-Point])>
+#' @param line Line to slice, a [data-Feature]<([data-LineString])>
 #' @template lint
-#' @return A [data-LineString].
+#' @return A [data-Feature]<([data-LineString])>
 #' @examples
 #' start <- '{
 #'   "type": "Feature",
@@ -54,6 +54,11 @@ lawn_line_slice <- function(point1, point2, line, lint = FALSE) {
   point1 <- convert(point1)
   point2 <- convert(point2)
   line <- convert(line)
+  if (lint) {
+    is_type(point1, type_top = "Feature", type_lower = "Point")
+    is_type(point2, type_top = "Feature", type_lower = "Point")
+    is_type(line, type_top = "Feature", type_lower = "LineString")
+  }
   ct$eval(sprintf("var exp = turf.lineSlice(%s, %s, %s);", point1,
                   point2, line))
   structure(ct$get("exp"), class = "linestring")

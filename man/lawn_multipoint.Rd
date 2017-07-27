@@ -14,7 +14,7 @@ as JSON e.g. \code{[[longitude, latitude], [longitude, latitude]]}.}
 \item{properties}{A list of properties. Default: \code{NULL}}
 }
 \value{
-A \link{data-MultiPoint} feature.
+A \link{data-Feature}<(\link{data-MultiPoint})>
 }
 \description{
 Create a multipoint

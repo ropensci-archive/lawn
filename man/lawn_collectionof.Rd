@@ -14,10 +14,10 @@ required}
 
 \item{name}{(character) name of calling function. required.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 nothing if no problems - error message if a problem
@@ -27,6 +27,7 @@ Enforce expectations about types of FeatureCollection inputs
 }
 \examples{
 # all okay
+cat(lawn_data$points_count)
 lawn_collectionof(lawn_data$points_count, 'Point', 'stuff')
 
 # error

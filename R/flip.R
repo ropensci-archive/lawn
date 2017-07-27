@@ -28,7 +28,7 @@
 lawn_flip <- function(input, lint = FALSE) {
   input <- convert(input)
   lawnlint(input, lint)
-  is_type(input, type_top = c("Feature", "FeatureCollection"))
+  if (lint) is_type(input, type_top = c("Feature", "FeatureCollection"))
   ct$eval(sprintf("var flp = turf.flip(%s);", input))
   structure(ct$get("flp"), class = tolower(ct$get("flp.type")))
 }

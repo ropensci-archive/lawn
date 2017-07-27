@@ -14,5 +14,5 @@ test_that("lawn_square fails correctly", {
   # only length 3 gives error message
   expect_error(lawn_square(c(1, 2, 4)), "coordinates must only contain numbers")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_square(c(1, 2, 4, "a")), "TypeError: Object 1 has no method 'slice'")
+  expect_error(lawn_square(c(1, 2, 4, "a")), "bbox must be")
 })

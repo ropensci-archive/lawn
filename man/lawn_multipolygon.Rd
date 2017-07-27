@@ -12,7 +12,7 @@ lawn_multipolygon(coordinates, properties = NULL)
 \item{properties}{A list of properties.}
 }
 \value{
-A \link{data-MultiPolygon} feature.
+A \link{data-Feature}<(\link{data-MultiPolygon})>
 }
 \description{
 Create a multipolygon

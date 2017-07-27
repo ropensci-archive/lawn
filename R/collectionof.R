@@ -10,13 +10,14 @@
 #' @return nothing if no problems - error message if a problem
 #' @examples
 #' # all okay
+#' cat(lawn_data$points_count)
 #' lawn_collectionof(lawn_data$points_count, 'Point', 'stuff')
 #'
 #' # error
 #' # lawn_collectionof(lawn_data$points_count, 'Polygon', 'stuff')
 lawn_collectionof <- function(x, type, name, lint = FALSE) {
   lawnlint(x, lint)
-  is_type(x, type_top = "FeatureCollection")
+  if (lint) is_type(x, type_top = "FeatureCollection")
   ct$eval(sprintf("var gt = turfinvariant.collectionOf(%s, '%s', '%s');",
                   convert(x), type, name))
   ct$get("gt")

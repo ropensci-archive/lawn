@@ -14,10 +14,10 @@ lawn_coordeach(x, fun = NULL, excludeWrapCoord = FALSE, lint = FALSE)
 \item{excludeWrapCoord}{(logical) whether or not to include
 the final coordinate of LinearRings that wraps the ring in its iteration.}
 
-\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing time
-as the object to get linted increases in size, so probably use by
-default for small objects, but not for large if you know they are good geojson
-objects. Default: \code{FALSE}}
+\item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
+time as the object to get linted increases in size, so probably use by
+default for small objects, but not for large if you know they are good
+geojson objects. Default: \code{FALSE}}
 }
 \value{
 matrix of coordinates, where each row in the matrix is a
