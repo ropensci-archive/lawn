@@ -4,17 +4,25 @@
 \alias{lawn_isolines}
 \title{Generate Isolines}
 \usage{
-lawn_isolines(points, z, resolution, breaks, lint = FALSE)
+lawn_isolines(points, breaks, z, propertiesToAllIsolines = NULL,
+  propertiesPerIsoline = list(), resolution = NULL, lint = FALSE)
 }
 \arguments{
-\item{points}{Input points.}
+\item{points}{Input points. a point grid, e.g., output of \code{\link[=lawn_point_grid]{lawn_point_grid()}}}
+
+\item{breaks}{(numeric) Where to draw contours.}
 
 \item{z}{(character) The property name in points from which z-values will
 be pulled.}
 
-\item{resolution}{(numeric) Resolution of the underlying grid.}
+\item{propertiesToAllIsolines}{GeoJSON properties passed to ALL isolines}
 
-\item{breaks}{(numeric) Where to draw contours.}
+\item{propertiesPerIsoline}{GeoJSON properties passed, in order, to the
+correspondent isoline; the breaks array will define the order in which the
+isolines are created}
+
+\item{resolution}{(numeric) Resolution of the underlying grid. THIS
+PARAMETER IS DEFUNCT}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
 time as the object to get linted increases in size, so probably use by
@@ -30,14 +38,16 @@ Takes \link{data-Point}'s with z-values and an array of value
 breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
 }
 \examples{
-pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
-pts$features$properties <- data.frame(z = round(rnorm(100, mean = 5)),
+# pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
+pts <- lawn_point_grid(c(0, 30, 20, 50), 100, 'miles')
+pts$features$properties <-
+  data.frame(temperature = round(rnorm(NROW(pts$features), mean = 5)),
   stringsAsFactors = FALSE)
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-lawn_isolines(pts, 'z', 15, breaks)
+lawn_isolines(points = pts, breaks, z = 'temperature')
 
 \dontrun{
-lawn_isolines(pts, 'z', 15, breaks) \%>\% view
+lawn_isolines(pts, breaks, 'temperature') \%>\% view
 }
 }
 \seealso{

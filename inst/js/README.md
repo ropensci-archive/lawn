@@ -15,7 +15,11 @@ List methods available
 library(V8)
 ct <- V8::v8()
 ct$source(system.file("js/turf452.js", package = 'lawn'))
-ct$get(JS('Object.keys(turf)'))
+funs <- ct$get(JS('Object.keys(turf)'))
+sort(funs)
+
+# a single function
+ct$eval('turf.isolines')
 ```
 
 
