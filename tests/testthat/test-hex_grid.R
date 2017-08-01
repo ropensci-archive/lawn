@@ -28,7 +28,7 @@ test_that("lawn_hex_grid fails correctly", {
                "argument \"extent\" is missing, with no default")
   # empty featurecollection if bbox is not correct
   expect_error(lawn_hex_grid(c(-96, 31, -84), 10, 'miles'),
-               "Coordinates must numbers")
+               "Coordinates must contain numbers")
   # can't pass in a character string to cellWidth
   expect_error(lawn_hex_grid(c(-96, 31, -84, 40), "the", 'miles'),
                "the is not defined")

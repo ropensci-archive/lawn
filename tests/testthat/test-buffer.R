@@ -20,6 +20,6 @@ test_that("lawn_buffer fails correctly", {
   expect_error(lawn_buffer(), "argument \"input\" is missing, with no default")
   expect_error(lawn_buffer(dist = 100), "argument \"input\" is missing, with no default")
   expect_error(lawn_buffer(pt), "argument \"dist\" is missing, with no default")
-  expect_error(lawn_buffer(pt, dist = 0), "radius is required")
-  expect_equal(length(lawn_buffer(pt, dist = -100)$geometry$coordinates[,,1]), 65)
+  expect_null(lawn_buffer(pt, dist = 0))
+  expect_null(lawn_buffer(pt, dist = -100))
 })

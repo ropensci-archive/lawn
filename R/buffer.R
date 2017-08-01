@@ -60,6 +60,7 @@ lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
   ct$eval(sprintf('var dist = %s;', dist))
   ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))
   output <- ct$get("buff")
+  if (is.null(output)) return(NULL)
   if (output$type == "Feature") {
     return(as.f(output))
   } else if (output$type == "FeatureCollection") {
