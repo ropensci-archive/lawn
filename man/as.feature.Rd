@@ -53,7 +53,7 @@ line <- '{
 }'
 as.feature(line)
 
-# returns self if no match - note "Points" is not a geojson type
+# returns self if no match - note "Points" is not a GeoJSON type
 pt <- '{"type":"Points","coordinates":[-75.343,39.984]}'
 as.feature(pt)
 }

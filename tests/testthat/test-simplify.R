@@ -175,7 +175,7 @@ test_that("lawn_simplify fails correctly", {
   # missing arguments
   expect_error(lawn_simplify(), "argument \"feature\" is missing, with no default")
   # wrong input object
-  expect_error(lawn_simplify("{}"), "Cannot read property")
+  expect_error(lawn_simplify("{}"), "unknown GeoJSON type")
   # can't pass in a character string to tolerance
   expect_error(lawn_simplify(feature, "a"), "tolerance must be")
   # can't pass in a non-logical to high_quality

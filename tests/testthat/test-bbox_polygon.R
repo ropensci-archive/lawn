@@ -34,7 +34,7 @@ test_that("lawn_bbox_polygon works", {
 
 test_that("lawn_bbox_polygon fails correctly", {
   expect_error(lawn_bbox_polygon(), "argument \"bbox\" is missing, with no default")
-  expect_true(is.na(lawn_bbox_polygon(1)$geometry$coordinates[,,1][1]))
+  expect_error(lawn_bbox_polygon(1), "Coordinates must contain numbers")
   expect_error(lawn_bbox_polygon(c("1", 2, 3, 4)), "All values must be numeric")
   expect_error(lawn_bbox_polygon(c("a", "b", "c", "d")), "All values must be numeric")
 })

@@ -49,10 +49,14 @@ test_that("works returns correct classes", {
 })
 
 test_that("fails correctly", {
-  expect_error(lawn_intersect(), "argument \"poly1\" is missing, with no default")
+  expect_error(lawn_intersect(),
+               "argument \"poly1\" is missing, with no default")
   expect_error(lawn_intersect(lawn_data$points_average, lawn_data$points_count),
                "has no method 'intersection'")
-  expect_error(lawn_intersect(poly1, sub("Polygon", "polygon", poly2)), "Unknown GeoJSON type: polygon")
-  expect_error(lawn_intersect(poly1, sub("Feature", "feature", poly2)), "Unknown GeoJSON type: feature")
-  expect_error(lawn_intersect(poly1, sub("coordinates", "cordinates", poly2)), "Cannot read property '0' of undefined")
+  expect_error(lawn_intersect(poly1, sub("Polygon", "polygon", poly2)),
+               "Unknown Geometry Type")
+  expect_error(lawn_intersect(poly1, sub("Feature", "feature", poly2)),
+               "Unknown Geometry Type")
+  expect_error(lawn_intersect(poly1, sub("coordinates", "cordinates", poly2)),
+               "Cannot read property 'length' of undefined")
 })

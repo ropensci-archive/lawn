@@ -34,6 +34,8 @@ test_that("lawn_point_on_line works", {
 })
 
 test_that("lawn_point_on_line fails correctly", {
-  expect_error(lawn_point_on_line(), "argument \"line\" is missing, with no default")
-  expect_error(lawn_point_on_line(5, TRUE), "input must be a LineString Feature or Geometry")
+  expect_error(lawn_point_on_line(),
+               "argument \"line\" is missing, with no default")
+  expect_error(lawn_point_on_line(5, TRUE),
+               "lines must be LineString or MultiLineString")
 })

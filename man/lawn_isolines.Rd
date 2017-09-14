@@ -4,7 +4,7 @@
 \alias{lawn_isolines}
 \title{Generate Isolines}
 \usage{
-lawn_isolines(points, breaks, z, propertiesToAllIsolines = NULL,
+lawn_isolines(points, breaks, z, propertiesToAllIsolines = c(),
   propertiesPerIsoline = list(), resolution = NULL, lint = FALSE)
 }
 \arguments{
@@ -37,7 +37,11 @@ A \link{data-FeatureCollection} of isolines
 Takes \link{data-Point}'s with z-values and an array of value
 breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
 }
+\details{
+Warning: this function seems to be broken, not sure why
+}
 \examples{
+\dontrun{
 # pts <- lawn_random(n = 100, bbox = c(0, 30, 20, 50))
 pts <- lawn_point_grid(c(0, 30, 20, 50), 100, 'miles')
 pts$features$properties <-
@@ -46,7 +50,6 @@ pts$features$properties <-
 breaks <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 lawn_isolines(points = pts, breaks, z = 'temperature')
 
-\dontrun{
 lawn_isolines(pts, breaks, 'temperature') \%>\% view
 }
 }

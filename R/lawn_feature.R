@@ -22,7 +22,7 @@
 #' )
 #' lapply(pts, lawn_feature)
 #' }
-lawn_feature <- function(geometry, properties = list(), lint = FALSE) {
+lawn_feature <- function(geometry, properties = c(), lint = FALSE) {
   lawnlint(geometry, lint)
   ct$eval(sprintf("var feet = turf.feature(%s, %s);",
                   convert(geometry), convert(properties)))

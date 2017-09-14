@@ -4,7 +4,7 @@
 \alias{lawn_feature}
 \title{Create a Feature}
 \usage{
-lawn_feature(geometry, properties = list(), lint = FALSE)
+lawn_feature(geometry, properties = c(), lint = FALSE)
 }
 \arguments{
 \item{geometry}{(character/json) Any geojson geometry.}

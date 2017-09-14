@@ -43,7 +43,7 @@ test_that("lawn_transform_scale fails correctly", {
   expect_error(lawn_transform_scale(), "argument \"x\" is missing, with no default")
   expect_error(lawn_transform_scale(5), "argument \"factor\" is missing, with no default")
   expect_error(lawn_transform_scale(x, 5, "asdfasf"), "invalid origin")
-  expect_error(lawn_transform_scale(list(), 100), "Unknown Geometry Type")
+  expect_error(lawn_transform_scale(list(), 100), "unknown GeoJSON type")
 
   expect_error(lawn_transform_scale(x, "adf"), "adf is not defined")
   expect_error(lawn_transform_scale(x, 34, c(1, "ad")),
