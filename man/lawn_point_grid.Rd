@@ -4,15 +4,24 @@
 \alias{lawn_point_grid}
 \title{Create a PointGrid}
 \usage{
-lawn_point_grid(extent, cellWidth, units)
+lawn_point_grid(extent, cellSide, units = "kilometers", centered = TRUE,
+  bboxIsMask = FALSE)
 }
 \arguments{
 \item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
 
-\item{cellWidth}{(integer) Width of each cell.}
+\item{cellSide}{(integer) the distance between points}
 
 \item{units}{(character) Units to use for cellWidth, one of 'miles' or
-'kilometers'.}
+'kilometers' (default).}
+
+\item{centered}{(logical) adjust points position to center the grid into
+bbox. This parameter is going to be removed in the next major release,
+having the output always centered into bbox. Default: \code{TRUE}}
+
+\item{bboxIsMask}{if \code{TRUE}, and bbox is a Polygon or MultiPolygon, the
+grid Point will be created only if inside the bbox Polygon(s).
+Default: \code{FALSE}}
 }
 \value{
 \link{data-FeatureCollection} grid of points.
