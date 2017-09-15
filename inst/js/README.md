@@ -2,11 +2,11 @@
 
 ## turf
 
-Currently (as of 2017-07-26) using `turf` `v4.5.2`
+Currently (as of 2017-09-14) using `turf` `v4.7.3`
 
-To recreate `inst/js/turf452.js`:
+To recreate `inst/js/turf473.js`:
 
-Download the minified file from <https://npmcdn.com/@turf/turf@4.5.2/turf.min.js>
+Download the minified file from <https://npmcdn.com/@turf/turf@4.7.3/turf.min.js>
 to `inst/js` directory in the `lawn` package
 
 List methods available
@@ -14,7 +14,7 @@ List methods available
 ```r
 library(V8)
 ct <- V8::v8()
-ct$source(system.file("js/turf452.js", package = 'lawn'))
+ct$source(system.file("js/turf473.js", package = 'lawn'))
 funs <- ct$get(JS('Object.keys(turf)'))
 sort(funs)
 
