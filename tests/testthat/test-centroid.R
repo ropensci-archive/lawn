@@ -26,6 +26,8 @@ a <- lawn_centroid(poly)
 b <- lawn_centroid(serbia)
 
 test_that("lawn_centroid works", {
+  skip_on_cran()
+
   expect_is(a, "point")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
@@ -39,6 +41,8 @@ test_that("lawn_centroid works", {
 })
 
 test_that("lawn_centroid fails correctly", {
+  skip_on_cran()
+
   expect_error(lawn_centroid(), "argument \"features\" is missing, with no default")
   expect_error(lawn_centroid(5), "Unknown Geometry Type")
   expect_error(lawn_centroid(5, lint = TRUE),

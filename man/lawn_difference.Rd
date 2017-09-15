@@ -25,6 +25,8 @@ Finds the difference between two \link{data-Polygon}'s by clipping
 the second polygon from the first.
 }
 \examples{
+\dontrun{
+# skipping on cran
 poly1 <- '{
  "type": "Feature",
   "properties": {
@@ -59,6 +61,7 @@ poly2 <- '{
   }
 }'
 lawn_difference(poly1, poly2)
+}
 \dontrun{
 lawn_featurecollection(list(poly1, poly2)) \%>\% view
 lawn_difference(poly1, poly2) \%>\% view

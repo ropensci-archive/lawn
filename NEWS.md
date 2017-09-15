@@ -1,49 +1,71 @@
+lawn 0.4.0
+==========
+
+### NEW FEATURES
+
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+
+### MINOR IMPROVEMENTS
+
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+
+### BUG FIXES
+
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+* Xxxxx (#xxx)
+
+
 lawn 0.3.0
 ==========
 
 ### NEW FEATURES
 
 * Updated to using turf.js `v3.5.2` (#49) (#50), with the following significant
-changes. Defunct functions (these methods were removed from turf, so 
-made sense to remove them here): `lawn_aggregate`, `lawn_jenks`, 
-`lawn_quantile`, `lawn_reclass`, `lawn_size`. New functions (these methods 
-were added to turf): `lawn_circle`, `lawn_collect`, `lawn_bbox`, 
-`lawn_feature`, `lawn_tesselate`. New data functions 
-to create geojson: `lawn_multipoint`, `lawn_multipolygon`, 
+changes. Defunct functions (these methods were removed from turf, so
+made sense to remove them here): `lawn_aggregate`, `lawn_jenks`,
+`lawn_quantile`, `lawn_reclass`, `lawn_size`. New functions (these methods
+were added to turf): `lawn_circle`, `lawn_collect`, `lawn_bbox`,
+`lawn_feature`, `lawn_tesselate`. New data functions
+to create geojson: `lawn_multipoint`, `lawn_multipolygon`,
 `lawn_multilinestring`, `lawn_geometrycollection`.
-* `as.turf` gains S3 methods for `multipoint`, `multipolygon`, 
+* `as.turf` gains S3 methods for `multipoint`, `multipolygon`,
 `multilinestring`, and `geometrycollection`.
-* `lawn_featurecollection` gains a default S3 method to error 
-gracefully on classes not supported, and gains S3 methods for `multipoint`, 
+* `lawn_featurecollection` gains a default S3 method to error
+gracefully on classes not supported, and gains S3 methods for `multipoint`,
 `multipolygon`, `multilinestring`, and `geometrycollection`.
 * `lawn_erase` renamed to `lawn_difference`, following turf changes
-* `lawn_average` parameter name changes: `field` to `in_field`, 
+* `lawn_average` parameter name changes: `field` to `in_field`,
 `outputField` to `out_field`
-* `lawn_count` loses parameter `countField`, and gains parameters 
+* `lawn_count` loses parameter `countField`, and gains parameters
 `in_field`, and `out_field` (with default 'count')
-* `lawn_deviation` parameter name changes: `inField` to `in_field`, 
+* `lawn_deviation` parameter name changes: `inField` to `in_field`,
 `outField` to `out_field` (with default 'deviation')
 * `lawn_max` parameter `out_field` with new default value 'max'
 * `lawn_median` parameter `out_field` with new default value 'median'
 * `lawn_min` parameter `out_field` with new default value 'min'
 * `lawn_sum` parameter `out_field` with new default value 'sum'
 * `lawn_variance` parameter `out_field` with new default value 'variance'
-* all aggregatation/math functions (`lawn_average`, `lawn_count`, `lawn_deviation`, 
-`lawn_max`, `lawn_median`, `lawn_min`, `lawn_sum`, `lawn_variance`) 
+* all aggregatation/math functions (`lawn_average`, `lawn_count`, `lawn_deviation`,
+`lawn_max`, `lawn_median`, `lawn_min`, `lawn_sum`, `lawn_variance`)
 use `turf.collect` internally, same method that's used in `lawn_collect`
 
 ### MINOR IMPROVEMENTS
 
-* Fixed example for `lawn_tag()` that wasn't working. Also, 
-`poly_id` parameter changed to `field`, and `containing_polyid` 
+* Fixed example for `lawn_tag()` that wasn't working. Also,
+`poly_id` parameter changed to `field`, and `containing_polyid`
 changed to `out_field`. (#30)
 * `lawn_merge` uses new turf method `turf.union` internally, but
 no user facing changes
-* Changed `x` parameter to `coordinates` in `lawn_point` for 
+* Changed `x` parameter to `coordinates` in `lawn_point` for
 consistency with similar methods
-* Changed `rings` parameter to `coordinates` in `lawn_polygon` for 
+* Changed `rings` parameter to `coordinates` in `lawn_polygon` for
 consistency with similar methods
-* Internal changes to `lawn_remove` following turf changes, but 
+* Internal changes to `lawn_remove` following turf changes, but
 there should be no  user facing changes
 
 ### BUG FIXES

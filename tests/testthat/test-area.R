@@ -5,6 +5,8 @@ multi <- lawn_data$multipoly
 pt <- lawn_point(c(-71.4226, 41.4945))
 
 test_that("lawn_area works", {
+  skip_on_cran()
+
   expect_is(lawn_area(poly), "numeric")
   expect_is(lawn_area(multi), "numeric")
   expect_is(lawn_area(pt), "integer")
@@ -14,5 +16,7 @@ test_that("lawn_area works", {
 })
 
 test_that("lawn_area fails correctly", {
+  skip_on_cran()
+
   expect_error(lawn_area(), "argument \"input\" is missing, with no default")
 })

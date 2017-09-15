@@ -10,7 +10,8 @@
 #' @family transformations
 #' @return a [data-Feature]<([data-Polygon])> feature showing the area of poly1
 #' excluding the area of poly2
-#' @examples
+#' @examples \dontrun{
+#' # skipping on cran
 #' poly1 <- '{
 #'  "type": "Feature",
 #'   "properties": {
@@ -45,6 +46,7 @@
 #'   }
 #' }'
 #' lawn_difference(poly1, poly2)
+#' }
 #' @examples \dontrun{
 #' lawn_featurecollection(list(poly1, poly2)) %>% view
 #' lawn_difference(poly1, poly2) %>% view

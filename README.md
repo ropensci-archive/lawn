@@ -44,7 +44,7 @@ lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
 #>   Bounding box: -112.1 46.6 -112.0 46.6
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties:
+#>   Properties: 
 #>     values count
 #> 1 200, 600     2
 #> 2              0
@@ -61,7 +61,7 @@ lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_av
 #>   Bounding box: 10.7 59.9 10.9 59.9
 #>   No. features: 2
 #>   No. points: 20
-#>   Properties:
+#>   Properties: 
 #>          values average
 #> 1 200, 600, 100     300
 #> 2      200, 300     250
@@ -105,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -179.0 -64.9 175.4 -1.9
+#>   Bounding box: -103.8 -37.1 2.6 -36.2
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -91.1 3.7 140.0 54.0
+#>   Bounding box: -128.1 -78.3 113.0 78.7
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: 26.9 -29.1 82.8 44.9
+#>   Bounding box: -44.4 -78.3 113.9 40.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 147.16514 -10.64865
+#> [1] -48.32684  71.47329
 ```
 
 Polygons
@@ -149,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -59.5 51.8 -52.7 54.3
+#>   Bounding box: -35.9 -70.6 -31.4 -68.0
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -165,9 +165,9 @@ lawn_sample(dat, 1)
 #>   Bounding box: 10.7 59.9 10.7 59.9
 #>   No. features: 1
 #>   No. points: 2
-#>   Properties:
+#>   Properties: 
 #>   population
-#> 1        200
+#> 1        100
 ```
 
 
@@ -177,7 +177,7 @@ lawn_sample(dat, 2)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
-#>   Properties:
+#>   Properties: 
 #>   population
 #> 1        600
 #> 2        300
@@ -190,11 +190,11 @@ lawn_sample(dat, 3)
 #>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 3
 #>   No. points: 6
-#>   Properties:
+#>   Properties: 
 #>   population
 #> 1        300
-#> 2        600
-#> 3        200
+#> 2        200
+#> 3        600
 ```
 
 ## extent
