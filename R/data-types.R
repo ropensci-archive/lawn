@@ -1,4 +1,6 @@
-#' Description of GeoJSON data types
+#' @title Description of GeoJSON data types
+#'
+#' @description GeoJSON types based on <https://tools.ietf.org/html/rfc7946>
 #'
 #' @section GeoJSON object:
 #'
@@ -20,6 +22,22 @@
 #'  \item A GeoJSON object may have a "bbox" member, the value of which must
 #'  be a bounding box array (see 4. Bounding Boxes).
 #' }
+#'
+#' @section Geometry:
+#'
+#' A Geometry object represents points, curves, and surfaces in
+#' coordinate space.  Every Geometry object is a GeoJSON object no
+#' matter where it occurs in a GeoJSON text.
+#'
+#' * The value of a Geometry object's "type" member MUST be one of the
+#' seven geometry types (see Section 1.4).
+#'
+#' * A GeoJSON Geometry object of any type other than
+#' "GeometryCollection" has a member with the name "coordinates".
+#' The value of the "coordinates" member is an array.  The structure
+#' of the elements in this array is determined by the type of
+#' geometry.  GeoJSON processors MAY interpret Geometry objects with
+#' empty "coordinates" arrays as null objects.
 #'
 #' @section Point:
 #'
@@ -152,7 +170,7 @@
 #' See: [lawn_geometrycollection]
 #'
 #' @name data-types
-#' @aliases data-Point data-MultiPoint data-Polygon data-MultiPolygon
-#' data-LineString data-MultiLineString data-Feature data-FeatureCollection
-#' data-GeometryCollection data-GeoJSON
+#' @aliases data-Geometry data-Point data-MultiPoint data-Polygon
+#' data-MultiPolygon data-LineString data-MultiLineString data-Feature
+#' data-FeatureCollection data-GeometryCollection data-GeoJSON
 NULL

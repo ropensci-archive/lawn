@@ -5,6 +5,7 @@
 #' @param linestring any [data-Geometry]/[data-Feature](<[data-LineString]>)
 #' @param ignoreEndVertices (logical) whether to ignore the start and end
 #' vertices. Default: `FALSE
+#' @template lint
 #' @family boolean functions
 #' @return a logical (`TRUE`/`FALSE`)
 #' @examples

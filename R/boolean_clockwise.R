@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param line line [data-Feature]<([data-LineString])>
+#' @template lint
 #' @family boolean functions
 #' @return a logical (`TRUE`/`FALSE`)
 #' @examples

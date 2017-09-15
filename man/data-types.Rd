@@ -2,6 +2,7 @@
 % Please edit documentation in R/data-types.R
 \name{data-types}
 \alias{data-types}
+\alias{data-Geometry}
 \alias{data-Point}
 \alias{data-MultiPoint}
 \alias{data-Polygon}
@@ -14,7 +15,7 @@
 \alias{data-GeoJSON}
 \title{Description of GeoJSON data types}
 \description{
-Description of GeoJSON data types
+GeoJSON types based on \url{https://tools.ietf.org/html/rfc7946}
 }
 \section{GeoJSON object}{
 
@@ -36,6 +37,24 @@ which must be a coordinate reference system object (see 3. Coordinate
 Reference System Objects).
 \item A GeoJSON object may have a "bbox" member, the value of which must
 be a bounding box array (see 4. Bounding Boxes).
+}
+}
+
+\section{Geometry}{
+
+
+A Geometry object represents points, curves, and surfaces in
+coordinate space.  Every Geometry object is a GeoJSON object no
+matter where it occurs in a GeoJSON text.
+\itemize{
+\item The value of a Geometry object's "type" member MUST be one of the
+seven geometry types (see Section 1.4).
+\item A GeoJSON Geometry object of any type other than
+"GeometryCollection" has a member with the name "coordinates".
+The value of the "coordinates" member is an array.  The structure
+of the elements in this array is determined by the type of
+geometry.  GeoJSON processors MAY interpret Geometry objects with
+empty "coordinates" arrays as null objects.
 }
 }
 

@@ -3,15 +3,20 @@ lawn 0.4.0
 
 ### NEW FEATURES
 
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
+* `view()` gains `.feature` method to plot `feature` class objects (#57)
+* gains new function `as.feature` to attempt to coerce strings or json
+to features (#71)
+* Xxxxx (#51) (#67) (#68) (#69) (#73) (#74)
 
 ### MINOR IMPROVEMENTS
 
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
+* lots of documentation consistency improvements (#58)
+* Now running on `simple-statistics` `v4.1.0` (very close to the
+latest version on NPM) (#66)
+* Started adding type checks to functions, only in `lawn_within` and
+`lawn_buffer` for now. These are type checks to check that the correct
+GeoJSON types (e.g., Feature or FeatureCollection) are passed. Will finish
+off remainder of package later (#65)
 
 ### BUG FIXES
 

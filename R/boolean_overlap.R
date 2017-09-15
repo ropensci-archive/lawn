@@ -4,6 +4,7 @@
 #' @param feature1,feature2 any [data-Geometry]/[data-Feature](
 #' <[data-LineString]|[data-MultiLineString]|[data-Polygon]|[data-MultiPolygon])
 #' objects
+#' @template lint
 #' @family boolean functions
 #' @return a logical (`TRUE`/`FALSE`)
 #' @examples
