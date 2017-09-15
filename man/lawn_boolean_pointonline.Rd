@@ -30,5 +30,6 @@ Other boolean functions: \code{\link{lawn_boolean_clockwise}},
   \code{\link{lawn_boolean_contains}},
   \code{\link{lawn_boolean_crosses}},
   \code{\link{lawn_boolean_disjoint}},
-  \code{\link{lawn_boolean_overlap}}
+  \code{\link{lawn_boolean_overlap}},
+  \code{\link{lawn_boolean_within}}
 }
