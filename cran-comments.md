@@ -20,7 +20,8 @@ There are no reverse dependencies.
 
 ---
 
-This version includes an update for the Javascript library 
-turf that this package wraps. 
+This version updates versions of a number of Javascript libraries
+wrapped, and subsequently adds some new functions. General
+documentation improvements.
 
 Thanks! Scott Chamberlain

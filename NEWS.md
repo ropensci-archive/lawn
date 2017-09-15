@@ -5,8 +5,16 @@ lawn 0.4.0
 
 * `view()` gains `.feature` method to plot `feature` class objects (#57)
 * gains new function `as.feature` to attempt to coerce strings or json
-to features (#71)
-* Xxxxx (#51) (#67) (#68) (#69) (#73) (#74)
+to features. associated with, adds `lawn_featurecollection.feature`, and
+`as.turf.feature` (#71)
+* JS library updates: Upgraded from turf.js `v3.10.4` to `v4.7.3`. Upgraded from
+`turf/meta` `v3.10.4` to `v4.4.0`. Upgraded from `turf/invariant` `v3.10.4` to `v4.7.3`.
+Upgraded from `simple-statistics` `v2.1.0` to `v4.1.0`. Upgraded from `geojsonhint`
+`v2.0.0-beta2` to `v2.0.1`. Upgraded from `clone` `v2.0.0-beta2` to `v2.1.1`.
+Upgraded from `geojson-random` `v0.2.2` to `v0.4.0`. Pkg gains new functions
+`lawn_line_offset`, `lawn_rewind`, `lawn_pt2line_distance`,
+`lawn_transform_rotate`, `lawn_transform_scale`, `lawn_transform_translate`,
+and `lawn_unkinkpolygon` (#51) (#67) (#68) (#69) (#73) (#74)
 
 ### MINOR IMPROVEMENTS
 
@@ -17,12 +25,6 @@ latest version on NPM) (#66)
 `lawn_buffer` for now. These are type checks to check that the correct
 GeoJSON types (e.g., Feature or FeatureCollection) are passed. Will finish
 off remainder of package later (#65)
-
-### BUG FIXES
-
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
-* Xxxxx (#xxx)
 
 
 lawn 0.3.0
