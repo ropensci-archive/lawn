@@ -1,3 +1,10 @@
+lawn 0.4.2
+==========
+
+Fix problems on Fedora.
+
+
+
 lawn 0.4.0
 ==========
 
