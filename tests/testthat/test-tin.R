@@ -11,10 +11,13 @@ pts$features$properties <-
 # })
 # jsonlite::toJSON(tin) %>% view
 
-a <- lawn_tin(pts)
-b <- lawn_tin(pts, propertyName = "z")
 
-test_that("lawn_tin returns correct classes", {
+test_that("lawn_tin", {
+  skip_on_os("linux")
+
+  a <- lawn_tin(pts)
+  b <- lawn_tin(pts, propertyName = "z")
+
   expect_is(a, "featurecollection")
   expect_is(a$type, "character")
   expect_is(a$features, "data.frame")
@@ -23,14 +26,15 @@ test_that("lawn_tin returns correct classes", {
   expect_equal(a$features$geometry$type[1], "Polygon")
 
   expect_is(b, "featurecollection")
-})
 
-test_that("propertyName parameter works as expected", {
+  # propertyName parameter works as expected
   expect_equal(length(names(a$features$properties)), 0)
   expect_named(b$features$properties, c("a", "b", "c"))
 })
 
 test_that("lawn_tin fails correctly", {
+  skip_on_os("linux")
+
   # missing arguments
   expect_error(lawn_tin(), "argument \"pt\" is missing, with no default")
   # bad geojson input

@@ -49,12 +49,15 @@ points <- '{
     ]
 }'
 
-a <- lawn_concave(points, 1)
-b <- lawn_concave(points, 5)
-d <- lawn_concave(points, 5, "kilometers")
-e <- lawn_concave(points, 20)
 
 test_that("lawn_concave works", {
+  skip_on_os("linux")
+
+  a <- lawn_concave(points, 1)
+  b <- lawn_concave(points, 5)
+  d <- lawn_concave(points, 5, "kilometers")
+  e <- lawn_concave(points, 20)
+
   expect_is(a, "linestring")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
@@ -74,6 +77,8 @@ test_that("lawn_concave works", {
 })
 
 test_that("lawn_concave fails correctly", {
+  skip_on_os("linux")
+
   expect_error(lawn_concave(), "argument \"points\" is missing, with no default")
   expect_error(lawn_concave("a"), "a is not defined")
   expect_error(lawn_concave("a", lint = TRUE), "invalid char")

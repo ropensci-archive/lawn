@@ -64,10 +64,13 @@ poly4 <- '{
   }
 }'
 
-a <- lawn_erase(poly1, poly2)
-b <- lawn_erase(poly3, poly4)
 
 test_that("lawn_erase works", {
+  skip_on_os("linux")
+
+  a <- lawn_erase(poly1, poly2)
+  b <- lawn_erase(poly3, poly4)
+
   expect_is(a, "polygon")
   expect_is(unclass(a), "list")
   expect_is(a$type, "character")
@@ -79,6 +82,8 @@ test_that("lawn_erase works", {
 })
 
 test_that("lawn_erase fails correctly", {
+  skip_on_os("linux")
+
   expect_error(lawn_erase(), "argument \"poly1\" is missing, with no default")
   expect_error(lawn_erase("A", "B"), "A is not defined")
   expect_error(lawn_erase(poly1, "{}"),

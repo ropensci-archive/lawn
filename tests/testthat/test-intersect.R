@@ -37,9 +37,12 @@ poly2 <- '{
  }
 }'
 
-a <- lawn_intersect(poly1, poly2)
 
 test_that("works returns correct classes", {
+  skip_on_os("linux")
+
+  a <- lawn_intersect(poly1, poly2)
+
   expect_is(a, "polygon")
   expect_is(a$type, "character")
   expect_is(a$geometry, "list")
