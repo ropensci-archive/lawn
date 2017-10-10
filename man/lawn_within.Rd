@@ -26,6 +26,7 @@ Takes a set of \link{data-Point}'s and a set of
 the polygons.
 }
 \examples{
+\dontrun{
 cat(lawn_data$points_within)
 cat(lawn_data$polygons_within)
 lawn_within(lawn_data$points_within, lawn_data$polygons_within)
@@ -42,6 +43,7 @@ poly <- lawn_featurecollection(lawn_buffer(pt, 5))
 pts <- lawn_featurecollection(lawn_point(c(-90.55, 14.62)))
 
 lawn_within(pts, poly)
+}
 }
 \seealso{
 Other joins: \code{\link{lawn_inside}},

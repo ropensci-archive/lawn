@@ -11,7 +11,7 @@
 #' @family joins
 #' @return Points that land within at least one polygon, as a
 #' [data-FeatureCollection].
-#' @examples
+#' @examples \dontrun{
 #' cat(lawn_data$points_within)
 #' cat(lawn_data$polygons_within)
 #' lawn_within(lawn_data$points_within, lawn_data$polygons_within)
@@ -28,6 +28,7 @@
 #' pts <- lawn_featurecollection(lawn_point(c(-90.55, 14.62)))
 #'
 #' lawn_within(pts, poly)
+#' }
 lawn_within <- function(points, polygons, lint = FALSE) {
   points <- convert(points)
   polygons <- convert(polygons)
