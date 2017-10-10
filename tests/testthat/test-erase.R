@@ -66,7 +66,7 @@ poly4 <- '{
 
 
 test_that("lawn_erase works", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   a <- lawn_erase(poly1, poly2)
   b <- lawn_erase(poly3, poly4)
@@ -82,7 +82,7 @@ test_that("lawn_erase works", {
 })
 
 test_that("lawn_erase fails correctly", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   expect_error(lawn_erase(), "argument \"poly1\" is missing, with no default")
   expect_error(lawn_erase("A", "B"), "A is not defined")

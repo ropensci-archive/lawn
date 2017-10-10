@@ -6,7 +6,7 @@ pt <- lawn_point(c(-71.4226, 41.4945))
 
 test_that("lawn_area works", {
   skip_on_cran()
-  skip_on_os("linux")
+  skip_on_fedora()
 
   expect_is(lawn_area(poly), "numeric")
   expect_is(lawn_area(multi), "numeric")
@@ -18,7 +18,7 @@ test_that("lawn_area works", {
 
 test_that("lawn_area fails correctly", {
   skip_on_cran()
-  skip_on_os("linux")
+  skip_on_fedora()
 
   expect_error(lawn_area(), "argument \"input\" is missing, with no default")
 })

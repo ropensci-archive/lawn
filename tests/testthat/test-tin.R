@@ -13,7 +13,7 @@ pts$features$properties <-
 
 
 test_that("lawn_tin", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   a <- lawn_tin(pts)
   b <- lawn_tin(pts, propertyName = "z")
@@ -33,7 +33,7 @@ test_that("lawn_tin", {
 })
 
 test_that("lawn_tin fails correctly", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   # missing arguments
   expect_error(lawn_tin(), "argument \"pt\" is missing, with no default")

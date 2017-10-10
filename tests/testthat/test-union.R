@@ -38,6 +38,8 @@ poly2 <- '{
 }'
 
 test_that("lawn_union works", {
+  skip_on_fedora()
+
   a <- lawn_union(poly1, poly2)
 
   expect_is(a, "polygon")
@@ -47,6 +49,8 @@ test_that("lawn_union works", {
 })
 
 test_that("lawn_union fails correctly", {
+  skip_on_fedora()
+
   expect_error(lawn_union(), "missing, with no default")
   expect_error(lawn_union("afa", "asd"), "ReferenceError: afa is not defined")
   expect_error(lawn_union(stuff = "adf"), "unused argument")

@@ -2,7 +2,7 @@ context("lawn_buffer")
 
 
 test_that("lawn_buffer works", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   poly <- lawn_data$poly
   multi <- lawn_data$multipoly
@@ -18,7 +18,7 @@ test_that("lawn_buffer works", {
 })
 
 test_that("lawn_buffer fails correctly", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   expect_error(lawn_buffer(), "argument \"input\" is missing, with no default")
   expect_error(lawn_buffer(dist = 100), "argument \"input\" is missing, with no default")

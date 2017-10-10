@@ -51,7 +51,7 @@ points <- '{
 
 
 test_that("lawn_concave works", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   a <- lawn_concave(points, 1)
   b <- lawn_concave(points, 5)
@@ -77,7 +77,7 @@ test_that("lawn_concave works", {
 })
 
 test_that("lawn_concave fails correctly", {
-  skip_on_os("linux")
+  skip_on_fedora()
 
   expect_error(lawn_concave(), "argument \"points\" is missing, with no default")
   expect_error(lawn_concave("a"), "a is not defined")
