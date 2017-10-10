@@ -27,6 +27,7 @@ Takes a set of \link{data-Point}'s and returns a concave hull polygon.
 Internally, this implements a Monotone chain algorithm
 }
 \examples{
+\dontrun{
 points <- '{
   "type": "FeatureCollection",
   "features": [
@@ -76,7 +77,7 @@ points <- '{
     ]
 }'
 lawn_concave(points, 1)
-\dontrun{
+
 lawn_concave(points) \%>\% view
 }
 }

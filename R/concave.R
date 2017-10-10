@@ -11,7 +11,7 @@
 #' @template lint
 #' @family transformations
 #' @return a concave hull [data-Polygon]
-#' @examples
+#' @examples \dontrun{
 #' points <- '{
 #'   "type": "FeatureCollection",
 #'   "features": [
@@ -61,7 +61,7 @@
 #'     ]
 #' }'
 #' lawn_concave(points, 1)
-#' @examples \dontrun{
+#'
 #' lawn_concave(points) %>% view
 #' }
 lawn_concave <- function(points, maxEdge = 1, units = "miles", lint = FALSE) {

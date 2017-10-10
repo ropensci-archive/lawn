@@ -15,7 +15,7 @@
 #' are returned as MultiPolygon.
 #' @seealso [lawn_merge]
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
-#' @examples
+#' @examples \dontrun{
 #' poly1 <- '{
 #'  "type": "Feature",
 #'  "properties": {
@@ -54,7 +54,6 @@
 #' }'
 #' lawn_union(poly1, poly2)
 #'
-#' @examples \dontrun{
 #' view(poly1)
 #' view(poly2)
 #' lawn_union(poly1, poly2) %>% view()

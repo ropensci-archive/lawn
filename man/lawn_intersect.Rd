@@ -28,6 +28,7 @@ Polygons with just a shared boundary will return the boundary.
 Polygons that do not intersect will return \code{NULL}.
 }
 \examples{
+\dontrun{
 poly1 <- '{
  "type": "Feature",
  "properties": {
@@ -66,7 +67,6 @@ poly2 <- '{
 }'
 lawn_intersect(poly1, poly2)
 
-\dontrun{
 view(poly1)
 view(poly2)
 lawn_intersect(poly1, poly2) \%>\% view()

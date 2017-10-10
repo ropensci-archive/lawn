@@ -12,7 +12,7 @@
 #' Polygons that do not intersect will return `NULL`.
 #' @return [data-Polygon], [data-MultiLineString], or undefined
 #' @author Jeff Hollister \email{hollister.jeff@@epa.gov}
-#' @examples
+#' @examples \dontrun{
 #' poly1 <- '{
 #'  "type": "Feature",
 #'  "properties": {
@@ -51,7 +51,6 @@
 #' }'
 #' lawn_intersect(poly1, poly2)
 #'
-#' @examples \dontrun{
 #' view(poly1)
 #' view(poly2)
 #' lawn_intersect(poly1, poly2) %>% view()

@@ -29,6 +29,7 @@ Contiguous polygons are combined, non-contiguous polygons
 are returned as MultiPolygon.
 }
 \examples{
+\dontrun{
 poly1 <- '{
  "type": "Feature",
  "properties": {
@@ -67,7 +68,6 @@ poly2 <- '{
 }'
 lawn_union(poly1, poly2)
 
-\dontrun{
 view(poly1)
 view(poly2)
 lawn_union(poly1, poly2) \%>\% view()
