@@ -20,6 +20,8 @@ test_that("lawn_buffer works", {
 test_that("lawn_buffer fails correctly", {
   skip_on_fedora()
 
+  pt <- lawn_point(c(0, 0))
+
   expect_error(lawn_buffer(), "argument \"input\" is missing, with no default")
   expect_error(lawn_buffer(dist = 100), "argument \"input\" is missing, with no default")
   expect_error(lawn_buffer(pt), "argument \"dist\" is missing, with no default")
