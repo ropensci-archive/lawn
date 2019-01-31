@@ -37,6 +37,5 @@ test_that("lawn_median fails correctly", {
       na.omit(
         lawn_median(poly, pt,
           'population2', 'median')$features$properties$median)), 0)
-  expect_error(lawn_median(poly, "{}", 'population', 'median'),
-    "Cannot read property")
+  expect_error(lawn_median(poly, "{}", 'population', 'median'))
 })

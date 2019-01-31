@@ -30,6 +30,5 @@ test_that("lawn_sum fails correctly", {
   expect_error(lawn_sum(), 
     "argument \"in_field\" is missing, with no default")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_sum(poly, "{}", 'population', 'sum'), 
-    "Cannot read property")
+  expect_error(lawn_sum(poly, "{}", 'population', 'sum'))
 })
