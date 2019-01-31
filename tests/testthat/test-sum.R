@@ -14,14 +14,22 @@ test_that("lawn_sum returns correct classes", {
 })
 
 test_that("in_field and out_field parameters works as expected", {
-  expect_named(lawn_sum(poly, pt, 'population')$features$properties, c('values', "sum"))
-  expect_named(lawn_sum(poly, pt, 'population', 'stuff')$features$properties, c('values', "stuff"))
-  expect_true(is.na(lawn_sum(poly, pt, 'population2', 'sum')$features$properties$sum[1]))
+  expect_named(
+    lawn_sum(poly, pt, 'population')$features$properties, c('values', "sum"))
+  expect_named(
+    lawn_sum(
+      poly, pt, 'population', 'stuff')$features$properties, 
+    c('values', "stuff"))
+  expect_true(
+    is.na(
+      lawn_sum(poly, pt, 'population2', 'sum')$features$properties$sum[1]))
 })
 
 test_that("lawn_sum fails correctly", {
   # missing arguments
-  expect_error(lawn_sum(), "argument \"in_field\" is missing, with no default")
+  expect_error(lawn_sum(), 
+    "argument \"in_field\" is missing, with no default")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_sum(poly, "{}", 'population', 'sum'), "Cannot call method")
+  expect_error(lawn_sum(poly, "{}", 'population', 'sum'), 
+    "Cannot read property")
 })

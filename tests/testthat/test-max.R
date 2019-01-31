@@ -26,7 +26,8 @@ test_that("lawn_max fails correctly", {
   # wrong in_field param leads to no ouput for max
   expect_null(lawn_max(poly, pt, 'population2')$features$properties$max)
   # can't pass in a character string to cellWidth
-  expect_error(lawn_max(poly, "{}", 'population', 'max'), "Cannot call method")
+  expect_error(lawn_max(poly, "{}", 'population', 'max'), 
+    "Cannot read property")
   # can't pass in a character string to cellWidth
   expect_error(lawn_max(poly, "{}", 'population', 'max', lint = TRUE),
                'Line 1 - "type" member required')
