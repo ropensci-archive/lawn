@@ -7,6 +7,9 @@ addons:
   apt:
     packages:
       - libv8-dev
+  homebrew:
+    taps: r-hub/cran
+    casks: v8
 
 r_github_packages:
   - jeroen/V8@newapi
@@ -20,14 +23,8 @@ after_success:
 
 matrix:
   include:
-    - os: linux
-      r: oldrel
-    - os: linux
+    - os: osx
       r: release
-      env: R_CODECOV=true
-    - os: linux
-      r: devel
-      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
     - os: osx
       osx_image: xcode7.3
       r: oldrel
