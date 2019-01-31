@@ -51,10 +51,13 @@ test_that("lawn_centroid fails correctly", {
   # FIXME: address these at some point - failing on travis but not on my machine, v8 difference, or c++ compiler diff. perhaps
   wrong1 <- '{"type":"Feature","properties":{adfad},"geometry":{"type":"Point","coordinates":[20.566406,43.421008]}}'
   #expect_error(lawn_centroid(wrong1), "c\\+\\+ exception")
+  expect_error(lawn_centroid(wrong1))
 
   wrong2 <- '{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[20.566406 43.421008]}}'
   #expect_error(lawn_centroid(wrong2), "c\\+\\+ exception")
+  expect_error(lawn_centroid(wrong2))
 
   wrong3 <- '{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinatez":[20.566406, 43.421008]}}'
   #expect_error(lawn_centroid(wrong3), "Cannot read property '0' of undefined")
+  expect_error(lawn_centroid(wrong3))
 })
