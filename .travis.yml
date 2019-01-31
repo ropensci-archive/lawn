@@ -8,6 +8,9 @@ addons:
     packages:
       - libv8-dev
 
+r_github_packages:
+  - jeroen/V8@newapi
+
 r_binary_packages:
   - covr
   - maps
