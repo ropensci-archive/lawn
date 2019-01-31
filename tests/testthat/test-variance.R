@@ -32,8 +32,7 @@ test_that("lawn_variance fails correctly", {
     0
   )
   # can't pass in a character string to cellWidth
-  expect_error(lawn_variance(poly, "{}", 'population', 'max'), 
-    "Cannot read property")
+  expect_error(lawn_variance(poly, "{}", 'population', 'max'))
   # can't pass in a character string to cellWidth
   expect_error(lawn_variance(poly, "{}", 'population', 'max', lint = TRUE),
                'Line 1 - "type" member required')

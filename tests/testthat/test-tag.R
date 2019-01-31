@@ -31,6 +31,5 @@ test_that("lawn_tag fails correctly", {
   # missing arguments
   expect_error(lawn_tag(), "argument \"points\" is missing, with no default")
   # wrong geojson input
-  expect_error(lawn_tag(pts, "{}", 'fill', 'marker-color'), 
-    "Cannot read property")
+  expect_error(lawn_tag(pts, "{}", 'fill', 'marker-color'))
 })
