@@ -7,27 +7,19 @@ addons:
   apt:
     packages:
       - libv8-dev
-  homebrew:
-    taps: r-hub/cran
-    casks: v8
 
-r_github_packages:
-  - jeroen/V8@newapi
-
-r_binary_packages:
-  - covr
+r_packages:
   - maps
 
-after_success:
-  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
+r_github_packages:
+  - jimhester/covr
 
-matrix:
-  include:
-    - os: osx
-      r: release
-    - os: osx
-      osx_image: xcode7.3
-      r: oldrel
+after_success:
+  - Rscript -e 'covr::codecov()'
+
+r:
+  - release
+  - devel
 
 notifications:
   email:
