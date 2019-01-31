@@ -23,12 +23,14 @@ test_that("lawn_tag returns correct classes", {
 })
 
 test_that("polyId, out_field parameters works as expected", {
-  expect_named(lawn_tag(pts, polys, 'fill', 'stuff')$features$properties, "stuff")
+  expect_named(lawn_tag(pts, polys, 'fill', 'stuff')$features$properties,
+    "stuff")
 })
 
 test_that("lawn_tag fails correctly", {
   # missing arguments
   expect_error(lawn_tag(), "argument \"points\" is missing, with no default")
   # wrong geojson input
-  expect_error(lawn_tag(pts, "{}", 'fill', 'marker-color'), "Cannot call method")
+  expect_error(lawn_tag(pts, "{}", 'fill', 'marker-color'), 
+    "Cannot read property")
 })

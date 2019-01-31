@@ -16,17 +16,27 @@ test_that("lawn_median returns correct classes", {
 
 test_that("in_field and out_field parameter works as expected", {
   expect_equal(
-    length(na.omit(lawn_median(poly, pt, 'population2', 'median')$features$properties$median)),
-    0)
-  expect_named(lawn_median(poly, pt, 'population', 'bears')$features$properties,
-               c('values', 'bears'))
+    length(
+      na.omit(
+        lawn_median(
+          poly, pt, 'population2', 'median')$features$properties$median)),
+    0
+  )
+  expect_named(
+    lawn_median(poly, pt, 'population', 'bears')$features$properties,
+    c('values', 'bears'))
 })
 
 test_that("lawn_median fails correctly", {
   # missing arguments
-  expect_error(lawn_median(), "argument \"in_field\" is missing, with no default")
+  expect_error(lawn_median(), 
+    "argument \"in_field\" is missing, with no default")
   # wrong in_field param leads to no ouput for median
   expect_equal(
-    length(na.omit(lawn_median(poly, pt, 'population2', 'median')$features$properties$median)), 0)
-  expect_error(lawn_median(poly, "{}", 'population', 'median'), "Cannot call method")
+    length(
+      na.omit(
+        lawn_median(poly, pt,
+          'population2', 'median')$features$properties$median)), 0)
+  expect_error(lawn_median(poly, "{}", 'population', 'median'),
+    "Cannot read property")
 })

@@ -57,7 +57,7 @@ test_that("fails correctly", {
   expect_error(lawn_intersect(),
                "argument \"poly1\" is missing, with no default")
   expect_error(lawn_intersect(lawn_data$points_average, lawn_data$points_count),
-               "has no method 'intersection'")
+               "a.intersection is not a function")
   expect_error(lawn_intersect(poly1, sub("Polygon", "polygon", poly2)),
                "Unknown Geometry Type")
   expect_error(lawn_intersect(poly1, sub("Feature", "feature", poly2)),
