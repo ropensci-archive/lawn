@@ -31,5 +31,4 @@ Suggests:
     leaflet
 Enhances: maps,
     geojsonio
-Remotes: jeroen/V8@newapi
 RoxygenNote: 6.1.1
