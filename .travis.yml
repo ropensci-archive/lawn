@@ -8,18 +8,26 @@ addons:
     packages:
       - libv8-dev
 
-r_packages:
+r_binary_packages:
+  - covr
   - maps
 
-r_github_packages:
-  - jimhester/covr
-
 after_success:
-  - Rscript -e 'covr::codecov()'
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
 
-r:
-  - release
-  - devel
+matrix:
+  include:
+    - os: linux
+      r: oldrel
+    - os: linux
+      r: release
+      env: R_CODECOV=true
+    - os: linux
+      r: devel
+      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
+    - os: osx
+      osx_image: xcode7.3
+      r: oldrel
 
 notifications:
   email:
