@@ -9,7 +9,7 @@ CONTRIBUTING.md
 man-roxygen
 .V8history
 cran-comments.md
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 ^cran-comments\.md$
 ^paper\.bib$
 ^paper\.md$
