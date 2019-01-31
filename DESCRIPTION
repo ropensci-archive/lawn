@@ -6,11 +6,13 @@ Description: Client for 'Turfjs' (<http://turfjs.org>) for
     measuring aspects of 'GeoJSON', and combining, transforming,
     and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.4.2.9210
+Version: 0.4.9.9210
 License: MIT + file LICENSE
 Authors@R: c(
-    person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
-    person("Jeff", "Hollister", role = "aut", email = "hollister.jeff@epa.gov"),
+    person("Scott", "Chamberlain", role = c("aut", "cre"), 
+        email = "myrmecocystus@gmail.com"),
+    person("Jeff", "Hollister", role = "aut", 
+        email = "hollister.jeff@epa.gov"),
     person("Morgan", "Herlocker", role = "cph")
   )
 URL: https://github.com/ropensci/lawn
