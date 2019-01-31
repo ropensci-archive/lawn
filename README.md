@@ -2,6 +2,7 @@ lawn
 =======
 
 
+
 [![cran checks](https://cranchecks.info/badges/worst/lawn)](https://cranchecks.info/pkgs/lawn)
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
@@ -105,7 +106,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -103.8 -37.1 2.6 -36.2
+#>   Bounding box: -31.3 3.2 155.0 67.6
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +116,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -128.1 -78.3 113.0 78.7
+#>   Bounding box: -50.6 -78.2 68.1 52.2
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +130,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -44.4 -78.3 113.9 40.9
+#>   Bounding box: -89.0 -7.1 123.4 -0.7
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +141,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] -48.32684  71.47329
+#> [1]  -7.546582 -66.863360
 ```
 
 Polygons
@@ -149,7 +150,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -35.9 -70.6 -31.4 -68.0
+#>   Bounding box: 76.8 -88.4 80.6 -83.6
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -174,12 +175,12 @@ lawn_sample(dat, 1)
 ```r
 lawn_sample(dat, 2)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.8 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: 
 #>   population
-#> 1        600
+#> 1        200
 #> 2        300
 ```
 
@@ -192,9 +193,9 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        300
+#> 1        600
 #> 2        200
-#> 3        600
+#> 3        100
 ```
 
 ## extent
