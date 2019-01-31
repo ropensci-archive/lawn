@@ -1,8 +1,13 @@
+lawn 0.5.0
+==========
+
+- fix tests for upcoming V8 R package changes (#78) (#79)
+
+
 lawn 0.4.2
 ==========
 
-Fix problems on Fedora.
-
+- Fix problems on Fedora.
 
 
 lawn 0.4.0

@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.4.2 patched
-* ubuntu 12.04 (on travis-ci), R 3.4.2
+* local OS X install, R 3.5.2 patched
+* ubuntu 14.04 (on travis-ci), R 3.5.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,7 +11,7 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2017
+     YEAR: 2019
      COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
@@ -20,6 +20,6 @@ There are no reverse dependencies.
 
 ---
 
-This version fixes problems on Fedora.
+This version fixes unit tests for upcoming V8 R package changes.
 
 Thanks! Scott Chamberlain
