@@ -74,16 +74,16 @@ lawn_intersect(poly1, poly2) \%>\% view()
 x1 <- lawn_buffer(lawn_point(c(-122.6375, 45.53)), 1500, "meters")
 x2 <- lawn_buffer(lawn_point(c(-122.6475, 45.53)), 1500, "meters")
 lawn_intersect(x1, x2)
-as.fc(x1) \%>\% view()
-as.fc(x2) \%>\% view()
+structure(x1, class = "featurecollection") \%>\% view()
+structure(x2, class = "featurecollection") \%>\% view()
 lawn_intersect(x1, x2) \%>\% view()
 
 # not overlapping
 x3 <- lawn_buffer(lawn_point(c(-122.6375, 45.53)), 1500, "meters")
 x4 <- lawn_buffer(lawn_point(c(-122.6975, 45.53)), 1500, "meters")
-as.fc(x3) \%>\% view()
-as.fc(x4) \%>\% view()
-lawn_intersect(x3, x4) \%>\% view()
+structure(x3, class = "featurecollection") \%>\% view()
+structure(x4, class = "featurecollection") \%>\% view()
+lawn_intersect(x3, x4)
 }
 }
 \seealso{

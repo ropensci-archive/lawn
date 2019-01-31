@@ -30,8 +30,8 @@
 #' @examples \dontrun{
 #' lawn_midpoint(pt1, pt2) %>% view
 #' lawn_featurecollection(list(
-#'   lawn_point(fromJSON(pt1)$geometry$coordinates),
-#'   lawn_point(fromJSON(pt2)$geometry$coordinates),
+#'   lawn_point(jsonlite::fromJSON(pt1)$geometry$coordinates),
+#'   lawn_point(jsonlite::fromJSON(pt2)$geometry$coordinates),
 #'   structure(lawn_midpoint(pt1, pt2), class = "point")
 #' )) %>% view
 #' }
