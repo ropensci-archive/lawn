@@ -34,3 +34,4 @@ Other boolean functions: \code{\link{lawn_boolean_contains}},
   \code{\link{lawn_boolean_pointonline}},
   \code{\link{lawn_boolean_within}}
 }
+\concept{boolean functions}

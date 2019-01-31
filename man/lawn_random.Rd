@@ -4,8 +4,8 @@
 \alias{lawn_random}
 \title{Generate random data}
 \usage{
-lawn_random(type = "points", n = 10, bbox = NULL, num_vertices = NULL,
-  max_radial_length = NULL)
+lawn_random(type = "points", n = 10, bbox = NULL,
+  num_vertices = NULL, max_radial_length = NULL)
 }
 \arguments{
 \item{type}{Type of features desired: 'points' or 'polygons'.}
@@ -52,3 +52,4 @@ Other data functions: \code{\link{lawn_featurecollection}},
   \code{\link{lawn_point}}, \code{\link{lawn_polygon}},
   \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
 }
+\concept{data functions}

@@ -35,3 +35,4 @@ Other interpolation: \code{\link{lawn_isolines}},
   \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}},
   \code{\link{lawn_triangle_grid}}
 }
+\concept{interpolation}

@@ -36,3 +36,4 @@ lawn_truncate(lawn_data$filter_features, 4, 1) \%>\% lawn_coordall
 \seealso{
 Other misc: \code{\link{lawn_flatten}}
 }
+\concept{misc}

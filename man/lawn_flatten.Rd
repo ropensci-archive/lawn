@@ -33,3 +33,4 @@ lawn_flatten(x, TRUE)
 \seealso{
 Other misc: \code{\link{lawn_truncate}}
 }
+\concept{misc}

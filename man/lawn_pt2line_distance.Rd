@@ -4,8 +4,8 @@
 \alias{lawn_pt2line_distance}
 \title{Minimum distance between a point and a lineString}
 \usage{
-lawn_pt2line_distance(point, line, units = "kilometers", mercator = FALSE,
-  lint = FALSE)
+lawn_pt2line_distance(point, line, units = "kilometers",
+  mercator = FALSE, lint = FALSE)
 }
 \arguments{
 \item{point}{(\link{data-Feature}<(\link{data-Point})>) feature or geometry}
@@ -58,3 +58,4 @@ Other measurements: \code{\link{lawn_along}},
   \code{\link{lawn_point_on_surface}},
   \code{\link{lawn_square}}
 }
+\concept{measurements}

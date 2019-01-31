@@ -37,3 +37,4 @@ lawn_collectionof(lawn_data$points_count, 'Point', 'stuff')
 Other invariant: \code{\link{lawn_featureof}},
   \code{\link{lawn_geosjontype}}
 }
+\concept{invariant}

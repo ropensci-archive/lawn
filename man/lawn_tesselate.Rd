@@ -52,3 +52,4 @@ lawn_tesselate(poly) \%>\% view
 Other assertions: \code{\link{lawn_circle}},
   \code{\link{lawn_dissolve}}
 }
+\concept{assertions}

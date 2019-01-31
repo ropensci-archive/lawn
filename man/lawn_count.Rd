@@ -4,7 +4,8 @@
 \alias{lawn_count}
 \title{Count number of points within polygons}
 \usage{
-lawn_count(polygons, points, in_field, out_field = "count", lint = FALSE)
+lawn_count(polygons, points, in_field, out_field = "count",
+  lint = FALSE)
 }
 \arguments{
 \item{polygons}{a \code{\link{data-FeatureCollection}} of
@@ -44,3 +45,4 @@ Other aggregations: \code{\link{lawn_average}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
 }
+\concept{aggregations}

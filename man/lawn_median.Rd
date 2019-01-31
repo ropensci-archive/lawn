@@ -4,7 +4,8 @@
 \alias{lawn_median}
 \title{Median value of a field among points within polygons}
 \usage{
-lawn_median(polygons, points, in_field, out_field = "median", lint = FALSE)
+lawn_median(polygons, points, in_field, out_field = "median",
+  lint = FALSE)
 }
 \arguments{
 \item{polygons}{a \code{\link{data-FeatureCollection}} of
@@ -44,3 +45,4 @@ Other aggregations: \code{\link{lawn_average}},
   \code{\link{lawn_min}}, \code{\link{lawn_sum}},
   \code{\link{lawn_variance}}
 }
+\concept{aggregations}

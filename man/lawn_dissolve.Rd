@@ -68,3 +68,4 @@ lawn_dissolve(x, key = 'combine')
 Other assertions: \code{\link{lawn_circle}},
   \code{\link{lawn_tesselate}}
 }
+\concept{assertions}

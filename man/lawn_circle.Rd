@@ -55,3 +55,4 @@ lawn_circle(pt, radius = 5, steps = 4) \%>\% view
 Other assertions: \code{\link{lawn_dissolve}},
   \code{\link{lawn_tesselate}}
 }
+\concept{assertions}

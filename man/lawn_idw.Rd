@@ -134,3 +134,4 @@ lawn_idw(x, 'value', 0.5, 1)
 \seealso{
 Other grids: \code{\link{lawn_unkinkpolygon}}
 }
+\concept{grids}

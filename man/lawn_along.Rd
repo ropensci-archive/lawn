@@ -72,3 +72,4 @@ Other measurements: \code{\link{lawn_area}},
   \code{\link{lawn_pt2line_distance}},
   \code{\link{lawn_square}}
 }
+\concept{measurements}

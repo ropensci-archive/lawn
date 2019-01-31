@@ -139,3 +139,4 @@ Other data functions: \code{\link{lawn_feature}},
   \code{\link{lawn_random}}, \code{\link{lawn_remove}},
   \code{\link{lawn_sample}}
 }
+\concept{data functions}

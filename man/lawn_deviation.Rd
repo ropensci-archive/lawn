@@ -51,3 +51,4 @@ Other aggregations: \code{\link{lawn_average}},
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}
 }
+\concept{aggregations}

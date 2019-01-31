@@ -37,3 +37,4 @@ lawn_featureof(x, 'Point', 'foobar')
 Other invariant: \code{\link{lawn_collectionof}},
   \code{\link{lawn_geosjontype}}
 }
+\concept{invariant}

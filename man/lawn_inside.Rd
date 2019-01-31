@@ -71,3 +71,4 @@ lawn_inside(point2, poly)
 Other joins: \code{\link{lawn_tag}},
   \code{\link{lawn_within}}
 }
+\concept{joins}

@@ -6,7 +6,7 @@ Description: Client for 'Turfjs' (<http://turfjs.org>) for
     measuring aspects of 'GeoJSON', and combining, transforming,
     and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.4.2.9100
+Version: 0.4.2.9110
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
@@ -18,16 +18,17 @@ BugReports: https://github.com/ropensci/lawn/issues
 LazyData: true
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
 Imports:
     V8,
     jsonlite,
     magrittr
 Suggests:
-    roxygen2 (>= 6.0.1),
+    roxygen2 (>= 6.1.1),
     testthat,
     knitr,
     rmarkdown,
     leaflet
 Enhances: maps,
     geojsonio
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

@@ -38,3 +38,4 @@ Other boolean functions: \code{\link{lawn_boolean_clockwise}},
   \code{\link{lawn_boolean_overlap}},
   \code{\link{lawn_boolean_within}}
 }
+\concept{boolean functions}

@@ -33,3 +33,4 @@ Other interpolation: \code{\link{lawn_hex_grid}},
   \code{\link{lawn_point_grid}},
   \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}}
 }
+\concept{interpolation}

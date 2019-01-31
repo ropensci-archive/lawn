@@ -4,8 +4,8 @@
 \alias{lawn_point_grid}
 \title{Create a PointGrid}
 \usage{
-lawn_point_grid(extent, cellSide, units = "kilometers", centered = TRUE,
-  bboxIsMask = FALSE)
+lawn_point_grid(extent, cellSide, units = "kilometers",
+  centered = TRUE, bboxIsMask = FALSE)
 }
 \arguments{
 \item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
@@ -42,3 +42,4 @@ Other interpolation: \code{\link{lawn_hex_grid}},
   \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}},
   \code{\link{lawn_triangle_grid}}
 }
+\concept{interpolation}
