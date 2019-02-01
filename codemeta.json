@@ -1,30 +1,159 @@
 {
-  "@context": "https://raw.githubusercontent.com/mbjones/codemeta/master/codemeta.jsonld",
-  "@type": "Code",
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "lawn",
+  "description": "Client for 'Turfjs' (<http://turfjs.org>) for\n    'geospatial' analysis. The package revolves around using 'GeoJSON'\n    data. Functions are included for creating 'GeoJSON' data objects,\n    measuring aspects of 'GeoJSON', and combining, transforming,\n    and creating random 'GeoJSON' data objects.",
+  "name": "lawn: Client for 'Turfjs' for 'Geospatial' Analysis",
+  "codeRepository": "https://github.com/ropensci/lawn",
+  "issueTracker": "https://github.com/ropensci/lawn/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.5.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.5.2",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.5.2 Patched (2018-12-31 r75943)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
   "author": [
     {
-      "@id": "0000-0003-1444-9135",
       "@type": "Person",
-      "email": "myrmecocystus@gmail.com",
-      "name": "Scott Chamberlain",
-      "affiliation": "rOpenSci"
+      "givenName": "Scott",
+      "familyName": "Chamberlain",
+      "email": "myrmecocystus@gmail.com"
     },
     {
-      "@id": "0000-0002-9254-9740",
       "@type": "Person",
-      "email": "hollister.jeff@epa.gov",
-      "name": "Jeffrey W. Hollister",
-      "affiliation": "US Environmental Protection Agency, Atlantic Ecology Division"
+      "givenName": "Jeff",
+      "familyName": "Hollister",
+      "email": "hollister.jeff@epa.gov"
     }
   ],
-  "identifier": "",
-  "codeRepository": "https://github.com/ropensci/lawn",
-  "datePublished": "2016-12-16",
-  "dateModified": "2016-12-16",
-  "dateCreated": "2016-12-16",
-  "description": "This is an R package to provide access to the Turf javascript library in R",
-  "keywords": "geospatial, javascript, GeoJSON",
-  "license": "MIT",
-  "title": "lawn: An R client for the Turf javascript library for Geospatial Analysis",
-  "version": "v0.3.1"
+  "copyrightHolder": [
+    {
+      "@type": "Person",
+      "givenName": "Morgan",
+      "familyName": "Herlocker"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Scott",
+      "familyName": "Chamberlain",
+      "email": "myrmecocystus@gmail.com"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "roxygen2",
+      "name": "roxygen2",
+      "version": ">= 6.1.1",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=roxygen2"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "leaflet",
+      "name": "leaflet",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=leaflet"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "V8",
+      "name": "V8",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=V8"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "magrittr",
+      "name": "magrittr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=magrittr"
+    }
+  ],
+  "releaseNotes": "https://github.com/ropensci/lawn/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/lawn/blob/master/README.md",
+  "fileSize": "1623.339KB",
+  "contIntegration": ["https://travis-ci.org/ropensci/lawn", "https://ci.appveyor.com/project/sckott/lawn", "https://codecov.io/github/ropensci/lawn?branch=master"],
+  "keywords": ["geojson", "geospatial", "r", "rstats", "r-package", "turf", "turfjs"]
 }
