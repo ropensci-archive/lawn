@@ -15,7 +15,7 @@ Authors@R: c(
         email = "hollister.jeff@epa.gov"),
     person("Morgan", "Herlocker", role = "cph")
   )
-URL: https://github.com/ropensci/lawn
+URL: https://docs.ropensci.org/lawn, https://github.com/ropensci/lawn
 BugReports: https://github.com/ropensci/lawn/issues
 LazyData: true
 VignetteBuilder: knitr
