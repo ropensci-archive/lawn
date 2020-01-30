@@ -1,10 +1,6 @@
 CONTRIBUTING
 ============
 
-### Please contribute!
-
-We love collaboration.
-
 ### Bugs?
 
 * Submit an issue on [the Issues page](https://github.com/ropensci/lawn/issues)
@@ -20,5 +16,3 @@ We love collaboration.
 * Submit a pull request to home base at `ropensci/lawn`
 
 ### Questions? Use [our discussion forum](http://discuss.ropensci.org/)
-
-### Thanks for contibuting!
