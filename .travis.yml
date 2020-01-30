@@ -1,7 +1,5 @@
 language: r
-sudo: false
 cache: packages
-dist: trusty
 
 addons:
   apt:
@@ -10,16 +8,26 @@ addons:
 
 r_packages:
   - maps
-
-r_github_packages:
-  - jimhester/covr
+  - covr
 
 after_success:
-  - Rscript -e 'covr::codecov()'
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
 
-r:
-  - release
-  - devel
+matrix:
+  include:
+    - os: linux
+      r: release
+      env: R_CODECOV=true
+    - os: linux
+      r: devel
+      env: _R_CHECK_LENGTH_1_LOGIC2_=FALSE
+
+env:
+   global:
+     - R_LIBS="https://cloud.r-project.org"
+     - R_BUILD_ARGS="--no-build-vignettes --no-manual"
+     - R_CHECK_ARGS="--no-build-vignettes --no-manual --as-cran"
+     - BOOTSTRAP_LATEX=""
 
 notifications:
   email:
