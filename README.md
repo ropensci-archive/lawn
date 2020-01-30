@@ -7,26 +7,25 @@ lawn
 [![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
 [![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
 
 ## Install
 
-The latest release of `lawn` is available from CRAN.  To install:
+The latest release of `lawn` is available from CRAN
 
 
 ```r
 install.packages("lawn")
 ```
 
-To install the development version:
+development version
 
 
 ```r
-install.packages("devtools")
-devtools::install_github("ropensci/lawn")
+remotes::install_github("ropensci/lawn")
 ```
 
 
@@ -106,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -31.3 3.2 155.0 67.6
+#>   Bounding box: -74.5 -70.3 11.8 -9.1
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -116,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -50.6 -78.2 68.1 52.2
+#>   Bounding box: -171.4 -89.8 127.3 84.3
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -130,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -89.0 -7.1 123.4 -0.7
+#>   Bounding box: -29.6 -75.5 152.4 57.4
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -141,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1]  -7.546582 -66.863360
+#> [1] 100.69716  38.23048
 ```
 
 Polygons
@@ -150,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: 76.8 -88.4 80.6 -83.6
+#>   Bounding box: 152.6 -0.1 158.6 7.0
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -163,25 +162,25 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: 
 #>   population
-#> 1        100
+#> 1        200
 ```
 
 
 ```r
 lawn_sample(dat, 2)
 #> <FeatureCollection>
-#>   Bounding box: 10.8 59.9 10.8 59.9
+#>   Bounding box: 10.7 59.9 10.8 59.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: 
 #>   population
 #> 1        200
-#> 2        300
+#> 2        200
 ```
 
 
@@ -193,9 +192,9 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        600
-#> 2        200
-#> 3        100
+#> 1        300
+#> 2        600
+#> 3        200
 ```
 
 ## extent
@@ -253,7 +252,7 @@ lawn_buffer(dat, 1, "miles")
 view(lawn_data$points_average)
 ```
 
-![map1](tools/map1.png)
+![map1](../man/figures/map1.png)
 
 Or during process of manipulating geojson, view at mostly any time.
 
@@ -264,7 +263,7 @@ Here, we sample at random two points from the same dataset just viewed.
 lawn_sample(lawn_data$points_average, 2) %>% view()
 ```
 
-![map1](tools/map2.png)
+![map1](../man/figures/map2.png)
 
 ## Contributors
 
@@ -277,9 +276,11 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 * Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
 * License: MIT
 * Get citation information for `lawn` in R doing `citation(package = 'lawn')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 ## Additional disclaimer
 Portions of this code have been contributed by Jeff Hollister, US EPA.  As such, that code is subjec to the following disclaimer: <https://www.epa.gov/home/github-contribution-disclaimer>
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+
+[coc]: https://github.com/ropensci/lawn/blob/master/CODE_OF_CONDUCT.md
