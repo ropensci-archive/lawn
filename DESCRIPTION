@@ -16,12 +16,14 @@ Authors@R: c(
         email = "hollister.jeff@epa.gov"),
     person("Morgan", "Herlocker", role = "cph")
   )
-URL: https://docs.ropensci.org/lawn, https://github.com/ropensci/lawn
+URL: https://github.com/ropensci/lawn (devel)
+    https://docs.ropensci.org/lawn (docs)
 BugReports: https://github.com/ropensci/lawn/issues
 LazyData: true
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
+Language: en-US
 Imports:
     V8,
     jsonlite,
@@ -35,3 +37,6 @@ Enhances:
     maps,
     geojsonio
 RoxygenNote: 7.0.2
+X-schema.org-applicationCategory: Geospatial
+X-schema.org-keywords: geojson, turf, geospatial, conversion, data, GeoJSON
+X-schema.org-isPartOf: https://ropensci.org
