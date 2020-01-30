@@ -73,10 +73,14 @@ view(fc)
 }
 }
 \seealso{
-Other transformations: \code{\link{lawn_bezier}},
-  \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},
-  \code{\link{lawn_convex}}, \code{\link{lawn_intersect}},
-  \code{\link{lawn_merge}}, \code{\link{lawn_simplify}},
-  \code{\link{lawn_union}}
+Other transformations: 
+\code{\link{lawn_bezier}()},
+\code{\link{lawn_buffer}()},
+\code{\link{lawn_concave}()},
+\code{\link{lawn_convex}()},
+\code{\link{lawn_intersect}()},
+\code{\link{lawn_merge}()},
+\code{\link{lawn_simplify}()},
+\code{\link{lawn_union}()}
 }
 \concept{transformations}

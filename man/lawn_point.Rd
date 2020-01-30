@@ -28,14 +28,18 @@ lawn_point(c(-74.5, 40), properties = list(name = 'poly1', population = 400))
 lawn_featurecollection(lawn_point(c(-74.5, 40)))
 }
 \seealso{
-Other data functions: \code{\link{lawn_featurecollection}},
-  \code{\link{lawn_feature}}, \code{\link{lawn_filter}},
-  \code{\link{lawn_geometrycollection}},
-  \code{\link{lawn_linestring}},
-  \code{\link{lawn_multilinestring}},
-  \code{\link{lawn_multipoint}},
-  \code{\link{lawn_multipolygon}},
-  \code{\link{lawn_polygon}}, \code{\link{lawn_random}},
-  \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
+Other data functions: 
+\code{\link{lawn_featurecollection}()},
+\code{\link{lawn_feature}()},
+\code{\link{lawn_filter}()},
+\code{\link{lawn_geometrycollection}()},
+\code{\link{lawn_linestring}()},
+\code{\link{lawn_multilinestring}()},
+\code{\link{lawn_multipoint}()},
+\code{\link{lawn_multipolygon}()},
+\code{\link{lawn_polygon}()},
+\code{\link{lawn_random}()},
+\code{\link{lawn_remove}()},
+\code{\link{lawn_sample}()}
 }
 \concept{data functions}

@@ -4,8 +4,15 @@
 \alias{lawn_transform_translate}
 \title{Translate a GeoJSON feature}
 \usage{
-lawn_transform_translate(x, distance, direction, units = "kilometers",
-  zTranslation = 0, mutate = FALSE, lint = FALSE)
+lawn_transform_translate(
+  x,
+  distance,
+  direction,
+  units = "kilometers",
+  zTranslation = 0,
+  mutate = FALSE,
+  lint = FALSE
+)
 }
 \arguments{
 \item{x}{a feature}

@@ -4,8 +4,14 @@
 \alias{lawn_idw}
 \title{IDW}
 \usage{
-lawn_idw(controlPoints, valueField, b, cellWidth, units = "kilometers",
-  lint = FALSE)
+lawn_idw(
+  controlPoints,
+  valueField,
+  b,
+  cellWidth,
+  units = "kilometers",
+  lint = FALSE
+)
 }
 \arguments{
 \item{controlPoints}{A \link{data-FeatureCollection}, Sampled
@@ -132,6 +138,7 @@ x <- '{
 lawn_idw(x, 'value', 0.5, 1)
 }
 \seealso{
-Other grids: \code{\link{lawn_unkinkpolygon}}
+Other grids: 
+\code{\link{lawn_unkinkpolygon}()}
 }
 \concept{grids}

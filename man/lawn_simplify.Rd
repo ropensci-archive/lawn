@@ -4,8 +4,7 @@
 \alias{lawn_simplify}
 \title{Simplify GeoJSON data}
 \usage{
-lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE,
-  lint = FALSE)
+lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE, lint = FALSE)
 }
 \arguments{
 \item{feature}{A \link{data-Feature}<(\link{data-LineString}, \link{data-Polygon},
@@ -72,10 +71,14 @@ lawn_simplify(feature, tolerance = 0.01) \%>\% view
 }
 }
 \seealso{
-Other transformations: \code{\link{lawn_bezier}},
-  \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},
-  \code{\link{lawn_convex}}, \code{\link{lawn_difference}},
-  \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
-  \code{\link{lawn_union}}
+Other transformations: 
+\code{\link{lawn_bezier}()},
+\code{\link{lawn_buffer}()},
+\code{\link{lawn_concave}()},
+\code{\link{lawn_convex}()},
+\code{\link{lawn_difference}()},
+\code{\link{lawn_intersect}()},
+\code{\link{lawn_merge}()},
+\code{\link{lawn_union}()}
 }
 \concept{transformations}

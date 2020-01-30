@@ -7,7 +7,7 @@
 lawn_triangle_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
+\item{extent}{(numeric) Extent in \verb{[minX, minY, maxX, maxY]} order.}
 
 \item{cellWidth}{(integer) Width of each cell.}
 
@@ -27,10 +27,12 @@ lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 10, 'miles')
 lawn_triangle_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
 }
 \seealso{
-Other interpolation: \code{\link{lawn_hex_grid}},
-  \code{\link{lawn_isolines}},
-  \code{\link{lawn_planepoint}},
-  \code{\link{lawn_point_grid}},
-  \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}}
+Other interpolation: 
+\code{\link{lawn_hex_grid}()},
+\code{\link{lawn_isolines}()},
+\code{\link{lawn_planepoint}()},
+\code{\link{lawn_point_grid}()},
+\code{\link{lawn_square_grid}()},
+\code{\link{lawn_tin}()}
 }
 \concept{interpolation}

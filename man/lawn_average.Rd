@@ -4,8 +4,7 @@
 \alias{lawn_average}
 \title{Average of a field among points within polygons}
 \usage{
-lawn_average(polygons, points, in_field, out_field = "average",
-  lint = FALSE)
+lawn_average(polygons, points, in_field, out_field = "average", lint = FALSE)
 }
 \arguments{
 \item{polygons}{A \link{data-FeatureCollection} of \link{data-Polygon}'s}
@@ -40,10 +39,14 @@ lawn_average(polygons = lawn_data$polygons_average,
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_collect}},
-  \code{\link{lawn_count}}, \code{\link{lawn_deviation}},
-  \code{\link{lawn_max}}, \code{\link{lawn_median}},
-  \code{\link{lawn_min}}, \code{\link{lawn_sum}},
-  \code{\link{lawn_variance}}
+Other aggregations: 
+\code{\link{lawn_collect}()},
+\code{\link{lawn_count}()},
+\code{\link{lawn_deviation}()},
+\code{\link{lawn_max}()},
+\code{\link{lawn_median}()},
+\code{\link{lawn_min}()},
+\code{\link{lawn_sum}()},
+\code{\link{lawn_variance}()}
 }
 \concept{aggregations}

@@ -4,8 +4,13 @@
 \alias{lawn_pt2line_distance}
 \title{Minimum distance between a point and a lineString}
 \usage{
-lawn_pt2line_distance(point, line, units = "kilometers",
-  mercator = FALSE, lint = FALSE)
+lawn_pt2line_distance(
+  point,
+  line,
+  units = "kilometers",
+  mercator = FALSE,
+  lint = FALSE
+)
 }
 \arguments{
 \item{point}{(\link{data-Feature}<(\link{data-Point})>) feature or geometry}
@@ -45,17 +50,22 @@ lawn_pt2line_distance(pt, ln, 'degrees')
 lawn_pt2line_distance(pt, ln, mercator = TRUE)
 }
 \seealso{
-Other measurements: \code{\link{lawn_along}},
-  \code{\link{lawn_area}}, \code{\link{lawn_bbox_polygon}},
-  \code{\link{lawn_bbox}}, \code{\link{lawn_bearing}},
-  \code{\link{lawn_center_of_mass}},
-  \code{\link{lawn_center}}, \code{\link{lawn_centroid}},
-  \code{\link{lawn_destination}},
-  \code{\link{lawn_distance}}, \code{\link{lawn_envelope}},
-  \code{\link{lawn_extent}},
-  \code{\link{lawn_line_distance}},
-  \code{\link{lawn_midpoint}},
-  \code{\link{lawn_point_on_surface}},
-  \code{\link{lawn_square}}
+Other measurements: 
+\code{\link{lawn_along}()},
+\code{\link{lawn_area}()},
+\code{\link{lawn_bbox_polygon}()},
+\code{\link{lawn_bbox}()},
+\code{\link{lawn_bearing}()},
+\code{\link{lawn_center_of_mass}()},
+\code{\link{lawn_center}()},
+\code{\link{lawn_centroid}()},
+\code{\link{lawn_destination}()},
+\code{\link{lawn_distance}()},
+\code{\link{lawn_envelope}()},
+\code{\link{lawn_extent}()},
+\code{\link{lawn_line_distance}()},
+\code{\link{lawn_midpoint}()},
+\code{\link{lawn_point_on_surface}()},
+\code{\link{lawn_square}()}
 }
 \concept{measurements}

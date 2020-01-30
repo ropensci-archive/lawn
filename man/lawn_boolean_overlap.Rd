@@ -29,11 +29,12 @@ lawn_boolean_overlap(lawn_polygon(poly1), lawn_polygon(poly2))
 lawn_boolean_overlap(lawn_polygon(poly2), lawn_polygon(poly3))
 }
 \seealso{
-Other boolean functions: \code{\link{lawn_boolean_clockwise}},
-  \code{\link{lawn_boolean_contains}},
-  \code{\link{lawn_boolean_crosses}},
-  \code{\link{lawn_boolean_disjoint}},
-  \code{\link{lawn_boolean_pointonline}},
-  \code{\link{lawn_boolean_within}}
+Other boolean functions: 
+\code{\link{lawn_boolean_clockwise}()},
+\code{\link{lawn_boolean_contains}()},
+\code{\link{lawn_boolean_crosses}()},
+\code{\link{lawn_boolean_disjoint}()},
+\code{\link{lawn_boolean_pointonline}()},
+\code{\link{lawn_boolean_within}()}
 }
 \concept{boolean functions}

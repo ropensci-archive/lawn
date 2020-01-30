@@ -12,11 +12,11 @@
 #' while Polygon features have their centroid within the bounds.
 #' @param num_vertices	Number options.vertices the number of vertices added to
 #' polygon features.
-#' @param max_radial_length Number	<optional> 10	 The total number of decimal
+#' @param max_radial_length (Number) 10 The total number of decimal
 #' degrees longitude or latitude that a polygon can extent outwards to from
 #' its center.
 #' @family data functions
-#' @return A [data-FeatureCollection].
+#' @return A [data-FeatureCollection]
 #'
 #' @examples
 #' ## set of points

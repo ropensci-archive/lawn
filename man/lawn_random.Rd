@@ -4,8 +4,13 @@
 \alias{lawn_random}
 \title{Generate random data}
 \usage{
-lawn_random(type = "points", n = 10, bbox = NULL,
-  num_vertices = NULL, max_radial_length = NULL)
+lawn_random(
+  type = "points",
+  n = 10,
+  bbox = NULL,
+  num_vertices = NULL,
+  max_radial_length = NULL
+)
 }
 \arguments{
 \item{type}{Type of features desired: 'points' or 'polygons'.}
@@ -19,12 +24,12 @@ while Polygon features have their centroid within the bounds.}
 \item{num_vertices}{Number options.vertices the number of vertices added to
 polygon features.}
 
-\item{max_radial_length}{Number    <optional> 10     The total number of decimal
+\item{max_radial_length}{(Number) 10 The total number of decimal
 degrees longitude or latitude that a polygon can extent outwards to from
 its center.}
 }
 \value{
-A \link{data-FeatureCollection}.
+A \link{data-FeatureCollection}
 }
 \description{
 Generates random \link{data-GeoJSON} data, including \link{data-Point}'s
@@ -42,14 +47,18 @@ lawn_random(bbox = c(-70, 40, -60, 60))
 lawn_random(num_vertices = 5)
 }
 \seealso{
-Other data functions: \code{\link{lawn_featurecollection}},
-  \code{\link{lawn_feature}}, \code{\link{lawn_filter}},
-  \code{\link{lawn_geometrycollection}},
-  \code{\link{lawn_linestring}},
-  \code{\link{lawn_multilinestring}},
-  \code{\link{lawn_multipoint}},
-  \code{\link{lawn_multipolygon}},
-  \code{\link{lawn_point}}, \code{\link{lawn_polygon}},
-  \code{\link{lawn_remove}}, \code{\link{lawn_sample}}
+Other data functions: 
+\code{\link{lawn_featurecollection}()},
+\code{\link{lawn_feature}()},
+\code{\link{lawn_filter}()},
+\code{\link{lawn_geometrycollection}()},
+\code{\link{lawn_linestring}()},
+\code{\link{lawn_multilinestring}()},
+\code{\link{lawn_multipoint}()},
+\code{\link{lawn_multipolygon}()},
+\code{\link{lawn_point}()},
+\code{\link{lawn_polygon}()},
+\code{\link{lawn_remove}()},
+\code{\link{lawn_sample}()}
 }
 \concept{data functions}

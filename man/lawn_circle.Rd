@@ -4,8 +4,7 @@
 \alias{lawn_circle}
 \title{circle}
 \usage{
-lawn_circle(center, radius, steps = FALSE, units = "kilometers",
-  lint = FALSE)
+lawn_circle(center, radius, steps = FALSE, units = "kilometers", lint = FALSE)
 }
 \arguments{
 \item{center}{The center, a \link{data-Feature}<(\link{data-Point})>}
@@ -52,7 +51,8 @@ lawn_circle(pt, radius = 5, steps = 4) \%>\% view
 }
 }
 \seealso{
-Other assertions: \code{\link{lawn_dissolve}},
-  \code{\link{lawn_tesselate}}
+Other assertions: 
+\code{\link{lawn_dissolve}()},
+\code{\link{lawn_tesselate}()}
 }
 \concept{assertions}

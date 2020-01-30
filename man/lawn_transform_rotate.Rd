@@ -4,8 +4,7 @@
 \alias{lawn_transform_rotate}
 \title{Rotate a GeoJSON feature}
 \usage{
-lawn_transform_rotate(x, angle, pivot = c(0, 0), mutate = FALSE,
-  lint = FALSE)
+lawn_transform_rotate(x, angle, pivot = c(0, 0), mutate = FALSE, lint = FALSE)
 }
 \arguments{
 \item{x}{a feature}

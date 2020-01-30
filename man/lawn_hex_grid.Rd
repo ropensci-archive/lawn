@@ -7,7 +7,7 @@
 lawn_hex_grid(extent, cellWidth, units)
 }
 \arguments{
-\item{extent}{(numeric) Extent in \code{[minX, minY, maxX, maxY]} order.}
+\item{extent}{(numeric) Extent in \verb{[minX, minY, maxX, maxY]} order.}
 
 \item{cellWidth}{(integer) Width of each cell.}
 
@@ -29,10 +29,12 @@ lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')
 lawn_hex_grid(c(-96,31,-84,40), 30, 'miles')
 }
 \seealso{
-Other interpolation: \code{\link{lawn_isolines}},
-  \code{\link{lawn_planepoint}},
-  \code{\link{lawn_point_grid}},
-  \code{\link{lawn_square_grid}}, \code{\link{lawn_tin}},
-  \code{\link{lawn_triangle_grid}}
+Other interpolation: 
+\code{\link{lawn_isolines}()},
+\code{\link{lawn_planepoint}()},
+\code{\link{lawn_point_grid}()},
+\code{\link{lawn_square_grid}()},
+\code{\link{lawn_tin}()},
+\code{\link{lawn_triangle_grid}()}
 }
 \concept{interpolation}

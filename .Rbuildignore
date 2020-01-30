@@ -16,3 +16,4 @@ cran-comments.md
 ^generate\.sh$
 ^codemeta\.json$
 .github
+^Makefile$

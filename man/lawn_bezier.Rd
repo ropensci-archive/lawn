@@ -4,8 +4,7 @@
 \alias{lawn_bezier}
 \title{Curve a linestring}
 \usage{
-lawn_bezier(line, resolution = 10000L, sharpness = 0.85,
-  lint = FALSE)
+lawn_bezier(line, resolution = 10000L, sharpness = 0.85, lint = FALSE)
 }
 \arguments{
 \item{line}{A \link{data-Feature} with a single \link{data-LineString}}
@@ -44,10 +43,14 @@ lawn_featurecollection(list(lawn_linestring(pts),
 }
 }
 \seealso{
-Other transformations: \code{\link{lawn_buffer}},
-  \code{\link{lawn_concave}}, \code{\link{lawn_convex}},
-  \code{\link{lawn_difference}},
-  \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
-  \code{\link{lawn_simplify}}, \code{\link{lawn_union}}
+Other transformations: 
+\code{\link{lawn_buffer}()},
+\code{\link{lawn_concave}()},
+\code{\link{lawn_convex}()},
+\code{\link{lawn_difference}()},
+\code{\link{lawn_intersect}()},
+\code{\link{lawn_merge}()},
+\code{\link{lawn_simplify}()},
+\code{\link{lawn_union}()}
 }
 \concept{transformations}

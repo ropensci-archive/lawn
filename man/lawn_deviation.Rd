@@ -4,8 +4,13 @@
 \alias{lawn_deviation}
 \title{Standard deviation of a field among points within polygons}
 \usage{
-lawn_deviation(polygons, points, in_field, out_field = "deviation",
-  lint = FALSE)
+lawn_deviation(
+  polygons,
+  points,
+  in_field,
+  out_field = "deviation",
+  lint = FALSE
+)
 }
 \arguments{
 \item{polygons}{Polygon(s) (\link{data-FeatureCollection}<(\link{data-Polygon})>)
@@ -42,11 +47,15 @@ lawn_deviation(ex_polys, ex_pts, "population")
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_average}},
-  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
-  \code{\link{lawn_max}}, \code{\link{lawn_median}},
-  \code{\link{lawn_min}}, \code{\link{lawn_sum}},
-  \code{\link{lawn_variance}}
+Other aggregations: 
+\code{\link{lawn_average}()},
+\code{\link{lawn_collect}()},
+\code{\link{lawn_count}()},
+\code{\link{lawn_max}()},
+\code{\link{lawn_median}()},
+\code{\link{lawn_min}()},
+\code{\link{lawn_sum}()},
+\code{\link{lawn_variance}()}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

@@ -33,7 +33,8 @@ lawn_geosjontype(x, 'Point', 'fooBar')
 # lawn_geosjontype(x, 'Polygon', 'fooBar')
 }
 \seealso{
-Other invariant: \code{\link{lawn_collectionof}},
-  \code{\link{lawn_featureof}}
+Other invariant: 
+\code{\link{lawn_collectionof}()},
+\code{\link{lawn_featureof}()}
 }
 \concept{invariant}

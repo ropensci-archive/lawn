@@ -12,8 +12,7 @@ gr_point(n = 10, bbox = NULL)
 
 gr_position(bbox = NULL)
 
-gr_polygon(n = 1, vertices = 10, max_radial_length = 10,
-  bbox = NULL)
+gr_polygon(n = 1, vertices = 10, max_radial_length = 10, bbox = NULL)
 }
 \arguments{
 \item{n}{(integer) Number of features to create. Default: 10 (points),

@@ -65,7 +65,8 @@ x <- '{
 lawn_dissolve(x, key = 'combine')
 }
 \seealso{
-Other assertions: \code{\link{lawn_circle}},
-  \code{\link{lawn_tesselate}}
+Other assertions: 
+\code{\link{lawn_circle}()},
+\code{\link{lawn_tesselate}()}
 }
 \concept{assertions}

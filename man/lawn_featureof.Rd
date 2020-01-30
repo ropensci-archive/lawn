@@ -34,7 +34,8 @@ lawn_featureof(x, 'Point', 'foobar')
 # lawn_featureof(x, 'MultiPoint', 'foobar')
 }
 \seealso{
-Other invariant: \code{\link{lawn_collectionof}},
-  \code{\link{lawn_geosjontype}}
+Other invariant: 
+\code{\link{lawn_collectionof}()},
+\code{\link{lawn_geosjontype}()}
 }
 \concept{invariant}

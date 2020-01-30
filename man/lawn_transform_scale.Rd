@@ -4,8 +4,13 @@
 \alias{lawn_transform_scale}
 \title{Scale a GeoJSON feature}
 \usage{
-lawn_transform_scale(x, factor, origin = "centroid", mutate = FALSE,
-  lint = FALSE)
+lawn_transform_scale(
+  x,
+  factor,
+  origin = "centroid",
+  mutate = FALSE,
+  lint = FALSE
+)
 }
 \arguments{
 \item{x}{a feature}
@@ -29,7 +34,7 @@ a scaled \link{data-Feature}
 }
 \description{
 Scale a GeoJSON from a given point by a factor of scaling (ex: factor=2
-would make the GeoJSON 200% larger). If a FeatureCollection is provided,
+would make the GeoJSON 200\% larger). If a FeatureCollection is provided,
 the origin point will be calculated based on each individual Feature.
 }
 \examples{

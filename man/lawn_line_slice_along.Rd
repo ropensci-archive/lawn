@@ -4,8 +4,13 @@
 \alias{lawn_line_slice_along}
 \title{Slice a line given two points}
 \usage{
-lawn_line_slice_along(startDist, stopDist, line, units = "kilometers",
-  lint = FALSE)
+lawn_line_slice_along(
+  startDist,
+  stopDist,
+  line,
+  units = "kilometers",
+  lint = FALSE
+)
 }
 \arguments{
 \item{startDist}{(numeric/integer) distance along the line to starting point}

@@ -46,7 +46,8 @@ lawn_within(pts, poly)
 }
 }
 \seealso{
-Other joins: \code{\link{lawn_inside}},
-  \code{\link{lawn_tag}}
+Other joins: 
+\code{\link{lawn_inside}()},
+\code{\link{lawn_tag}()}
 }
 \concept{joins}

@@ -36,6 +36,7 @@ view(x)
 view(lawn_unkinkpolygon(x))
 }
 \seealso{
-Other grids: \code{\link{lawn_idw}}
+Other grids: 
+\code{\link{lawn_idw}()}
 }
 \concept{grids}

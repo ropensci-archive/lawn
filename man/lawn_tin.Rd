@@ -42,11 +42,12 @@ lawn_tin(lawn_random(bbox = c(-70, 40, -60, 10))) \%>\% view
 }
 }
 \seealso{
-Other interpolation: \code{\link{lawn_hex_grid}},
-  \code{\link{lawn_isolines}},
-  \code{\link{lawn_planepoint}},
-  \code{\link{lawn_point_grid}},
-  \code{\link{lawn_square_grid}},
-  \code{\link{lawn_triangle_grid}}
+Other interpolation: 
+\code{\link{lawn_hex_grid}()},
+\code{\link{lawn_isolines}()},
+\code{\link{lawn_planepoint}()},
+\code{\link{lawn_point_grid}()},
+\code{\link{lawn_square_grid}()},
+\code{\link{lawn_triangle_grid}()}
 }
 \concept{interpolation}

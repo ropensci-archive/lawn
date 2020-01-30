@@ -38,10 +38,14 @@ lawn_sum(poly, pt, 'population')
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_average}},
-  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
-  \code{\link{lawn_deviation}}, \code{\link{lawn_max}},
-  \code{\link{lawn_median}}, \code{\link{lawn_min}},
-  \code{\link{lawn_variance}}
+Other aggregations: 
+\code{\link{lawn_average}()},
+\code{\link{lawn_collect}()},
+\code{\link{lawn_count}()},
+\code{\link{lawn_deviation}()},
+\code{\link{lawn_max}()},
+\code{\link{lawn_median}()},
+\code{\link{lawn_min}()},
+\code{\link{lawn_variance}()}
 }
 \concept{aggregations}

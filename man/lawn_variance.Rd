@@ -4,8 +4,7 @@
 \alias{lawn_variance}
 \title{Variance of a field among points within polygons}
 \usage{
-lawn_variance(polygons, points, in_field, out_field = "variance",
-  lint = FALSE)
+lawn_variance(polygons, points, in_field, out_field = "variance", lint = FALSE)
 }
 \arguments{
 \item{polygons}{a \code{\link{data-FeatureCollection}} of
@@ -42,10 +41,14 @@ lawn_variance(poly, pt, 'population')
 }
 }
 \seealso{
-Other aggregations: \code{\link{lawn_average}},
-  \code{\link{lawn_collect}}, \code{\link{lawn_count}},
-  \code{\link{lawn_deviation}}, \code{\link{lawn_max}},
-  \code{\link{lawn_median}}, \code{\link{lawn_min}},
-  \code{\link{lawn_sum}}
+Other aggregations: 
+\code{\link{lawn_average}()},
+\code{\link{lawn_collect}()},
+\code{\link{lawn_count}()},
+\code{\link{lawn_deviation}()},
+\code{\link{lawn_max}()},
+\code{\link{lawn_median}()},
+\code{\link{lawn_min}()},
+\code{\link{lawn_sum}()}
 }
 \concept{aggregations}

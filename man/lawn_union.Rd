@@ -83,11 +83,15 @@ lawn_union(x1, x2) \%>\% view()
 \seealso{
 \link{lawn_merge}
 
-Other transformations: \code{\link{lawn_bezier}},
-  \code{\link{lawn_buffer}}, \code{\link{lawn_concave}},
-  \code{\link{lawn_convex}}, \code{\link{lawn_difference}},
-  \code{\link{lawn_intersect}}, \code{\link{lawn_merge}},
-  \code{\link{lawn_simplify}}
+Other transformations: 
+\code{\link{lawn_bezier}()},
+\code{\link{lawn_buffer}()},
+\code{\link{lawn_concave}()},
+\code{\link{lawn_convex}()},
+\code{\link{lawn_difference}()},
+\code{\link{lawn_intersect}()},
+\code{\link{lawn_merge}()},
+\code{\link{lawn_simplify}()}
 }
 \author{
 Jeff Hollister \email{hollister.jeff@epa.gov}

@@ -6,11 +6,12 @@ Description: Client for 'Turfjs' (<http://turfjs.org>) for
     measuring aspects of 'GeoJSON', and combining, transforming,
     and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.5.0.9100
+Version: 0.5.1.92
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
-        email = "myrmecocystus@gmail.com"),
+        email = "myrmecocystus@gmail.com", 
+        comment = c(ORCID = "0000-0003-1444-9135")),
     person("Jeff", "Hollister", role = "aut", 
         email = "hollister.jeff@epa.gov"),
     person("Morgan", "Herlocker", role = "cph")
@@ -26,11 +27,11 @@ Imports:
     jsonlite,
     magrittr
 Suggests:
-    roxygen2 (>= 6.1.1),
     testthat,
     knitr,
     rmarkdown,
     leaflet
-Enhances: maps,
+Enhances:
+    maps,
     geojsonio
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

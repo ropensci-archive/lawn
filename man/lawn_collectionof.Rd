@@ -34,7 +34,8 @@ lawn_collectionof(lawn_data$points_count, 'Point', 'stuff')
 # lawn_collectionof(lawn_data$points_count, 'Polygon', 'stuff')
 }
 \seealso{
-Other invariant: \code{\link{lawn_featureof}},
-  \code{\link{lawn_geosjontype}}
+Other invariant: 
+\code{\link{lawn_featureof}()},
+\code{\link{lawn_geosjontype}()}
 }
 \concept{invariant}

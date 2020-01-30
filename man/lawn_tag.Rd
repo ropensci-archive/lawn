@@ -43,7 +43,8 @@ lawn_tag(pts, polys, 'fill', 'marker-color') \%>\% view
 }
 }
 \seealso{
-Other joins: \code{\link{lawn_inside}},
-  \code{\link{lawn_within}}
+Other joins: 
+\code{\link{lawn_inside}()},
+\code{\link{lawn_within}()}
 }
 \concept{joins}

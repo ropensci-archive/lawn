@@ -27,11 +27,12 @@ l1 <- '[[1, 1], [1, 2], [1, 3], [1, 4]]'
 lawn_boolean_within(lawn_point(pt1), lawn_linestring(l1))
 }
 \seealso{
-Other boolean functions: \code{\link{lawn_boolean_clockwise}},
-  \code{\link{lawn_boolean_contains}},
-  \code{\link{lawn_boolean_crosses}},
-  \code{\link{lawn_boolean_disjoint}},
-  \code{\link{lawn_boolean_overlap}},
-  \code{\link{lawn_boolean_pointonline}}
+Other boolean functions: 
+\code{\link{lawn_boolean_clockwise}()},
+\code{\link{lawn_boolean_contains}()},
+\code{\link{lawn_boolean_crosses}()},
+\code{\link{lawn_boolean_disjoint}()},
+\code{\link{lawn_boolean_overlap}()},
+\code{\link{lawn_boolean_pointonline}()}
 }
 \concept{boolean functions}
