@@ -38,6 +38,6 @@ test_that("lawn_bezier works", {
 
 test_that("lawn_bezier fails correctly", {
   expect_error(lawn_bezier(), "argument \"line\" is missing, with no default")
-  expect_error(lawn_bezier(lawn_linestring(pts), "bean"), "ReferenceError: bean is not defined")
-  expect_error(lawn_bezier(lawn_linestring(pts), sharpness = "bean"), "ReferenceError: bean is not defined")
+  expect_error(lawn_bezier(lawn_linestring(pts), "bean"))
+  expect_error(lawn_bezier(lawn_linestring(pts), sharpness = "bean"))
 })

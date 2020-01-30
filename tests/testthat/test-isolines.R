@@ -8,25 +8,25 @@ context("lawn_isolines")
 # b <- lawn_isolines(pts, 'z', 15, breaks)
 # d <- lawn_isolines(pts, 'z', 15, breaks)
 
-test_that("lawn_isolines returns correct class", {
-  # expect_is(a, "featurecollection")
-  # expect_is(a$type, "character")
-  # expect_is(a$features, "data.frame")
-  # expect_is(a$features$geometry$type, "character")
-  # expect_is(a$features$geometry$coordinates, "list")
-  # expect_is(a$features$geometry$coordinates[[1]], "matrix")
-})
+# test_that("lawn_isolines returns correct class", {
+#   expect_is(a, "featurecollection")
+#   expect_is(a$type, "character")
+#   expect_is(a$features, "data.frame")
+#   expect_is(a$features$geometry$type, "character")
+#   expect_is(a$features$geometry$coordinates, "list")
+#   expect_is(a$features$geometry$coordinates[[1]], "matrix")
+# })
 
-test_that("lawn_isolines returns correct values", {
-  # expect_equal(a$features$geometry$type[1], "LineString")
-  # expect_equal(a$features$geometry$type[1], "LineString")
-})
+# test_that("lawn_isolines returns correct values", {
+#   expect_equal(a$features$geometry$type[1], "LineString")
+#   expect_equal(a$features$geometry$type[1], "LineString")
+# })
 
 # test_that("resolution parameter works as expected", {
 #   expect_lt(length(lawn_isolines(pts, 'z', 30, breaks)$features$geometry$coordinates),
 #                    length(lawn_isolines(pts, 'z', 50, breaks)$features$geometry$coordinates))
 # })
 
-test_that("lawn_isolines fails correctly", {
-  #expect_error(lawn_isolines(), "argument \"points\" is missing, with no default")
-})
+# test_that("lawn_isolines fails correctly", {
+#   expect_error(lawn_isolines(), "argument \"points\" is missing, with no default")
+# })

@@ -38,12 +38,10 @@ test_that("lawn_square_grid fails correctly", {
   # missing arguments
   expect_error(lawn_square_grid(), "argument \"extent\" is missing, with no default")
   # empty featurecollection if bbox is not correct
-  expect_error(lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'stuff'),
-               "units is invalid")
+  expect_error(lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'stuff'))
   # can't pass in a character string to cellWidth
   expect_error(lawn_square_grid(c(-96, 31, -84, 40), "the", 'miles'),
                "cellWidth must be")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_square_grid(c(-96, 31, -84, 40), 50, 'doesntexist'),
-               "units is invalid")
+  expect_error(lawn_square_grid(c(-96, 31, -84, 40), 50, 'doesntexist'))
 })

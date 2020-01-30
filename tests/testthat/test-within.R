@@ -15,6 +15,5 @@ test_that("lawn_within fails correctly", {
   # missing arguments
   expect_error(lawn_within(), "argument \"points\" is missing, with no default")
   # empty featurecollection if bbox is not correct
-  expect_error(lawn_within(lawn_data$points_within, lawn_data$points_average),
-               "Cannot read property '0' of undefined")
+  expect_error(lawn_within(lawn_data$points_within, lawn_data$points_average))
 })

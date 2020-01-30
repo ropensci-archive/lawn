@@ -29,6 +29,6 @@ test_that("lawn_explode works", {
 
 test_that("lawn_explode fails correctly", {
   expect_error(lawn_explode(), "argument \"input\" is missing, with no default")
-  expect_error(lawn_explode(5), "Unknown Geometry Type")
+  expect_error(lawn_explode(5))
   expect_error(lawn_explode(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
 })

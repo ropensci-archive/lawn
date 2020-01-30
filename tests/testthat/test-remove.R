@@ -28,6 +28,5 @@ test_that("lawn_remove fails correctly", {
   # not found value param gives back empty feature collection
   expect_equal(length(unclass(lawn_remove(dat, 'marker-color', '#zzz'))$features), 0)
   # can't pass in a character string to cellWidth
-  expect_error(lawn_remove(lawn_point(c(4, 5)), 'marker-color', '#0f0', lint = TRUE),
-               "Cannot read property 'length' of undefined")
+  expect_error(lawn_remove(lawn_point(c(4, 5)), 'marker-color', '#0f0', lint = TRUE))
 })

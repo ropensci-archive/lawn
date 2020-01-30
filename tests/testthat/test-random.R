@@ -44,5 +44,5 @@ test_that("cellWidth parameter works as expected", {
 
 test_that("lawn_random fails correctly", {
   # missing arguments
-  expect_error(lawn_random("stuff"), "valid options are points and polygons")
+  expect_error(lawn_random("stuff"))
 })

@@ -85,9 +85,9 @@ test_that("gr_polygon works", {
   expect_equal(length(poly_bb$features$geometry$coordinates[[1]][,,1]), 6)
 
   # fails well
-  expect_error(gr_polygon("a"), "a is not defined")
-  expect_error(gr_polygon(vertices = "a"), "a is not defined")
-  expect_error(gr_polygon(max_radial_length = "a"), "a is not defined")
+  expect_error(gr_polygon("a"))
+  expect_error(gr_polygon(vertices = "a"))
+  expect_error(gr_polygon(max_radial_length = "a"))
   expect_error(gr_polygon(bbox = "a"), "bbox must be numeric")
   expect_error(gr_polygon(bbox = c(1, 2, 3, 4, 5)), "bbox must be length 4")
 })

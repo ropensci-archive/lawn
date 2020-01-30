@@ -44,7 +44,7 @@ test_that("lawn_centroid fails correctly", {
   skip_on_cran()
 
   expect_error(lawn_centroid(), "argument \"features\" is missing, with no default")
-  expect_error(lawn_centroid(5), "Unknown Geometry Type")
+  expect_error(lawn_centroid(5))
   expect_error(lawn_centroid(5, lint = TRUE),
                "The root of a GeoJSON object must be an object")
 

@@ -29,5 +29,5 @@ test_that("lawn_sample fails correctly", {
   # n of negative number gives back no data
   expect_equal(length(lawn_sample(dat, -1)$features), 0)
   # n of character string errors
-  expect_error(lawn_sample(dat, "a"), "a is not defined")
+  expect_error(lawn_sample(dat, "a"))
 })

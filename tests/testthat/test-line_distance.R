@@ -37,11 +37,9 @@ test_that("right dimensions", {
 test_that("lawn_line_distance fails correctly", {
   # missing arguments
   expect_error(lawn_line_distance(),
-               "argument \"line\" is missing, with no default")
+    "argument \"line\" is missing, with no default")
   # can't pass in a character string to cellWidth
-  expect_error(lawn_line_distance(line, 'stuff'), "units is invalid")
+  expect_error(lawn_line_distance(line, 'stuff'))
   # can't pass in a character string to cellWidth
-  expect_error(
-    lawn_line_distance("{}", "miles"),
-    "Unknown Geometry Type")
+  expect_error(lawn_line_distance("{}", "miles"))
 })

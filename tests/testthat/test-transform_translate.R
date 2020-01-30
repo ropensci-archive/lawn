@@ -39,9 +39,11 @@ test_that("lawn_transform_translate fails correctly", {
   expect_error(lawn_transform_translate(5), "argument \"distance\" is missing, with no default")
   expect_error(lawn_transform_translate(x, 100), "argument \"direction\" is missing, with no default")
 
-  expect_error(lawn_transform_translate(x, "Asdf", 5), "must be of class")
-  expect_error(lawn_transform_translate(x, 100, "ad"), "must be of class")
-  expect_error(lawn_transform_translate(x, 100, 4, "aas"), "units is invalid")
+  expect_error(lawn_transform_translate(x, "Asdf", 5),
+    "must be of class")
+  expect_error(lawn_transform_translate(x, 100, "ad"),
+    "must be of class")
+  expect_error(lawn_transform_translate(x, 100, 4, "aas"))
 
-  expect_error(lawn_transform_translate(list(), 100, 4), "Unknown Geometry Type")
+  expect_error(lawn_transform_translate(list(), 100, 4))
 })

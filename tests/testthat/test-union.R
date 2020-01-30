@@ -52,6 +52,6 @@ test_that("lawn_union fails correctly", {
   skip_on_fedora()
 
   expect_error(lawn_union(), "missing, with no default")
-  expect_error(lawn_union("afa", "asd"), "ReferenceError: afa is not defined")
+  expect_error(lawn_union("afa", "asd"))
   expect_error(lawn_union(stuff = "adf"), "unused argument")
 })

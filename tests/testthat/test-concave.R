@@ -80,8 +80,8 @@ test_that("lawn_concave fails correctly", {
   skip_on_fedora()
 
   expect_error(lawn_concave(), "argument \"points\" is missing, with no default")
-  expect_error(lawn_concave("a"), "a is not defined")
+  expect_error(lawn_concave("a"))
   expect_error(lawn_concave("a", lint = TRUE), "invalid char")
-  expect_error(lawn_concave(points, "stuff"), "stuff is not defined")
-  expect_error(lawn_concave(points, 1, "stuff"), "units is invalid")
+  expect_error(lawn_concave(points, "stuff"))
+  expect_error(lawn_concave(points, 1, "stuff"))
 })

@@ -18,9 +18,10 @@ test_that("lawn_flip works", {
 })
 
 test_that("lawn_flip fails correctly", {
-  expect_error(lawn_flip(5, FALSE), "Unknown Geometry Type")
-  expect_error(lawn_flip(5, TRUE), "Line 0 - The root of a GeoJSON object must be an object")
-  expect_error(lawn_flip("adfdfasds"), "is not defined")
+  expect_error(lawn_flip(5, FALSE))
+  expect_error(lawn_flip(5, TRUE),
+    "Line 0 - The root of a GeoJSON object must be an object")
+  expect_error(lawn_flip("adfdfasds"))
 
   bad1 <- '{"type":"Feature","properties":{},"geometry":{"type":"point","coordinates":[20.566406,43.421008]}}'
   expect_error(lawn_flip(bad1, TRUE), "Line 1 - Expected Point but got point \\(case sensitive\\)")

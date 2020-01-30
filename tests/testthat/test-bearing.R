@@ -56,5 +56,5 @@ test_that("lawn_bearing linting works correctly", {
 test_that("lawn_bearing fails correctly", {
   expect_error(lawn_bearing(), "argument \"start\" is missing, with no default")
   expect_error(lawn_bearing(start), "argument \"end\" is missing, with no default")
-  expect_error(lawn_bearing(4, 5), "No valid coordinates")
+  expect_error(lawn_bearing(4, 5))
 })
