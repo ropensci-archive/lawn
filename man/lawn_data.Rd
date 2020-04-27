@@ -4,8 +4,10 @@
 \name{lawn_data}
 \alias{lawn_data}
 \title{Data for use in examples}
-\format{A list of character strings of points or polygons in FeatureCollection or Feature
-Geojson formats.}
+\format{
+A list of character strings of points or polygons in FeatureCollection or Feature
+Geojson formats.
+}
 \description{
 Data for use in examples
 }

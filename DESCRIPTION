@@ -36,7 +36,7 @@ Suggests:
 Enhances:
     maps,
     geojsonio
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Geospatial
 X-schema.org-keywords: geojson, turf, geospatial, conversion, data, GeoJSON
 X-schema.org-isPartOf: https://ropensci.org
