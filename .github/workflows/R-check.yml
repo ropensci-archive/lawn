@@ -57,7 +57,7 @@ jobs:
       - name: Install dependencies
         run: |
           pak::local_install_dev_deps()
-          pak::pkg_install("rcmdcheck")
+          pak::pkg_install(c("rcmdcheck", "maps", "leaflet"))
         shell: Rscript {0}
 
       - name: Session info
