@@ -105,7 +105,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -74.5 -70.3 11.8 -9.1
+#>   Bounding box: -62.3 -46.5 101.4 76.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +115,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -171.4 -89.8 127.3 84.3
+#>   Bounding box: -166.7 -82.3 28.2 82.1
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +129,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -29.6 -75.5 152.4 57.4
+#>   Bounding box: -140.2 -36.9 135.3 50.5
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +140,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 100.69716  38.23048
+#> [1] 50.32416 17.03418
 ```
 
 Polygons
@@ -149,7 +149,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: 152.6 -0.1 158.6 7.0
+#>   Bounding box: -147.5 -9.6 -141.5 -1.5
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -162,7 +162,7 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.8 59.9 10.8 59.9
+#>   Bounding box: 10.7 59.9 10.7 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: 
@@ -192,8 +192,8 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        300
-#> 2        600
+#> 1        600
+#> 2        300
 #> 3        200
 ```
 
@@ -276,11 +276,9 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 * Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
 * License: MIT
 * Get citation information for `lawn` in R doing `citation(package = 'lawn')`
-* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 ## Additional disclaimer
 Portions of this code have been contributed by Jeff Hollister, US EPA.  As such, that code is subjec to the following disclaimer: <https://www.epa.gov/home/github-contribution-disclaimer>
 
 [![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
-
-[coc]: https://github.com/ropensci/lawn/blob/master/CODE_OF_CONDUCT.md

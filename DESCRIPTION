@@ -6,7 +6,7 @@ Description: Client for 'Turfjs' (<http://turfjs.org>) for
     measuring aspects of 'GeoJSON', and combining, transforming,
     and creating random 'GeoJSON' data objects.
 Type: Package
-Version: 0.5.1.92
+Version: 0.5.1.93
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -36,7 +36,7 @@ Suggests:
 Enhances:
     maps,
     geojsonio
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Geospatial
 X-schema.org-keywords: geojson, turf, geospatial, conversion, data, GeoJSON
 X-schema.org-isPartOf: https://ropensci.org

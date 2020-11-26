@@ -10,7 +10,7 @@
 #' @name lawn-package
 #' @importFrom jsonlite fromJSON
 #' @aliases lawn
-#' @author Scott Chamberlain (\email{myrmecocystus@@gmail.com})
+#' @author Scott Chamberlain
 #' @author Jeff Hollister (\email{hollister.jeff@@epa.gov})
 #' @docType package
 NULL
