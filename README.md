@@ -4,8 +4,7 @@ lawn
 
 
 [![cran checks](https://cranchecks.info/badges/worst/lawn)](https://cranchecks.info/pkgs/lawn)
-[![Build Status](https://travis-ci.org/ropensci/lawn.svg?branch=master)](https://travis-ci.org/ropensci/lawn)
-[![Build status](https://ci.appveyor.com/api/projects/status/v7d3p3q9j97h0ttw?svg=true)](https://ci.appveyor.com/project/sckott/lawn)
+[![R-check](https://github.com/ropensci/lawn/workflows/R-check/badge.svg)](https://github.com/ropensci/lawn/actions?query=workflow%3AR-check)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
@@ -105,7 +104,7 @@ lawn_distance(from, to)
 ```r
 lawn_random(n = 2)
 #> <FeatureCollection>
-#>   Bounding box: -62.3 -46.5 101.4 76.5
+#>   Bounding box: 86.8 -61.0 174.5 -46.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -115,7 +114,7 @@ lawn_random(n = 2)
 ```r
 lawn_random(n = 5)
 #> <FeatureCollection>
-#>   Bounding box: -166.7 -82.3 28.2 82.1
+#>   Bounding box: -152.8 -65.4 89.1 53.6
 #>   No. features: 5
 #>   No. points: 10
 #>   Properties: NULL
@@ -129,7 +128,7 @@ Points
 ```r
 gr_point(2)
 #> <FeatureCollection>
-#>   Bounding box: -140.2 -36.9 135.3 50.5
+#>   Bounding box: -10.3 -1.0 162.1 84.9
 #>   No. features: 2
 #>   No. points: 4
 #>   Properties: NULL
@@ -140,7 +139,7 @@ Positions
 
 ```r
 gr_position()
-#> [1] 50.32416 17.03418
+#> [1] 175.7061  59.7676
 ```
 
 Polygons
@@ -149,7 +148,7 @@ Polygons
 ```r
 gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 #> <FeatureCollection>
-#>   Bounding box: -147.5 -9.6 -141.5 -1.5
+#>   Bounding box: -14.0 -79.5 -11.2 -75.8
 #>   No. features: 1
 #>   No. points: 12
 #>   Properties: NULL
@@ -162,12 +161,12 @@ gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
 dat <- lawn_data$points_average
 lawn_sample(dat, 1)
 #> <FeatureCollection>
-#>   Bounding box: 10.7 59.9 10.7 59.9
+#>   Bounding box: 10.8 59.9 10.8 59.9
 #>   No. features: 1
 #>   No. points: 2
 #>   Properties: 
 #>   population
-#> 1        200
+#> 1        300
 ```
 
 
@@ -192,8 +191,8 @@ lawn_sample(dat, 3)
 #>   No. points: 6
 #>   Properties: 
 #>   population
-#> 1        600
-#> 2        300
+#> 1        200
+#> 2        600
 #> 3        200
 ```
 
