@@ -25,7 +25,7 @@ ct$eval('turf.isolines')
 
 ## @turf/meta
 
-Currently (as of 2017-06-13) using `turf/meta` `v4.4.0`
+Currently (as of 2020-12-17) using `turf/meta` `v6.0.2`
 
 To recreate `inst/js/turf-meta.js`:
 
@@ -50,7 +50,7 @@ cp turf-meta.js lawn/inst/js/
 
 ## @turf/invariant
 
-Currently (as of 2017-06-13) using `turf/invariant` `v4.4.0`
+Currently (as of 2020-12-17) using `turf/invariant` `v6.1.2`
 
 To recreate `inst/js/turf-invariant.js`:
 
@@ -75,7 +75,7 @@ cp turf-invariant.js lawn/inst/js/
 
 ## simple-statistics
 
-Currently (as of 2017-05-06) using `simple-statistics` `v4.1.0`
+Currently (as of 2020-12-17) using `simple-statistics` `v7.4.0`
 
 To recreate `inst/js/simple-statistics.js`:
 
@@ -140,7 +140,7 @@ cp cloner.js lawn/inst/js
 
 ## geojson-random
 
-Currently (as of 2017-06-13) using `geojson-random` `v0.4.0`
+Currently (as of 2020-12-17) using `geojson-random` `v0.5.0`
 
 To recreate `inst/js/geojson_random.js`:
 
