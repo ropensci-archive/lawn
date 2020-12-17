@@ -5,7 +5,7 @@ ht <- NULL
 
 .onLoad <- function(libname, pkgname){
   ct <<- V8::v8();
-  ct$source(system.file("js/turf473.js", package = pkgname))
+  ct$source(system.file("js/turf516.js", package = pkgname))
   ct$source(system.file("js/turf-meta.js", package = pkgname))
   ct$source(system.file("js/turf-invariant.js", package = pkgname))
   ct$source(system.file("js/cloner.js", package = pkgname))

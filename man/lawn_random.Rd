@@ -9,11 +9,14 @@ lawn_random(
   n = 10,
   bbox = NULL,
   num_vertices = NULL,
-  max_radial_length = NULL
+  max_radial_length = NULL,
+  max_length = NULL,
+  max_rotation = NULL
 )
 }
 \arguments{
-\item{type}{Type of features desired: 'points' or 'polygons'.}
+\item{type}{Type of features desired: 'position', 'points', 'polygons',
+or 'lines'}
 
 \item{n}{(integer) Number of features to generate.}
 
@@ -36,12 +39,17 @@ Generates random \link{data-GeoJSON} data, including \link{data-Point}'s
 and \link{data-Polygon}'s, for testing and experimentation
 }
 \examples{
+## a position
+lawn_random("position")
 ## set of points
 lawn_random(n = 2)
 lawn_random(n = 10)
 ## set of polygons
 lawn_random('polygons', 2)
 lawn_random('polygons', 10)
+## set of lines
+lawn_random('lines', 2)
+lawn_random('lines', 10)
 # with options
 lawn_random(bbox = c(-70, 40, -60, 60))
 lawn_random(num_vertices = 5)

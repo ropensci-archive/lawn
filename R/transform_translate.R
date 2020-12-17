@@ -54,8 +54,8 @@
 #'    units = "kilometers", mutate = TRUE)
 #' ))
 #' }
-lawn_transform_translate <- function(x, distance, direction, units = "kilometers",
-  zTranslation = 0, mutate = FALSE, lint = FALSE) {
+lawn_transform_translate <- function(x, distance, direction,
+  units = "kilometers", zTranslation = 0, mutate = FALSE, lint = FALSE) {
 
   x <- convert(x)
   lawnlint(x, lint)
@@ -64,7 +64,7 @@ lawn_transform_translate <- function(x, distance, direction, units = "kilometers
   assert(units, 'character')
   assert(zTranslation, c('numeric', 'integer'))
   assert(mutate, 'logical')
-  ct$eval(sprintf("var tt = turf.transformTranslate(%s, %s, %s, '%s', %s, %s);",
-                  x, distance, direction, units, zTranslation, toj(mutate)))
+  ct$eval(sprintf("var tt = turf.transformTranslate(%s, %s, %s, {units:'%s', zTranslation:%s, mutate:%s});",
+    x, distance, direction, units, zTranslation, toj(mutate)))
   as.f(ct$get("tt"))
 }

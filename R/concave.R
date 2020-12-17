@@ -67,8 +67,10 @@
 lawn_concave <- function(points, maxEdge = 1, units = "miles", lint = FALSE) {
   points <- convert(points)
   lawnlint(points, lint)
-  if (lint) is_type(points, type_top = "FeatureCollection", type_lower = "Point")
-  ct$eval(sprintf("var cv = turf.concave(%s, %s, '%s');", points,
-                  maxEdge, units))
+  if (lint) {
+    is_type(points, type_top = "FeatureCollection", type_lower = "Point")
+  }
+  ct$eval(sprintf("var cv = turf.concave(%s, {maxEdge:%s, units:'%s'});",
+    points, maxEdge, units))
   structure(ct$get("cv"), class = "linestring")
 }

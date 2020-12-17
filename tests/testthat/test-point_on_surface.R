@@ -1,11 +1,11 @@
 context("lawn_point_on_surface")
 
 # polygon
-x <- lawn_random("polygon")
+x <- lawn_random("polygons")
 a <- lawn_point_on_surface(x)
 
 # point
-x <- lawn_random("point")
+x <- lawn_random("points")
 b <- lawn_point_on_surface(x)
 
 # linestring

@@ -40,7 +40,7 @@ lawn_destination <- function(start, distance, bearing, units, lint = FALSE) {
   start <- convert(start)
   lawnlint(start, lint)
   if (lint) is_type(start, "Feature", "Point")
-  ct$eval(sprintf("var dest = turf.destination(%s, %s, %s, '%s');",
+  ct$eval(sprintf("var dest = turf.destination(%s, %s, %s, {units:'%s'});",
                   start, distance, bearing, units))
   structure(ct$get("dest"), class = "point")
 }

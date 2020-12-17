@@ -1,7 +1,8 @@
 #' Measure a linestring
 #'
 #' Takes a [data-LineString] and measures its length in
-#' the specified units.
+#' the specified units. Uses turf/length internally as 
+#' lineDistance was deprecated
 #'
 #' @export
 #' @param line Line to measure, a [data-Feature]<([data-LineString])>,
@@ -35,6 +36,6 @@ lawn_line_distance <- function(line, units, lint = FALSE) {
   lawnlint(line, lint)
   assert(units, "character")
   if (lint) is_type(line, type_top = c("Feature", "FeatureCollection"))
-  ct$eval(sprintf("var env = turf.lineDistance(%s, '%s');", line, units))
+  ct$eval(sprintf("var env = turf.length(%s, {units:'%s'});", line, units))
   ct$get("env")
 }

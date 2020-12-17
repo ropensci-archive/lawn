@@ -56,9 +56,8 @@ lawn_buffer <- function(input, dist, units = "kilometers", lint = FALSE) {
   if (lint) is_type(input, type_top = c("Feature", "FeatureCollection"))
   units <- match.arg(units, c("meters", "feet", "kilometers",
                               "miles", "degrees"))
-  ct$eval(sprintf("var units = '%s';", units))
-  ct$eval(sprintf('var dist = %s;', dist))
-  ct$eval(sprintf("var buff = turf.buffer(%s, dist, units);", input))
+  ct$eval(sprintf("var buff = turf.buffer(%s, %s, {units:'%s'});",
+    input, dist, units))
   output <- ct$get("buff")
   if (is.null(output)) return(NULL)
   if (output$type == "Feature") {

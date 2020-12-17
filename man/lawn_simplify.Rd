@@ -4,7 +4,13 @@
 \alias{lawn_simplify}
 \title{Simplify GeoJSON data}
 \usage{
-lawn_simplify(feature, tolerance = 0.01, high_quality = FALSE, lint = FALSE)
+lawn_simplify(
+  feature,
+  tolerance = 0.01,
+  high_quality = FALSE,
+  mutate = FALSE,
+  lint = FALSE
+)
 }
 \arguments{
 \item{feature}{A \link{data-Feature}<(\link{data-LineString}, \link{data-Polygon},
@@ -15,6 +21,9 @@ or \link{data-GeometryCollection}}
 
 \item{high_quality}{(boolean) Whether or not to spend more time to create a
 higher-quality simplification with a different algorithm. Default: \code{FALSE}}
+
+\item{mutate}{(boolean) allows GeoJSON input to be mutated (significant
+performance increase if \code{TRUE}). Default: \code{FALSE}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
 time as the object to get linted increases in size, so probably use by

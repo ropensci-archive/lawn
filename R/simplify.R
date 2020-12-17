@@ -10,6 +10,8 @@
 #' @param tolerance (numeric) Simplification tolerance.  Default value is 0.01.
 #' @param high_quality (boolean) Whether or not to spend more time to create a
 #' higher-quality simplification with a different algorithm. Default: `FALSE`
+#' @param mutate (boolean) allows GeoJSON input to be mutated (significant
+#' performance increase if `TRUE`). Default: `FALSE`
 #' @return A simplified feature.
 #' @template lint
 #' @family transformations
@@ -53,12 +55,12 @@
 #' lawn_simplify(feature, tolerance = 0.01) %>% view
 #' }
 lawn_simplify <- function(feature, tolerance = 0.01, high_quality = FALSE,
-                          lint = FALSE) {
+  mutate = FALSE, lint = FALSE) {
 
   lawnlint(feature, lint)
   assert(high_quality, "logical")
   assert(tolerance, c("numeric", "integer"))
-  ct$eval(sprintf("var simp = turf.simplify(%s, %s, %s);", convert(feature),
-                  tolerance, tolower(high_quality)))
+  ct$eval(sprintf("var simp = turf.simplify(%s, {tolerance:%s, highQuality:%s, mutate:%s});",
+    convert(feature), tolerance, tolower(high_quality), tolower(mutate)))
   structure(ct$get("simp"), class = tolower(ct$get("simp.geometry.type")))
 }

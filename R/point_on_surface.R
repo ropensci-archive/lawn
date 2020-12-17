@@ -21,10 +21,10 @@
 #' @examples
 #' # polygon
 #' x <- lawn_random("polygon")
-#' lawn_point_on_surface(x)
+#' lawn_point_on_feature(x)
 #' # point
 #' x <- lawn_random("point")
-#' lawn_point_on_surface(x)
+#' lawn_point_on_feature(x)
 #' # linestring
 #' linestring <- '[
 #'    [-21.929054, 64.127985],
@@ -32,11 +32,12 @@
 #'    [-21.916007, 64.141016],
 #'    [-21.930084, 64.14446]
 #' ]'
-#' lawn_point_on_surface(lawn_linestring(linestring))
-lawn_point_on_surface <- function(x, lint = FALSE) {
+#' lawn_point_on_feature(lawn_linestring(linestring))
+lawn_point_on_feature <- function(x, lint = FALSE) {
   x <- convert(x)
   lawnlint(x, lint)
   is_type(x, type_top = c("Feature", "FeatureCollection"))
-  ct$eval(sprintf("var psf = turf.pointOnSurface(%s);", x))
+  ct$eval(sprintf("var psf = turf.pointOnFeature(%s);", x))
   structure(ct$get("psf"), class = "point")
 }
+lawn_point_on_surface <- lawn_point_on_feature

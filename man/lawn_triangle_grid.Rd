@@ -4,15 +4,15 @@
 \alias{lawn_triangle_grid}
 \title{Create a TriangleGrid}
 \usage{
-lawn_triangle_grid(extent, cellWidth, units)
+lawn_triangle_grid(extent, cellSide, units = "kilometers", mask = NULL)
 }
 \arguments{
 \item{extent}{(numeric) Extent in \verb{[minX, minY, maxX, maxY]} order.}
 
-\item{cellWidth}{(integer) Width of each cell.}
+\item{cellSide}{(integer) dimension of each cell.}
 
-\item{units}{(character) Units to use for cellWidth, one of 'miles' or
-'kilometers'.}
+\item{units}{(character) Units to use for cellSide, one of miles,
+kilometers, degrees, radians}
 }
 \value{
 \link{data-FeatureCollection} grid of \link{data-Polygon}'s

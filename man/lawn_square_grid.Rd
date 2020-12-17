@@ -4,14 +4,14 @@
 \alias{lawn_square_grid}
 \title{Create a SquareGrid}
 \usage{
-lawn_square_grid(extent, cellWidth, units)
+lawn_square_grid(extent, cellSide, units = "kilometers", mask = NULL)
 }
 \arguments{
 \item{extent}{(numeric) Extent in \verb{[minX, minY, maxX, maxY]} order.}
 
-\item{cellWidth}{(integer) Width of each cell.}
+\item{cellSide}{(integer) dimension of each cell.}
 
-\item{units}{(character) Units to use for cellWidth, one of 'miles' or
+\item{units}{(character) Units to use for cellSide, one of 'miles' or
 'kilometers'.}
 }
 \value{
@@ -22,9 +22,9 @@ Takes a bounding box and a cell depth and returns a set of square
 \link{data-Polygon}'s in a grid.
 }
 \examples{
-lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 30, 'miles')
-lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 10, 'miles')
-lawn_square_grid(c(-77.3876, 38.7198, -76.9482, 39.0277), 3, 'miles')
+lawn_square_grid(c(-95, 30 ,-85, 40), 30, 'miles')
+lawn_square_grid(c(-95, 30 ,-85, 40), 10, 'miles')
+lawn_square_grid(c(-95, 30 ,-85, 40), 3, 'miles')
 }
 \seealso{
 Other interpolation: 

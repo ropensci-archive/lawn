@@ -15,7 +15,7 @@ easily create GeoJSON in a browser.
 \link{lawn-defunct}
 }
 \author{
-Scott Chamberlain (\email{myrmecocystus@gmail.com})
+Scott Chamberlain
 
 Jeff Hollister (\email{hollister.jeff@epa.gov})
 }

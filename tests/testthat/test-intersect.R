@@ -58,6 +58,6 @@ test_that("fails correctly", {
                "argument \"poly1\" is missing, with no default")
   expect_error(lawn_intersect(lawn_data$points_average, lawn_data$points_count))
   expect_error(lawn_intersect(poly1, sub("Polygon", "polygon", poly2)))
-  expect_error(lawn_intersect(poly1, sub("Feature", "feature", poly2)))
+  # expect_error(lawn_intersect(poly1, sub("Feature", "feature", poly2)))
   expect_error(lawn_intersect(poly1, sub("coordinates", "cordinates", poly2)))
 })
