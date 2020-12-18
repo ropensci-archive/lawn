@@ -1,8 +1,8 @@
 #' Boolean overlap
 #'
 #' @export
-#' @param point any [data-Geometry]/[data-Feature](data-Point)
-#' @param linestring any [data-Geometry]/[data-Feature](data-LineString)
+#' @param point any [data-Geometry]/[data-Feature] data-Point
+#' @param linestring any [data-Geometry]/[data-Feature] data-LineString
 #' @param ignoreEndVertices (logical) whether to ignore the start and end
 #' vertices. Default: `FALSE
 #' @template lint
