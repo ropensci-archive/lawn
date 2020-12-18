@@ -4,7 +4,7 @@
 \alias{lawn_truncate}
 \title{Truncate}
 \usage{
-lawn_truncate(x, precision = 6, coordinates = 2, lint = FALSE)
+lawn_truncate(x, precision = 6, coordinates = 2, mutate = FALSE, lint = FALSE)
 }
 \arguments{
 \item{x}{any \link{data-Feature} or \link{data-FeatureCollection}}
@@ -13,6 +13,9 @@ lawn_truncate(x, precision = 6, coordinates = 2, lint = FALSE)
 
 \item{coordinates}{(integer) maximum number of coordinates (primarily used
 to remove z coordinates). default: 2}
+
+\item{mutate}{(logical) allows GeoJSON input to be mutated (significant
+performance increase if true) Default: \code{FALSE}}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
 time as the object to get linted increases in size, so probably use by

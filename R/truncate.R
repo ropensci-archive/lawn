@@ -8,6 +8,8 @@
 #' @param precision (integer) coordinate decimal precision. default: 6
 #' @param coordinates (integer) maximum number of coordinates (primarily used
 #' to remove z coordinates). default: 2
+#' @param mutate (logical) allows GeoJSON input to be mutated (significant
+#' performance increase if true) Default: `FALSE`
 #' @template lint
 #' @family misc
 #' @return a [data-Feature] or [data-FeatureCollection] with truncated geometry
@@ -17,11 +19,15 @@
 #' lawn_truncate(lawn_data$filter_features, 4) %>% lawn_coordall
 #' lawn_truncate(lawn_data$filter_features, 2) %>% lawn_coordall
 #' lawn_truncate(lawn_data$filter_features, 4, 1) %>% lawn_coordall
-lawn_truncate <- function(x, precision = 6, coordinates = 2, lint = FALSE) {
+lawn_truncate <- function(x, precision = 6, coordinates = 2, mutate = FALSE,
+  lint = FALSE) {
+
   lawnlint(x, lint)
   assert(precision, c('numeric', 'integer'))
   assert(coordinates, c('numeric', 'integer'))
-  ct$eval(sprintf('var out = turf.truncate(%s, %s, %s);',
-                  x, precision, coordinates))
+  assert(mutate, "logical")
+  ct$eval(sprintf(
+    'var out = turf.truncate(%s, {precision:%s, coordinates:%s, mutate:%s});',
+    x, precision, coordinates, tolower(mutate)))
   as.fc(ct$get("out"))
 }

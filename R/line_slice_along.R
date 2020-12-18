@@ -43,7 +43,7 @@ lawn_line_slice_along <- function(startDist, stopDist, line,
   assert(units, 'character')
   lawnlint(line, lint)
   if (lint) is_type(line, type_top = "Feature", type_lower = "LineString")
-  ct$eval(sprintf("var exp = turf.lineSliceAlong(%s, %s, %s, '%s');",
+  ct$eval(sprintf("var exp = turf.lineSliceAlong(%s, %s, %s, {units:'%s'});",
                   convert(line), startDist, stopDist, units))
   structure(ct$get("exp"), class = "linestring")
 }

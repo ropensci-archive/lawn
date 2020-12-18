@@ -30,7 +30,7 @@
 lawn_rewind <- function(x, reverse = FALSE, mutate = FALSE, lint = FALSE) {
   if (!is.null(x)) lawnlint(x, lint)
   if (lint) is_type(x, type_top = c("FeatureCollection", "Feature"))
-  ct$eval(sprintf("var res = turf.rewind(%s, %s, %s);", convert(x),
-                  tolower(reverse), tolower(mutate)))
+  ct$eval(sprintf("var res = turf.rewind(%s, {reverse:%s, mutate:%s});",
+    convert(x), tolower(reverse), tolower(mutate)))
   as.fc(ct$get("res"))
 }

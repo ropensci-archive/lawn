@@ -20,10 +20,10 @@
 #'
 #' @examples
 #' # polygon
-#' x <- lawn_random("polygon")
+#' x <- lawn_random("polygons")
 #' lawn_point_on_feature(x)
 #' # point
-#' x <- lawn_random("point")
+#' x <- lawn_random("points")
 #' lawn_point_on_feature(x)
 #' # linestring
 #' linestring <- '[

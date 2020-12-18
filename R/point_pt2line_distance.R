@@ -34,7 +34,7 @@ lawn_pt2line_distance <- function(point, line, units = "kilometers",
   lawnlint(list(point, line), lint)
   assert(units, "character")
   assert(mercator, "logical")
-  ct$eval(sprintf("var xxx = turf.pointToLineDistance(%s, %s, '%s', %s);",
-                  point, line, units, convert(mercator)))
+  ct$eval(sprintf("var xxx = turf.pointToLineDistance(%s, %s, {units:'%s', mercator:%s});",
+    point, line, units, convert(mercator)))
   ct$get("xxx")
 }

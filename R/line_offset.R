@@ -38,7 +38,7 @@ lawn_line_offset <- function(line, distance, units, lint = FALSE) {
   lawnlint(line, lint)
   assert(distance, c('numeric', 'integer'))
   assert(units, "character")
-  ct$eval(sprintf("var off = turf.lineOffset(%s, %s, '%s');",
+  ct$eval(sprintf("var off = turf.lineOffset(%s, %s, {units:'%s'});",
                   line, distance, units))
   as.f(ct$get("off"))
 }

@@ -8,10 +8,10 @@ lawn_random(
   type = "points",
   n = 10,
   bbox = NULL,
-  num_vertices = NULL,
-  max_radial_length = NULL,
-  max_length = NULL,
-  max_rotation = NULL
+  num_vertices = 10,
+  max_radial_length = 10,
+  max_length = 1e-04,
+  max_rotation = pi/8
 )
 }
 \arguments{
@@ -24,12 +24,18 @@ or 'lines'}
 case of Point features, they are guaranteed to be within this bounds,
 while Polygon features have their centroid within the bounds.}
 
-\item{num_vertices}{Number options.vertices the number of vertices added to
-polygon features.}
+\item{num_vertices}{(numeric) the number of vertices added to
+polygon features. default: \code{10}}
 
-\item{max_radial_length}{(Number) 10 The total number of decimal
-degrees longitude or latitude that a polygon can extent outwards to from
-its center.}
+\item{max_radial_length}{(numeric) The total number of decimal
+degrees longitude or latitude that a polygon can extent outwards to
+from its center. default: \code{10}}
+
+\item{max_length}{(numeric) maximum number of decimal degrees that a
+vertex can be from its predecessor. default: \code{0.0001}}
+
+\item{max_rotation}{(numeric) maximum number of radians that a line
+segment can turn from the previous segment. default: \code{pi/8}}
 }
 \value{
 A \link{data-FeatureCollection}

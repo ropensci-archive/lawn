@@ -49,6 +49,7 @@
 lawn_dissolve <- function(features, key, lint = FALSE) {
   lawnlint(features, lint)
   if (lint) is_type(features, "FeatureCollection", "Polygon")
-  ct$eval(sprintf('var out = turf.dissolve(%s, "%s");', features, key))
+  ct$eval(sprintf('var out = turf.dissolve(%s, {propertyName:"%s"});',
+    features, key))
   as.fc(ct$get("out"))
 }
