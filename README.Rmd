@@ -13,10 +13,10 @@ knitr::opts_chunk$set(
 [![cran checks](https://cranchecks.info/badges/worst/lawn)](https://cranchecks.info/pkgs/lawn)
 [![R-check](https://github.com/ropensci/lawn/workflows/R-check/badge.svg)](https://github.com/ropensci/lawn/actions?query=workflow%3AR-check)
 [![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/lawn?color=ff69b4)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/lawn?color=ff69b4)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
 
-`lawn` is an R wrapper for the Javascript library [turf.js](http://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
+`lawn` is an R wrapper for the Javascript library [turf.js](https://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
 
 ## Install
 
@@ -36,147 +36,9 @@ remotes::install_github("ropensci/lawn")
 library("lawn")
 ```
 
-## count
+## Documentation
 
-Count number of points within polygons
-
-```{r}
-lawn_count(lawn_data$polygons_count, lawn_data$points_count, 'population')
-```
-
-## average
-
-Average value of a field for a set of points within a set of polygons
-
-```{r}
-lawn_average(polygons = lawn_data$polygons_average, points = lawn_data$points_average, 'population')
-```
-
-## distance
-
-Define two points
-
-```{r}
-from <- '{
- "type": "Feature",
- "properties": {},
- "geometry": {
-   "type": "Point",
-   "coordinates": [-75.343, 39.984]
- }
-}'
-to <- '{
-  "type": "Feature",
-  "properties": {},
-  "geometry": {
-    "type": "Point",
-    "coordinates": [-75.534, 39.123]
-  }
-}'
-```
-
-Calculate distance, default units is kilometers (`km`)
-
-```{r}
-lawn_distance(from, to)
-```
-
-## random set of points
-
-```{r}
-lawn_random(n = 2)
-```
-
-```{r}
-lawn_random(n = 5)
-```
-
-## random features with geojson-random
-
-Points
-
-```{r}
-gr_point(2)
-```
-
-Positions
-
-```{r}
-gr_position()
-```
-
-Polygons
-
-```{r}
-gr_polygon(n = 1, vertices = 5, max_radial_length = 5)
-```
-
-## sample from a FeatureCollection
-
-```{r}
-dat <- lawn_data$points_average
-lawn_sample(dat, 1)
-```
-
-```{r}
-lawn_sample(dat, 2)
-```
-
-```{r}
-lawn_sample(dat, 3)
-```
-
-## extent
-
-```{r}
-lawn_extent(lawn_data$points_average)
-```
-
-## within
-
-```{r}
-lawn_within(lawn_data$points_within, lawn_data$polygons_within)
-```
-
-## buffer
-
-```{r}
-dat <- '{
- "type": "Feature",
- "properties": {},
- "geometry": {
-     "type": "Polygon",
-     "coordinates": [[
-       [-112.072391,46.586591],
-       [-112.072391,46.61761],
-       [-112.028102,46.61761],
-       [-112.028102,46.586591],
-       [-112.072391,46.586591]
-     ]]
-   }
-}'
-lawn_buffer(dat, 1, "miles")
-```
-
-## view
-
-`lawn` includes a tiny helper function for visualizing geojson.
-
-```{r eval=FALSE}
-view(lawn_data$points_average)
-```
-
-![map1](man/figures/map1.png)
-
-Or during process of manipulating geojson, view at mostly any time.
-
-Here, we sample at random two points from the same dataset just viewed.
-
-```{r eval=FALSE}
-lawn_sample(lawn_data$points_average, 2) %>% view()
-```
-
-![map1](man/figures/map2.png)
+https://docs.ropensci.org/lawn/
 
 ## Contributors
 
@@ -193,5 +55,3 @@ lawn_sample(lawn_data$points_average, 2) %>% view()
 
 ## Additional disclaimer
 Portions of this code have been contributed by Jeff Hollister, US EPA.  As such, that code is subjec to the following disclaimer: <https://www.epa.gov/home/github-contribution-disclaimer>
-
-[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
