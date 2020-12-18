@@ -13,10 +13,11 @@
 #' Points will be created only inside it
 #' @family interpolation
 #' @return [data-FeatureCollection] grid of polygons.
-#' @examples
+#' @examples \dontrun{
 #' lawn_square_grid(c(-95, 30 ,-85, 40), 30, 'miles')
 #' lawn_square_grid(c(-95, 30 ,-85, 40), 10, 'miles')
 #' lawn_square_grid(c(-95, 30 ,-85, 40), 3, 'miles')
+#' }
 lawn_square_grid <- function(extent, cellSide, units = "kilometers",
   mask = NULL) {
 

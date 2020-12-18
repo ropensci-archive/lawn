@@ -25,9 +25,11 @@ Takes a bounding box and a cell depth and returns a set of square
 \link{data-Polygon}'s in a grid.
 }
 \examples{
+\dontrun{
 lawn_square_grid(c(-95, 30 ,-85, 40), 30, 'miles')
 lawn_square_grid(c(-95, 30 ,-85, 40), 10, 'miles')
 lawn_square_grid(c(-95, 30 ,-85, 40), 3, 'miles')
+}
 }
 \seealso{
 Other interpolation: 
