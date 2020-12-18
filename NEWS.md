@@ -1,13 +1,19 @@
+lawn 0.6.0
+==========
+
+* update Javascript libraries to their latest versions - associated changes mostly not public API facing in the R code here to adapt to the JS changes (#84)
+* move readme images into man/figures (#83)
+
 lawn 0.5.0
 ==========
 
-- fix tests for upcoming V8 R package changes (#78) (#79)
+* fix tests for upcoming V8 R package changes (#78) (#79)
 
 
 lawn 0.4.2
 ==========
 
-- Fix problems on Fedora.
+* Fix problems on Fedora.
 
 
 lawn 0.4.0
