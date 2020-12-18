@@ -3,6 +3,7 @@
 .travis.yml
 appveyor.yml
 README.Rmd
+README.md
 inst/img
 CONTRIBUTING.md
 ^\.httr-oauth$
@@ -18,3 +19,4 @@ cran-comments.md
 .github
 ^Makefile$
 ^LICENSE\.md$
+vignettes/
