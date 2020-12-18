@@ -9,6 +9,8 @@
 #' @param cellSide (integer) dimension of each cell.
 #' @param units (character) Units to use for cellSide, one of miles,
 #' kilometers, degrees, radians
+#' @param mask (logical) if passed a Polygon or MultiPolygon, the grid
+#' Points will be created only inside it
 #' @family interpolation
 #' @return [data-FeatureCollection] grid of [data-Polygon]'s
 #' @examples

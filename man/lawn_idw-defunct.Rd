@@ -6,6 +6,9 @@
 \usage{
 lawn_idw(...)
 }
+\arguments{
+\item{...}{ignored}
+}
 \description{
 DEFUNCT
 }

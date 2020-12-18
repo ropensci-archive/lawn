@@ -13,6 +13,9 @@ lawn_square_grid(extent, cellSide, units = "kilometers", mask = NULL)
 
 \item{units}{(character) Units to use for cellSide, one of 'miles' or
 'kilometers'.}
+
+\item{mask}{(logical) if passed a Polygon or MultiPolygon, the grid
+Points will be created only inside it}
 }
 \value{
 \link{data-FeatureCollection} grid of polygons.
