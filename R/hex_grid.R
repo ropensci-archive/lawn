@@ -4,7 +4,7 @@
 #' [data-FeatureCollection] of flat-topped hexagons
 #' ([data-Polygon] features) aligned in an "odd-q" vertical
 #' grid as described in Hexagonal Grids
-#' <http://www.redblobgames.com/grids/hexagons/>
+#' http://www.redblobgames.com/grids/hexagons/
 #'
 #' @export
 #'

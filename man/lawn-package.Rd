@@ -8,7 +8,7 @@
 \description{
 turf.js uses GeoJSON for all geographic data, and expects the data to be
 standard \href{http://en.wikipedia.org/wiki/World_Geodetic_System}{WGS84}
-longitude,latitude coordinates. See \url{http://geojson.io/} for a tool to
+longitude,latitude coordinates. See https://geojson.io/ for a tool to
 easily create GeoJSON in a browser.
 }
 \seealso{

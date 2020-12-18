@@ -25,8 +25,7 @@ A \link{data-FeatureCollection}
 }
 \description{
 Rewind (Multi)LineString or (Multi)Polygon outer ring counterclockwise
-and inner rings clockwise (Uses Shoelace Formula
-(\url{https://en.wikipedia.org/wiki/Shoelace_formula})).
+and inner rings clockwise (Uses Shoelace Formula)
 }
 \examples{
 x <- '{

@@ -31,8 +31,7 @@ Rotates any geojson Feature or Geometry of a specified angle, around its
 centroid or a given pivot point
 }
 \note{
-all rotations follow the right-hand rule:
-\url{https://en.wikipedia.org/wiki/Right-hand_rule}
+all rotations follow the right-hand rule
 }
 \examples{
 x <- '{

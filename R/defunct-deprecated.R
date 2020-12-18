@@ -49,19 +49,20 @@ lawn_aggregate <- function(...) {
 #' \itemize{
 #'  \item [lawn_size]: Function removed. The `size`
 #'  method in turf.js has been removed.
-#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  See https://github.com/Turfjs/turf/issues/306
 #'  \item [lawn_reclass]: Function removed. The `reclass`
 #'  method in turf.js has been removed.
-#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  See https://github.com/Turfjs/turf/issues/306
 #'  \item [lawn_jenks]: Function removed. The `jenks`
 #'  method in turf.js has been removed.
-#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  See https://github.com/Turfjs/turf/issues/306
 #'  \item [lawn_quantile]: Function removed. The `quantile`
 #'  method in turf.js has been removed.
-#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  See https://github.com/Turfjs/turf/issues/306
 #'  \item [lawn_aggregate]: Function removed. The `aggregate`
 #'  method in turf.js has been removed.
-#'  See <https://github.com/Turfjs/turf/issues/306>
+#'  See https://github.com/Turfjs/turf/issues/306
+#'  \item [lawn_idw]: Function removed.
 #' }
 #'
 #' @name lawn-defunct

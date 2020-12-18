@@ -1,8 +1,7 @@
 #' Rewind
 #'
 #' Rewind (Multi)LineString or (Multi)Polygon outer ring counterclockwise
-#' and inner rings clockwise (Uses Shoelace Formula
-#' (<https://en.wikipedia.org/wiki/Shoelace_formula>)).
+#' and inner rings clockwise (Uses Shoelace Formula)
 #'
 #' @export
 #' @param x A [data-FeatureCollection] or [data-Feature] with

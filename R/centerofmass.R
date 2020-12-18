@@ -2,7 +2,7 @@
 #'
 #' Takes a [data-Feature] or a [data-FeatureCollection]
 #' and returns its center of mass using formula
-#' <https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon>
+#' https://en.wikipedia.org/wiki/Centroid#Centroid_of_polygon
 #'
 #' @export
 #' @param x a [data-Feature] or [data-FeatureCollection]

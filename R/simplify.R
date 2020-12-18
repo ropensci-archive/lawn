@@ -17,7 +17,7 @@
 #' @family transformations
 #' @return A Feature of either [data-Polygon] or [data-LineString].
 #' @details Internally uses simplify-js
-#' (<http://mourner.github.io/simplify-js/>) to perform simplification.
+#' (https://mourner.github.io/simplify-js/) to perform simplification.
 #'
 #' @examples
 #' feature <- '{

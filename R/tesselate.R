@@ -2,7 +2,7 @@
 #'
 #' Tesselates a [data-Polygon] into a
 #' [data-FeatureCollection] of
-#' triangles using earcut (<https://github.com/mapbox/earcut>)
+#' triangles using earcut (github.com/mapbox/earcut)
 #'
 #' @export
 #' @param polygon Input [data-Feature]<([data-Polygon])>

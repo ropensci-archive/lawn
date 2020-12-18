@@ -12,9 +12,9 @@ lawn_boolean_pointonline(
 )
 }
 \arguments{
-\item{point}{any \link{data-Geometry}/\href{[data-Point]}{data-Feature}}
+\item{point}{any \link{data-Geometry}/\href{data-Point}{data-Feature}}
 
-\item{linestring}{any \link{data-Geometry}/\href{[data-LineString]}{data-Feature}}
+\item{linestring}{any \link{data-Geometry}/\href{data-LineString}{data-Feature}}
 
 \item{ignoreEndVertices}{(logical) whether to ignore the start and end
 vertices. Default: `FALSE}

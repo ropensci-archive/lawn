@@ -67,9 +67,6 @@ gr_polygon(1, 10, 100)
 ## use a bounding box
 gr_polygon(1, 5, 5, c(50, 50, 60, 60))
 }
-\references{
-\url{https://github.com/mapbox/geojson-random}
-}
 \seealso{
 \link{lawn_random}
 }

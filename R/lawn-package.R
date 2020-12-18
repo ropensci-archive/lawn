@@ -2,7 +2,7 @@
 #'
 #' turf.js uses GeoJSON for all geographic data, and expects the data to be
 #' standard [WGS84](http://en.wikipedia.org/wiki/World_Geodetic_System)
-#' longitude,latitude coordinates. See <http://geojson.io/> for a tool to
+#' longitude,latitude coordinates. See https://geojson.io/ for a tool to
 #' easily create GeoJSON in a browser.
 #'
 #' @seealso [lawn-defunct]

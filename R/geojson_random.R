@@ -15,7 +15,6 @@
 #' east, north order. By default, no bounding box is passed in.
 #' @return A [data-FeatureCollection] for point and polygon, or numeric
 #' vector for position.
-#' @references <https://github.com/mapbox/geojson-random>
 #' @details These functions create either random points, polygons, or
 #' positions (single long/lat coordinate pairs).
 #' @seealso [lawn_random]

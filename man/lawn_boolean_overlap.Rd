@@ -7,8 +7,8 @@
 lawn_boolean_overlap(feature1, feature2, lint = FALSE)
 }
 \arguments{
-\item{feature1, feature2}{any \link{data-Geometry}/\href{<[data-LineString]|[data-MultiLineString]|[data-Polygon]|[data-MultiPolygon]}{data-Feature}
-objects}
+\item{feature1, feature2}{any data-Geometry/data-Feature(
+data-LineString|data-MultiLineString|data-Polygon|data-MultiPolygon) objects}
 
 \item{lint}{(logical) Lint or not. Uses geojsonhint. Takes up increasing
 time as the object to get linted increases in size, so probably use by

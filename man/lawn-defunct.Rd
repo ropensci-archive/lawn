@@ -7,18 +7,19 @@
 \itemize{
 \item \link{lawn_size}: Function removed. The \code{size}
 method in turf.js has been removed.
-See \url{https://github.com/Turfjs/turf/issues/306}
+See https://github.com/Turfjs/turf/issues/306
 \item \link{lawn_reclass}: Function removed. The \code{reclass}
 method in turf.js has been removed.
-See \url{https://github.com/Turfjs/turf/issues/306}
+See https://github.com/Turfjs/turf/issues/306
 \item \link{lawn_jenks}: Function removed. The \code{jenks}
 method in turf.js has been removed.
-See \url{https://github.com/Turfjs/turf/issues/306}
+See https://github.com/Turfjs/turf/issues/306
 \item \link{lawn_quantile}: Function removed. The \code{quantile}
 method in turf.js has been removed.
-See \url{https://github.com/Turfjs/turf/issues/306}
+See https://github.com/Turfjs/turf/issues/306
 \item \link{lawn_aggregate}: Function removed. The \code{aggregate}
 method in turf.js has been removed.
-See \url{https://github.com/Turfjs/turf/issues/306}
+See https://github.com/Turfjs/turf/issues/306
+\item \link{lawn_idw}: Function removed.
 }
 }

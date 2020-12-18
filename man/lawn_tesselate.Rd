@@ -20,7 +20,7 @@ A \link{data-FeatureCollection}
 \description{
 Tesselates a \link{data-Polygon} into a
 \link{data-FeatureCollection} of
-triangles using earcut (\url{https://github.com/mapbox/earcut})
+triangles using earcut (github.com/mapbox/earcut)
 }
 \examples{
 poly <- '{

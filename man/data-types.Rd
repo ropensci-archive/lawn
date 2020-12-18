@@ -15,7 +15,7 @@
 \alias{data-GeoJSON}
 \title{Description of GeoJSON data types}
 \description{
-GeoJSON types based on \url{https://tools.ietf.org/html/rfc7946}
+GeoJSON types based on https://tools.ietf.org/html/rfc7946
 }
 \section{GeoJSON object}{
 

@@ -13,8 +13,7 @@
 #' performance increase if true) (optional). Default: `FALSE`
 #' @template lint
 #' @return a rotated [data-Feature]
-#' @note all rotations follow the right-hand rule:
-#' <https://en.wikipedia.org/wiki/Right-hand_rule>
+#' @note all rotations follow the right-hand rule
 #' @examples
 #' x <- '{
 #'  "type": "Feature",
