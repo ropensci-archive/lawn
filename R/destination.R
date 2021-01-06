@@ -3,7 +3,7 @@
 #' Takes a [data-Point] and calculates the location of a
 #' destination point given a distance in degrees, radians, miles, or
 #' kilometers; and bearing in degrees. Uses the
-#' [Haversine formula](http://en.wikipedia.org/wiki/Haversine_formula) to
+#' Haversine formula (http://en.wikipedia.org/wiki/Haversine_formula) to
 #' account for global curvature.
 #'
 #' @export

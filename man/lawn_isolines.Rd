@@ -42,7 +42,7 @@ A \link{data-FeatureCollection} of isolines
 }
 \description{
 Takes \link{data-Point}'s with z-values and an array of value
-breaks and generates \href{http://en.wikipedia.org/wiki/Isoline}{isolines}
+breaks and generates isolines (http://en.wikipedia.org/wiki/Isoline)
 }
 \details{
 Warning: this function seems to be broken, not sure why

@@ -1,7 +1,7 @@
 #' Generate Isolines
 #'
 #' Takes [data-Point]'s with z-values and an array of value
-#' breaks and generates [isolines](http://en.wikipedia.org/wiki/Isoline)
+#' breaks and generates isolines (http://en.wikipedia.org/wiki/Isoline)
 #'
 #' @export
 #'
