@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This version fixes updates the javascript libraries.
+This version fixes updates the javascript libraries and fixes some urls.
 
 Thanks!
 Scott Chamberlain
