@@ -22,7 +22,6 @@ Takes a bounding box and a cell size in degrees and returns a
 \link{data-FeatureCollection} of flat-topped hexagons
 (\link{data-Polygon} features) aligned in an "odd-q" vertical
 grid as described in Hexagonal Grids
-http://www.redblobgames.com/grids/hexagons/
 }
 \examples{
 lawn_hex_grid(c(-96,31,-84,40), 50, 'miles')

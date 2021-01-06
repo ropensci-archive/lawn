@@ -20,7 +20,7 @@ a convex hull \link{data-Polygon}
 \description{
 Takes a set of \link{data-Point}'s and returns a convex
 hull polygon. Internally, this uses the
-convex-hull (https://github.com/mikolalysenko/convex-hull) module
+convex-hull  module
 that implements a Monotone chain hull
 }
 \examples{

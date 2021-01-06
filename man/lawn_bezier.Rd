@@ -23,7 +23,7 @@ A \link{data-LineString} curved line.
 }
 \description{
 Takes a \link{data-LineString} and returns a curved version
-by applying a Bezier http://en.wikipedia.org/wiki/Bezier_spline
+by applying a Bezier
 spline algorithm.
 }
 \examples{

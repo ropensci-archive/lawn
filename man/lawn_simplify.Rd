@@ -41,7 +41,7 @@ and returns a simplified version.
 }
 \details{
 Internally uses simplify-js
-(https://mourner.github.io/simplify-js/) to perform simplification.
+to perform simplification.
 }
 \examples{
 feature <- '{

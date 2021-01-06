@@ -1,7 +1,7 @@
 #' Curve a linestring
 #'
 #' Takes a [data-LineString] and returns a curved version
-#' by applying a Bezier http://en.wikipedia.org/wiki/Bezier_spline
+#' by applying a Bezier 
 #' spline algorithm.
 #'
 #' @export

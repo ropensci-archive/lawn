@@ -27,7 +27,7 @@ the calculated destination, a \link{data-Feature}<\link{data-Point}>
 Takes a \link{data-Point} and calculates the location of a
 destination point given a distance in degrees, radians, miles, or
 kilometers; and bearing in degrees. Uses the
-Haversine formula (http://en.wikipedia.org/wiki/Haversine_formula) to
+Haversine formula  to
 account for global curvature.
 }
 \examples{

@@ -25,7 +25,7 @@ Single numeric value
 \description{
 Calculates the distance between two \link{data-Point}s in degress,
 radians, miles, or kilometers. Uses the
-Haversine formula (http://en.wikipedia.org/wiki/Haversine_formula)
+Haversine formula
 to account for global curvature.
 }
 \examples{
