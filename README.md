@@ -1,53 +1,8 @@
 lawn
 =======
 
+[![Project Status: Abandoned – Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development.](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 
-
-[![cran checks](https://cranchecks.info/badges/worst/lawn)](https://cranchecks.info/pkgs/lawn)
-[![R-check](https://github.com/ropensci/lawn/workflows/R-check/badge.svg)](https://github.com/ropensci/lawn/actions?query=workflow%3AR-check)
-[![codecov.io](https://codecov.io/github/ropensci/lawn/coverage.svg?branch=master)](https://codecov.io/github/ropensci/lawn?branch=master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/lawn?color=ff69b4)](https://github.com/r-hub/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/lawn)](https://cran.r-project.org/package=lawn)
 
 `lawn` is an R wrapper for the Javascript library [turf.js](https://turfjs.org/). In addition, we have a few functions to interface with the [geojson-random](https://github.com/mapbox/geojson-random) and [geojsonhint](https://www.npmjs.com/package/geojsonhint) Javascript libraries, for generating random GeoJSON objects and linting GeoJSON, respectively.
 
-## Install
-
-The latest release of `lawn` is available from CRAN
-
-
-```r
-install.packages("lawn")
-```
-
-development version
-
-
-```r
-remotes::install_github("ropensci/lawn")
-```
-
-
-```r
-library("lawn")
-```
-
-## Documentation
-
-https://docs.ropensci.org/lawn/
-
-## Contributors
-
-* [Scott Chamberlain](https://github.com/sckott)
-* [Jeff Hollister](https://github.com/jhollist)
-* [Thanh Lê](https://github.com/thanhleviet)
-
-## Meta
-
-* Please [report any issues or bugs](https://github.com/ropensci/lawn/issues).
-* License: MIT
-* Get citation information for `lawn` in R doing `citation(package = 'lawn')`
-* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
-
-## Additional disclaimer
-Portions of this code have been contributed by Jeff Hollister, US EPA.  As such, that code is subjec to the following disclaimer: <https://www.epa.gov/home/github-contribution-disclaimer>
